@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@theme {
+  --font-head: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+  --font-body: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-deva: var(--font-noto-devanagari), ui-sans-serif, sans-serif;
+
+  --color-ink: #141414;
+  --color-mute: #6b6b6b;
+  --color-gold: #f5c518;
+  --color-cream: #fcf9f0;
+
+  /* Mint — positive chip and badge colour */
+  --color-mint: #dcefd0;
+  --color-mint-soft: #e4f2d8;
+  --color-mint-ink: #3c5a2c;
+
+  /* Pastel feature cards */
+  --color-rose: #fbe2e4;
+  --color-rose-line: #efcace;
+  --color-rose-ink: #6b5457;
+  --color-amber: #fcefc7;
+  --color-amber-line: #eddca8;
+  --color-amber-ink: #6b5f41;
+  --color-sky: #d6eff7;
+  --color-sky-line: #b9dfeb;
+  --color-sky-ink: #4c6670;
+
+  /* Market meaning */
+  --color-up: #17845a;
+  --color-down: #d64550;
+
+  --color-hair: #ededed;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-body);
+    background: #fff;
+    color: var(--color-ink);
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-head);
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+@layer components {
+  /* The prototype's two buttons: a solid ink pill and a hairline white pill. */
+  .pill {
+    display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+    border-radius: 9999px; padding: 0.875rem 1.75rem;
+    font-size: 14px; font-weight: 500; line-height: 1;
+    transition: background-color .18s ease, border-color .18s ease, opacity .18s ease;
+  }
+  .pill-ink { background: var(--color-ink); color: #fff; }
+  .pill-ink:hover { opacity: .9; }
+  .pill-line { border: 1px solid #ddd8cb; background: #fff; }
+  .pill-line:hover { background: #faf7ee; }
+  .pill-sm { padding: 0.625rem 1.25rem; }
+
+  /* Section eyebrow — the mint capsule above every heading. */
+  .eyebrow {
+    display: inline-block; border-radius: 9999px;
+    background: var(--color-mint-soft); color: var(--color-mint-ink);
+    padding: 0.375rem 1rem; font-size: 12px; font-weight: 500;
+  }
+
+  /* A floating product card in the hero and feature collages. */
+  .float-card {
+    border-radius: 22px; background: #fff; padding: 1.25rem;
+    box-shadow: 0 18px 50px rgba(20, 20, 20, .10);
+  }
+}
+
+@keyframes draw    { to { stroke-dashoffset: 0; } }
+@keyframes float   { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-9px); } }
+@keyframes rise    { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+
+.animate-draw    { animation: draw 2.6s cubic-bezier(.22,.61,.36,1) forwards; }
+.animate-float   { animation: float 7s ease-in-out infinite; }
+.animate-rise    { animation: rise .7s cubic-bezier(.22,.61,.36,1) both; }
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-draw, .animate-float, .animate-rise { animation: none; }
+}
+

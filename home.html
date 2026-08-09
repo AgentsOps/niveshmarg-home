@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NiveshMarg — The path of investment</title>
+<meta name="description" content="NiveshMarg is an AI stock and portfolio workspace: a six-agent research swarm, a four-part AI Score, a conversational market analyst, paper trading, backtesting and board-ready reports.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Noto+Sans+Devanagari:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0" rel="stylesheet">
+
+<script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+<style type="text/tailwindcss">
+  /* ------------------------------------------------------------------
+     Design tokens, taken from the Capsule prototype so this page and the
+     prototype read as one system: Poppins for headings, DM Sans for copy,
+     ink on cream, and gold as the single accent that draws the eye.
+
+     The market colours are the exception. Green and red are not decoration
+     here — they carry the meaning of a number — so they stay saturated
+     enough to read against both the cream and the pastel cards.
+     ------------------------------------------------------------------ */
+  @theme {
+    --font-head: "Poppins", ui-sans-serif, system-ui, sans-serif;
+    --font-body: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+    --font-deva: "Noto Sans Devanagari", ui-sans-serif, sans-serif;
+
+    --color-ink: #141414;
+    --color-mute: #6b6b6b;
+    --color-gold: #f5c518;
+    --color-cream: #fcf9f0;
+
+    /* Mint — the prototype's "positive" chip and badge colour */
+    --color-mint: #dcefd0;
+    --color-mint-soft: #e4f2d8;
+    --color-mint-ink: #3c5a2c;
+
+    /* Pastel feature cards */
+    --color-rose: #fbe2e4;
+    --color-rose-line: #efcace;
+    --color-rose-ink: #6b5457;
+    --color-amber: #fcefc7;
+    --color-amber-line: #eddca8;
+    --color-amber-ink: #6b5f41;
+    --color-sky: #d6eff7;
+    --color-sky-line: #b9dfeb;
+    --color-sky-ink: #4c6670;
+
+    /* Market meaning */
+    --color-up: #17845a;
+    --color-down: #d64550;
+
+    --color-hair: #ededed;
+  }
+
+  @layer base {
+    body { font-family: var(--font-body); background: #fff; color: var(--color-ink); }
+    h1, h2, h3, h4 { font-family: var(--font-head); }
+    a { color: inherit; text-decoration: none; }
+  }
+
+  @layer components {
+    /* The prototype's two buttons: a solid ink pill and a hairline white pill. */
+    .pill {
+      display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+      border-radius: 9999px; padding: 0.875rem 1.75rem;
+      font-size: 14px; font-weight: 500; line-height: 1;
+      transition: background-color .18s ease, border-color .18s ease, opacity .18s ease;
+    }
+    .pill-ink { background: var(--color-ink); color: #fff; }
+    .pill-ink:hover { opacity: .9; }
+    .pill-line { border: 1px solid #ddd8cb; background: #fff; }
+    .pill-line:hover { background: #faf7ee; }
+    .pill-sm { padding: 0.625rem 1.25rem; }
+
+    /* Section eyebrow — the mint capsule above every heading. */
+    .eyebrow {
+      display: inline-block; border-radius: 9999px;
+      background: var(--color-mint-soft); color: var(--color-mint-ink);
+      padding: 0.375rem 1rem; font-size: 12px; font-weight: 500;
+    }
+
+    /* A floating product card in the hero and feature collages. */
+    .float-card {
+      border-radius: 22px; background: #fff; padding: 1.25rem;
+      box-shadow: 0 18px 50px rgba(20, 20, 20, .10);
+    }
+  }
+
+  @keyframes draw    { to { stroke-dashoffset: 0; } }
+  @keyframes float   { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-9px); } }
+  @keyframes rise    { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+
+  .animate-draw    { animation: draw 2.6s cubic-bezier(.22,.61,.36,1) forwards; }
+  .animate-float   { animation: float 7s ease-in-out infinite; }
+  .animate-rise    { animation: rise .7s cubic-bezier(.22,.61,.36,1) both; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animate-draw, .animate-float, .animate-rise { animation: none; }
+  }
+</style>
+</head>
+
+<body class="font-body text-ink antialiased">
+
+<!-- ─────────────────────────────────────────────────────────────────── nav -->
+<header class="sticky top-0 z-50 w-full border-b border-[#F0EADA] bg-cream/90 backdrop-blur-md">
+  <div class="mx-auto flex h-[76px] max-w-[1180px] items-center justify-between px-6">
+
+    <a href="#top" class="flex min-w-0 items-center gap-2.5">
+      <span class="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-gold">
+        <span class="material-symbols-outlined text-[19px] text-ink">trending_up</span>
+      </span>
+      <span class="min-w-0 leading-none">
+        <span class="block truncate font-head text-[18px] font-semibold tracking-tight sm:text-[20px]">NiveshMarg</span>
+        <span class="mt-0.5 block font-deva text-[10px] text-mute">निवेश · मार्ग</span>
+      </span>
+    </a>
+
+    <nav class="hidden items-center gap-8 text-[14px] text-mute lg:flex" aria-label="Primary">
+      <a href="#top"       class="font-medium text-ink transition hover:text-ink">Home</a>
+      <a href="#score"     data-navlink class="transition hover:text-ink">AI Score</a>
+      <a href="#swarm"     data-navlink class="transition hover:text-ink">The swarm</a>
+      <a href="#workspace" data-navlink class="transition hover:text-ink">Workspace</a>
+      <a href="#path"      data-navlink class="transition hover:text-ink">How it works</a>
+    </nav>
+
+    <div class="flex shrink-0 items-center gap-3 sm:gap-4">
+      <a href="https://dashboard.niveshmarg.com/" class="hidden text-[14px] font-medium sm:inline">Sign in</a>
+      <!-- The full label needs room the phone header does not have. -->
+      <a href="https://dashboard.niveshmarg.com/" class="pill pill-ink pill-sm whitespace-nowrap">
+        <span class="hidden sm:inline">Open dashboard</span>
+        <span class="sm:hidden">Log in</span>
+      </a>
+      <button type="button" id="menu-btn" aria-expanded="false" aria-controls="menu-panel" aria-label="Open menu"
+              class="grid h-9 w-9 place-items-center rounded-full border border-[#E4DFCD] bg-white lg:hidden">
+        <span class="material-symbols-outlined text-[20px]">menu</span>
+      </button>
+    </div>
+  </div>
+
+  <div id="menu-panel" class="hidden border-t border-[#F0EADA] bg-cream px-6 py-3 lg:hidden">
+    <nav class="grid gap-1 text-[14px]" aria-label="Mobile">
+      <a href="#score"     class="rounded-xl px-3 py-2.5 font-medium transition hover:bg-white">AI Score</a>
+      <a href="#swarm"     class="rounded-xl px-3 py-2.5 font-medium transition hover:bg-white">The swarm</a>
+      <a href="#workspace" class="rounded-xl px-3 py-2.5 font-medium transition hover:bg-white">Workspace</a>
+      <a href="#path"      class="rounded-xl px-3 py-2.5 font-medium transition hover:bg-white">How it works</a>
+      <a href="https://dashboard.niveshmarg.com/" class="mt-1 rounded-xl bg-ink px-3 py-2.5 text-center font-medium text-white">Sign in</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ────────────────────────────────────────────────────────────────── hero -->
+<section class="relative overflow-hidden bg-gradient-to-b from-cream via-[#FDFBF5] to-white">
+  <div class="mx-auto grid max-w-[1180px] grid-cols-1 items-center gap-12 px-6 pb-20 pt-10 lg:grid-cols-[46%_1fr] lg:pb-24">
+
+    <div>
+      <span class="animate-rise inline-block rounded-full border border-[#E4DFCD] bg-white/70 px-4 py-1.5 text-[12px] font-medium tracking-wide">
+        AI research, made simple
+      </span>
+
+      <h1 class="animate-rise [animation-delay:80ms] mt-6 font-head text-[clamp(2.25rem,7.5vw,3.25rem)] font-semibold leading-[1.08] tracking-[-0.02em]">
+        Unlock Your
+        <!-- The six research agents, standing in for the prototype's avatar
+             cluster: the same shape, but each disc names a real analyst. -->
+        <span class="relative inline-flex items-center gap-3 align-middle">
+          <span class="flex -space-x-2">
+            <span class="grid h-9 w-9 place-items-center rounded-full bg-[#E9F0FA] text-[#1E5AA8] ring-2 ring-white" title="Fundamental agent">
+              <span class="material-symbols-outlined text-[17px]">account_balance</span>
+            </span>
+            <span class="grid h-9 w-9 place-items-center rounded-full bg-[#FCEFC7] text-[#B98A18] ring-2 ring-white" title="Technical agent">
+              <span class="material-symbols-outlined text-[17px]">ssid_chart</span>
+            </span>
+            <span class="grid h-9 w-9 place-items-center rounded-full bg-[#FBE2E4] text-[#C2566A] ring-2 ring-white" title="Risk manager">
+              <span class="material-symbols-outlined text-[17px]">shield</span>
+            </span>
+          </span>
+          <span class="grid h-9 w-9 place-items-center rounded-full bg-mint text-[16px] font-normal text-mint-ink">+3</span>
+        </span>
+        <br>
+        <span class="relative">Investing Edge
+          <svg class="absolute -bottom-1 left-0 w-[200px] max-w-full" viewBox="0 0 210 14" fill="none" aria-hidden="true">
+            <path d="M3 9C50 3 140 2 206 6" stroke="#F5C518" stroke-width="6" stroke-linecap="round"/>
+          </svg>
+        </span>
+      </h1>
+
+      <p class="animate-rise [animation-delay:160ms] mt-7 max-w-[420px] text-[14px] leading-[1.75] text-mute">
+        Six specialist AI analysts research a stock, argue the bull case against the bear
+        case, and hand you a verdict with entry, target and stop levels attached — for NSE
+        listings and global markets alike.
+      </p>
+
+      <div class="animate-rise [animation-delay:240ms] mt-8 flex flex-wrap items-center gap-3">
+        <a href="https://dashboard.niveshmarg.com/" class="pill pill-ink">Open dashboard</a>
+        <a href="#score" class="pill pill-line">See how it thinks</a>
+      </div>
+
+      <div class="animate-rise [animation-delay:320ms] mt-10 flex items-end gap-4">
+        <div>
+          <div class="flex gap-1.5" aria-hidden="true">
+            <span class="material-symbols-outlined text-[20px]">timeline</span>
+            <span class="material-symbols-outlined text-[20px]">candlestick_chart</span>
+            <span class="material-symbols-outlined text-[20px]">newspaper</span>
+            <span class="material-symbols-outlined text-[20px]">show_chart</span>
+          </div>
+          <p class="mt-3 text-[14px] font-medium">Four signals · 25 points each</p>
+        </div>
+        <span class="relative -ml-1 mb-1 inline-block -rotate-[8deg] rounded-full bg-mint px-4 py-1.5 font-head text-[14px] italic text-[#2F3A2A]">
+          AI Score
+        </span>
+      </div>
+    </div>
+
+    <!-- Product collage. Every card is a real surface from the workspace, drawn
+         at rest so the page needs no chart library to render.
+
+         The prototype scatters these with absolute percentages, which only holds
+         at its own width. Here the scatter is switched on at lg and the cards
+         fall back to a plain grid below it, so nothing overlaps on a phone. -->
+    <div class="grid gap-4 sm:grid-cols-2 lg:relative lg:mx-auto lg:block lg:h-[440px] lg:w-full lg:max-w-[560px]">
+      <svg class="absolute left-[4%] top-[26%] hidden h-24 w-24 text-gold lg:block" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+        <path d="M6 60c14-30 32-38 44-24s26 10 34-14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <div class="absolute left-[36%] top-[-3%] hidden font-head text-[18px] text-gold lg:block" aria-hidden="true">✦</div>
+
+      <!-- AI Score breakdown -->
+      <div class="float-card static lg:absolute lg:left-0 lg:top-[2%] lg:w-[262px]">
+        <p class="text-center font-head text-[15px] font-semibold">AI Score</p>
+        <p class="mt-0.5 text-center text-[11px] text-mute">RELIANCE.NS · four readings</p>
+        <div class="relative mt-6 flex h-[110px] items-end justify-between px-1">
+          <div class="w-[11px] rounded-full bg-[#8B5CF6]" style="height:84%"></div>
+          <div class="w-[11px] rounded-full bg-[#C4B5FD]" style="height:72%"></div>
+          <div class="w-[11px] rounded-full bg-[#8B5CF6]" style="height:68%"></div>
+          <div class="relative w-[11px] rounded-full bg-gold" style="height:100%">
+            <span class="absolute -top-6 left-1/2 -translate-x-1/2 rounded-md bg-ink px-1.5 py-0.5 text-[10px] font-semibold text-white">76</span>
+          </div>
+          <div class="w-[11px] rounded-full bg-[#E6E6E6]" style="height:60%"></div>
+          <div class="w-[11px] rounded-full bg-[#E6E6E6]" style="height:44%"></div>
+          <div class="w-[11px] rounded-full bg-[#E6E6E6]" style="height:52%"></div>
+        </div>
+        <div class="mt-3 flex justify-between px-0.5 text-[10px] text-mute">
+          <span>Fcst</span><span>Tech</span><span>Sent</span><span>Trend</span><span>1W</span><span>1M</span><span>1Y</span>
+        </div>
+        <div class="mt-4 flex items-center gap-2 border-t border-[#F0F0F0] pt-4">
+          <span class="grid h-6 w-6 place-items-center rounded-full bg-mint text-[11px] text-mint-ink">✓</span>
+          <div>
+            <p class="text-[11px] font-semibold">Signals agree</p>
+            <p class="text-[10px] text-mute">All four readings point the same way</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Forecast band -->
+      <div class="float-card static lg:absolute lg:right-0 lg:top-0 lg:w-[252px]">
+        <p class="font-head text-[14px] font-semibold">Forecast band</p>
+        <div class="mt-4 flex h-[52px] items-end gap-[3px]">
+          <div class="w-full rounded-[2px] bg-[#8BD17C]" style="height:18%"></div>
+          <div class="w-full rounded-[2px] bg-[#8BD17C]" style="height:26%"></div>
+          <div class="w-full rounded-[2px] bg-[#8BD17C]" style="height:34%"></div>
+          <div class="w-full rounded-[2px] bg-[#8BD17C]" style="height:44%"></div>
+          <div class="w-full rounded-[2px] bg-[#8BD17C]" style="height:58%"></div>
+          <div class="w-full rounded-[2px] bg-[#8BD17C]" style="height:72%"></div>
+          <div class="w-full rounded-[2px] bg-[#8BD17C]" style="height:86%"></div>
+          <div class="w-full rounded-[2px] bg-[#8BD17C]" style="height:100%"></div>
+          <div class="w-full rounded-[2px] bg-[#8BD17C]" style="height:92%"></div>
+          <div class="w-full rounded-[2px] bg-[#8BD17C]" style="height:78%"></div>
+          <div class="w-full rounded-[2px] bg-[#8BD17C]" style="height:62%"></div>
+          <div class="w-full rounded-[2px] bg-[#8BD17C]" style="height:48%"></div>
+          <div class="w-full rounded-[2px] bg-[#8BD17C]" style="height:36%"></div>
+          <div class="w-full rounded-[2px] bg-[#8BD17C]" style="height:26%"></div>
+          <div class="w-full rounded-[2px] bg-[#8BD17C]" style="height:18%"></div>
+        </div>
+        <div class="mt-3 flex justify-between border-t border-[#F0F0F0] pt-2 text-[10px] text-mute">
+          <span>₹1,240</span><span>₹1,520</span>
+        </div>
+      </div>
+
+      <!-- Bull vs bear debate. Sits clear of the forecast card above it. -->
+      <div class="float-card static lg:absolute lg:right-[2%] lg:top-[40%] lg:w-[262px]">
+        <div class="flex items-start justify-between">
+          <div>
+            <p class="font-head text-[14px] font-semibold">Bull vs Bear</p>
+            <div class="mt-1.5 flex gap-3 text-[10px] text-mute">
+              <span class="flex items-center gap-1"><i class="h-1.5 w-1.5 rounded-full bg-up"></i>Bull</span>
+              <span class="flex items-center gap-1"><i class="h-1.5 w-1.5 rounded-full bg-down"></i>Bear</span>
+            </div>
+          </div>
+          <span class="rounded-md border border-[#EAEAEA] px-2 py-1 text-[10px] text-mute">1Y ⌄</span>
+        </div>
+        <div class="relative mt-3 h-[112px]">
+          <svg viewBox="0 0 220 112" class="h-full w-full" fill="none" preserveAspectRatio="none" aria-hidden="true">
+            <line x1="0" y1="20" x2="220" y2="20" stroke="#F2F2F2"/>
+            <line x1="0" y1="48" x2="220" y2="48" stroke="#F2F2F2"/>
+            <line x1="0" y1="76" x2="220" y2="76" stroke="#F2F2F2"/>
+            <line x1="0" y1="104" x2="220" y2="104" stroke="#F2F2F2"/>
+            <rect x="60" y="0" width="20" height="112" rx="6" fill="#FDECEC"/>
+            <polyline points="0,74 18,52 36,80 54,44 72,26 90,62 108,40 126,78 144,54 162,86 180,58 198,72 220,50" stroke="#D64550" stroke-width="2.2" stroke-linejoin="round"/>
+            <polyline points="0,92 18,78 36,96 54,70 72,84 90,58 108,92 126,64 144,88 162,70 180,94 198,66 220,84" stroke="#17845A" stroke-width="2.2" stroke-linejoin="round"/>
+            <circle cx="70" cy="28" r="4" fill="#D64550" stroke="#fff" stroke-width="2"/>
+          </svg>
+          <span class="absolute left-[24%] top-0 rounded-md bg-down px-1.5 py-0.5 text-[9px] font-semibold text-white">Risk</span>
+        </div>
+        <div class="mt-2 flex justify-between text-[9px] text-mute">
+          <span>JAN</span><span>MAR</span><span>MAY</span><span>JUL</span><span>SEP</span><span>NOV</span>
+        </div>
+      </div>
+
+      <!-- Portfolio P&L -->
+      <div class="float-card animate-float static p-4 sm:col-span-2 lg:absolute lg:bottom-0 lg:left-[2%] lg:w-[250px]">
+        <div class="flex items-center gap-4">
+          <svg viewBox="0 0 90 34" class="h-[34px] w-[90px]" fill="none" aria-hidden="true">
+            <path d="M2 24c8-16 14 4 22-6s12 12 20 2 12-10 22-14" stroke="#F5C518" stroke-width="2.2" stroke-linecap="round"
+                  stroke-dasharray="140" stroke-dashoffset="140" class="animate-draw"/>
+          </svg>
+          <div>
+            <p class="font-head text-[20px] font-semibold">+43.5% <span class="text-gold">✦</span></p>
+            <p class="text-[10px] text-mute">Unrealised P&amp;L across holdings</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ────────────────────────────────────────────────────── data source band -->
+<section class="border-y border-[#EDEDED] bg-[#F6F6F6]">
+  <div class="mx-auto grid max-w-[1180px] grid-cols-2 divide-x divide-y divide-[#E4E4E4] px-6 md:grid-cols-5 md:divide-y-0">
+    <div class="flex items-center justify-center gap-2 py-8 font-head text-[17px] font-semibold">
+      <span class="material-symbols-outlined text-[20px]">apartment</span>NSE
+    </div>
+    <div class="flex items-center justify-center gap-2 py-8 font-head text-[17px] font-semibold">
+      <span class="material-symbols-outlined text-[20px]">account_balance</span>BSE
+    </div>
+    <div class="flex items-center justify-center gap-2 py-8 font-head text-[17px] font-semibold">
+      <span class="material-symbols-outlined text-[20px]">public</span>Global
+    </div>
+    <div class="flex items-center justify-center gap-2 py-8 font-head text-[17px] font-semibold">
+      <span class="material-symbols-outlined text-[20px]">smart_toy</span>OpenRouter
+    </div>
+    <div class="col-span-2 flex items-center justify-center gap-2 py-8 font-head text-[17px] font-semibold md:col-span-1">
+      <span class="material-symbols-outlined text-[20px]">send</span>Telegram
+    </div>
+  </div>
+</section>
+
+<!-- ────────────────────────────────────────────────────── feature highlights -->
+<section id="score" class="relative mx-auto max-w-[1180px] scroll-mt-24 px-6 py-20 sm:py-24">
+  <svg class="absolute left-[12%] top-[20%] hidden w-16 text-gold lg:block" viewBox="0 0 60 12" fill="none" aria-hidden="true">
+    <path d="M2 8c4-8 8 4 12-2s8 6 12 0 8 4 12-2 8 4 10 0" stroke="currentColor" stroke-width="2"/>
+  </svg>
+  <svg class="absolute right-[12%] top-[20%] hidden w-16 text-gold lg:block" viewBox="0 0 60 12" fill="none" aria-hidden="true">
+    <path d="M2 8c4-8 8 4 12-2s8 6 12 0 8 4 12-2 8 4 10 0" stroke="currentColor" stroke-width="2"/>
+  </svg>
+
+  <div data-reveal class="text-center">
+    <span class="eyebrow">Three engines, one workspace</span>
+    <h2 class="mt-6 font-head text-[clamp(2rem,6vw,2.875rem)] font-semibold tracking-[-0.02em]">Feature highlights</h2>
+    <p class="mt-3 text-[14px] text-mute">Research that shows its working, not just its conclusion.</p>
+  </div>
+
+  <div class="mt-14 grid grid-cols-1 gap-6 md:grid-cols-3">
+    <article data-reveal class="rounded-[20px] bg-rose p-7">
+      <span class="grid h-11 w-11 place-items-center rounded-xl bg-white/70">
+        <span class="material-symbols-outlined text-[22px] text-[#C2566A]">bar_chart</span>
+      </span>
+      <h3 class="mt-6 font-head text-[19px] font-semibold leading-snug">A Score Earned Four Times Over</h3>
+      <p class="mt-3 text-[12.5px] leading-[1.7] text-rose-ink">
+        Chronos forecast, technicals, news sentiment and market trend are each scored out of
+        twenty-five — so a signal only carries weight when the evidence agrees with itself.
+      </p>
+      <div class="mt-6 border-t border-rose-line pt-4">
+        <a href="#swarm" class="inline-flex items-center gap-2 text-[13px] font-semibold">More Details <span>→</span></a>
+      </div>
+    </article>
+
+    <article data-reveal class="rounded-[20px] bg-amber p-7">
+      <span class="grid h-11 w-11 place-items-center rounded-xl bg-white/70">
+        <span class="material-symbols-outlined text-[22px] text-[#B98A18]">groups</span>
+      </span>
+      <h3 class="mt-6 font-head text-[19px] font-semibold leading-snug">Six Analysts That Disagree</h3>
+      <p class="mt-3 text-[12.5px] leading-[1.7] text-amber-ink">
+        Fundamental, technical, news, valuation and macro agents each file a report. A risk
+        manager argues against all of them before any verdict is written.
+      </p>
+      <div class="mt-6 border-t border-amber-line pt-4">
+        <a href="#swarm" class="inline-flex items-center gap-2 text-[13px] font-semibold">More Details <span>→</span></a>
+      </div>
+    </article>
+
+    <article data-reveal class="rounded-[20px] bg-sky p-7">
+      <span class="grid h-11 w-11 place-items-center rounded-xl bg-white/70">
+        <span class="material-symbols-outlined text-[22px] text-[#2E7E96]">forum</span>
+      </span>
+      <h3 class="mt-6 font-head text-[19px] font-semibold leading-snug">An Analyst You Can Question</h3>
+      <p class="mt-3 text-[12.5px] leading-[1.7] text-sky-ink">
+        Stock Chat reaches for ten live tools — prices, indicators, fundamentals, news and
+        your own holdings — and shows you which ones it used to answer.
+      </p>
+      <div class="mt-6 border-t border-sky-line pt-4">
+        <a href="#chat" class="inline-flex items-center gap-2 text-[13px] font-semibold">More Details <span>→</span></a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────────────────────────── the swarm -->
+<section id="swarm" class="relative mx-auto max-w-[1180px] scroll-mt-24 px-6 pb-20 sm:pb-24">
+  <div class="absolute left-6 top-6 h-3 w-3 border border-[#D8D8D8]" aria-hidden="true"></div>
+  <div class="absolute right-10 top-16 h-3 w-3 border border-[#D8D8D8]" aria-hidden="true"></div>
+
+  <div data-reveal class="text-center">
+    <span class="eyebrow">The debate engine</span>
+    <h2 class="mx-auto mt-6 max-w-[560px] font-head text-[clamp(1.875rem,5.5vw,2.625rem)] font-semibold leading-[1.2] tracking-[-0.02em]">
+      A Verdict You Can Audit
+    </h2>
+  </div>
+
+  <div class="mt-12 grid grid-cols-1 gap-5 md:grid-cols-3">
+
+    <!-- Bull case -->
+    <div data-reveal class="relative flex min-h-[300px] flex-col justify-end overflow-hidden rounded-[18px] bg-gradient-to-br from-[#E9F6EE] via-[#F2FAF5] to-[#DDF0E6] p-5">
+      <svg class="pointer-events-none absolute inset-x-0 top-6 h-32 w-full" viewBox="0 0 300 120" fill="none" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 104 L38 92 L76 98 L114 70 L152 78 L190 48 L228 56 L266 26 L300 14 L300 120 L0 120 Z" fill="#17845A" fill-opacity="0.10"/>
+        <path d="M0 104 L38 92 L76 98 L114 70 L152 78 L190 48 L228 56 L266 26 L300 14" stroke="#17845A" stroke-width="2.5" stroke-linejoin="round"/>
+      </svg>
+      <span class="absolute right-4 top-4 grid h-10 w-10 place-items-center rounded-full bg-white text-[16px]">↗</span>
+      <p class="relative text-[11px] font-semibold uppercase tracking-[0.06em] text-up">Bull case</p>
+      <h3 class="relative mt-1.5 font-head text-[19px] font-semibold leading-snug">Every Strength, With Its Evidence Attached</h3>
+      <p class="relative mt-2 text-[12.5px] leading-[1.7] text-[#416452]">
+        Growth catalysts, technical setups and an upside target — argued, not asserted.
+      </p>
+    </div>
+
+    <!-- Centre column: verdict + coverage -->
+    <div class="flex flex-col gap-5">
+      <div data-reveal class="relative rounded-[18px] bg-ink p-7 pb-14">
+        <h3 class="max-w-[230px] font-head text-[21px] font-semibold leading-[1.3] text-white">
+          One Verdict, With the Numbers Attached
+        </h3>
+        <dl class="mt-5 space-y-2 text-[13px] text-white">
+          <div class="flex items-baseline justify-between gap-3 border-b border-white/10 pb-2">
+            <dt class="text-white/55">Entry</dt><dd class="font-semibold tabular-nums">₹1,240 – 1,275</dd>
+          </div>
+          <div class="flex items-baseline justify-between gap-3 border-b border-white/10 pb-2">
+            <dt class="text-white/55">Target</dt><dd class="font-semibold tabular-nums">₹1,520</dd>
+          </div>
+          <div class="flex items-baseline justify-between gap-3">
+            <dt class="text-white/55">Risk / reward</dt><dd class="font-semibold tabular-nums">1 : 2.6</dd>
+          </div>
+        </dl>
+        <span class="absolute bottom-5 right-5 grid h-10 w-10 place-items-center rounded-full bg-white text-[16px]">↗</span>
+      </div>
+
+      <div data-reveal class="flex flex-1 flex-col justify-between rounded-[18px] border border-hair bg-white p-5">
+        <div class="flex items-center justify-between">
+          <div class="flex -space-x-2">
+            <span class="grid h-7 w-7 place-items-center rounded-full bg-[#E9F0FA] text-[#1E5AA8] ring-2 ring-white">
+              <span class="material-symbols-outlined text-[14px]">account_balance</span>
+            </span>
+            <span class="grid h-7 w-7 place-items-center rounded-full bg-[#FCEFC7] text-[#B98A18] ring-2 ring-white">
+              <span class="material-symbols-outlined text-[14px]">ssid_chart</span>
+            </span>
+            <span class="grid h-7 w-7 place-items-center rounded-full bg-[#D6EFF7] text-[#2E7E96] ring-2 ring-white">
+              <span class="material-symbols-outlined text-[14px]">feed</span>
+            </span>
+            <span class="grid h-7 w-7 place-items-center rounded-full bg-[#EFEFEF] text-[9px] font-semibold ring-2 ring-white">+3</span>
+          </div>
+          <p class="font-head text-[24px] font-semibold">6 agents</p>
+        </div>
+        <div class="mt-5">
+          <div class="flex items-center justify-between text-[13px]">
+            <span class="font-medium">Signal convergence</span><span class="font-semibold">84%</span>
+          </div>
+          <div class="mt-2 h-[5px] w-full rounded-full bg-[#EFEFEF]"><div class="h-full w-[84%] rounded-full bg-ink"></div></div>
+        </div>
+        <div class="mt-6 flex items-center justify-between">
+          <a href="#path" class="inline-flex items-center gap-2 text-[13px] font-medium text-mute">How it works <span>→</span></a>
+          <span class="grid h-9 w-9 place-items-center rounded-full bg-[#F3F3F3] text-[15px]">↗</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bear case -->
+    <div data-reveal class="relative flex min-h-[300px] flex-col justify-end overflow-hidden rounded-[18px] bg-gradient-to-br from-[#FBECEE] via-[#FDF5F6] to-[#F8DFE3] p-5">
+      <svg class="pointer-events-none absolute inset-x-0 top-6 h-32 w-full" viewBox="0 0 300 120" fill="none" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 16 L38 30 L76 24 L114 52 L152 44 L190 74 L228 66 L266 96 L300 108 L300 120 L0 120 Z" fill="#D64550" fill-opacity="0.10"/>
+        <path d="M0 16 L38 30 L76 24 L114 52 L152 44 L190 74 L228 66 L266 96 L300 108" stroke="#D64550" stroke-width="2.5" stroke-linejoin="round"/>
+      </svg>
+      <span class="absolute right-4 top-4 grid h-10 w-10 place-items-center rounded-full bg-white text-[16px]">↗</span>
+      <p class="relative text-[11px] font-semibold uppercase tracking-[0.06em] text-down">Bear case</p>
+      <h3 class="relative mt-1.5 font-head text-[19px] font-semibold leading-snug">The Dissent That Keeps You Honest</h3>
+      <p class="relative mt-2 text-[12.5px] leading-[1.7] text-[#6B5457]">
+        What breaks this thesis, what it costs when it does, and the level that proves it.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ──────────────────────────────────────────────────────────── portfolio band -->
+<section id="chat" class="scroll-mt-24 bg-gradient-to-br from-[#F6EEFA] via-[#FBF1F5] to-[#FDF7F3]">
+  <div class="mx-auto grid max-w-[1180px] grid-cols-1 items-center gap-10 px-6 py-20 sm:py-24 lg:grid-cols-2">
+
+    <!-- Workspace collage — scattered at lg, stacked below it. The offsets are
+         chosen so the cards sit at different depths without any one covering
+         another's figures. -->
+    <div class="grid gap-4 sm:grid-cols-2 lg:relative lg:mx-auto lg:block lg:h-[480px] lg:w-full lg:max-w-[520px]">
+      <div class="absolute left-[2%] top-[36%] hidden h-20 w-24 opacity-40 lg:block"
+           style="background-image: radial-gradient(#9A9A9A 1px, transparent 1px); background-size: 9px 9px;" aria-hidden="true"></div>
+      <svg class="absolute left-[26%] top-[14%] hidden w-40 text-[#F2A65A] lg:block" viewBox="0 0 160 60" fill="none" aria-hidden="true">
+        <path d="M4 46c26-46 66 6 96-14 14-9 22-18 56-26" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+      </svg>
+
+      <!-- Backtest -->
+      <div class="static rounded-[16px] bg-white p-4 shadow-[0_16px_40px_rgba(80,50,90,0.10)] lg:absolute lg:right-0 lg:top-0 lg:w-[186px]">
+        <p class="text-[9px] text-mute">Backtest · 5 years</p>
+        <p class="font-head text-[15px] font-semibold">+118% <span class="text-[9px] font-normal text-mute">vs NIFTY +64%</span></p>
+        <svg viewBox="0 0 160 50" class="mt-2 h-[50px] w-full" fill="none" aria-hidden="true">
+          <path d="M0 42c14-4 22-18 34-16s18 14 30 6 20-22 34-18 22 20 34 16 20-14 28-18v30H0z" fill="#FBD9C5"/>
+          <path d="M0 42c14-4 22-18 34-16s18 14 30 6 20-22 34-18 22 20 34 16 20-14 28-18" stroke="#F1874F" stroke-width="1.6"/>
+        </svg>
+        <div class="mt-3 flex items-center justify-between border-t border-[#F1F1F1] pt-2">
+          <p class="text-[9px] font-semibold">Max drawdown</p>
+          <span class="text-[9px] font-semibold text-down">−12.4%</span>
+        </div>
+      </div>
+
+      <!-- Portfolio -->
+      <div class="static rounded-[16px] bg-white p-4 shadow-[0_16px_40px_rgba(80,50,90,0.10)] lg:absolute lg:left-0 lg:top-[6%] lg:w-[236px]">
+        <div class="flex items-center justify-between">
+          <p class="font-head text-[12px] font-semibold">Portfolio</p>
+          <div class="flex gap-1.5 text-[7px] text-mute">
+            <span class="flex items-center gap-1"><i class="h-1 w-1 rounded-full bg-up"></i>Invested</span>
+            <span class="flex items-center gap-1"><i class="h-1 w-1 rounded-full bg-[#7C3AED]"></i>Market</span>
+          </div>
+        </div>
+        <svg viewBox="0 0 230 90" class="mt-3 h-[90px] w-full" fill="none" aria-hidden="true">
+          <line x1="0" y1="22" x2="230" y2="22" stroke="#F4F4F4"/><line x1="0" y1="45" x2="230" y2="45" stroke="#F4F4F4"/><line x1="0" y1="68" x2="230" y2="68" stroke="#F4F4F4"/>
+          <polyline points="0,68 20,64 40,58 60,56 80,50 100,46 120,42 140,36 160,32 180,28 200,22 230,18" stroke="#7C3AED" stroke-width="2"/>
+          <polyline points="0,74 20,72 40,70 60,68 80,66 100,64 120,62 140,60 160,58 180,56 200,54 230,52" stroke="#17845A" stroke-width="2"/>
+          <circle cx="230" cy="18" r="3.5" fill="#141414" stroke="#fff" stroke-width="2"/>
+        </svg>
+        <div class="mt-1 flex justify-between text-[7px] text-mute">
+          <span>JAN</span><span>MAR</span><span>MAY</span><span>JUL</span><span>SEP</span><span>NOV</span>
+        </div>
+      </div>
+
+      <!-- Portfolio Doctor -->
+      <div class="static rounded-[16px] bg-white p-4 shadow-[0_16px_40px_rgba(80,50,90,0.10)] lg:absolute lg:right-[4%] lg:top-[38%] lg:w-[178px]">
+        <p class="text-[9px] text-mute">Portfolio Doctor</p>
+        <p class="font-head text-[19px] font-semibold">Concentrated</p>
+        <span class="mt-1 inline-block rounded bg-mint px-1.5 py-0.5 text-[7px] font-semibold text-mint-ink">Rebalance suggested</span>
+        <div class="mt-3 flex h-[46px] items-end gap-[5px]">
+          <div class="w-full rounded-sm bg-[#FCE9B8]" style="height:40%"></div>
+          <div class="w-full rounded-sm bg-[#FCE9B8]" style="height:62%"></div>
+          <div class="w-full rounded-sm bg-gold" style="height:100%"></div>
+          <div class="w-full rounded-sm bg-[#FCE9B8]" style="height:54%"></div>
+          <div class="w-full rounded-sm bg-[#FCE9B8]" style="height:38%"></div>
+          <div class="w-full rounded-sm bg-[#FCE9B8]" style="height:46%"></div>
+          <div class="w-full rounded-sm bg-[#FCE9B8]" style="height:30%"></div>
+        </div>
+        <div class="mt-1 flex justify-between text-[7px] text-mute">
+          <span>IT</span><span>FIN</span><span>ENE</span><span>FMCG</span><span>PHA</span><span>AUT</span><span>MET</span>
+        </div>
+      </div>
+
+      <!-- Stock Chat -->
+      <div class="static rounded-[16px] bg-white p-4 shadow-[0_16px_40px_rgba(80,50,90,0.10)] sm:col-span-2 lg:absolute lg:bottom-0 lg:left-[6%] lg:w-[200px]">
+        <p class="font-head text-[12px] font-semibold">Stock Chat</p>
+        <p class="text-[7px] text-mute">Ten live tools connected</p>
+        <div class="mt-3 space-y-2">
+          <p class="ml-auto w-fit max-w-[85%] rounded-[10px] rounded-tr-[3px] bg-ink px-2 py-1.5 text-[9px] text-white">
+            How is my portfolio doing?
+          </p>
+          <div class="w-fit max-w-[92%] rounded-[10px] rounded-tl-[3px] border border-[#F0F0F0] bg-[#FAFAFA] px-2 py-1.5">
+            <span class="inline-block rounded bg-white px-1 py-0.5 text-[7px] font-semibold text-mute">Reading your portfolio</span>
+            <p class="mt-1 text-[9px] leading-snug">One position, and it is well ahead — PNB.NS <span class="font-semibold text-up">+43.5%</span></p>
+          </div>
+        </div>
+        <div class="mt-3 border-t border-[#F1F1F1] pt-2 text-center text-[9px] font-medium text-mute">Ask anything</div>
+      </div>
+    </div>
+
+    <div data-reveal class="lg:pl-6">
+      <span class="eyebrow">Grounded in what you own</span>
+      <h2 class="mt-7 max-w-[460px] font-head text-[clamp(1.875rem,5.5vw,2.625rem)] font-semibold leading-[1.18] tracking-[-0.02em]">
+        Building Strong Portfolios, One Decision at a Time
+      </h2>
+      <p class="mt-6 max-w-[400px] text-[13.5px] leading-[1.8] text-mute">
+        Ask in your own words and get answers from your own numbers. Stock Chat reads your
+        holdings, watchlist and saved analyses alongside live prices, indicators and news —
+        and tells you which tools it reached for. The Portfolio Doctor diagnoses
+        concentration and drift; backtests walk a strategy through history before you walk
+        it forward with money.
+      </p>
+
+      <ul class="mt-7 space-y-3">
+        <li class="flex gap-3 text-[13.5px]">
+          <span class="material-symbols-outlined mt-px shrink-0 text-[18px] text-up">check_circle</span>
+          Every conversation and analysis saved, searchable and exportable
+        </li>
+        <li class="flex gap-3 text-[13.5px]">
+          <span class="material-symbols-outlined mt-px shrink-0 text-[18px] text-up">check_circle</span>
+          Long runs execute in the background and tell you when they land
+        </li>
+        <li class="flex gap-3 text-[13.5px]">
+          <span class="material-symbols-outlined mt-px shrink-0 text-[18px] text-up">check_circle</span>
+          Choose the model that answers you
+        </li>
+      </ul>
+
+      <a href="https://dashboard.niveshmarg.com/" class="pill pill-ink mt-8">Open your workspace</a>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────────────────────────── workspace -->
+<section id="workspace" class="mx-auto max-w-[1180px] scroll-mt-24 px-6 py-20 sm:py-24">
+  <div data-reveal class="text-center">
+    <span class="eyebrow">Everything in one place</span>
+    <h2 class="mt-6 font-head text-[clamp(1.875rem,5.5vw,2.625rem)] font-semibold tracking-[-0.02em]">The Workspace</h2>
+    <p class="mt-3 text-[14px] text-mute">Research, test, hold and report — without leaving for a spreadsheet.</p>
+  </div>
+
+  <div class="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+    <div data-reveal class="rounded-[18px] border border-hair bg-white p-6 transition hover:border-[#DCDCDC]">
+      <span class="grid h-10 w-10 place-items-center rounded-xl bg-cream text-ink">
+        <span class="material-symbols-outlined text-[20px]">dashboard</span>
+      </span>
+      <h3 class="mt-5 font-head text-[16px] font-semibold">Dashboard</h3>
+      <p class="mt-2 text-[12.5px] leading-[1.7] text-mute">
+        Holdings, movers and open positions on one canvas, refreshed against live quotes.
+      </p>
+    </div>
+
+    <div data-reveal class="rounded-[18px] border border-hair bg-white p-6 transition hover:border-[#DCDCDC]">
+      <span class="grid h-10 w-10 place-items-center rounded-xl bg-cream text-ink">
+        <span class="material-symbols-outlined text-[20px]">account_balance_wallet</span>
+      </span>
+      <h3 class="mt-5 font-head text-[16px] font-semibold">Portfolio &amp; P&amp;L</h3>
+      <p class="mt-2 text-[12.5px] leading-[1.7] text-mute">
+        Quantity, average price and invested value, with corporate actions applied for you.
+      </p>
+    </div>
+
+    <div data-reveal class="rounded-[18px] border border-hair bg-white p-6 transition hover:border-[#DCDCDC]">
+      <span class="grid h-10 w-10 place-items-center rounded-xl bg-cream text-ink">
+        <span class="material-symbols-outlined text-[20px]">visibility</span>
+      </span>
+      <h3 class="mt-5 font-head text-[16px] font-semibold">Watchlist</h3>
+      <p class="mt-2 text-[12.5px] leading-[1.7] text-mute">
+        Tickers you are studying, prioritised, with notes kept beside each name.
+      </p>
+    </div>
+
+    <div data-reveal class="rounded-[18px] border border-hair bg-white p-6 transition hover:border-[#DCDCDC]">
+      <span class="grid h-10 w-10 place-items-center rounded-xl bg-cream text-ink">
+        <span class="material-symbols-outlined text-[20px]">stethoscope</span>
+      </span>
+      <h3 class="mt-5 font-head text-[16px] font-semibold">Portfolio Doctor</h3>
+      <p class="mt-2 text-[12.5px] leading-[1.7] text-mute">
+        A diagnosis of concentration, drift and imbalance — with rebalancing suggested,
+        never forced.
+      </p>
+    </div>
+
+    <div data-reveal class="rounded-[18px] border border-hair bg-white p-6 transition hover:border-[#DCDCDC]">
+      <span class="grid h-10 w-10 place-items-center rounded-xl bg-cream text-ink">
+        <span class="material-symbols-outlined text-[20px]">filter_alt</span>
+      </span>
+      <h3 class="mt-5 font-head text-[16px] font-semibold">Screener &amp; market screens</h3>
+      <p class="mt-2 text-[12.5px] leading-[1.7] text-mute">
+        Filter every listing on valuation, growth and momentum, and save the screens that
+        work.
+      </p>
+    </div>
+
+    <div data-reveal class="rounded-[18px] border border-hair bg-white p-6 transition hover:border-[#DCDCDC]">
+      <span class="grid h-10 w-10 place-items-center rounded-xl bg-cream text-ink">
+        <span class="material-symbols-outlined text-[20px]">swap_horiz</span>
+      </span>
+      <h3 class="mt-5 font-head text-[16px] font-semibold">Paper trading</h3>
+      <p class="mt-2 text-[12.5px] leading-[1.7] text-mute">
+        Practise the discipline before it costs anything. Same data, no capital at risk.
+      </p>
+    </div>
+
+    <div data-reveal class="rounded-[18px] border border-hair bg-white p-6 transition hover:border-[#DCDCDC]">
+      <span class="grid h-10 w-10 place-items-center rounded-xl bg-cream text-ink">
+        <span class="material-symbols-outlined text-[20px]">rule</span>
+      </span>
+      <h3 class="mt-5 font-head text-[16px] font-semibold">Strategy builder</h3>
+      <p class="mt-2 text-[12.5px] leading-[1.7] text-mute">
+        Compose rules and signals visually, then let them watch the market for you.
+      </p>
+    </div>
+
+    <div data-reveal class="rounded-[18px] border border-hair bg-white p-6 transition hover:border-[#DCDCDC]">
+      <span class="grid h-10 w-10 place-items-center rounded-xl bg-cream text-ink">
+        <span class="material-symbols-outlined text-[20px]">history</span>
+      </span>
+      <h3 class="mt-5 font-head text-[16px] font-semibold">Backtesting</h3>
+      <p class="mt-2 text-[12.5px] leading-[1.7] text-mute">
+        Walk a strategy back through history before you walk it forward with money.
+      </p>
+    </div>
+
+    <div data-reveal class="rounded-[18px] border border-hair bg-white p-6 transition hover:border-[#DCDCDC]">
+      <span class="grid h-10 w-10 place-items-center rounded-xl bg-cream text-ink">
+        <span class="material-symbols-outlined text-[20px]">apartment</span>
+      </span>
+      <h3 class="mt-5 font-head text-[16px] font-semibold">Institutional flow</h3>
+      <p class="mt-2 text-[12.5px] leading-[1.7] text-mute">
+        NSE bulk and block deals alongside global institutional filings — who is actually
+        buying.
+      </p>
+    </div>
+
+    <div data-reveal class="rounded-[18px] border border-hair bg-white p-6 transition hover:border-[#DCDCDC]">
+      <span class="grid h-10 w-10 place-items-center rounded-xl bg-cream text-ink">
+        <span class="material-symbols-outlined text-[20px]">picture_as_pdf</span>
+      </span>
+      <h3 class="mt-5 font-head text-[16px] font-semibold">Reports &amp; exports</h3>
+      <p class="mt-2 text-[12.5px] leading-[1.7] text-mute">
+        Any analysis becomes a clean PDF, saved and shareable, with the reasoning intact.
+      </p>
+    </div>
+
+    <div data-reveal class="rounded-[18px] border border-hair bg-white p-6 transition hover:border-[#DCDCDC]">
+      <span class="grid h-10 w-10 place-items-center rounded-xl bg-cream text-ink">
+        <span class="material-symbols-outlined text-[20px]">notifications_active</span>
+      </span>
+      <h3 class="mt-5 font-head text-[16px] font-semibold">Alerts &amp; background jobs</h3>
+      <p class="mt-2 text-[12.5px] leading-[1.7] text-mute">
+        Long analyses run with a live progress stepper and tell you — in-app or on Telegram
+        — when they land.
+      </p>
+    </div>
+
+    <div data-reveal class="flex flex-col justify-between rounded-[18px] bg-cream p-6">
+      <div>
+        <span class="grid h-10 w-10 place-items-center rounded-xl bg-gold text-ink">
+          <span class="material-symbols-outlined text-[20px]">bolt</span>
+        </span>
+        <h3 class="mt-5 font-head text-[16px] font-semibold">Start with one ticker</h3>
+        <p class="mt-2 text-[12.5px] leading-[1.7] text-mute">
+          Type a symbol and watch the swarm work. Everything else grows from there.
+        </p>
+      </div>
+      <a href="https://dashboard.niveshmarg.com/" class="mt-5 inline-flex items-center gap-2 text-[13px] font-semibold">
+        Open dashboard <span>→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ──────────────────────────────────────────────────────────────────── path -->
+<section id="path" class="mx-auto grid max-w-[1180px] scroll-mt-24 grid-cols-1 gap-8 px-6 pb-20 sm:pb-24 lg:grid-cols-[300px_1fr]">
+
+  <article data-reveal>
+    <div class="flex h-[290px] flex-col justify-between overflow-hidden rounded-[14px] bg-gradient-to-br from-cream via-[#FBF3E4] to-[#F8E9CE] p-6">
+      <span class="font-deva text-[13px] text-mute">निवेश · मार्ग</span>
+      <div>
+        <p class="font-head text-[26px] font-semibold leading-[1.15]">The path of investment</p>
+        <svg class="mt-3 w-[150px]" viewBox="0 0 210 14" fill="none" aria-hidden="true">
+          <path d="M3 9C50 3 140 2 206 6" stroke="#F5C518" stroke-width="6" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <p class="text-[12px] leading-[1.7] text-mute">
+        Wealth is not a destination. It is a path you walk with patience.
+      </p>
+    </div>
+    <h3 class="mt-5 font-head text-[15px] font-semibold leading-snug">Four steps, walked in order</h3>
+    <p class="mt-2 text-[12px] leading-[1.7] text-mute">
+      The workspace shapes itself around what you actually own — and keeps the record of
+      every decision you made along the way.
+    </p>
+  </article>
+
+  <div>
+    <ol class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+      <li data-reveal class="rounded-[14px] border border-hair p-6">
+        <span class="font-head text-[34px] font-semibold leading-none text-[#E8E8E8]">01</span>
+        <h3 class="mt-3 font-head text-[15px] font-semibold">Bring your holdings</h3>
+        <p class="mt-2 text-[12.5px] leading-[1.7] text-mute">
+          Add positions and the tickers you are watching.
+        </p>
+      </li>
+      <li data-reveal class="rounded-[14px] border border-hair p-6">
+        <span class="font-head text-[34px] font-semibold leading-none text-[#E8E8E8]">02</span>
+        <h3 class="mt-3 font-head text-[15px] font-semibold">Let the swarm argue</h3>
+        <p class="mt-2 text-[12.5px] leading-[1.7] text-mute">
+          Six analysts research, debate and reach a verdict with levels attached.
+        </p>
+      </li>
+      <li data-reveal class="rounded-[14px] border border-hair p-6">
+        <span class="font-head text-[34px] font-semibold leading-none text-[#E8E8E8]">03</span>
+        <h3 class="mt-3 font-head text-[15px] font-semibold">Test before you commit</h3>
+        <p class="mt-2 text-[12.5px] leading-[1.7] text-mute">
+          Backtest the strategy, paper trade the idea, read the Doctor's diagnosis.
+        </p>
+      </li>
+      <li data-reveal class="rounded-[14px] border border-hair p-6">
+        <span class="font-head text-[34px] font-semibold leading-none text-[#E8E8E8]">04</span>
+        <h3 class="mt-3 font-head text-[15px] font-semibold">Walk, and keep the record</h3>
+        <p class="mt-2 text-[12.5px] leading-[1.7] text-mute">
+          Export the reasoning, set the alerts, and let patience do the rest.
+        </p>
+      </li>
+    </ol>
+
+    <!-- The prototype puts a customer testimonial here. This product has none
+         to quote, and inventing one would be a fabricated review — so the slot
+         holds the principle the research is actually built on. -->
+
+    <div data-reveal class="mt-8 rounded-[14px] border border-hair p-8">
+      <p class="max-w-[620px] text-[14px] leading-[1.9] text-[#3A3A3A]">
+        “A verdict is only worth as much as the argument behind it. Every score keeps its
+        four readings, every debate keeps both cases in the words the agents used, and every
+        report can still be opened a year later and checked against what actually happened.”
+      </p>
+      <div class="mt-8 flex flex-wrap items-center justify-between gap-4">
+        <div class="flex items-center gap-3">
+          <span class="grid h-11 w-11 place-items-center rounded-full bg-gold">
+            <span class="material-symbols-outlined text-[20px] text-ink">trending_up</span>
+          </span>
+          <div>
+            <p class="font-head text-[15px] font-semibold">How NiveshMarg works</p>
+            <p class="text-[12px] text-mute">Auditable by design</p>
+          </div>
+        </div>
+        <a href="#swarm" class="inline-flex items-center gap-2 text-[13px] font-semibold text-mute">Read the method <span>→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ────────────────────────────────────────────────────────────────── footer -->
+<footer class="bg-gradient-to-br from-[#FDF8EC] via-[#FBF4F1] to-[#FBEFF4]">
+  <div class="mx-auto max-w-[1180px] px-6 pb-8 pt-20">
+    <div class="grid grid-cols-1 gap-12 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
+
+      <div>
+        <div class="flex items-center gap-2.5">
+          <span class="grid h-9 w-9 place-items-center rounded-full bg-gold">
+            <span class="material-symbols-outlined text-[19px] text-ink">trending_up</span>
+          </span>
+          <span class="leading-none">
+            <span class="block font-head text-[20px] font-semibold tracking-tight">NiveshMarg</span>
+            <span class="mt-0.5 block font-deva text-[10px] text-mute">निवेश · मार्ग</span>
+          </span>
+        </div>
+        <p class="mt-5 max-w-[300px] text-[12.5px] leading-[1.8] text-mute">
+          An AI research workspace for patient investors — six specialist agents, a four-part
+          score and a conversational analyst, built for NSE and global markets.
+        </p>
+        <div class="mt-6 flex gap-2.5">
+          <a href="https://dashboard.niveshmarg.com/" aria-label="Open dashboard" class="grid h-9 w-9 place-items-center rounded-full border border-[#E0DAD2] text-[13px]">
+            <span class="material-symbols-outlined text-[17px]">dashboard</span>
+          </a>
+          <a href="mailto:hello@niveshmarg.com" aria-label="Email us" class="grid h-9 w-9 place-items-center rounded-full border border-[#E0DAD2] text-[13px]">
+            <span class="material-symbols-outlined text-[17px]">mail</span>
+          </a>
+          <a href="https://dashboard.niveshmarg.com/" aria-label="Telegram alerts" class="grid h-9 w-9 place-items-center rounded-full border border-[#E0DAD2] text-[13px]">
+            <span class="material-symbols-outlined text-[17px]">send</span>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="font-head text-[15px] font-semibold">Research</h4>
+        <ul class="mt-5 flex flex-col gap-3 text-[13px] text-mute">
+          <li><a href="#score" class="transition hover:text-ink">AI Score</a></li>
+          <li class="flex items-center gap-2">
+            <a href="#swarm" class="transition hover:text-ink">Agent swarm</a>
+            <span class="rounded bg-mint px-1.5 py-0.5 text-[9px] font-semibold text-mint-ink">New</span>
+          </li>
+          <li><a href="#chat" class="transition hover:text-ink">Stock Chat</a></li>
+          <li><a href="#workspace" class="transition hover:text-ink">Screener</a></li>
+          <li><a href="#workspace" class="transition hover:text-ink">Institutional flow</a></li>
+          <li><a href="#workspace" class="transition hover:text-ink">Reports &amp; exports</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-head text-[15px] font-semibold">Practise</h4>
+        <ul class="mt-5 flex flex-col gap-3 text-[13px] text-mute">
+          <li><a href="#workspace" class="transition hover:text-ink">Paper trading</a></li>
+          <li><a href="#workspace" class="transition hover:text-ink">Backtesting</a></li>
+          <li><a href="#workspace" class="transition hover:text-ink">Strategy builder</a></li>
+          <li><a href="#workspace" class="transition hover:text-ink">Portfolio Doctor</a></li>
+          <li><a href="#workspace" class="transition hover:text-ink">Watchlist</a></li>
+          <li><a href="#path" class="transition hover:text-ink">How it works</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-head text-[15px] font-semibold">Get started</h4>
+        <ul class="mt-5 flex flex-col gap-3 text-[13px] text-mute">
+          <li><a href="https://dashboard.niveshmarg.com/" class="transition hover:text-ink">Sign in</a></li>
+          <li><a href="https://dashboard.niveshmarg.com/" class="transition hover:text-ink">Open dashboard</a></li>
+          <li><a href="mailto:hello@niveshmarg.com" class="transition hover:text-ink">Contact</a></li>
+        </ul>
+        <a href="https://dashboard.niveshmarg.com/" class="pill pill-ink pill-sm mt-6">
+          Take the first step <span class="material-symbols-outlined text-[17px]">arrow_forward</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="mt-16 flex flex-col gap-4 border-t border-[#EBE3DA] pt-8 md:flex-row md:items-end md:justify-between">
+      <div>
+        <p class="font-head text-[15px] font-semibold">Walk the path with NiveshMarg</p>
+        <p class="mt-1.5 max-w-[560px] text-[12.5px] leading-[1.7] text-mute">
+          Markets carry risk. Nothing here is personalised investment advice — please do your
+          own research, or consult a SEBI-registered adviser, before you invest.
+        </p>
+      </div>
+      <p class="text-[12.5px] text-mute">© <span id="year">2026</span> NiveshMarg. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+
+  /* Mobile menu ---------------------------------------------------------- */
+  var menuBtn = document.getElementById('menu-btn');
+  var menuPanel = document.getElementById('menu-panel');
+
+  menuBtn.addEventListener('click', function () {
+    var open = menuPanel.classList.toggle('hidden') === false;
+    menuBtn.setAttribute('aria-expanded', String(open));
+    menuBtn.querySelector('.material-symbols-outlined').textContent = open ? 'close' : 'menu';
+  });
+
+  menuPanel.addEventListener('click', function (e) {
+    if (e.target.closest('a')) {
+      menuPanel.classList.add('hidden');
+      menuBtn.setAttribute('aria-expanded', 'false');
+      menuBtn.querySelector('.material-symbols-outlined').textContent = 'menu';
+    }
+  });
+
+  /* Reveal on scroll ------------------------------------------------------
+     The hidden state is applied here rather than in the markup, so without JS
+     every section is simply visible instead of blank. */
+  var hidden = ['opacity-0', 'translate-y-4'];
+  var revealed = ['opacity-100', 'translate-y-0'];
+  var items = document.querySelectorAll('[data-reveal]');
+
+  if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    items.forEach(function (el) {
+      el.classList.add('transition-all', 'duration-700', 'ease-out');
+      el.classList.add.apply(el.classList, hidden);
+    });
+
+    var revealer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.remove.apply(entry.target.classList, hidden);
+        entry.target.classList.add.apply(entry.target.classList, revealed);
+        revealer.unobserve(entry.target);
+      });
+    }, { rootMargin: '0px 0px -12% 0px', threshold: 0.05 });
+
+    items.forEach(function (el) { revealer.observe(el); });
+  }
+
+  /* Mark the nav link for the section in view ----------------------------- */
+  var links = Array.prototype.slice.call(document.querySelectorAll('[data-navlink]'));
+  var sections = links
+    .map(function (link) { return document.querySelector(link.getAttribute('href')); })
+    .filter(Boolean);
+
+  if ('IntersectionObserver' in window && sections.length) {
+    var spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        links.forEach(function (link) {
+          var on = link.getAttribute('href') === '#' + entry.target.id;
+          link.classList[on ? 'add' : 'remove']('text-ink', 'font-medium');
+        });
+      });
+    }, { rootMargin: '-20% 0px -70% 0px' });
+
+    sections.forEach(function (section) { spy.observe(section); });
+  }
+
+  /* Keep the copyright honest without a build step ------------------------ */
+  document.getElementById('year').textContent = new Date().getFullYear();
+})();
+</script>
+
+</body>
+</html>
