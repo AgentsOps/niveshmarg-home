@@ -24,9 +24,9 @@ const notoSansDevanagari = Noto_Sans_Devanagari({
 });
 
 export const metadata: Metadata = {
-  title: "NiveshMarg — The path of investment",
+  title: "Niveshmarg — The path of investment",
   description:
-    "NiveshMarg is an AI stock and portfolio workspace: a six-agent research swarm, a four-part AI Score, a conversational market analyst, paper trading, backtesting and board-ready reports.",
+    "Niveshmarg is an AI stock and portfolio workspace: a six-agent research swarm, a four-part AI Score, a conversational market analyst, paper trading, backtesting and board-ready reports.",
 };
 
 export default function RootLayout({

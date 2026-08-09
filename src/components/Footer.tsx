@@ -13,7 +13,7 @@ export default function Footer() {
               <span className="grid h-9 w-9 place-items-center rounded-full">
                 <Image
                   src="/logo.svg"
-                  alt="NiveshMarg logo"
+                  alt="Niveshmarg logo"
                   width={36}
                   height={36}
                   className="h-9 w-9 object-cover"
@@ -22,7 +22,7 @@ export default function Footer() {
               </span>
               <span className="leading-none">
                 <span className="block font-head text-[20px] font-semibold tracking-tight">
-                  NiveshMarg
+                  Niveshmarg
                 </span>
                 <span className="mt-0.5 block font-deva text-[10px] text-mute"> निवेश · मार्ग </span>
               </span>

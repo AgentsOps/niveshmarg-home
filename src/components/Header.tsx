@@ -41,7 +41,7 @@ export default function Header() {
           <span className="grid h-9 w-9 shrink-0 place-items-center overflow-hidden rounded-full">
             <Image
               src="/logo.svg"
-              alt="NiveshMarg logo"
+              alt="Niveshmarg logo"
               width={36}
               height={36}
               className="h-9 w-9 object-cover"
@@ -50,7 +50,7 @@ export default function Header() {
           </span>
           <span className="min-w-0 leading-none">
             <span className="block truncate font-head text-[18px] font-semibold tracking-tight sm:text-[20px]">
-              NiveshMarg
+              Niveshmarg
             </span>
             <span className="mt-0.5 block font-deva text-[10px] text-mute"> निवेश · मार्ग </span>
           </span>

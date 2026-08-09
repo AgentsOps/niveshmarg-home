@@ -104,7 +104,7 @@ export default function PathSection() {
                 <span className="grid h-11 w-11 place-items-center rounded-full">
                   <Image
                     src="/logo.svg"
-                    alt="NiveshMarg logo"
+                    alt="Niveshmarg logo"
                     width={36}
                     height={36}
                     className="h-9 w-9 object-cover"

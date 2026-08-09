@@ -37,9 +37,6 @@ export default function TheSwarmSection() {
                 strokeLinejoin="round"
               />
             </svg>
-            <span className="absolute right-4 top-4 grid h-10 w-10 place-items-center rounded-full bg-white text-[16px]">
-              ↗
-            </span>
             <p className="relative text-[11px] font-semibold uppercase tracking-[0.06em] text-up">
               Bull case
             </p>
@@ -73,9 +70,6 @@ export default function TheSwarmSection() {
                   <dd className="font-semibold tabular-nums">1 : 2.6</dd>
                 </div>
               </dl>
-              <span className="absolute bottom-5 right-5 grid h-10 w-10 place-items-center rounded-full bg-white text-[16px]">
-                ↗
-              </span>
             </div>
           </ScrollReveal>
 
@@ -114,9 +108,6 @@ export default function TheSwarmSection() {
                 >
                   How it works <span>→</span>
                 </Link>
-                <span className="grid h-9 w-9 place-items-center rounded-full bg-[#F3F3F3] text-[15px]">
-                  ↗
-                </span>
               </div>
             </div>
           </ScrollReveal>
@@ -144,9 +135,6 @@ export default function TheSwarmSection() {
                 strokeLinejoin="round"
               />
             </svg>
-            <span className="absolute right-4 top-4 grid h-10 w-10 place-items-center rounded-full bg-white text-[16px]">
-              ↗
-            </span>
             <p className="relative text-[11px] font-semibold uppercase tracking-[0.06em] text-down">
               Bear case
             </p>
