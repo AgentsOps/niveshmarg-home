@@ -80,7 +80,7 @@ export default function HeroSection() {
               </div>
               <p className="mt-3 text-[14px] font-medium">Four signals · 25 points each</p>
             </div>
-            <span className="relative -ml-1 mb-1 inline-block -rotate-[8deg] rounded-full bg-mint px-4 py-1.5 font-head text-[14px] italic text-[#2F3A2A]">
+            <span className="relative -ml-1 mb-1 inline-block rounded-full bg-mint px-4 py-1.5 font-head text-[14px] text-[#2F3A2A] uppercase font-bold">
               AI Score
             </span>
           </div>
