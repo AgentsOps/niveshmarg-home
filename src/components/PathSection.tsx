@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import ScrollReveal from "./ScrollReveal";
 
@@ -5,7 +6,7 @@ export default function PathSection() {
   return (
     <section
       id="path"
-      className="mx-auto grid max-w-[1180px] scroll-mt-24 grid-cols-1 gap-8 px-6 pb-20 sm:pb-24 lg:grid-cols-[300px_1fr]"
+      className="mx-auto grid max-w-[1180px] scroll-mt-24 grid-cols-1 gap-8 px-6 pb-20 sm:pb-24 lg:grid-cols-[300px_1fr] items-center"
     >
       <ScrollReveal>
         <article>
@@ -100,10 +101,15 @@ export default function PathSection() {
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-between gap-4">
               <div className="flex items-center gap-3">
-                <span className="grid h-11 w-11 place-items-center rounded-full bg-gold">
-                  <span className="material-symbols-outlined text-[20px] text-ink">
-                    trending_up
-                  </span>
+                <span className="grid h-11 w-11 place-items-center rounded-full">
+                  <Image
+                    src="/logo.svg"
+                    alt="NiveshMarg logo"
+                    width={36}
+                    height={36}
+                    className="h-9 w-9 object-cover"
+                    priority
+                  />
                 </span>
                 <div>
                   <p className="font-head text-[15px] font-semibold">How NiveshMarg works</p>

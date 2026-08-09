@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
@@ -9,8 +10,15 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-12 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>
             <div className="flex items-center gap-2.5">
-              <span className="grid h-9 w-9 place-items-center rounded-full bg-gold">
-                <span className="material-symbols-outlined text-[19px] text-ink">trending_up</span>
+              <span className="grid h-9 w-9 place-items-center rounded-full">
+                <Image
+                  src="/logo.svg"
+                  alt="NiveshMarg logo"
+                  width={36}
+                  height={36}
+                  className="h-9 w-9 object-cover"
+                  priority
+                />
               </span>
               <span className="leading-none">
                 <span className="block font-head text-[20px] font-semibold tracking-tight">

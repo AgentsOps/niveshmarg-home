@@ -14,7 +14,7 @@ export default function TheSwarmSection() {
         </h2>
       </ScrollReveal>
 
-      <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-3">
+      <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-3 items-center">
         {/* Bull case */}
         <ScrollReveal delayMs={100}>
           <div className="relative flex min-h-[300px] flex-col justify-end overflow-hidden rounded-[18px] bg-gradient-to-br from-[#E9F6EE] via-[#F2FAF5] to-[#DDF0E6] p-5">

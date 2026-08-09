@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 
@@ -37,8 +38,15 @@ export default function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-[#F0EADA] bg-cream/90 backdrop-blur-md">
       <div className="mx-auto flex h-[76px] max-w-[1180px] items-center justify-between px-6">
         <Link href="#top" onClick={closeMenu} className="flex min-w-0 items-center gap-2.5">
-          <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-gold">
-            <span className="material-symbols-outlined text-[19px] text-ink">trending_up</span>
+          <span className="grid h-9 w-9 shrink-0 place-items-center overflow-hidden rounded-full">
+            <Image
+              src="/logo.svg"
+              alt="NiveshMarg logo"
+              width={36}
+              height={36}
+              className="h-9 w-9 object-cover"
+              priority
+            />
           </span>
           <span className="min-w-0 leading-none">
             <span className="block truncate font-head text-[18px] font-semibold tracking-tight sm:text-[20px]">
