@@ -59,7 +59,7 @@ export default function Header() {
         <nav className="hidden items-center gap-8 text-[14px] text-mute lg:flex" aria-label="Primary">
           <Link
             href="#top"
-            className={`transition hover:text-ink ${
+            className={`transition hover:text-ink uppercase ${
               activeSection === "top" ? "font-medium text-ink" : ""
             }`}
           >
@@ -67,7 +67,7 @@ export default function Header() {
           </Link>
           <Link
             href="#score"
-            className={`transition hover:text-ink ${
+            className={`transition hover:text-ink uppercase ${
               activeSection === "score" ? "font-medium text-ink" : ""
             }`}
           >
@@ -75,7 +75,7 @@ export default function Header() {
           </Link>
           <Link
             href="#swarm"
-            className={`transition hover:text-ink ${
+            className={`transition hover:text-ink uppercase ${
               activeSection === "swarm" ? "font-medium text-ink" : ""
             }`}
           >
@@ -83,7 +83,7 @@ export default function Header() {
           </Link>
           <Link
             href="#workspace"
-            className={`transition hover:text-ink ${
+            className={`transition hover:text-ink uppercase ${
               activeSection === "workspace" ? "font-medium text-ink" : ""
             }`}
           >
@@ -91,7 +91,7 @@ export default function Header() {
           </Link>
           <Link
             href="#path"
-            className={`transition hover:text-ink ${
+            className={`transition hover:text-ink uppercase ${
               activeSection === "path" ? "font-medium text-ink" : ""
             }`}
           >
