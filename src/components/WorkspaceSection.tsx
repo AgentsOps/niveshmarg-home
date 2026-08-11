@@ -1,9 +1,11 @@
+import Link from "next/link";
 import ScrollReveal from "./ScrollReveal";
 
 interface WorkspaceCardItem {
   icon: string;
   title: string;
   description: string;
+  link?: string;
 }
 
 const cards: WorkspaceCardItem[] = [
@@ -22,12 +24,14 @@ const cards: WorkspaceCardItem[] = [
     icon: "visibility",
     title: "Watchlist",
     description: "Tickers you are studying, prioritised, with notes kept beside each name.",
+    link: "/features/watchlist",
   },
   {
     icon: "stethoscope",
     title: "Portfolio Doctor",
     description:
       "A diagnosis of concentration, drift and imbalance — with rebalancing suggested, never forced.",
+    link: "/features/portfolio-doctor",
   },
   {
     icon: "filter_alt",
@@ -39,16 +43,19 @@ const cards: WorkspaceCardItem[] = [
     icon: "swap_horiz",
     title: "Paper trading",
     description: "Practise the discipline before it costs anything. Same data, no capital at risk.",
+    link: "/features/paper-trading",
   },
   {
     icon: "rule",
     title: "Strategy builder",
     description: "Compose rules and signals visually, then let them watch the market for you.",
+    link: "/features/backtesting-strategy",
   },
   {
     icon: "history",
     title: "Backtesting",
     description: "Walk a strategy back through history before you walk it forward with money.",
+    link: "/features/backtesting-strategy",
   },
   {
     icon: "apartment",
@@ -84,8 +91,8 @@ export default function WorkspaceSection() {
       </ScrollReveal>
 
       <div className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        {cards.map((card, idx) => (
-          <ScrollReveal key={card.title} delayMs={(idx % 3) * 100}>
+        {cards.map((card, idx) => {
+          const cardBody = (
             <div className="h-full rounded-[18px] border border-hair bg-white p-6 transition hover:border-[#DCDCDC]">
               <span className="grid h-10 w-10 place-items-center rounded-xl bg-cream text-ink">
                 <span className="material-symbols-outlined text-[20px]">{card.icon}</span>
@@ -93,8 +100,20 @@ export default function WorkspaceSection() {
               <h3 className="mt-5 font-head text-[16px] font-semibold">{card.title}</h3>
               <p className="mt-2 text-[12.5px] leading-[1.7] text-mute">{card.description}</p>
             </div>
-          </ScrollReveal>
-        ))}
+          );
+
+          return (
+            <ScrollReveal key={card.title} delayMs={(idx % 3) * 100}>
+              {card.link ? (
+                <Link href={card.link} className="block h-full">
+                  {cardBody}
+                </Link>
+              ) : (
+                cardBody
+              )}
+            </ScrollReveal>
+          );
+        })}
 
         {/* 12th Card - Start with one ticker */}
         <ScrollReveal delayMs={200}>
@@ -108,12 +127,12 @@ export default function WorkspaceSection() {
                 Type a symbol and watch the swarm work. Everything else grows from there.
               </p>
             </div>
-            <a
-              href="https://dashboard.niveshmarg.com/"
+            <Link
+              href="/features/workspace"
               className="mt-5 inline-flex items-center gap-2 text-[13px] font-semibold"
             >
-              Open dashboard <span>→</span>
-            </a>
+              Explore workspace <span>→</span>
+            </Link>
           </div>
         </ScrollReveal>
       </div>

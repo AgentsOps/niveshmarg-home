@@ -103,7 +103,7 @@ export default function TheSwarmSection() {
               </div>
               <div className="mt-6 flex items-center justify-between">
                 <Link
-                  href="#path"
+                  href="/features/path"
                   className="inline-flex items-center gap-2 text-[13px] font-medium text-mute"
                 >
                   How it works <span>→</span>

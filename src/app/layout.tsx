@@ -24,9 +24,41 @@ const notoSansDevanagari = Noto_Sans_Devanagari({
 });
 
 export const metadata: Metadata = {
-  title: "Niveshmarg — The path of investment",
+  metadataBase: new URL("https://niveshmarg.com"),
+  title: {
+    default: "Niveshmarg — The path of investment",
+    template: "%s | NiveshMarg",
+  },
   description:
     "Niveshmarg is an AI stock and portfolio workspace: a six-agent research swarm, a four-part AI Score, a conversational market analyst, paper trading, backtesting and board-ready reports.",
+  keywords: [
+    "NiveshMarg",
+    "AI stock analysis",
+    "portfolio workspace",
+    "stock research",
+    "paper trading",
+    "strategy builder",
+    "portfolio doctor",
+    "watchlist",
+  ],
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Niveshmarg — The path of investment",
+    description:
+      "AI stock research, portfolio analysis and disciplined investment workflows for modern investors.",
+    url: "https://niveshmarg.com",
+    siteName: "NiveshMarg",
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Niveshmarg — The path of investment",
+    description:
+      "AI stock research, portfolio analysis and disciplined investment workflows for modern investors.",
+  },
 };
 
 export default function RootLayout({

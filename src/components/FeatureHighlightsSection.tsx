@@ -47,7 +47,7 @@ export default function FeatureHighlightsSection() {
               twenty-five — so a signal only carries weight when the evidence agrees with itself.
             </p>
             <div className="mt-6 border-t border-rose-line pt-4">
-              <Link href="#swarm" className="inline-flex items-center gap-2 text-[13px] font-semibold">
+              <Link href="/features/ai-score" className="inline-flex items-center gap-2 text-[13px] font-semibold">
                 More Details <span>→</span>
               </Link>
             </div>
@@ -69,7 +69,7 @@ export default function FeatureHighlightsSection() {
               manager argues against all of them before any verdict is written.
             </p>
             <div className="mt-6 border-t border-amber-line pt-4">
-              <Link href="#swarm" className="inline-flex items-center gap-2 text-[13px] font-semibold">
+              <Link href="/features/swarm" className="inline-flex items-center gap-2 text-[13px] font-semibold">
                 More Details <span>→</span>
               </Link>
             </div>
@@ -91,7 +91,7 @@ export default function FeatureHighlightsSection() {
               your own holdings — and shows you which ones it used to answer.
             </p>
             <div className="mt-6 border-t border-sky-line pt-4">
-              <Link href="#chat" className="inline-flex items-center gap-2 text-[13px] font-semibold">
+              <Link href="/features/workspace" className="inline-flex items-center gap-2 text-[13px] font-semibold">
                 More Details <span>→</span>
               </Link>
             </div>

@@ -117,7 +117,7 @@ export default function PathSection() {
                 </div>
               </div>
               <Link
-                href="#swarm"
+                href="/features/swarm"
                 className="inline-flex items-center gap-2 text-[13px] font-semibold text-mute"
               >
                 Read the method <span>→</span>

@@ -1,43 +1,18 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState<string>("top");
-
-  useEffect(() => {
-    const sectionIds = ["score", "swarm", "workspace", "path"];
-    const sections = sectionIds
-      .map((id) => document.getElementById(id))
-      .filter((el): el is HTMLElement => el !== null);
-
-    if (!("IntersectionObserver" in window) || sections.length === 0) return;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
-          }
-        });
-      },
-      { rootMargin: "-20% 0px -70% 0px" }
-    );
-
-    sections.forEach((section) => observer.observe(section));
-
-    return () => observer.disconnect();
-  }, []);
 
   const closeMenu = () => setIsMenuOpen(false);
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-[#F0EADA] bg-cream/90 backdrop-blur-md">
       <div className="mx-auto flex h-[76px] max-w-[1180px] items-center justify-between px-6">
-        <Link href="#top" onClick={closeMenu} className="flex min-w-0 items-center gap-2.5">
+        <Link href="/" onClick={closeMenu} className="flex min-w-0 items-center gap-2.5">
           <span className="grid h-9 w-9 shrink-0 place-items-center overflow-hidden rounded-full">
             <Image
               src="/logo.svg"
@@ -57,44 +32,22 @@ export default function Header() {
         </Link>
 
         <nav className="hidden items-center gap-8 text-[14px] text-mute lg:flex" aria-label="Primary">
-          <Link
-            href="#top"
-            className={`transition hover:text-ink uppercase ${
-              activeSection === "top" ? "font-medium text-ink" : ""
-            }`}
-          >
+          <Link href="/" className="transition hover:text-ink uppercase">
             Home
           </Link>
-          <Link
-            href="#score"
-            className={`transition hover:text-ink uppercase ${
-              activeSection === "score" ? "font-medium text-ink" : ""
-            }`}
-          >
+          <Link href="/features" className="transition hover:text-ink uppercase">
+            Features
+          </Link>
+          <Link href="/features/ai-score" className="transition hover:text-ink uppercase">
             AI Score
           </Link>
-          <Link
-            href="#swarm"
-            className={`transition hover:text-ink uppercase ${
-              activeSection === "swarm" ? "font-medium text-ink" : ""
-            }`}
-          >
+          <Link href="/features/swarm" className="transition hover:text-ink uppercase">
             The swarm
           </Link>
-          <Link
-            href="#workspace"
-            className={`transition hover:text-ink uppercase ${
-              activeSection === "workspace" ? "font-medium text-ink" : ""
-            }`}
-          >
+          <Link href="/features/workspace" className="transition hover:text-ink uppercase">
             Workspace
           </Link>
-          <Link
-            href="#path"
-            className={`transition hover:text-ink uppercase ${
-              activeSection === "path" ? "font-medium text-ink" : ""
-            }`}
-          >
+          <Link href="/features/path" className="transition hover:text-ink uppercase">
             How it works
           </Link>
         </nav>
@@ -132,28 +85,35 @@ export default function Header() {
         <div id="menu-panel" className="border-t border-[#F0EADA] bg-cream px-6 py-3 lg:hidden">
           <nav className="grid gap-1 text-[14px]" aria-label="Mobile">
             <Link
-              href="#score"
+              href="/features"
+              onClick={closeMenu}
+              className="rounded-xl px-3 py-2.5 font-medium transition hover:bg-white"
+            >
+              Features
+            </Link>
+            <Link
+              href="/features/ai-score"
               onClick={closeMenu}
               className="rounded-xl px-3 py-2.5 font-medium transition hover:bg-white"
             >
               AI Score
             </Link>
             <Link
-              href="#swarm"
+              href="/features/swarm"
               onClick={closeMenu}
               className="rounded-xl px-3 py-2.5 font-medium transition hover:bg-white"
             >
               The swarm
             </Link>
             <Link
-              href="#workspace"
+              href="/features/workspace"
               onClick={closeMenu}
               className="rounded-xl px-3 py-2.5 font-medium transition hover:bg-white"
             >
               Workspace
             </Link>
             <Link
-              href="#path"
+              href="/features/path"
               onClick={closeMenu}
               className="rounded-xl px-3 py-2.5 font-medium transition hover:bg-white"
             >
