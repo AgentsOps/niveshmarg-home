@@ -1,6 +1,6 @@
-# NiveshMarg
+# Niveshmarg
 
-NiveshMarg is a modern marketing and product landing page for an AI-powered stock and portfolio workspace. The app presents the platform’s value proposition, AI scoring concepts, portfolio tools, and investment workflow in a polished single-page experience built with Next.js.
+Niveshmarg is a modern marketing and product landing page for an AI-powered stock and portfolio workspace. The app presents the platform’s value proposition, AI scoring concepts, portfolio tools, and investment workflow in a polished single-page experience built with Next.js.
 
 ## Overview
 
@@ -232,6 +232,16 @@ npm run dev
 npm run build
 npm run start
 npm run lint
+```
+
+```bash
+git pull origin main
+npm run build
+cd /var/www/niveshmarg
+cp -r .next/static .next/standalone/.next/
+cp -r public .next/standalone/
+chown -R www-data:www-data .next/standalone
+systemctl restart niveshmarg
 ```
 
 ## License
