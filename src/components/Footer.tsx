@@ -81,15 +81,16 @@ export default function Footer() {
                   </li>
                 ))}
               </ul>
+              {"Get started" == section.title && (
+                <div className="mt-6">
+                    <a href={siteInfo.dashboardUrl} className="pill pill-ink pill-sm mt-6">
+                      {footerData.ctaLabel}{" "}
+                      <span className="material-symbols-outlined text-[17px]">arrow_forward</span>
+                    </a>
+                </div>
+              )}
             </div>
           ))}
-
-          <div>
-            <a href={siteInfo.dashboardUrl} className="pill pill-ink pill-sm mt-6">
-              {footerData.ctaLabel}{" "}
-              <span className="material-symbols-outlined text-[17px]">arrow_forward</span>
-            </a>
-          </div>
         </div>
 
         <div className="mt-16 flex flex-col gap-4 border-t border-[#EBE3DA] pt-8 md:flex-row md:items-end md:justify-between">

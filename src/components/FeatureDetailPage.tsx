@@ -433,7 +433,7 @@ export default function FeatureDetailPage({
                   <div key={step} className="relative group">
                     {/* Stepper Node */}
                     <span
-                      className="absolute -left-[31px] top-0 grid h-6 w-6 place-items-center rounded-full text-[11px] font-bold text-white shadow-sm transition-transform duration-300 group-hover:scale-110"
+                      className="absolute -left-[37px] top-0 grid h-6 w-6 place-items-center rounded-full text-[11px] font-bold text-white shadow-sm transition-transform duration-300 group-hover:scale-110"
                       style={{ backgroundColor: style.accent }}
                     >
                       {index + 1}
@@ -466,11 +466,6 @@ export default function FeatureDetailPage({
                     <p className="text-[13.5px] leading-[1.7] text-[#2c2c2c] font-medium mt-0.5">{point}</p>
                   </div>
                 ))}
-              </div>
-
-              <div className="mt-8 flex items-center justify-between rounded-[16px] bg-cream p-4 border border-[#EFE8D8] text-[12px] text-mute font-medium">
-                <span>Auditable Decision Record</span>
-                <span className="font-semibold text-ink">NiveshMarg Standard ✓</span>
               </div>
             </div>
           </div>
