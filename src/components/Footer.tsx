@@ -60,12 +60,12 @@ export default function Footer() {
             <h4 className="font-head text-[15px] font-semibold">Research</h4>
             <ul className="mt-5 flex flex-col gap-3 text-[13px] text-mute">
               <li>
-                <Link href="#score" className="transition hover:text-ink">
+                <Link href="/features/ai-score" className="transition hover:text-ink">
                   AI Score
                 </Link>
               </li>
               <li className="flex items-center gap-2">
-                <Link href="#swarm" className="transition hover:text-ink">
+                <Link href="/features/swarm" className="transition hover:text-ink">
                   Agent swarm
                 </Link>
                 <span className="rounded bg-mint px-1.5 py-0.5 text-[9px] font-semibold text-mint-ink">
@@ -73,22 +73,22 @@ export default function Footer() {
                 </span>
               </li>
               <li>
-                <Link href="#chat" className="transition hover:text-ink">
+                <Link href="/features/stock-chat" className="transition hover:text-ink">
                   Stock Chat
                 </Link>
               </li>
               <li>
-                <Link href="#workspace" className="transition hover:text-ink">
-                  Screener
+                <Link href="/features/workspace" className="transition hover:text-ink">
+                  Workspace
                 </Link>
               </li>
               <li>
-                <Link href="#workspace" className="transition hover:text-ink">
+                <Link href="/features/institutional-flow" className="transition hover:text-ink">
                   Institutional flow
                 </Link>
               </li>
               <li>
-                <Link href="#workspace" className="transition hover:text-ink">
+                <Link href="/features/reports-exports" className="transition hover:text-ink">
                   Reports &amp; exports
                 </Link>
               </li>
@@ -99,32 +99,32 @@ export default function Footer() {
             <h4 className="font-head text-[15px] font-semibold">Practise</h4>
             <ul className="mt-5 flex flex-col gap-3 text-[13px] text-mute">
               <li>
-                <Link href="#workspace" className="transition hover:text-ink">
+                <Link href="/features/paper-trading" className="transition hover:text-ink">
                   Paper trading
                 </Link>
               </li>
               <li>
-                <Link href="#workspace" className="transition hover:text-ink">
+                <Link href="/features/backtesting-strategy" className="transition hover:text-ink">
                   Backtesting
                 </Link>
               </li>
               <li>
-                <Link href="#workspace" className="transition hover:text-ink">
+                <Link href="/features/backtesting-strategy" className="transition hover:text-ink">
                   Strategy builder
                 </Link>
               </li>
               <li>
-                <Link href="#workspace" className="transition hover:text-ink">
+                <Link href="/features/portfolio-doctor" className="transition hover:text-ink">
                   Portfolio Doctor
                 </Link>
               </li>
               <li>
-                <Link href="#workspace" className="transition hover:text-ink">
+                <Link href="/features/watchlist" className="transition hover:text-ink">
                   Watchlist
                 </Link>
               </li>
               <li>
-                <Link href="#path" className="transition hover:text-ink">
+                <Link href="/features/path" className="transition hover:text-ink">
                   How it works
                 </Link>
               </li>
