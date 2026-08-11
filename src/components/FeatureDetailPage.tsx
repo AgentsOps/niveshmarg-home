@@ -1,9 +1,23 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useMemo, useState } from "react";
 import ScrollReveal from "@/components/ScrollReveal";
 import FeatureLayout from "@/components/FeatureLayout";
+import siteData from "../../data/site_data.json";
+
+import AiScoreWidget from "@/components/features/AiScoreWidget";
+import SwarmDebateWidget from "@/components/features/SwarmDebateWidget";
+import WorkspaceTerminalWidget from "@/components/features/WorkspaceTerminalWidget";
+import PortfolioDoctorWidget from "@/components/features/PortfolioDoctorWidget";
+import PaperTradingWidget from "@/components/features/PaperTradingWidget";
+import BacktestingWidget from "@/components/features/BacktestingWidget";
+import WatchlistMatrixWidget from "@/components/features/WatchlistMatrixWidget";
+import StockChatWidget from "@/components/features/StockChatWidget";
+import InstitutionalFlowWidget from "@/components/features/InstitutionalFlowWidget";
+import ReportsExportsWidget from "@/components/features/ReportsExportsWidget";
+import PathWorkflowWidget from "@/components/features/PathWorkflowWidget";
 
 type FeatureStat = {
   label: string;
@@ -81,6 +95,7 @@ export default function FeatureDetailPage({
   previous?: FeaturePageData;
   next?: FeaturePageData;
 }) {
+  const common = siteData.featureDetailCommon;
   const style = accentStyles[feature.accent];
   const [activeMediaIndex, setActiveMediaIndex] = useState<number | null>(null);
 
@@ -123,6 +138,35 @@ export default function FeatureDetailPage({
     });
   };
 
+  const renderFeatureComponent = () => {
+    switch (feature.slug) {
+      case "ai-score":
+        return <AiScoreWidget />;
+      case "swarm":
+        return <SwarmDebateWidget />;
+      case "workspace":
+        return <WorkspaceTerminalWidget />;
+      case "portfolio-doctor":
+        return <PortfolioDoctorWidget />;
+      case "paper-trading":
+        return <PaperTradingWidget />;
+      case "backtesting-strategy":
+        return <BacktestingWidget />;
+      case "watchlist":
+        return <WatchlistMatrixWidget />;
+      case "stock-chat":
+        return <StockChatWidget />;
+      case "institutional-flow":
+        return <InstitutionalFlowWidget />;
+      case "reports-exports":
+        return <ReportsExportsWidget />;
+      case "path":
+        return <PathWorkflowWidget />;
+      default:
+        return null;
+    }
+  };
+
   return (
     <FeatureLayout>
       <main className="mx-auto max-w-[1180px] px-6 py-10 sm:py-16">
@@ -148,10 +192,10 @@ export default function FeatureDetailPage({
 
                 <div className="mt-8 flex flex-wrap gap-3">
                   <Link href="/features" className="pill pill-ink">
-                    View all features
+                    {common.viewAllFeatures}
                   </Link>
                   <Link href="/" className="pill pill-line">
-                    Back home
+                    {common.backHome}
                   </Link>
                 </div>
               </div>
@@ -171,6 +215,13 @@ export default function FeatureDetailPage({
             </div>
           </section>
         </ScrollReveal>
+
+        {/* Feature-Specific Interactive Component Section */}
+        <section className="mt-12">
+          <ScrollReveal>
+            {renderFeatureComponent()}
+          </ScrollReveal>
+        </section>
 
         <section className="mt-12 grid gap-5 md:grid-cols-3">
           {feature.highlights.map((item, index) => (
@@ -192,7 +243,7 @@ export default function FeatureDetailPage({
           <section className="mt-12">
             <ScrollReveal>
               <div className="mb-6 flex items-center justify-between gap-4">
-                <span className="eyebrow">See it in action</span>
+                <span className="eyebrow">{common.seeInAction}</span>
               </div>
             </ScrollReveal>
 
@@ -203,19 +254,27 @@ export default function FeatureDetailPage({
                     <button
                       type="button"
                       onClick={() => openMedia(index)}
-                      className="block w-full overflow-hidden border-b border-[#F1EDE0] bg-[#f9f7f1] text-left"
+                      className="block w-full overflow-hidden border-b border-[#F1EDE0] bg-[#f9f7f1] text-left relative h-[250px]"
                       aria-label={`Open ${item.title}`}
                     >
                       {item.type === "image" ? (
-                        <img src={item.src} alt={item.title} className="h-[250px] w-full cursor-pointer object-cover transition duration-300 hover:scale-[1.02]" />
+                        <Image
+                          src={item.src}
+                          alt={item.title}
+                          fill
+                          sizes="(max-width: 1024px) 100vw, 50vw"
+                          className="cursor-pointer object-cover transition duration-300 hover:scale-[1.02]"
+                        />
                       ) : (
-                        <div className="relative h-[250px] w-full overflow-hidden bg-[#f0efe9]">
-                          <img
+                        <div className="relative h-full w-full overflow-hidden bg-[#f0efe9]">
+                          <Image
                             src={item.poster || item.src}
                             alt={item.title}
-                            className="h-full w-full cursor-pointer object-cover transition duration-300 hover:scale-[1.02]"
+                            fill
+                            sizes="(max-width: 1024px) 100vw, 50vw"
+                            className="cursor-pointer object-cover transition duration-300 hover:scale-[1.02]"
                           />
-                          <span className="absolute inset-0 grid place-items-center">
+                          <span className="absolute inset-0 grid place-items-center z-10">
                             <span className="grid h-14 w-14 place-items-center rounded-full bg-white/85 text-ink shadow-lg backdrop-blur-sm">
                               <span className="material-symbols-outlined text-[28px]">play_circle</span>
                             </span>
@@ -273,9 +332,9 @@ export default function FeatureDetailPage({
                 </>
               )}
 
-              <div className="max-h-[80vh] overflow-hidden bg-[#121212]">
+              <div className="max-h-[80vh] overflow-hidden bg-[#121212] relative min-h-[300px]">
                 {activeMedia.type === "image" ? (
-                  <img src={activeMedia.src} alt={activeMedia.title} className="max-h-[80vh] w-full object-contain" />
+                  <Image src={activeMedia.src} alt={activeMedia.title} fill className="object-contain" />
                 ) : (
                   <video
                     className="max-h-[80vh] w-full object-contain bg-[#111111]"
@@ -350,9 +409,9 @@ export default function FeatureDetailPage({
         <section className="mt-12 grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
           <ScrollReveal>
             <div className="rounded-[24px] border border-hair bg-[#fffdf8] p-6 sm:p-8">
-              <span className="eyebrow">How it works</span>
+              <span className="eyebrow">{common.howItWorksEyebrow}</span>
               <h2 className="mt-6 font-head text-[clamp(1.8rem,4vw,2.4rem)] font-semibold tracking-[-0.03em]">
-                A process built for real decisions
+                {common.howItWorks}
               </h2>
               <ol className="mt-6 space-y-4">
                 {feature.process.map((step, index) => (
@@ -369,7 +428,7 @@ export default function FeatureDetailPage({
 
           <ScrollReveal delayMs={150}>
             <div className="rounded-[24px] border border-hair bg-cream p-6 sm:p-8">
-              <span className="eyebrow">Why it matters</span>
+              <span className="eyebrow">{common.whyItMattersEyebrow}</span>
               <ul className="mt-6 space-y-4">
                 {feature.impact.map((point) => (
                   <li key={point} className="flex gap-3 rounded-[18px] border border-[#EFE4CE] bg-white p-4">
@@ -395,7 +454,7 @@ export default function FeatureDetailPage({
           )}
 
           <Link href="/features" className="inline-flex items-center gap-2 text-[13px] font-semibold text-mute">
-            Explore all features
+            {common.exploreAllFeatures}
           </Link>
 
           {next ? (

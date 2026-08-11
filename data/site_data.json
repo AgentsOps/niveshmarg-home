@@ -1,8 +1,10 @@
 {
   "site": {
-    "name": "Niveshmarg",
+    "name": "NiveshMarg",
     "subtitle": "निवेश · मार्ग",
-    "description": "AI stock research, portfolio analysis and disciplined investment workflows for modern investors."
+    "description": "AI stock research, portfolio analysis and disciplined investment workflows for modern investors.",
+    "contactEmail": "hello@niveshmarg.com",
+    "dashboardUrl": "https://dashboard.niveshmarg.com/"
   },
   "navigation": [
     { "label": "AI Score", "href": "/features/ai-score" },
@@ -11,6 +13,58 @@
     { "label": "Backtesting", "href": "/features/backtesting-strategy" },
     { "label": "Stock Chat", "href": "/features/stock-chat" }
   ],
+  "header": {
+    "signInLabel": "Sign in",
+    "dashboardLabel": "Open dashboard",
+    "mobileSignInLabel": "Log in",
+    "defaultNavItems": [
+      { "label": "Home", "href": "/" },
+      { "label": "Features", "href": "/features" },
+      { "label": "AI Score", "href": "/features/ai-score" },
+      { "label": "The swarm", "href": "/features/swarm" },
+      { "label": "Workspace", "href": "/features/workspace" },
+      { "label": "How it works", "href": "/features/path" }
+    ]
+  },
+  "footer": {
+    "tagline": "An AI research workspace for patient investors — six specialist agents, a four-part score and a conversational analyst, built for NSE and global markets.",
+    "sections": [
+      {
+        "title": "Research",
+        "links": [
+          { "label": "AI Score", "href": "/features/ai-score" },
+          { "label": "Agent swarm", "href": "/features/swarm", "badge": "New" },
+          { "label": "Stock Chat", "href": "/features/stock-chat" },
+          { "label": "Workspace", "href": "/features/workspace" },
+          { "label": "Institutional flow", "href": "/features/institutional-flow" },
+          { "label": "Reports & exports", "href": "/features/reports-exports" }
+        ]
+      },
+      {
+        "title": "Practise",
+        "links": [
+          { "label": "Paper trading", "href": "/features/paper-trading" },
+          { "label": "Backtesting", "href": "/features/backtesting-strategy" },
+          { "label": "Strategy builder", "href": "/features/backtesting-strategy" },
+          { "label": "Portfolio Doctor", "href": "/features/portfolio-doctor" },
+          { "label": "Watchlist", "href": "/features/watchlist" },
+          { "label": "How it works", "href": "/features/path" }
+        ]
+      },
+      {
+        "title": "Get started",
+        "links": [
+          { "label": "Sign in", "href": "https://dashboard.niveshmarg.com/" },
+          { "label": "Open dashboard", "href": "https://dashboard.niveshmarg.com/" },
+          { "label": "Contact", "href": "mailto:hello@niveshmarg.com" }
+        ]
+      }
+    ],
+    "ctaLabel": "Take the first step",
+    "bottomTitle": "Walk the path with NiveshMarg",
+    "disclaimer": "Markets carry risk. Nothing here is personalised investment advice — please do your own research, or consult a SEBI-registered adviser, before you invest.",
+    "copyright": "All rights reserved."
+  },
   "home": {
     "eyebrow": "AI research, made simple",
     "headline": "Unlock Your Investing Edge",
@@ -22,7 +76,216 @@
     "secondaryCta": {
       "label": "See how it thinks",
       "href": "#score"
+    },
+    "scoreBadgeText": "Four signals · 25 points each",
+    "scorePillLabel": "AI Score"
+  },
+  "dataSources": [
+    { "icon": "apartment", "label": "NSE" },
+    { "icon": "account_balance", "label": "BSE" },
+    { "icon": "public", "label": "Global" },
+    { "icon": "smart_toy", "label": "OpenRouter" },
+    { "icon": "send", "label": "Telegram" }
+  ],
+  "featureHighlights": {
+    "eyebrow": "Three engines, one workspace",
+    "title": "Feature highlights",
+    "subtitle": "Research that shows its working, not just its conclusion.",
+    "cards": [
+      {
+        "icon": "bar_chart",
+        "iconColor": "text-[#C2566A]",
+        "bgClass": "bg-rose",
+        "textClass": "text-rose-ink",
+        "borderClass": "border-rose-line",
+        "title": "A Score Earned Four Times Over",
+        "description": "Chronos forecast, technicals, news sentiment and market trend are each scored out of twenty-five — so a signal only carries weight when the evidence agrees with itself.",
+        "link": "/features/ai-score"
+      },
+      {
+        "icon": "groups",
+        "iconColor": "text-[#B98A18]",
+        "bgClass": "bg-amber",
+        "textClass": "text-amber-ink",
+        "borderClass": "border-amber-line",
+        "title": "Six Analysts That Disagree",
+        "description": "Fundamental, technical, news, valuation and macro agents each file a report. A risk manager argues against all of them before any verdict is written.",
+        "link": "/features/swarm"
+      },
+      {
+        "icon": "forum",
+        "iconColor": "text-[#2E7E96]",
+        "bgClass": "bg-sky",
+        "textClass": "text-sky-ink",
+        "borderClass": "border-sky-line",
+        "title": "An Analyst You Can Question",
+        "description": "Stock Chat reaches for ten live tools — prices, indicators, fundamentals, news and your own holdings — and shows you which ones it used to answer.",
+        "link": "/features/workspace"
+      }
+    ]
+  },
+  "theSwarm": {
+    "eyebrow": "The debate engine",
+    "title": "A Verdict You Can Audit",
+    "bullCase": {
+      "kicker": "Bull case",
+      "title": "Every Strength, With Its Evidence Attached",
+      "description": "Growth catalysts, technical setups and an upside target — argued, not asserted."
+    },
+    "verdict": {
+      "title": "One Verdict, With the Numbers Attached",
+      "entry": "₹1,240 – 1,275",
+      "target": "₹1,520",
+      "riskReward": "1 : 2.6"
+    },
+    "agentMeta": {
+      "count": "6 agents",
+      "convergenceLabel": "Signal convergence",
+      "convergenceValue": "84%",
+      "linkText": "How it works",
+      "linkHref": "/features/path"
+    },
+    "bearCase": {
+      "kicker": "Bear case",
+      "title": "The Dissent That Keeps You Honest",
+      "description": "What breaks this thesis, what it costs when it does, and the level that proves it."
     }
+  },
+  "portfolioBand": {
+    "eyebrow": "Grounded in what you own",
+    "title": "Building Strong Portfolios, One Decision at a Time",
+    "description": "Ask in your own words and get answers from your own numbers. Stock Chat reads your holdings, watchlist and saved analyses alongside live prices, indicators and news — and tells you which tools it reached for. The Portfolio Doctor diagnoses concentration and drift; backtests walk a strategy through history before you walk it forward with money.",
+    "points": [
+      "Every conversation and analysis saved, searchable and exportable",
+      "Long runs execute in the background and tell you when they land",
+      "Choose the model that answers you"
+    ],
+    "ctaLabel": "Open your workspace",
+    "ctaHref": "https://dashboard.niveshmarg.com/"
+  },
+  "workspaceSection": {
+    "eyebrow": "Everything in one place",
+    "title": "The Workspace",
+    "subtitle": "Research, test, hold and report — without leaving for a spreadsheet.",
+    "cards": [
+      {
+        "icon": "dashboard",
+        "title": "Dashboard",
+        "description": "Holdings, movers and open positions on one canvas, refreshed against live quotes."
+      },
+      {
+        "icon": "account_balance_wallet",
+        "title": "Portfolio & P&L",
+        "description": "Quantity, average price and invested value, with corporate actions applied for you."
+      },
+      {
+        "icon": "visibility",
+        "title": "Watchlist",
+        "description": "Tickers you are studying, prioritised, with notes kept beside each name.",
+        "link": "/features/watchlist"
+      },
+      {
+        "icon": "stethoscope",
+        "title": "Portfolio Doctor",
+        "description": "A diagnosis of concentration, drift and imbalance — with rebalancing suggested, never forced.",
+        "link": "/features/portfolio-doctor"
+      },
+      {
+        "icon": "filter_alt",
+        "title": "Screener & market screens",
+        "description": "Filter every listing on valuation, growth and momentum, and save the screens that work."
+      },
+      {
+        "icon": "swap_horiz",
+        "title": "Paper trading",
+        "description": "Practise the discipline before it costs anything. Same data, no capital at risk.",
+        "link": "/features/paper-trading"
+      },
+      {
+        "icon": "rule",
+        "title": "Strategy builder",
+        "description": "Compose rules and signals visually, then let them watch the market for you.",
+        "link": "/features/backtesting-strategy"
+      },
+      {
+        "icon": "history",
+        "title": "Backtesting",
+        "description": "Walk a strategy back through history before you walk it forward with money.",
+        "link": "/features/backtesting-strategy"
+      },
+      {
+        "icon": "apartment",
+        "title": "Institutional flow",
+        "description": "NSE bulk and block deals alongside global institutional filings — who is actually buying."
+      },
+      {
+        "icon": "picture_as_pdf",
+        "title": "Reports & exports",
+        "description": "Any analysis becomes a clean PDF, saved and shareable, with the reasoning intact."
+      },
+      {
+        "icon": "notifications_active",
+        "title": "Alerts & background jobs",
+        "description": "Long analyses run with a live progress stepper and tell you — in-app or on Telegram — when they land."
+      }
+    ],
+    "featuredCard": {
+      "icon": "bolt",
+      "title": "Start with one ticker",
+      "description": "Type a symbol and watch the swarm work. Everything else grows from there.",
+      "link": "/features/workspace",
+      "linkText": "Explore workspace"
+    }
+  },
+  "pathSection": {
+    "cardSub": "निवेश · मार्ग",
+    "cardTitle": "The path of investment",
+    "cardBody": "Wealth is not a destination. It is a path you walk with patience.",
+    "sectionHeading": "Four steps, walked in order",
+    "sectionBody": "The workspace shapes itself around what you actually own — and keeps the record of every decision you made along the way.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Bring your holdings",
+        "description": "Add positions and the tickers you are watching."
+      },
+      {
+        "number": "02",
+        "title": "Let the swarm argue",
+        "description": "Six analysts research, debate and reach a verdict with levels attached."
+      },
+      {
+        "number": "03",
+        "title": "Test before you commit",
+        "description": "Backtest the strategy, paper trade the idea, read the Doctor's diagnosis."
+      },
+      {
+        "number": "04",
+        "title": "Walk, and keep the record",
+        "description": "Export the reasoning, set the alerts, and let patience do the rest."
+      }
+    ],
+    "quote": "“A verdict is only worth as much as the argument behind it. Every score keeps its four readings, every debate keeps both cases in the words the agents used, and every report can still be opened a year later and checked against what actually happened.”",
+    "quoteAuthor": "How NiveshMarg works",
+    "quoteSubtitle": "Auditable by design",
+    "quoteLinkText": "Read the method",
+    "quoteLinkHref": "/features/swarm"
+  },
+  "featuresOverview": {
+    "eyebrow": "Feature library",
+    "title": "One system. Complete investor toolkit.",
+    "description": "Each feature sits inside the same investment workflow: uncover the signal, challenge the thesis, manage the portfolio, and keep the decision trail intact.",
+    "learnMoreText": "Learn more"
+  },
+  "featureDetailCommon": {
+    "viewAllFeatures": "View all features",
+    "backHome": "Back home",
+    "seeInAction": "See it in action",
+    "howItWorks": "A process built for real decisions",
+    "howItWorksEyebrow": "How it works",
+    "whyItMattersEyebrow": "Why it matters",
+    "exploreAllFeatures": "Explore all features",
+    "interactiveDemoTitle": "Interactive Feature Workspace"
   },
   "features": [
     {

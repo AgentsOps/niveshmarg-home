@@ -37,17 +37,16 @@ const accentMap = {
 } as const;
 
 export default function FeaturesOverviewPage() {
-  const navigation = (siteData as { navigation: { label: string; href: string }[] }).navigation;
-  const features = (siteData as {
-    features: {
-      slug: string;
-      accent: keyof typeof accentMap;
-      kicker: string;
-      title: string;
-      summary: string;
-      badge: string;
-    }[];
-  }).features;
+  const navigation = siteData.navigation;
+  const overview = siteData.featuresOverview;
+  const features = siteData.features as {
+    slug: string;
+    accent: keyof typeof accentMap;
+    kicker: string;
+    title: string;
+    summary: string;
+    badge: string;
+  }[];
 
   return (
     <div className="bg-white text-ink">
@@ -55,13 +54,12 @@ export default function FeaturesOverviewPage() {
 
       <main className="mx-auto max-w-[1180px] px-6 py-12 sm:py-16">
         <div className="text-center">
-          <span className="eyebrow">Feature library</span>
+          <span className="eyebrow">{overview.eyebrow}</span>
           <h1 className="mt-6 font-head text-[clamp(2.2rem,6vw,3.4rem)] font-semibold tracking-[-0.04em]">
-            One system. Four feature stories.
+            {overview.title}
           </h1>
           <p className="mx-auto mt-4 max-w-[720px] text-[15px] leading-[1.8] text-mute">
-            Each feature sits inside the same investment workflow: uncover the signal, challenge the
-            thesis, manage the portfolio, and keep the decision trail intact.
+            {overview.description}
           </p>
         </div>
 
@@ -93,7 +91,7 @@ export default function FeaturesOverviewPage() {
                 <div className="mt-6 flex items-center justify-between border-t border-[#efe7d7] pt-4">
                   <span className="text-[12px] font-medium text-[#3b3b3b]">{feature.badge}</span>
                   <span className="inline-flex items-center gap-2 text-[12px] font-semibold text-[#2d2d2d]">
-                    Learn more <span>→</span>
+                    {overview.learnMoreText} <span>→</span>
                   </span>
                 </div>
               </Link>

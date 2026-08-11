@@ -1,6 +1,9 @@
 import ScrollReveal from "./ScrollReveal";
+import siteData from "../../data/site_data.json";
 
 export default function PortfolioBandSection() {
+  const data = siteData.portfolioBand;
+
   return (
     <section
       id="chat"
@@ -145,40 +148,27 @@ export default function PortfolioBandSection() {
         </div>
 
         <ScrollReveal className="lg:pl-6">
-          <span className="eyebrow">Grounded in what you own</span>
+          <span className="eyebrow">{data.eyebrow}</span>
           <h2 className="mt-7 max-w-[460px] font-head text-[clamp(1.875rem,5.5vw,2.625rem)] font-semibold leading-[1.18] tracking-[-0.02em]">
-            Building Strong Portfolios, One Decision at a Time
+            {data.title}
           </h2>
           <p className="mt-6 max-w-[400px] text-[13.5px] leading-[1.8] text-mute">
-            Ask in your own words and get answers from your own numbers. Stock Chat reads your
-            holdings, watchlist and saved analyses alongside live prices, indicators and news — and
-            tells you which tools it reached for. The Portfolio Doctor diagnoses concentration and
-            drift; backtests walk a strategy through history before you walk it forward with money.
+            {data.description}
           </p>
 
           <ul className="mt-7 space-y-3">
-            <li className="flex gap-3 text-[13.5px]">
-              <span className="material-symbols-outlined mt-px shrink-0 text-[18px] text-up">
-                check_circle
-              </span>
-              Every conversation and analysis saved, searchable and exportable
-            </li>
-            <li className="flex gap-3 text-[13.5px]">
-              <span className="material-symbols-outlined mt-px shrink-0 text-[18px] text-up">
-                check_circle
-              </span>
-              Long runs execute in the background and tell you when they land
-            </li>
-            <li className="flex gap-3 text-[13.5px]">
-              <span className="material-symbols-outlined mt-px shrink-0 text-[18px] text-up">
-                check_circle
-              </span>
-              Choose the model that answers you
-            </li>
+            {data.points.map((point) => (
+              <li key={point} className="flex gap-3 text-[13.5px]">
+                <span className="material-symbols-outlined mt-px shrink-0 text-[18px] text-up">
+                  check_circle
+                </span>
+                {point}
+              </li>
+            ))}
           </ul>
 
-          <a href="https://dashboard.niveshmarg.com/" className="pill pill-ink mt-8">
-            Open your workspace
+          <a href={data.ctaHref} className="pill pill-ink mt-8">
+            {data.ctaLabel}
           </a>
         </ScrollReveal>
       </div>

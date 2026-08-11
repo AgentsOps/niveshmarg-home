@@ -1,16 +1,19 @@
 import Link from "next/link";
 import ScrollReveal from "./ScrollReveal";
+import siteData from "../../data/site_data.json";
 
 export default function TheSwarmSection() {
+  const data = siteData.theSwarm;
+
   return (
     <section id="swarm" className="relative mx-auto max-w-[1180px] scroll-mt-24 px-6 pb-20 sm:pb-24">
       <div className="absolute left-6 top-6 h-3 w-3 border border-[#D8D8D8]" aria-hidden="true"></div>
       <div className="absolute right-10 top-16 h-3 w-3 border border-[#D8D8D8]" aria-hidden="true"></div>
 
       <ScrollReveal className="text-center">
-        <span className="eyebrow">The debate engine</span>
+        <span className="eyebrow">{data.eyebrow}</span>
         <h2 className="mx-auto mt-6 max-w-[560px] font-head text-[clamp(1.875rem,5.5vw,2.625rem)] font-semibold leading-[1.2] tracking-[-0.02em]">
-          A Verdict You Can Audit
+          {data.title}
         </h2>
       </ScrollReveal>
 
@@ -38,13 +41,13 @@ export default function TheSwarmSection() {
               />
             </svg>
             <p className="relative text-[11px] font-semibold uppercase tracking-[0.06em] text-up">
-              Bull case
+              {data.bullCase.kicker}
             </p>
             <h3 className="relative mt-1.5 font-head text-[19px] font-semibold leading-snug">
-              Every Strength, With Its Evidence Attached
+              {data.bullCase.title}
             </h3>
             <p className="relative mt-2 text-[12.5px] leading-[1.7] text-[#416452]">
-              Growth catalysts, technical setups and an upside target — argued, not asserted.
+              {data.bullCase.description}
             </p>
           </div>
         </ScrollReveal>
@@ -54,20 +57,20 @@ export default function TheSwarmSection() {
           <ScrollReveal delayMs={150}>
             <div className="relative rounded-[18px] bg-ink p-7 pb-14">
               <h3 className="max-w-[230px] font-head text-[21px] font-semibold leading-[1.3] text-white">
-                One Verdict, With the Numbers Attached
+                {data.verdict.title}
               </h3>
               <dl className="mt-5 space-y-2 text-[13px] text-white">
                 <div className="flex items-baseline justify-between gap-3 border-b border-white/10 pb-2">
                   <dt className="text-white/55">Entry</dt>
-                  <dd className="font-semibold tabular-nums">₹1,240 – 1,275</dd>
+                  <dd className="font-semibold tabular-nums">{data.verdict.entry}</dd>
                 </div>
                 <div className="flex items-baseline justify-between gap-3 border-b border-white/10 pb-2">
                   <dt className="text-white/55">Target</dt>
-                  <dd className="font-semibold tabular-nums">₹1,520</dd>
+                  <dd className="font-semibold tabular-nums">{data.verdict.target}</dd>
                 </div>
                 <div className="flex items-baseline justify-between gap-3">
                   <dt className="text-white/55">Risk / reward</dt>
-                  <dd className="font-semibold tabular-nums">1 : 2.6</dd>
+                  <dd className="font-semibold tabular-nums">{data.verdict.riskReward}</dd>
                 </div>
               </dl>
             </div>
@@ -90,12 +93,12 @@ export default function TheSwarmSection() {
                     +3
                   </span>
                 </div>
-                <p className="font-head text-[24px] font-semibold">6 agents</p>
+                <p className="font-head text-[24px] font-semibold">{data.agentMeta.count}</p>
               </div>
               <div className="mt-5">
                 <div className="flex items-center justify-between text-[13px]">
-                  <span className="font-medium">Signal convergence</span>
-                  <span className="font-semibold">84%</span>
+                  <span className="font-medium">{data.agentMeta.convergenceLabel}</span>
+                  <span className="font-semibold">{data.agentMeta.convergenceValue}</span>
                 </div>
                 <div className="mt-2 h-[5px] w-full rounded-full bg-[#EFEFEF]">
                   <div className="h-full w-[84%] rounded-full bg-ink"></div>
@@ -103,10 +106,10 @@ export default function TheSwarmSection() {
               </div>
               <div className="mt-6 flex items-center justify-between">
                 <Link
-                  href="/features/path"
+                  href={data.agentMeta.linkHref}
                   className="inline-flex items-center gap-2 text-[13px] font-medium text-mute"
                 >
-                  How it works <span>→</span>
+                  {data.agentMeta.linkText} <span>→</span>
                 </Link>
               </div>
             </div>
@@ -136,13 +139,13 @@ export default function TheSwarmSection() {
               />
             </svg>
             <p className="relative text-[11px] font-semibold uppercase tracking-[0.06em] text-down">
-              Bear case
+              {data.bearCase.kicker}
             </p>
             <h3 className="relative mt-1.5 font-head text-[19px] font-semibold leading-snug">
-              The Dissent That Keeps You Honest
+              {data.bearCase.title}
             </h3>
             <p className="relative mt-2 text-[12.5px] leading-[1.7] text-[#6B5457]">
-              What breaks this thesis, what it costs when it does, and the level that proves it.
+              {data.bearCase.description}
             </p>
           </div>
         </ScrollReveal>

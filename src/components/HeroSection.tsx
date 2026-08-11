@@ -1,4 +1,5 @@
 import Link from "next/link";
+import siteData from "../../data/site_data.json";
 
 type HeroContent = {
   eyebrow: string;
@@ -12,24 +13,13 @@ type HeroContent = {
     label: string;
     href: string;
   };
+  scoreBadgeText?: string;
+  scorePillLabel?: string;
 };
 
-const defaultHero: HeroContent = {
-  eyebrow: "AI research, made simple",
-  headline: "Unlock Your Investing Edge",
-  description:
-    "Six specialist AI analysts research a stock, argue the bull case against the bear case, and hand you a verdict with entry, target and stop levels attached — for NSE listings and global markets alike.",
-  primaryCta: {
-    label: "Open dashboard",
-    href: "https://dashboard.niveshmarg.com/",
-  },
-  secondaryCta: {
-    label: "See how it thinks",
-    href: "#score",
-  },
-};
+export default function HeroSection({ hero = siteData.home }: { hero?: HeroContent }) {
+  const homeData = siteData.home;
 
-export default function HeroSection({ hero = defaultHero }: { hero?: HeroContent }) {
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-cream via-[#FDFBF5] to-white">
       <div className="mx-auto grid max-w-[1180px] grid-cols-1 items-center gap-12 px-6 pb-20 pt-10 lg:grid-cols-[46%_1fr] lg:pb-24">
@@ -105,10 +95,10 @@ export default function HeroSection({ hero = defaultHero }: { hero?: HeroContent
                 <span className="material-symbols-outlined text-[20px]">newspaper</span>
                 <span className="material-symbols-outlined text-[20px]">show_chart</span>
               </div>
-              <p className="mt-3 text-[14px] font-medium">Four signals · 25 points each</p>
+              <p className="mt-3 text-[14px] font-medium">{homeData.scoreBadgeText}</p>
             </div>
             <span className="relative -ml-1 mb-1 inline-block rounded-full bg-mint px-4 py-1.5 font-head text-[14px] text-[#2F3A2A] uppercase font-bold">
-              AI Score
+              {homeData.scorePillLabel}
             </span>
           </div>
         </div>

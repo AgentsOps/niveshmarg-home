@@ -3,23 +3,17 @@
 import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
+import siteData from "../../data/site_data.json";
 
 type NavItem = {
   label: string;
   href: string;
 };
 
-const defaultNavItems: NavItem[] = [
-  { label: "Home", href: "/" },
-  { label: "Features", href: "/features" },
-  { label: "AI Score", href: "/features/ai-score" },
-  { label: "The swarm", href: "/features/swarm" },
-  { label: "Workspace", href: "/features/workspace" },
-  { label: "How it works", href: "/features/path" },
-];
-
-export default function Header({ navItems = defaultNavItems }: { navItems?: NavItem[] }) {
+export default function Header({ navItems = siteData.header.defaultNavItems }: { navItems?: NavItem[] }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const headerData = siteData.header;
+  const siteInfo = siteData.site;
 
   const closeMenu = () => setIsMenuOpen(false);
 
@@ -30,7 +24,7 @@ export default function Header({ navItems = defaultNavItems }: { navItems?: NavI
           <span className="grid h-9 w-9 shrink-0 place-items-center overflow-hidden rounded-full">
             <Image
               src="/logo.svg"
-              alt="Niveshmarg logo"
+              alt={`${siteInfo.name} logo`}
               width={36}
               height={36}
               className="h-9 w-9 object-cover"
@@ -39,9 +33,9 @@ export default function Header({ navItems = defaultNavItems }: { navItems?: NavI
           </span>
           <span className="min-w-0 leading-none">
             <span className="block truncate font-head text-[18px] font-semibold tracking-tight sm:text-[20px]">
-              NiveshMarg
+              {siteInfo.name}
             </span>
-            <span className="mt-0.5 block font-deva text-[10px] text-mute"> निवेश · मार्ग </span>
+            <span className="mt-0.5 block font-deva text-[10px] text-mute"> {siteInfo.subtitle} </span>
           </span>
         </Link>
 
@@ -55,17 +49,17 @@ export default function Header({ navItems = defaultNavItems }: { navItems?: NavI
 
         <div className="flex shrink-0 items-center gap-3 sm:gap-4">
           <a
-            href="https://dashboard.niveshmarg.com/"
+            href={siteInfo.dashboardUrl}
             className="hidden text-[14px] font-medium sm:inline"
           >
-            Sign in
+            {headerData.signInLabel}
           </a>
           <a
-            href="https://dashboard.niveshmarg.com/"
+            href={siteInfo.dashboardUrl}
             className="pill pill-ink pill-sm whitespace-nowrap"
           >
-            <span className="hidden sm:inline">Open dashboard</span>
-            <span className="sm:hidden">Log in</span>
+            <span className="hidden sm:inline">{headerData.dashboardLabel}</span>
+            <span className="sm:hidden">{headerData.mobileSignInLabel}</span>
           </a>
           <button
             type="button"
@@ -96,11 +90,11 @@ export default function Header({ navItems = defaultNavItems }: { navItems?: NavI
               </Link>
             ))}
             <a
-              href="https://dashboard.niveshmarg.com/"
+              href={siteInfo.dashboardUrl}
               onClick={closeMenu}
               className="mt-1 rounded-xl bg-ink px-3 py-2.5 text-center font-medium text-white"
             >
-              Sign in
+              {headerData.signInLabel}
             </a>
           </nav>
         </div>
