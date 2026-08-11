@@ -1,23 +1,15 @@
 {
   "site": {
-    "name": "NiveshMarg",
+    "name": "Niveshmarg",
     "subtitle": "निवेश · मार्ग",
     "description": "AI stock research, portfolio analysis and disciplined investment workflows for modern investors."
   },
   "navigation": [
-    { "label": "Home", "href": "/" },
-    { "label": "Features", "href": "/features" },
     { "label": "AI Score", "href": "/features/ai-score" },
-    { "label": "The swarm", "href": "/features/swarm" },
-    { "label": "Workspace", "href": "/features/workspace" },
-    { "label": "Portfolio Doctor", "href": "/features/portfolio-doctor" },
+    { "label": "Portfolio", "href": "/features/portfolio-doctor" },
     { "label": "Paper Trading", "href": "/features/paper-trading" },
     { "label": "Backtesting", "href": "/features/backtesting-strategy" },
-    { "label": "Watchlist", "href": "/features/watchlist" },
-    { "label": "Stock Chat", "href": "/features/stock-chat" },
-    { "label": "Institutional Flow", "href": "/features/institutional-flow" },
-    { "label": "Reports & Exports", "href": "/features/reports-exports" },
-    { "label": "How it works", "href": "/features/path" }
+    { "label": "Stock Chat", "href": "/features/stock-chat" }
   ],
   "home": {
     "eyebrow": "AI research, made simple",
@@ -38,7 +30,7 @@
       "accent": "rose",
       "kicker": "Signal strength",
       "title": "AI Score",
-      "summary": "NiveshMarg converts four independent market lenses into one clear signal so you can see both the trend and the evidence behind it.",
+      "summary": "Niveshmarg converts four independent market lenses into one clear signal so you can see both the trend and the evidence behind it.",
       "badge": "4 readings • 25 points each",
       "stats": [
         { "label": "Forecast", "value": "25" },
