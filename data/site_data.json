@@ -10,6 +10,13 @@
     { "label": "AI Score", "href": "/features/ai-score" },
     { "label": "The swarm", "href": "/features/swarm" },
     { "label": "Workspace", "href": "/features/workspace" },
+    { "label": "Portfolio Doctor", "href": "/features/portfolio-doctor" },
+    { "label": "Paper Trading", "href": "/features/paper-trading" },
+    { "label": "Backtesting", "href": "/features/backtesting-strategy" },
+    { "label": "Watchlist", "href": "/features/watchlist" },
+    { "label": "Stock Chat", "href": "/features/stock-chat" },
+    { "label": "Institutional Flow", "href": "/features/institutional-flow" },
+    { "label": "Reports & Exports", "href": "/features/reports-exports" },
     { "label": "How it works", "href": "/features/path" }
   ],
   "home": {
@@ -29,117 +36,475 @@
     {
       "slug": "ai-score",
       "accent": "rose",
-      "kicker": "Feature 01",
+      "kicker": "Signal strength",
       "title": "AI Score",
-      "summary": "A four-part signal engine that blends trend, valuation, sentiment and execution quality into one verdict for every stock you watch.",
-      "badge": "Four signals. One verdict.",
+      "summary": "NiveshMarg converts four independent market lenses into one clear signal so you can see both the trend and the evidence behind it.",
+      "badge": "4 readings • 25 points each",
       "stats": [
-        { "label": "Signals", "value": "4" },
-        { "label": "Readiness", "value": "76/100" },
-        { "label": "Coverage", "value": "NSE + US" },
-        { "label": "Decision", "value": "Buy / Hold / Exit" }
+        { "label": "Forecast", "value": "25" },
+        { "label": "Technical", "value": "25" },
+        { "label": "Sentiment", "value": "25" },
+        { "label": "Trend", "value": "25" }
       ],
       "highlights": [
-        { "title": "Signal stacking", "detail": "Each score combines valuation momentum, market context and sentiment to reduce noisy single-metric decisions." },
-        { "title": "Clear confidence", "detail": "The model marks how strong the conviction is before it ever tells you to act." },
-        { "title": "Fast context", "detail": "A single score makes it easy to compare companies, sectors and watchlists in seconds." }
+        {
+          "title": "Evidence before verdict",
+          "detail": "A score looks reliable only when each pillar is visible. The workspace shows which readings are reinforcing one another and which ones are weakening the case."
+        },
+        {
+          "title": "Balanced by design",
+          "detail": "The model weighs the signal using four lenses instead of a single narrative, which reduces the risk of a strong story masking weak execution."
+        },
+        {
+          "title": "Decision-ready output",
+          "detail": "Whether you are screening a fast mover or validating a home-position thesis, the score becomes a shorthand for deeper due diligence."
+        }
       ],
       "process": [
-        "Collect valuation, trend, sentiment and operational quality inputs across the stock's relevant time window.",
-        "Normalize each signal into a common risk-adjusted score before comparing it with peers and benchmarks.",
-        "Blend the readings into a single verdict with a confidence band and an actionable next step."
+        "Collect short-term price momentum and trend structure.",
+        "Assess sentiment, news tone and market reaction.",
+        "Compare the result against fundamentals and valuation signals.",
+        "Present a single confidence score with all four readings visible."
       ],
       "impact": [
-        "Helps investors avoid hype-driven entries without removing the conviction behind a good thesis.",
-        "Creates a repeatable discipline for comparing opportunities across sectors and benchmarks.",
-        "Turns a crowded stream of headlines into a structured decision framework."
+        "Helps compare ideas without losing the underlying rationale.",
+        "Shortens the time between discovery and decision-making.",
+        "Makes portfolio reviews easier to defend with numbers."
       ]
     },
     {
       "slug": "swarm",
       "accent": "amber",
-      "kicker": "Feature 02",
+      "kicker": "The debate engine",
       "title": "The Swarm",
-      "summary": "A specialist research team of AI agents argues the bull and bear cases side by side so you see the why behind the score.",
-      "badge": "Six analysts. One thesis.",
+      "summary": "Six specialist AI analysts challenge one another, then converge into one actionable verdict with a clear bull case, bear case, and risk levels.",
+      "badge": "6 analysts • 1 verdict",
       "stats": [
         { "label": "Analysts", "value": "6" },
-        { "label": "Debate", "value": "Bull vs Bear" },
-        { "label": "Frames", "value": "Risk + Upside" },
-        { "label": "Outlook", "value": "Actionable" }
+        { "label": "Signals", "value": "84%" },
+        { "label": "Risk", "value": "1:2.6" },
+        { "label": "Bias check", "value": "Live" }
       ],
       "highlights": [
-        { "title": "Multi-angle review", "detail": "Fundamental, technical and risk lenses are evaluated together instead of in isolation." },
-        { "title": "Balanced debate", "detail": "The swarm surfaces the counterarguments you are most likely to miss in a one-sided narrative." },
-        { "title": "Evidence trail", "detail": "Each conclusion is traceable to the factors that moved the score and the price thesis." }
+        {
+          "title": "Every thesis is argued",
+          "detail": "Instead of one polished answer, the system produces a structured debate: what the bull case sees, what the bear case fears, and where the gap actually sits."
+        },
+        {
+          "title": "Risk is not hidden",
+          "detail": "The risk manager calls out downside, breaks the setup and highlights when conviction should weaken. That discipline protects against overconfidence."
+        },
+        {
+          "title": "Verdict with numbers",
+          "detail": "Entry, target and stop levels stay attached to the reasoning so users can evaluate whether the risk-reward matches the idea."
+        }
       ],
       "process": [
-        "Assign research tasks to specialist AI personas focused on fundamentals, charting, risk and market context.",
-        "Have the agents challenge each other with supporting evidence and trade-off analysis rather than static summaries.",
-        "Package the strongest aligned arguments into a decision-ready narrative with clear trade boundaries."
+        "Every analyst investigates a different dimension: valuation, momentum, news, macro, quality and risk.",
+        "Findings are compared and contested before a shared conclusion is drafted.",
+        "The final view includes risk levels and a concrete action range.",
+        "Users can revisit the argument instead of relying on a summary alone."
       ],
       "impact": [
-        "Reduces blind spots created by one-dimensional analysis or a single expert bias.",
-        "Makes it easier to understand not just the recommendation, but the assumptions behind it.",
-        "Creates a stronger investable story when you need to defend or revisit a thesis."
+        "Reduces one-sided thinking in investment research.",
+        "Builds confidence through transparent disagreement.",
+        "Turns analysis into a reviewable decision trail."
       ]
     },
     {
       "slug": "workspace",
       "accent": "sky",
-      "kicker": "Feature 03",
+      "kicker": "Everything in one place",
       "title": "Workspace",
-      "summary": "An integrated investor workspace that keeps your watchlists, portfolios, thesis notes, and action trail in one place.",
-      "badge": "Portfolio context. Clean action.",
+      "summary": "The workspace is where research, positions, strategy testing, and reporting live together, so the investor does not need to jump between tools.",
+      "badge": "Portfolio • research • trade",
       "stats": [
-        { "label": "Positions", "value": "Live" },
-        { "label": "Notes", "value": "All in one" },
-        { "label": "Reports", "value": "Board-ready" },
-        { "label": "Tracking", "value": "Real-time" }
+        { "label": "Holdings", "value": "Live" },
+        { "label": "Screens", "value": "Saved" },
+        { "label": "Reports", "value": "PDF" },
+        { "label": "Alerts", "value": "Live" }
       ],
       "highlights": [
-        { "title": "Portfolio memory", "detail": "Every position and note sits inside the same coherent map of your investing process." },
-        { "title": "Decision trail", "detail": "You keep the rationale, target, and review checkpoint connected to each action." },
-        { "title": "Execution clarity", "detail": "The dashboard condenses crowded information into a cleaner workflow for investors and analysts." }
+        {
+          "title": "A single operating surface",
+          "detail": "Dashboard, watchlist, portfolio diagnostics, screening, and paper trading remain connected, reducing friction between thought and action."
+        },
+        {
+          "title": "Research with discipline",
+          "detail": "The portfolio doctor highlights concentration, drift, and risk, while backtesting and strategy rules help validate ideas before capital is committed."
+        },
+        {
+          "title": "Decision records that travel",
+          "detail": "Reports and exports package the reasoning and the data in a simple format for follow-up, review or board-level communication."
+        }
       ],
       "process": [
-        "Bring each idea, portfolio holding and market watch into a single investor workspace.",
-        "Tag positions with thesis notes, risk categories and review checkpoints to maintain context over time.",
-        "Turn the workspace into a living decision ledger for portfolio updates, scenario checks and review cycles."
+        "Bring in a portfolio, watchlist or one ticker you want to study.",
+        "Review live holdings, signals and diagnostic views in one screen.",
+        "Test ideas with paper trading, strategies and historical review.",
+        "Share or export the final record when the decision is ready."
       ],
       "impact": [
-        "Improves consistency across watchlists, position reviews and trade deliberation.",
-        "Makes it easier to revisit why a position was entered, changed or exited.",
-        "Keeps portfolio decision-making organized even as the number of ideas grows."
+        "Cuts the admin overhead of active investing.",
+        "Makes portfolio decisions easier to review and defend.",
+        "Keeps strategy and execution in the same system."
+      ]
+    },
+    {
+      "slug": "portfolio-doctor",
+      "accent": "mint",
+      "kicker": "Portfolio health",
+      "title": "Portfolio Doctor",
+      "summary": "The Portfolio Doctor reviews your portfolio like a disciplined analyst, surfacing concentration, drift, imbalance and resilience before emotions or market noise take over.",
+      "badge": "Risk check • allocation • balance",
+      "stats": [
+        { "label": "Exposure", "value": "Live" },
+        { "label": "Risk", "value": "Scan" },
+        { "label": "Drift", "value": "Flagged" },
+        { "label": "Balance", "value": "Advised" }
+      ],
+      "highlights": [
+        {
+          "title": "Diagnose concentration early",
+          "detail": "The doctor highlights when too much of the portfolio lives in one theme, sector or stock so overconfidence is corrected before it becomes a problem."
+        },
+        {
+          "title": "Spot drift before it hurts",
+          "detail": "As positions move away from the strategic mix, the system flags where the portfolio is no longer aligned with the intended risk profile."
+        },
+        {
+          "title": "Give actionable direction",
+          "detail": "Rather than leaving you with a warning, it suggests whether to rebalance, trim, rotate or hold based on the shape of the portfolio."
+        }
+      ],
+      "process": [
+        "Map your current holdings and allocation across sectors, themes and risk buckets.",
+        "Measure concentration, drift and diversification against your intended balance.",
+        "Highlight the largest sources of exposure and the signals that may be distorting the portfolio.",
+        "Recommend the next move: rebalance, reduce concentration, or keep holding with a clearer plan."
+      ],
+      "impact": [
+        "Helps investors avoid silent portfolio drift.",
+        "Turns portfolio reviews into proactive risk management.",
+        "Gives every holding a clearer place inside the wider plan."
+      ]
+    },
+    {
+      "slug": "paper-trading",
+      "accent": "amber",
+      "kicker": "Practice before risk",
+      "title": "Paper Trading",
+      "summary": "Paper trading gives investors a safe environment to test strategy, hone execution and learn from market behavior without placing real capital on the line.",
+      "badge": "Practice • test • refine",
+      "stats": [
+        { "label": "Capital", "value": "Virtual" },
+        { "label": "Execution", "value": "Live" },
+        { "label": "Review", "value": "Instant" },
+        { "label": "Learning", "value": "Fast" }
+      ],
+      "highlights": [
+        {
+          "title": "Build discipline without real risk",
+          "detail": "You can experiment with entries, exits and position sizing in a realistic market environment without exposing actual capital to the noise of emotion."
+        },
+        {
+          "title": "Test ideas against real market motion",
+          "detail": "Paper trading lets you replay monthly and weekly behaviour, evaluate setups and compare whether a thesis holds up under forward-moving conditions."
+        },
+        {
+          "title": "Turn mistakes into feedback",
+          "detail": "Every trade, win or miss, helps sharpen your decision structure and uncover where your strategy is reliable and where it needs adjustment."
+        }
+      ],
+      "process": [
+        "Select a stock, strategy or setup you want to practice.",
+        "Place virtual trades using live price and position logic.",
+        "Review execution quality, risk control and result quality in context.",
+        "Refine the plan before moving from rehearsal to real capital."
+      ],
+      "impact": [
+        "Reduces the cost of learning when market timing is tough.",
+        "Improves execution quality by removing emotional friction.",
+        "Builds confidence with a repeatable, evidence-based process."
+      ],
+      "media": [
+        {
+          "type": "image",
+          "title": "Live paper trading board",
+          "src": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1200&q=80",
+          "caption": "A market dashboard where strategy, entry levels and risk can be reviewed before real money is involved."
+        },
+        {
+          "type": "video",
+          "title": "Simulation walkthrough",
+          "src": "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+          "poster": "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=80",
+          "caption": "See how a paper trade can be monitored, evaluated and refined in realistic market conditions."
+        }
+      ]
+    },
+    {
+      "slug": "backtesting-strategy",
+      "accent": "sky",
+      "kicker": "Build and validate",
+      "title": "Backtesting & Strategy Builder",
+      "summary": "This feature combines historical validation with visual strategy design so investors can test ideas, refine rules, and see whether a system has edge before it reaches live capital.",
+      "badge": "Test • refine • repeat",
+      "stats": [
+        { "label": "History", "value": "5Y+" },
+        { "label": "Rules", "value": "Visual" },
+        { "label": "Edge", "value": "Measured" },
+        { "label": "Learning", "value": "Systematic" }
+      ],
+      "highlights": [
+        {
+          "title": "Design strategy without coding friction",
+          "detail": "The strategy builder lets you define conditions and rules visually, turning investment logic into a repeatable framework instead of a collection of ad hoc impulses."
+        },
+        {
+          "title": "Test against real market history",
+          "detail": "Backtesting evaluates a strategy across historical market conditions so you can see if the framework survives noise, volatility, sector rotations and weak trends."
+        },
+        {
+          "title": "Use evidence before increasing conviction",
+          "detail": "You can compare outcomes, understand drawdowns, and decide whether a setup deserves a forward test or more refinement before it becomes a live decision."
+        }
+      ],
+      "process": [
+        "Map the market conditions, entry rules and risk controls you want to test.",
+        "Build the strategy with a visual logic layer that is easy to review and adjust.",
+        "Run it across historical data to measure performance, volatility and drawdown.",
+        "Refine the rules and repeat until the strategy is consistent, understandable and defensible."
+      ],
+      "impact": [
+        "Improves conviction by replacing guesswork with historical evidence.",
+        "Helps reduce overfitting by measuring performance across different phases.",
+        "Turns trading logic into a repeatable system that can be reviewed with clarity."
+      ],
+      "media": [
+        {
+          "type": "image",
+          "title": "Strategy canvas",
+          "src": "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=1200&q=80",
+          "caption": "A visual strategy workspace showing how rules, timing and allocation can be structured before execution."
+        },
+        {
+          "type": "video",
+          "title": "Backtest walkthrough",
+          "src": "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+          "poster": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+          "caption": "A walkthrough of a historical strategy test that reveals performance, risk exposure and trade quality."
+        }
+      ]
+    },
+    {
+      "slug": "watchlist",
+      "accent": "rose",
+      "kicker": "Stay focused",
+      "title": "Watchlist",
+      "summary": "The Watchlist keeps the names that matter most in a single, easy-to-scan workspace so investors can monitor opportunities, track conviction and capture changes without losing context.",
+      "badge": "Track • prioritize • monitor",
+      "stats": [
+        { "label": "Names", "value": "Live" },
+        { "label": "Alerts", "value": "On" },
+        { "label": "Priority", "value": "Ranked" },
+        { "label": "Context", "value": "Saved" }
+      ],
+      "highlights": [
+        {
+          "title": "Keep the right names in view",
+          "detail": "Track your current opportunities, watchlists and ideas in one place without losing the context that made them worth revisiting."
+        },
+        {
+          "title": "Prioritize with intent",
+          "detail": "Rank positions by conviction, urgency and research stage so your attention follows the ideas with the highest chance of pay-off."
+        },
+        {
+          "title": "Monitor changes without noise",
+          "detail": "Watch price moves, signal updates, and note changes over time so you can respond to real shifts instead of reacting to every headline."
+        }
+      ],
+      "process": [
+        "Add the names you want to follow and assign them to the right priority bucket.",
+        "Track price action, AI score changes and research context alongside your notes.",
+        "Monitor catalysts, thresholds and momentum shifts without searching across multiple tools.",
+        "Use the list to decide when to act, revisit, or remove a name from focus."
+      ],
+      "impact": [
+        "Improves focus by limiting attention to a curated set of names.",
+        "Makes opportunity tracking more consistent across busy market days.",
+        "Helps investors use context rather than impulse when they decide to act."
+      ],
+      "media": [
+        {
+          "type": "image",
+          "title": "Priority watchlist grid",
+          "src": "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=1200&q=80",
+          "caption": "A clean tracking board that helps investors monitor priority names, easy reads and shifts in conviction."
+        },
+        {
+          "type": "video",
+          "title": "Watchlist alert flow",
+          "src": "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+          "poster": "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=80",
+          "caption": "A simple walkthrough of how alerts and updates can surface the meaningful changes in a watchlist."
+        }
+      ]
+    },
+    {
+      "slug": "stock-chat",
+      "accent": "sky",
+      "kicker": "Ask the market naturally",
+      "title": "Stock Chat",
+      "summary": "Stock Chat turns natural-language questions into market insight, helping investors ask for context, comparison and reasoning without wading through tabs or raw data dumps.",
+      "badge": "Ask • compare • decide",
+      "stats": [
+        { "label": "Inputs", "value": "10+" },
+        { "label": "Context", "value": "Live" },
+        { "label": "Reasoning", "value": "AI" },
+        { "label": "Speed", "value": "Instant" }
+      ],
+      "highlights": [
+        {
+          "title": "Ask in plain English",
+          "detail": "Instead of forcing users into technical queries, the chat layer understands natural questions like what is driving momentum, how this compares with peers, or what risks matter most."
+        },
+        {
+          "title": "Ground the answer in your context",
+          "detail": "It can work from live prices, indicators, fundamentals, news and portfolio context so answers stay actionable instead of generic commentary."
+        },
+        {
+          "title": "Use it as a research companion",
+          "detail": "The conversation becomes a guided way to challenge assumptions, compare themes and narrow down where deeper review is worth your time."
+        }
+      ],
+      "process": [
+        "Ask a question in your own words about a stock, sector or portfolio theme.",
+        "Pull in live market, fundamentals and portfolio context for the answer.",
+        "Summarise the likely drivers, risks and next checks in plain language.",
+        "Use the response to decide where to dive deeper or to keep the thesis in view."
+      ],
+      "impact": [
+        "Makes market research more conversational and less manual.",
+        "Helps investors understand the 'why' behind a move faster.",
+        "Transforms raw data into a faster decision-making loop."
+      ]
+    },
+    {
+      "slug": "institutional-flow",
+      "accent": "amber",
+      "kicker": "See the tape clearly",
+      "title": "Institutional Flow",
+      "summary": "Institutional Flow brings attention to the forces that move the market beyond headline noise, surfacing where smart money is leaning and how that interacts with your own portfolio decisions.",
+      "badge": "Flow • attention • conviction",
+      "stats": [
+        { "label": "Signals", "value": "Live" },
+        { "label": "Focus", "value": "Smart" },
+        { "label": "Bias", "value": "Tracked" },
+        { "label": "Action", "value": "Context" }
+      ],
+      "highlights": [
+        {
+          "title": "Track where interest is building",
+          "detail": "The feature helps you understand whether risk is rotating into a theme, sector or idea so you can better interpret broader market behaviour."
+        },
+        {
+          "title": "Separate signal from hype",
+          "detail": "By pairing flow signals with your own portfolio context, it becomes easier to tell whether attention is becoming conviction or just another short-lived headline."
+        },
+        {
+          "title": "Support calmer decisions",
+          "detail": "Institutional flow adds a wider lens to your process, reducing the chance that you react to isolated moves without understanding the bigger structure."
+        }
+      ],
+      "process": [
+        "Review the trend in participation, focus and leadership across sectors or stocks.",
+        "Compare current flow with the broader market backdrop and your own exposure.",
+        "Look for shifts in conviction, risk appetite and concentration before acting.",
+        "Use the context to refine timing, sizing and risk management."
+      ],
+      "impact": [
+        "Helps investors read the market with more context.",
+        "Adds a macro lens without overwhelming day-to-day decisions.",
+        "Improves risk-awareness when momentum changes quickly."
+      ]
+    },
+    {
+      "slug": "reports-exports",
+      "accent": "mint",
+      "kicker": "Share the story",
+      "title": "Reports & Exports",
+      "summary": "Reports & Exports turns research and portfolio decisions into clean, board-ready summaries so you can review a thesis, share a result, or document the logic behind an action.",
+      "badge": "Document • share • review",
+      "stats": [
+        { "label": "Format", "value": "PDF" },
+        { "label": "Share", "value": "Ready" },
+        { "label": "Clarity", "value": "High" },
+        { "label": "Review", "value": "Simple" }
+      ],
+      "highlights": [
+        {
+          "title": "Package the decision, not just the data",
+          "detail": "The export captures the reasoning, trade logic and key risk points so a decision can be reviewed later without needing to reconstruct the whole story."
+        },
+        {
+          "title": "Helpful for team or family review",
+          "detail": "Whether you are reviewing a thesis with a partner or preparing a summary for a stakeholder, the output keeps the answer concise and readable."
+        },
+        {
+          "title": "Build better habits around review",
+          "detail": "Good records make it easier to learn from the process, understand mistakes and improve portfolio decisions over time."
+        }
+      ],
+      "process": [
+        "Collect the portfolio, chart or strategy context you want to summarise.",
+        "Turn the research notes into a structured recommendation or review document.",
+        "Export the record in a clean format for future reference or sharing.",
+        "Use the report to revisit the idea, compare outcomes and learn from your process."
+      ],
+      "impact": [
+        "Improves accountability in research and investing decisions.",
+        "Makes it easier to communicate a thesis clearly and confidently.",
+        "Creates a durable record for learning and follow-through."
       ]
     },
     {
       "slug": "path",
       "accent": "mint",
-      "kicker": "Feature 04",
-      "title": "How it works",
-      "summary": "A guided investment path that moves from idea discovery to thesis validation, portfolio management and disciplined review.",
-      "badge": "From signal to action.",
+      "kicker": "The path of investment",
+      "title": "How it Works",
+      "summary": "The experience is designed around a disciplined investment path: gather positions, run the debate, test the idea, then keep a record of the decision.",
+      "badge": "4 steps • 1 system",
       "stats": [
-        { "label": "Flow", "value": "4 steps" },
-        { "label": "Focus", "value": "Idea → Action" },
-        { "label": "Review", "value": "Continuous" },
-        { "label": "Discipline", "value": "Built-in" }
+        { "label": "Track", "value": "1" },
+        { "label": "Assess", "value": "2" },
+        { "label": "Test", "value": "3" },
+        { "label": "Review", "value": "4" }
       ],
       "highlights": [
-        { "title": "Discover signals", "detail": "The workflow begins with a clear market question and a scan of the strongest opportunities." },
-        { "title": "Challenge the thesis", "detail": "Counterarguments and risk scenarios are tested before you size the position or commit capital." },
-        { "title": "Track outcomes", "detail": "The process keeps learning from review cycles so the next decision is sharper than the last." }
+        {
+          "title": "Start with what you own",
+          "detail": "The workflow is anchored around your actual holdings and the names you are watching, not a disconnected market dashboard."
+        },
+        {
+          "title": "Let the process do the heavy lifting",
+          "detail": "From research swarm to risk checks and strategy testing, the product keeps a consistent thread between idea generation and action."
+        },
+        {
+          "title": "Keep the record, not just the result",
+          "detail": "Reports remain auditable long after the decision was made, making learning and review more straightforward."
+        }
       ],
       "process": [
-        "Start with a market question, a watchlist or a thesis that deserves validation.",
-        "Use the score and swarm insights to pressure-test assumptions, risk and timing before acting.",
-        "Review execution, portfolio impact and outcome data to refine the next cycle and stay disciplined."
+        "Bring your holdings and target names into the workspace.",
+        "Run the swarm and review the evidence behind each conclusion.",
+        "Backtest or paper trade the logic before the money is committed.",
+        "Export the verdict and continue the journey with a clear record."
       ],
       "impact": [
-        "Creates a repeatable path from research to action without depending on ad hoc process notes.",
-        "Helps investors become more consistent and less reactive in volatile markets.",
-        "Brings a clear thread from idea generation to portfolio-level review and learning."
+        "Makes decision-making feel deliberate rather than reactive.",
+        "Builds a habit of reviewing the logic behind outcomes.",
+        "Turns investing into a repeatable, teachable system."
       ]
     }
   ]
