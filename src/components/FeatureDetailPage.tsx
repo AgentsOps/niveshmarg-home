@@ -54,7 +54,7 @@ type FeaturePageData = {
 const accentStyles = {
   rose: {
     shell: "bg-rose",
-    panel: "bg-white/70",
+    panel: "bg-[#FFF8F8]",
     eyebrow: "bg-white/70 text-rose-ink",
     icon: "text-[#C2566A]",
     chip: "bg-[#fff7f7] text-rose-ink border border-[#f0d8dc]",
@@ -62,7 +62,7 @@ const accentStyles = {
   },
   amber: {
     shell: "bg-amber",
-    panel: "bg-white/70",
+    panel: "bg-[#FFFDF6]",
     eyebrow: "bg-white/70 text-amber-ink",
     icon: "text-[#B98A18]",
     chip: "bg-[#fffaf0] text-amber-ink border border-[#f0e2b5]",
@@ -70,7 +70,7 @@ const accentStyles = {
   },
   sky: {
     shell: "bg-sky",
-    panel: "bg-white/70",
+    panel: "bg-[#F4FAFC]",
     eyebrow: "bg-white/70 text-sky-ink",
     icon: "text-[#2E7E96]",
     chip: "bg-[#f3fbff] text-sky-ink border border-[#cfe3ee]",
@@ -78,7 +78,7 @@ const accentStyles = {
   },
   mint: {
     shell: "bg-mint",
-    panel: "bg-white/70",
+    panel: "bg-[#F6FAF3]",
     eyebrow: "bg-white/70 text-mint-ink",
     icon: "text-[#3c5a2c]",
     chip: "bg-[#f4faee] text-mint-ink border border-[#d9e8cc]",
@@ -200,7 +200,7 @@ export default function FeatureDetailPage({
                 </div>
               </div>
 
-              <div className={`rounded-[24px] border border-black/5 ${style.panel} p-5 shadow-[0_18px_50px_rgba(20,20,20,0.08)]`}>
+              <div className="rounded-[24px] border border-black/5 bg-white/70 p-5 shadow-[0_18px_50px_rgba(20,20,20,0.08)]">
                 <div className="grid grid-cols-2 gap-3">
                   {feature.stats.map((item) => (
                     <div key={item.label} className="rounded-[18px] bg-white/80 p-4">
@@ -406,41 +406,74 @@ export default function FeatureDetailPage({
           }
         `}</style>
 
-        <section className="mt-12 grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
-          <ScrollReveal>
-            <div className="rounded-[24px] border border-hair bg-[#fffdf8] p-6 sm:p-8">
-              <span className="eyebrow">{common.howItWorksEyebrow}</span>
-              <h2 className="mt-6 font-head text-[clamp(1.8rem,4vw,2.4rem)] font-semibold tracking-[-0.03em]">
-                {common.howItWorks}
-              </h2>
-              <ol className="mt-6 space-y-4">
-                {feature.process.map((step, index) => (
-                  <li key={step} className="flex gap-4 rounded-[18px] border border-[#F1E9D7] bg-white p-4">
-                    <span className="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-ink font-head text-[12px] text-white">
-                      {String(index + 1).padStart(2, "0")}
-                    </span>
-                    <p className="text-[13px] leading-[1.8] text-[#3d3d3d]">{step}</p>
-                  </li>
-                ))}
-              </ol>
-            </div>
-          </ScrollReveal>
+        {/* Process Architecture & Impact Outcomes */}
+        <section className="mt-16 rounded-[28px] border border-hair bg-gradient-to-b from-[#FDFBF7] to-white p-6 sm:p-10 shadow-[0_16px_40px_rgba(20,20,20,0.03)]">
+          <div className="text-center max-w-[640px] mx-auto">
+            <span className={`inline-flex items-center rounded-full px-3.5 py-1 text-[12px] font-semibold ${style.chip}`}>
+              Workflow &amp; Impact
+            </span>
+            <h2 className="mt-4 font-head text-[clamp(1.8rem,4vw,2.5rem)] font-bold tracking-tight">
+              A Process Built for Real Decisions
+            </h2>
+            <p className="mt-2 text-[14px] text-mute">
+              How {feature.title} transforms raw data into disciplined, defensible investment actions.
+            </p>
+          </div>
 
-          <ScrollReveal delayMs={150}>
-            <div className="rounded-[24px] border border-hair bg-cream p-6 sm:p-8">
-              <span className="eyebrow">{common.whyItMattersEyebrow}</span>
-              <ul className="mt-6 space-y-4">
+          <div className="mt-12 grid gap-10 lg:grid-cols-2 lg:items-start">
+            {/* Left: Connected Stepper Timeline */}
+            <div>
+              <h3 className="font-head text-[16px] font-semibold mb-6 flex items-center gap-2">
+                <span className="material-symbols-outlined text-[20px] text-ink">alt_route</span>
+                Execution Sequence
+              </h3>
+
+              <div className="relative pl-6 space-y-6 border-l-2 border-[#EFE8D8]">
+                {feature.process.map((step, index) => (
+                  <div key={step} className="relative group">
+                    {/* Stepper Node */}
+                    <span
+                      className="absolute -left-[31px] top-0 grid h-6 w-6 place-items-center rounded-full text-[11px] font-bold text-white shadow-sm transition-transform duration-300 group-hover:scale-110"
+                      style={{ backgroundColor: style.accent }}
+                    >
+                      {index + 1}
+                    </span>
+
+                    <div className="rounded-[16px] border border-[#F2EDE2] bg-white p-4 transition-all duration-300 group-hover:border-[#E4D9C4] group-hover:shadow-md">
+                      <p className="text-[13px] leading-[1.7] text-[#2c2c2c] font-medium">{step}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Right: Key Value Impacts */}
+            <div>
+              <h3 className="font-head text-[16px] font-semibold mb-6 flex items-center gap-2">
+                <span className="material-symbols-outlined text-[20px] text-ink">verified</span>
+                Strategic Impact
+              </h3>
+
+              <div className="space-y-4">
                 {feature.impact.map((point) => (
-                  <li key={point} className="flex gap-3 rounded-[18px] border border-[#EFE4CE] bg-white p-4">
-                    <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-gold text-[12px] text-ink">
+                  <div
+                    key={point}
+                    className={`rounded-[18px] border border-[#F0E8D6] ${style.panel} p-5 transition hover:shadow-md flex items-start gap-3.5`}
+                  >
+                    <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-gold text-[13px] font-bold text-ink shadow-sm">
                       ✓
                     </span>
-                    <p className="text-[13px] leading-[1.8] text-[#3d3d3d]">{point}</p>
-                  </li>
+                    <p className="text-[13.5px] leading-[1.7] text-[#2c2c2c] font-medium mt-0.5">{point}</p>
+                  </div>
                 ))}
-              </ul>
+              </div>
+
+              <div className="mt-8 flex items-center justify-between rounded-[16px] bg-cream p-4 border border-[#EFE8D8] text-[12px] text-mute font-medium">
+                <span>Auditable Decision Record</span>
+                <span className="font-semibold text-ink">NiveshMarg Standard ✓</span>
+              </div>
             </div>
-          </ScrollReveal>
+          </div>
         </section>
 
         <nav className="mt-12 flex flex-col gap-4 border-t border-[#F2EFE6] pt-8 sm:flex-row sm:items-center sm:justify-between">
