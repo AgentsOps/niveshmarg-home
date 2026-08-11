@@ -1,9 +1,9 @@
 import FeatureDetailPage from "@/components/FeatureDetailPage";
 import { notFound } from "next/navigation";
-import featuresData from "../../../../docs/features.json";
+import siteData from "../../../../data/site_data.json";
 
 const featureList = (
-  featuresData as {
+  siteData as {
     features: {
       slug: string;
       accent: "rose" | "amber" | "sky" | "mint";

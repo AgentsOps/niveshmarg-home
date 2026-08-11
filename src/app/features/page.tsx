@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import featuresData from "../../../docs/features.json";
+import siteData from "../../../data/site_data.json";
 
 export const metadata: Metadata = {
   title: "NiveshMarg Features",
@@ -37,22 +37,21 @@ const accentMap = {
 } as const;
 
 export default function FeaturesOverviewPage() {
-  const features = (
-    featuresData as {
-      features: {
-        slug: string;
-        accent: keyof typeof accentMap;
-        kicker: string;
-        title: string;
-        summary: string;
-        badge: string;
-      }[];
-    }
-  ).features;
+  const navigation = (siteData as { navigation: { label: string; href: string }[] }).navigation;
+  const features = (siteData as {
+    features: {
+      slug: string;
+      accent: keyof typeof accentMap;
+      kicker: string;
+      title: string;
+      summary: string;
+      badge: string;
+    }[];
+  }).features;
 
   return (
     <div className="bg-white text-ink">
-      <Header />
+      <Header navItems={navigation} />
 
       <main className="mx-auto max-w-[1180px] px-6 py-12 sm:py-16">
         <div className="text-center">

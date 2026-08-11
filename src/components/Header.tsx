@@ -4,7 +4,21 @@ import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
 
-export default function Header() {
+type NavItem = {
+  label: string;
+  href: string;
+};
+
+const defaultNavItems: NavItem[] = [
+  { label: "Home", href: "/" },
+  { label: "Features", href: "/features" },
+  { label: "AI Score", href: "/features/ai-score" },
+  { label: "The swarm", href: "/features/swarm" },
+  { label: "Workspace", href: "/features/workspace" },
+  { label: "How it works", href: "/features/path" },
+];
+
+export default function Header({ navItems = defaultNavItems }: { navItems?: NavItem[] }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const closeMenu = () => setIsMenuOpen(false);
@@ -25,31 +39,18 @@ export default function Header() {
           </span>
           <span className="min-w-0 leading-none">
             <span className="block truncate font-head text-[18px] font-semibold tracking-tight sm:text-[20px]">
-              Niveshmarg
+              NiveshMarg
             </span>
             <span className="mt-0.5 block font-deva text-[10px] text-mute"> निवेश · मार्ग </span>
           </span>
         </Link>
 
         <nav className="hidden items-center gap-8 text-[14px] text-mute lg:flex" aria-label="Primary">
-          <Link href="/" className="transition hover:text-ink uppercase">
-            Home
-          </Link>
-          <Link href="/features" className="transition hover:text-ink uppercase">
-            Features
-          </Link>
-          <Link href="/features/ai-score" className="transition hover:text-ink uppercase">
-            AI Score
-          </Link>
-          <Link href="/features/swarm" className="transition hover:text-ink uppercase">
-            The swarm
-          </Link>
-          <Link href="/features/workspace" className="transition hover:text-ink uppercase">
-            Workspace
-          </Link>
-          <Link href="/features/path" className="transition hover:text-ink uppercase">
-            How it works
-          </Link>
+          {navItems.map((item) => (
+            <Link key={item.href} href={item.href} className="transition hover:text-ink uppercase">
+              {item.label}
+            </Link>
+          ))}
         </nav>
 
         <div className="flex shrink-0 items-center gap-3 sm:gap-4">
@@ -84,41 +85,16 @@ export default function Header() {
       {isMenuOpen && (
         <div id="menu-panel" className="border-t border-[#F0EADA] bg-cream px-6 py-3 lg:hidden">
           <nav className="grid gap-1 text-[14px]" aria-label="Mobile">
-            <Link
-              href="/features"
-              onClick={closeMenu}
-              className="rounded-xl px-3 py-2.5 font-medium transition hover:bg-white"
-            >
-              Features
-            </Link>
-            <Link
-              href="/features/ai-score"
-              onClick={closeMenu}
-              className="rounded-xl px-3 py-2.5 font-medium transition hover:bg-white"
-            >
-              AI Score
-            </Link>
-            <Link
-              href="/features/swarm"
-              onClick={closeMenu}
-              className="rounded-xl px-3 py-2.5 font-medium transition hover:bg-white"
-            >
-              The swarm
-            </Link>
-            <Link
-              href="/features/workspace"
-              onClick={closeMenu}
-              className="rounded-xl px-3 py-2.5 font-medium transition hover:bg-white"
-            >
-              Workspace
-            </Link>
-            <Link
-              href="/features/path"
-              onClick={closeMenu}
-              className="rounded-xl px-3 py-2.5 font-medium transition hover:bg-white"
-            >
-              How it works
-            </Link>
+            {navItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                onClick={closeMenu}
+                className="rounded-xl px-3 py-2.5 font-medium transition hover:bg-white"
+              >
+                {item.label}
+              </Link>
+            ))}
             <a
               href="https://dashboard.niveshmarg.com/"
               onClick={closeMenu}

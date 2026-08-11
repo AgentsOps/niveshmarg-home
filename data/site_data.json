@@ -1,0 +1,146 @@
+{
+  "site": {
+    "name": "NiveshMarg",
+    "subtitle": "निवेश · मार्ग",
+    "description": "AI stock research, portfolio analysis and disciplined investment workflows for modern investors."
+  },
+  "navigation": [
+    { "label": "Home", "href": "/" },
+    { "label": "Features", "href": "/features" },
+    { "label": "AI Score", "href": "/features/ai-score" },
+    { "label": "The swarm", "href": "/features/swarm" },
+    { "label": "Workspace", "href": "/features/workspace" },
+    { "label": "How it works", "href": "/features/path" }
+  ],
+  "home": {
+    "eyebrow": "AI research, made simple",
+    "headline": "Unlock Your Investing Edge",
+    "description": "Six specialist AI analysts research a stock, argue the bull case against the bear case, and hand you a verdict with entry, target and stop levels attached — for NSE listings and global markets alike.",
+    "primaryCta": {
+      "label": "Open dashboard",
+      "href": "https://dashboard.niveshmarg.com/"
+    },
+    "secondaryCta": {
+      "label": "See how it thinks",
+      "href": "#score"
+    }
+  },
+  "features": [
+    {
+      "slug": "ai-score",
+      "accent": "rose",
+      "kicker": "Feature 01",
+      "title": "AI Score",
+      "summary": "A four-part signal engine that blends trend, valuation, sentiment and execution quality into one verdict for every stock you watch.",
+      "badge": "Four signals. One verdict.",
+      "stats": [
+        { "label": "Signals", "value": "4" },
+        { "label": "Readiness", "value": "76/100" },
+        { "label": "Coverage", "value": "NSE + US" },
+        { "label": "Decision", "value": "Buy / Hold / Exit" }
+      ],
+      "highlights": [
+        { "title": "Signal stacking", "detail": "Each score combines valuation momentum, market context and sentiment to reduce noisy single-metric decisions." },
+        { "title": "Clear confidence", "detail": "The model marks how strong the conviction is before it ever tells you to act." },
+        { "title": "Fast context", "detail": "A single score makes it easy to compare companies, sectors and watchlists in seconds." }
+      ],
+      "process": [
+        "Collect valuation, trend, sentiment and operational quality inputs across the stock's relevant time window.",
+        "Normalize each signal into a common risk-adjusted score before comparing it with peers and benchmarks.",
+        "Blend the readings into a single verdict with a confidence band and an actionable next step."
+      ],
+      "impact": [
+        "Helps investors avoid hype-driven entries without removing the conviction behind a good thesis.",
+        "Creates a repeatable discipline for comparing opportunities across sectors and benchmarks.",
+        "Turns a crowded stream of headlines into a structured decision framework."
+      ]
+    },
+    {
+      "slug": "swarm",
+      "accent": "amber",
+      "kicker": "Feature 02",
+      "title": "The Swarm",
+      "summary": "A specialist research team of AI agents argues the bull and bear cases side by side so you see the why behind the score.",
+      "badge": "Six analysts. One thesis.",
+      "stats": [
+        { "label": "Analysts", "value": "6" },
+        { "label": "Debate", "value": "Bull vs Bear" },
+        { "label": "Frames", "value": "Risk + Upside" },
+        { "label": "Outlook", "value": "Actionable" }
+      ],
+      "highlights": [
+        { "title": "Multi-angle review", "detail": "Fundamental, technical and risk lenses are evaluated together instead of in isolation." },
+        { "title": "Balanced debate", "detail": "The swarm surfaces the counterarguments you are most likely to miss in a one-sided narrative." },
+        { "title": "Evidence trail", "detail": "Each conclusion is traceable to the factors that moved the score and the price thesis." }
+      ],
+      "process": [
+        "Assign research tasks to specialist AI personas focused on fundamentals, charting, risk and market context.",
+        "Have the agents challenge each other with supporting evidence and trade-off analysis rather than static summaries.",
+        "Package the strongest aligned arguments into a decision-ready narrative with clear trade boundaries."
+      ],
+      "impact": [
+        "Reduces blind spots created by one-dimensional analysis or a single expert bias.",
+        "Makes it easier to understand not just the recommendation, but the assumptions behind it.",
+        "Creates a stronger investable story when you need to defend or revisit a thesis."
+      ]
+    },
+    {
+      "slug": "workspace",
+      "accent": "sky",
+      "kicker": "Feature 03",
+      "title": "Workspace",
+      "summary": "An integrated investor workspace that keeps your watchlists, portfolios, thesis notes, and action trail in one place.",
+      "badge": "Portfolio context. Clean action.",
+      "stats": [
+        { "label": "Positions", "value": "Live" },
+        { "label": "Notes", "value": "All in one" },
+        { "label": "Reports", "value": "Board-ready" },
+        { "label": "Tracking", "value": "Real-time" }
+      ],
+      "highlights": [
+        { "title": "Portfolio memory", "detail": "Every position and note sits inside the same coherent map of your investing process." },
+        { "title": "Decision trail", "detail": "You keep the rationale, target, and review checkpoint connected to each action." },
+        { "title": "Execution clarity", "detail": "The dashboard condenses crowded information into a cleaner workflow for investors and analysts." }
+      ],
+      "process": [
+        "Bring each idea, portfolio holding and market watch into a single investor workspace.",
+        "Tag positions with thesis notes, risk categories and review checkpoints to maintain context over time.",
+        "Turn the workspace into a living decision ledger for portfolio updates, scenario checks and review cycles."
+      ],
+      "impact": [
+        "Improves consistency across watchlists, position reviews and trade deliberation.",
+        "Makes it easier to revisit why a position was entered, changed or exited.",
+        "Keeps portfolio decision-making organized even as the number of ideas grows."
+      ]
+    },
+    {
+      "slug": "path",
+      "accent": "mint",
+      "kicker": "Feature 04",
+      "title": "How it works",
+      "summary": "A guided investment path that moves from idea discovery to thesis validation, portfolio management and disciplined review.",
+      "badge": "From signal to action.",
+      "stats": [
+        { "label": "Flow", "value": "4 steps" },
+        { "label": "Focus", "value": "Idea → Action" },
+        { "label": "Review", "value": "Continuous" },
+        { "label": "Discipline", "value": "Built-in" }
+      ],
+      "highlights": [
+        { "title": "Discover signals", "detail": "The workflow begins with a clear market question and a scan of the strongest opportunities." },
+        { "title": "Challenge the thesis", "detail": "Counterarguments and risk scenarios are tested before you size the position or commit capital." },
+        { "title": "Track outcomes", "detail": "The process keeps learning from review cycles so the next decision is sharper than the last." }
+      ],
+      "process": [
+        "Start with a market question, a watchlist or a thesis that deserves validation.",
+        "Use the score and swarm insights to pressure-test assumptions, risk and timing before acting.",
+        "Review execution, portfolio impact and outcome data to refine the next cycle and stay disciplined."
+      ],
+      "impact": [
+        "Creates a repeatable path from research to action without depending on ad hoc process notes.",
+        "Helps investors become more consistent and less reactive in volatile markets.",
+        "Brings a clear thread from idea generation to portfolio-level review and learning."
+      ]
+    }
+  ]
+}

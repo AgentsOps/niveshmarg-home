@@ -7,13 +7,17 @@ import PortfolioBandSection from "@/components/PortfolioBandSection";
 import WorkspaceSection from "@/components/WorkspaceSection";
 import PathSection from "@/components/PathSection";
 import Footer from "@/components/Footer";
+import siteData from "../../data/site_data.json";
 
 export default function Home() {
+  const navigation = (siteData as { navigation: { label: string; href: string }[] }).navigation;
+  const hero = (siteData as { home: { eyebrow: string; headline: string; description: string; primaryCta: { label: string; href: string }; secondaryCta: { label: string; href: string } } }).home;
+
   return (
     <>
-      <Header />
+      <Header navItems={navigation} />
       <main id="top">
-        <HeroSection />
+        <HeroSection hero={hero} />
         <DataSourcesSection />
         <FeatureHighlightsSection />
         <TheSwarmSection />

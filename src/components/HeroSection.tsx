@@ -1,16 +1,45 @@
 import Link from "next/link";
 
-export default function HeroSection() {
+type HeroContent = {
+  eyebrow: string;
+  headline: string;
+  description: string;
+  primaryCta: {
+    label: string;
+    href: string;
+  };
+  secondaryCta: {
+    label: string;
+    href: string;
+  };
+};
+
+const defaultHero: HeroContent = {
+  eyebrow: "AI research, made simple",
+  headline: "Unlock Your Investing Edge",
+  description:
+    "Six specialist AI analysts research a stock, argue the bull case against the bear case, and hand you a verdict with entry, target and stop levels attached — for NSE listings and global markets alike.",
+  primaryCta: {
+    label: "Open dashboard",
+    href: "https://dashboard.niveshmarg.com/",
+  },
+  secondaryCta: {
+    label: "See how it thinks",
+    href: "#score",
+  },
+};
+
+export default function HeroSection({ hero = defaultHero }: { hero?: HeroContent }) {
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-cream via-[#FDFBF5] to-white">
       <div className="mx-auto grid max-w-[1180px] grid-cols-1 items-center gap-12 px-6 pb-20 pt-10 lg:grid-cols-[46%_1fr] lg:pb-24">
         <div>
           <span className="animate-rise inline-block rounded-full border border-[#E4DFCD] bg-white/70 px-4 py-1.5 text-[12px] font-medium tracking-wide">
-            AI research, made simple
+            {hero.eyebrow}
           </span>
 
           <h1 className="animate-rise [animation-delay:80ms] mt-6 font-head text-[clamp(2.25rem,7.5vw,3.25rem)] font-semibold leading-[1.08] tracking-[-0.02em]">
-            Unlock Your{" "}
+            {hero.headline.split(" ").slice(0, 2).join(" ")}{" "}
             <span className="relative inline-flex items-center gap-3 align-middle">
               <span className="flex -space-x-2">
                 <span
@@ -38,7 +67,7 @@ export default function HeroSection() {
             </span>
             <br />
             <span className="relative">
-              Investing Edge
+              {hero.headline.split(" ").slice(-2).join(" ")}
               <svg
                 className="absolute -bottom-1 left-0 w-[200px] max-w-full"
                 viewBox="0 0 210 14"
@@ -56,17 +85,15 @@ export default function HeroSection() {
           </h1>
 
           <p className="animate-rise [animation-delay:160ms] mt-7 max-w-[420px] text-[14px] leading-[1.75] text-mute">
-            Six specialist AI analysts research a stock, argue the bull case against the bear
-            case, and hand you a verdict with entry, target and stop levels attached — for NSE
-            listings and global markets alike.
+            {hero.description}
           </p>
 
           <div className="animate-rise [animation-delay:240ms] mt-8 flex flex-wrap items-center gap-3">
-            <a href="https://dashboard.niveshmarg.com/" className="pill pill-ink">
-              Open dashboard
+            <a href={hero.primaryCta.href} className="pill pill-ink">
+              {hero.primaryCta.label}
             </a>
-            <Link href="#score" className="pill pill-line">
-              See how it thinks
+            <Link href={hero.secondaryCta.href} className="pill pill-line">
+              {hero.secondaryCta.label}
             </Link>
           </div>
 
