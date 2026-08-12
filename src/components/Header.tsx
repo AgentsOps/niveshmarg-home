@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
 import siteData from "../../data/site_data.json";
+import { event } from "@/lib/analytics";
 
 type NavItem = {
   label: string;
@@ -16,6 +17,10 @@ export default function Header({ navItems = siteData.header.defaultNavItems }: {
   const siteInfo = siteData.site;
 
   const closeMenu = () => setIsMenuOpen(false);
+
+  const trackDashboardClick = (location: string) => {
+    event("open_dashboard", { location });
+  };
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-[#F0EADA] bg-cream/90 backdrop-blur-md">
@@ -50,12 +55,14 @@ export default function Header({ navItems = siteData.header.defaultNavItems }: {
         <div className="flex shrink-0 items-center gap-3 sm:gap-4">
           <a
             href={siteInfo.dashboardUrl}
+            onClick={() => trackDashboardClick("header_signin")}
             className="hidden text-[14px] font-medium sm:inline"
           >
             {headerData.signInLabel}
           </a>
           <a
             href={siteInfo.dashboardUrl}
+            onClick={() => trackDashboardClick("header_cta")}
             className="pill pill-ink pill-sm whitespace-nowrap"
           >
             <span className="hidden sm:inline">{headerData.dashboardLabel}</span>
@@ -91,7 +98,10 @@ export default function Header({ navItems = siteData.header.defaultNavItems }: {
             ))}
             <a
               href={siteInfo.dashboardUrl}
-              onClick={closeMenu}
+              onClick={() => {
+                closeMenu();
+                trackDashboardClick("mobile_menu");
+              }}
               className="mt-1 rounded-xl bg-ink px-3 py-2.5 text-center font-medium text-white"
             >
               {headerData.signInLabel}

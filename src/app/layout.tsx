@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { Poppins, DM_Sans, Noto_Sans_Devanagari } from "next/font/google";
+import Script from "next/script";
+import GoogleAnalyticsTracker from "@/components/GoogleAnalyticsTracker";
+import { GA_MEASUREMENT_ID } from "@/lib/analytics";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -77,9 +80,29 @@ export default function RootLayout({
       <body
         className={`${poppins.variable} ${dmSans.variable} ${notoSansDevanagari.variable} font-body text-ink antialiased`}
       >
+        {/* Google Analytics gtag.js */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', '${GA_MEASUREMENT_ID}', {
+              page_path: window.location.pathname,
+              send_page_view: true
+            });
+          `}
+        </Script>
+
+        {/* Client-side route transition tracker for recording user journeys */}
+        <GoogleAnalyticsTracker />
+
         {children}
       </body>
     </html>
   );
 }
-

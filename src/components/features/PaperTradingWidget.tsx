@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { event } from "@/lib/analytics";
 
 interface SimulatedTrade {
   id: string;
@@ -42,6 +43,13 @@ export default function PaperTradingWidget() {
     } else {
       setBalance((b) => b + tradeCost);
     }
+
+    event("execute_paper_trade", {
+      ticker,
+      order_type: orderType,
+      shares,
+      total_value: tradeCost,
+    });
   };
 
   return (
