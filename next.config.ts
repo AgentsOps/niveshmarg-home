@@ -2,32 +2,44 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: "standalone",
+  // Permanent: these short URLs are shared links, and a temporary redirect
+  // tells search engines to keep indexing the short form instead of the page.
   async redirects() {
+    const aliases: Record<string, string> = {
+      "ai-score": "ai-score",
+      swarm: "swarm",
+      workspace: "workspace",
+      "portfolio-doctor": "portfolio-doctor",
+      portfolio: "portfolio-management",
+      "portfolio-management": "portfolio-management",
+      "paper-trading": "paper-trading",
+      backtesting: "backtesting-strategy",
+      "backtesting-strategy": "backtesting-strategy",
+      watchlist: "watchlist",
+      "stock-chat": "stock-chat",
+      chat: "stock-chat",
+      "stock-analysis": "stock-analysis",
+      "stock-screener": "stock-screener",
+      screener: "stock-screener",
+      learn: "learn-stock-market",
+      "learn-stock-market": "learn-stock-market",
+      "mobile-app": "mobile-app",
+      app: "mobile-app",
+      "reports-exports": "reports-exports",
+      path: "path",
+      "how-it-works": "path",
+      // The institutional-flow page described a feature the product no
+      // longer has; its nearest successor is the company research page.
+      "institutional-flow": "stock-analysis",
+    };
     return [
-      { source: "/ai-score", destination: "/features/ai-score", permanent: false },
-      { source: "/swarm", destination: "/features/swarm", permanent: false },
-      { source: "/workspace", destination: "/features/workspace", permanent: false },
-      { source: "/portfolio-doctor", destination: "/features/portfolio-doctor", permanent: false },
-      { source: "/portfolio", destination: "/features/portfolio-doctor", permanent: false },
-      { source: "/paper-trading", destination: "/features/paper-trading", permanent: false },
-      { source: "/backtesting", destination: "/features/backtesting-strategy", permanent: false },
-      { source: "/backtesting-strategy", destination: "/features/backtesting-strategy", permanent: false },
-      { source: "/watchlist", destination: "/features/watchlist", permanent: false },
-      { source: "/stock-chat", destination: "/features/stock-chat", permanent: false },
-      { source: "/chat", destination: "/features/stock-chat", permanent: false },
-      { source: "/institutional-flow", destination: "/features/institutional-flow", permanent: false },
-      { source: "/reports-exports", destination: "/features/reports-exports", permanent: false },
-      { source: "/path", destination: "/features/path", permanent: false },
-      { source: "/how-it-works", destination: "/features/path", permanent: false },
+      ...Object.entries(aliases).map(([source, slug]) => ({
+        source: `/${source}`,
+        destination: `/features/${slug}`,
+        permanent: true,
+      })),
+      { source: "/features/institutional-flow", destination: "/features/stock-analysis", permanent: true },
     ];
-  },
-  images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'images.unsplash.com',
-      },
-    ],
   },
 };
 

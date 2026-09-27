@@ -7,7 +7,42 @@ import PortfolioBandSection from "@/components/PortfolioBandSection";
 import WorkspaceSection from "@/components/WorkspaceSection";
 import PathSection from "@/components/PathSection";
 import Footer from "@/components/Footer";
+import JsonLd from "@/components/JsonLd";
 import siteData from "../../data/site_data.json";
+import { SITE_URL } from "@/lib/features";
+
+export const metadata = {
+  alternates: { canonical: "/" },
+};
+
+const structuredData = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "NiveshMarg",
+    url: SITE_URL,
+    logo: `${SITE_URL}/logo.png`,
+    email: siteData.site.contactEmail,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "NiveshMarg",
+    url: SITE_URL,
+    description: siteData.site.description,
+    inLanguage: "en-IN",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: "NiveshMarg",
+    applicationCategory: "FinanceApplication",
+    operatingSystem: "Web, Android, iOS",
+    url: siteData.site.dashboardUrl,
+    description: siteData.site.description,
+    offers: { "@type": "Offer", price: "0", priceCurrency: "INR" },
+  },
+];
 
 export default function Home() {
   const navigation = (siteData as { navigation: { label: string; href: string }[] }).navigation;
@@ -15,6 +50,9 @@ export default function Home() {
 
   return (
     <>
+      {structuredData.map((data) => (
+        <JsonLd key={data["@type"]} data={data} />
+      ))}
       <Header navItems={navigation} />
       <main id="top">
         <HeroSection hero={hero} />

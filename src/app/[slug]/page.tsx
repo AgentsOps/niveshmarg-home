@@ -1,73 +1,46 @@
 import FeatureDetailPage from "@/components/FeatureDetailPage";
 import { notFound } from "next/navigation";
-import siteData from "../../../data/site_data.json";
+import { featureMetadata, features, getFeature } from "@/lib/features";
 
+/**
+ * Top-level aliases (`/learn`, `/chat`, …). next.config.ts redirects the
+ * common ones permanently; anything that still lands here renders the page
+ * with its canonical pointing at `/features/<slug>`, so the two URLs never
+ * compete in search results.
+ */
 const slugAliases: Record<string, string> = {
   backtesting: "backtesting-strategy",
-  portfolio: "portfolio-doctor",
+  portfolio: "portfolio-management",
   chat: "stock-chat",
+  learn: "learn-stock-market",
+  screener: "stock-screener",
+  app: "mobile-app",
   "how-it-works": "path",
+  "institutional-flow": "stock-analysis",
 };
 
-const featureList = siteData.features as {
-  slug: string;
-  accent: "rose" | "amber" | "sky" | "mint";
-  kicker: string;
-  title: string;
-  summary: string;
-  badge: string;
-  stats: { label: string; value: string }[];
-  highlights: { title: string; detail: string }[];
-  process: string[];
-  impact: string[];
-}[];
+function resolve(rawSlug: string) {
+  return getFeature(slugAliases[rawSlug] ?? rawSlug);
+}
 
 export function generateStaticParams() {
-  const primarySlugs = featureList.map((f) => ({ slug: f.slug }));
-  const aliasSlugs = Object.keys(slugAliases).map((alias) => ({ slug: alias }));
-  return [...primarySlugs, ...aliasSlugs];
+  return [
+    ...features.map((feature) => ({ slug: feature.slug })),
+    ...Object.keys(slugAliases).map((slug) => ({ slug })),
+  ];
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug: rawSlug } = await params;
-  const slug = slugAliases[rawSlug] || rawSlug;
-  const feature = featureList.find((entry) => entry.slug === slug);
-
-  if (!feature) {
-    return {
-      title: "Page not found",
-    };
-  }
-
-  return {
-    title: `${feature.title} | NiveshMarg`,
-    description: feature.summary,
-    openGraph: {
-      title: `${feature.title} | NiveshMarg`,
-      description: feature.summary,
-      url: `https://niveshmarg.com/${feature.slug}`,
-      type: "website",
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: `${feature.title} | NiveshMarg`,
-      description: feature.summary,
-    },
-  };
+  const { slug } = await params;
+  const feature = resolve(slug);
+  return feature ? featureMetadata(feature) : { title: "Page not found" };
 }
 
 export default async function TopLevelSlugPage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug: rawSlug } = await params;
-  const slug = slugAliases[rawSlug] || rawSlug;
-  const feature = featureList.find((entry) => entry.slug === slug);
+  const { slug } = await params;
+  const feature = resolve(slug);
+  if (!feature) notFound();
 
-  if (!feature) {
-    notFound();
-  }
-
-  const currentIndex = featureList.findIndex((entry) => entry.slug === slug);
-  const previous = currentIndex > 0 ? featureList[currentIndex - 1] : undefined;
-  const next = currentIndex < featureList.length - 1 ? featureList[currentIndex + 1] : undefined;
-
-  return <FeatureDetailPage feature={feature} previous={previous} next={next} />;
+  const index = features.indexOf(feature);
+  return <FeatureDetailPage feature={feature} previous={features[index - 1]} next={features[index + 1]} />;
 }

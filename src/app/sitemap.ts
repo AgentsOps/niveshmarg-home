@@ -1,39 +1,19 @@
 import type { MetadataRoute } from "next";
-import siteData from "../../data/site_data.json";
+import { SITE_URL, featurePath, features } from "@/lib/features";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://niveshmarg.com";
+  const lastModified = new Date();
 
-  const featureSlugs = siteData.features.map((f) => f.slug);
-
-  const mainPages: MetadataRoute.Sitemap = [
-    {
-      url: baseUrl,
-      lastModified: new Date(),
-      changeFrequency: "daily",
-      priority: 1.0,
-    },
-    {
-      url: `${baseUrl}/features`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
+  // Only canonical URLs. The top-level /<slug> aliases used to be listed as
+  // well, which asked search engines to index every feature page twice.
+  return [
+    { url: SITE_URL, lastModified, changeFrequency: "weekly", priority: 1.0 },
+    { url: `${SITE_URL}/features`, lastModified, changeFrequency: "weekly", priority: 0.9 },
+    ...features.map((feature) => ({
+      url: `${SITE_URL}${featurePath(feature.slug)}`,
+      lastModified,
+      changeFrequency: "monthly" as const,
+      priority: feature.category === "learn" ? 0.85 : 0.8,
+    })),
   ];
-
-  const featurePages: MetadataRoute.Sitemap = featureSlugs.map((slug) => ({
-    url: `${baseUrl}/features/${slug}`,
-    lastModified: new Date(),
-    changeFrequency: "weekly",
-    priority: 0.8,
-  }));
-
-  const directPages: MetadataRoute.Sitemap = featureSlugs.map((slug) => ({
-    url: `${baseUrl}/${slug}`,
-    lastModified: new Date(),
-    changeFrequency: "weekly",
-    priority: 0.7,
-  }));
-
-  return [...mainPages, ...featurePages, ...directPages];
 }

@@ -2,95 +2,182 @@
   "site": {
     "name": "NiveshMarg",
     "subtitle": "निवेश · मार्ग",
-    "description": "AI stock research, portfolio analysis and disciplined investment workflows for modern investors.",
+    "description": "A stock market playground to learn investing with virtual money, analyse stocks with AI and manage your portfolio — for NSE, BSE and 30+ global exchanges.",
     "contactEmail": "hello@niveshmarg.com",
     "dashboardUrl": "https://dashboard.niveshmarg.com/"
   },
   "navigation": [
-    { "label": "AI Score", "href": "/features/ai-score" },
-    { "label": "Portfolio", "href": "/features/portfolio-doctor" },
-    { "label": "Paper Trading", "href": "/features/paper-trading" },
-    { "label": "Backtesting", "href": "/features/backtesting-strategy" },
-    { "label": "Stock Chat", "href": "/features/stock-chat" }
+    {
+      "label": "Learn",
+      "href": "/features/learn-stock-market"
+    },
+    {
+      "label": "Paper Trading",
+      "href": "/features/paper-trading"
+    },
+    {
+      "label": "Stock Analysis",
+      "href": "/features/stock-analysis"
+    },
+    {
+      "label": "Portfolio",
+      "href": "/features/portfolio-management"
+    },
+    {
+      "label": "All Features",
+      "href": "/features"
+    }
   ],
   "header": {
     "signInLabel": "Sign in",
     "dashboardLabel": "Open dashboard",
     "mobileSignInLabel": "Log in",
     "defaultNavItems": [
-      { "label": "Home", "href": "/" },
-      { "label": "Features", "href": "/features" },
-      { "label": "AI Score", "href": "/features/ai-score" },
-      { "label": "The swarm", "href": "/features/swarm" },
-      { "label": "Workspace", "href": "/features/workspace" },
-      { "label": "How it works", "href": "/features/path" }
+      {
+        "label": "Home",
+        "href": "/"
+      },
+      {
+        "label": "Features",
+        "href": "/features"
+      },
+      {
+        "label": "Learn",
+        "href": "/features/learn-stock-market"
+      },
+      {
+        "label": "Analyse",
+        "href": "/features/stock-analysis"
+      },
+      {
+        "label": "Portfolio",
+        "href": "/features/portfolio-management"
+      },
+      {
+        "label": "How it works",
+        "href": "/features/path"
+      }
     ]
   },
   "footer": {
-    "tagline": "An AI research workspace for patient investors — six specialist agents, a four-part score and a conversational analyst, built for NSE and global markets.",
+    "tagline": "A stock market playground: learn with virtual money, analyse any stock with AI, and manage a real portfolio — on the web and on your phone.",
     "sections": [
       {
-        "title": "Research",
+        "title": "Learn & practise",
         "links": [
-          { "label": "AI Score", "href": "/features/ai-score" },
-          { "label": "Agent swarm", "href": "/features/swarm", "badge": "New" },
-          { "label": "Stock Chat", "href": "/features/stock-chat" },
-          { "label": "Workspace", "href": "/features/workspace" },
-          { "label": "Institutional flow", "href": "/features/institutional-flow" },
-          { "label": "Reports & exports", "href": "/features/reports-exports" }
+          {
+            "label": "Learn the stock market",
+            "href": "/features/learn-stock-market",
+            "badge": "New"
+          },
+          {
+            "label": "Paper trading",
+            "href": "/features/paper-trading"
+          },
+          {
+            "label": "Backtesting & strategies",
+            "href": "/features/backtesting-strategy"
+          },
+          {
+            "label": "How it works",
+            "href": "/features/path"
+          }
         ]
       },
       {
-        "title": "Practise",
+        "title": "Analyse & manage",
         "links": [
-          { "label": "Paper trading", "href": "/features/paper-trading" },
-          { "label": "Backtesting", "href": "/features/backtesting-strategy" },
-          { "label": "Strategy builder", "href": "/features/backtesting-strategy" },
-          { "label": "Portfolio Doctor", "href": "/features/portfolio-doctor" },
-          { "label": "Watchlist", "href": "/features/watchlist" },
-          { "label": "How it works", "href": "/features/path" }
+          {
+            "label": "Stock analysis",
+            "href": "/features/stock-analysis"
+          },
+          {
+            "label": "Stock screener",
+            "href": "/features/stock-screener"
+          },
+          {
+            "label": "AI Score",
+            "href": "/features/ai-score"
+          },
+          {
+            "label": "Stock Chat",
+            "href": "/features/stock-chat"
+          },
+          {
+            "label": "Portfolio management",
+            "href": "/features/portfolio-management"
+          },
+          {
+            "label": "Mobile app",
+            "href": "/features/mobile-app"
+          }
         ]
       },
       {
         "title": "Get started",
         "links": [
-          { "label": "Sign in", "href": "https://dashboard.niveshmarg.com/" },
-          { "label": "Open dashboard", "href": "https://dashboard.niveshmarg.com/" },
-          { "label": "Contact", "href": "mailto:hello@niveshmarg.com" }
+          {
+            "label": "Sign in",
+            "href": "https://dashboard.niveshmarg.com/"
+          },
+          {
+            "label": "All features",
+            "href": "/features"
+          },
+          {
+            "label": "Contact",
+            "href": "mailto:hello@niveshmarg.com"
+          }
         ]
       }
     ],
-    "ctaLabel": "Take the first step",
-    "bottomTitle": "Walk the path with NiveshMarg",
-    "disclaimer": "Markets carry risk. Nothing here is personalised investment advice — please do your own research, or consult a SEBI-registered adviser, before you invest.",
-    "copyright": "All rights reserved."
+    "ctaLabel": "Start practising free",
+    "bottomTitle": "Learn first. Invest when you are ready.",
+    "disclaimer": "Markets carry risk. NiveshMarg is a place to learn, practise and organise your research — not a source of personalised investment advice.",
+    "copyright": "All rights reserved.",
+    "legalDisclaimer": "Disclaimer: NiveshMarg is an educational and research tool. It is not a SEBI-registered investment adviser or research analyst, and nothing on this website or in the app is a recommendation to buy, sell or hold any security. AI scores, verdicts, forecasts, analyst ratings and backtest results are generated automatically, can be wrong or out of date, and do not guarantee future returns. Paper trading uses virtual money only; results in simulation do not reflect real-market costs, slippage or liquidity. Market data may be delayed. Investments in securities are subject to market risks — read all related documents carefully and consult a SEBI-registered adviser before investing."
   },
   "home": {
-    "eyebrow": "AI research, made simple",
-    "headline": "Unlock Your Investing Edge",
-    "description": "Six specialist AI analysts research a stock, argue the bull case against the bear case, and hand you a verdict with entry, target and stop levels attached — for NSE listings and global markets alike.",
+    "eyebrow": "Learn · Analyse · Manage",
+    "headline": "Your Stock Market Playground",
+    "description": "Learn how the stock market works with virtual money, analyse any stock with six AI analysts, and keep your real portfolio healthy — one workspace for NSE, BSE and 30+ global exchanges, on web and mobile.",
     "primaryCta": {
-      "label": "Open dashboard",
+      "label": "Start practising free",
       "href": "https://dashboard.niveshmarg.com/"
     },
     "secondaryCta": {
-      "label": "See how it thinks",
+      "label": "Explore features",
       "href": "#score"
     },
     "scoreBadgeText": "Four signals · 25 points each",
     "scorePillLabel": "AI Score"
   },
   "dataSources": [
-    { "icon": "apartment", "label": "NSE" },
-    { "icon": "account_balance", "label": "BSE" },
-    { "icon": "public", "label": "Global" },
-    { "icon": "smart_toy", "label": "OpenRouter" },
-    { "icon": "send", "label": "Telegram" }
+    {
+      "icon": "apartment",
+      "label": "NSE"
+    },
+    {
+      "icon": "account_balance",
+      "label": "BSE"
+    },
+    {
+      "icon": "public",
+      "label": "30+ exchanges"
+    },
+    {
+      "icon": "smartphone",
+      "label": "Android & iOS"
+    },
+    {
+      "icon": "send",
+      "label": "Telegram"
+    }
   ],
   "featureHighlights": {
-    "eyebrow": "Three engines, one workspace",
-    "title": "Feature highlights",
-    "subtitle": "Research that shows its working, not just its conclusion.",
+    "eyebrow": "Learn, analyse, manage",
+    "title": "Three reasons to start here",
+    "subtitle": "A safe place to practise, research that shows its working, and a portfolio that stays in shape.",
     "cards": [
       {
         "icon": "bar_chart",
@@ -98,9 +185,9 @@
         "bgClass": "bg-rose",
         "textClass": "text-rose-ink",
         "borderClass": "border-rose-line",
-        "title": "A Score Earned Four Times Over",
-        "description": "Chronos forecast, technicals, news sentiment and market trend are each scored out of twenty-five — so a signal only carries weight when the evidence agrees with itself.",
-        "link": "/features/ai-score"
+        "title": "Practise With Virtual Money",
+        "description": "Place paper trades at live prices, backtest 18 ready-made strategies and learn from every mistake — before a single rupee of real money is at risk.",
+        "link": "/features/learn-stock-market"
       },
       {
         "icon": "groups",
@@ -108,9 +195,9 @@
         "bgClass": "bg-amber",
         "textClass": "text-amber-ink",
         "borderClass": "border-amber-line",
-        "title": "Six Analysts That Disagree",
-        "description": "Fundamental, technical, news, valuation and macro agents each file a report. A risk manager argues against all of them before any verdict is written.",
-        "link": "/features/swarm"
+        "title": "Analyse Any Stock With AI",
+        "description": "Six AI analysts research a company, argue the bull case against the bear case and explain their verdict. A four-part AI Score and a stock chat you can question sit alongside.",
+        "link": "/features/stock-analysis"
       },
       {
         "icon": "forum",
@@ -118,19 +205,19 @@
         "bgClass": "bg-sky",
         "textClass": "text-sky-ink",
         "borderClass": "border-sky-line",
-        "title": "An Analyst You Can Question",
-        "description": "Stock Chat reaches for ten live tools — prices, indicators, fundamentals, news and your own holdings — and shows you which ones it used to answer.",
-        "link": "/features/workspace"
+        "title": "Manage Your Real Portfolio",
+        "description": "Import holdings from Zerodha, Groww or Fyers, track live P&L, and let the Portfolio Doctor flag concentration and risk before it hurts.",
+        "link": "/features/portfolio-management"
       }
     ]
   },
   "theSwarm": {
-    "eyebrow": "The debate engine",
+    "eyebrow": "Learn how analysts think",
     "title": "A Verdict You Can Audit",
     "bullCase": {
       "kicker": "Bull case",
       "title": "Every Strength, With Its Evidence Attached",
-      "description": "Growth catalysts, technical setups and an upside target — argued, not asserted."
+      "description": "Growth catalysts, technical setups and an upside target — argued in plain language, so you learn what to look for."
     },
     "verdict": {
       "title": "One Verdict, With the Numbers Attached",
@@ -148,17 +235,17 @@
     "bearCase": {
       "kicker": "Bear case",
       "title": "The Dissent That Keeps You Honest",
-      "description": "What breaks this thesis, what it costs when it does, and the level that proves it."
+      "description": "What breaks the thesis, what it costs when it does, and the price level that proves it — the part beginners most often skip."
     }
   },
   "portfolioBand": {
     "eyebrow": "Grounded in what you own",
     "title": "Building Strong Portfolios, One Decision at a Time",
-    "description": "Ask in your own words and get answers from your own numbers. Stock Chat reads your holdings, watchlist and saved analyses alongside live prices, indicators and news — and tells you which tools it reached for. The Portfolio Doctor diagnoses concentration and drift; backtests walk a strategy through history before you walk it forward with money.",
+    "description": "Bring your holdings in with a broker CSV and see live value and P&L across every market you hold. Ask Stock Chat about them in your own words, run the Portfolio Doctor for a health score, and stress-test the whole portfolio against scenarios like an RBI rate hike or an oil spike.",
     "points": [
-      "Every conversation and analysis saved, searchable and exportable",
-      "Long runs execute in the background and tell you when they land",
-      "Choose the model that answers you"
+      "Import from Zerodha, Groww, Fyers or any CSV",
+      "Health score, sector concentration and stress tests",
+      "Bring your own OpenRouter key and pick from 300+ AI models"
     ],
     "ctaLabel": "Open your workspace",
     "ctaHref": "https://dashboard.niveshmarg.com/"
@@ -166,75 +253,80 @@
   "workspaceSection": {
     "eyebrow": "Everything in one place",
     "title": "The Workspace",
-    "subtitle": "Research, test, hold and report — without leaving for a spreadsheet.",
+    "subtitle": "Learn, research, practise and manage — on the web and in the mobile app.",
     "cards": [
       {
         "icon": "dashboard",
         "title": "Dashboard",
-        "description": "Holdings, movers and open positions on one canvas, refreshed against live quotes."
+        "description": "Holdings, paper-trade performance, strategy signals and monthly P&L on one screen."
       },
       {
         "icon": "account_balance_wallet",
         "title": "Portfolio & P&L",
-        "description": "Quantity, average price and invested value, with corporate actions applied for you."
+        "description": "Live value and unrealised P&L in each market's own currency, imported from your broker.",
+        "link": "/features/portfolio-management"
       },
       {
         "icon": "visibility",
         "title": "Watchlist",
-        "description": "Tickers you are studying, prioritised, with notes kept beside each name.",
+        "description": "Tickers you are studying, with priority alerts and notes kept beside each name.",
         "link": "/features/watchlist"
       },
       {
         "icon": "stethoscope",
         "title": "Portfolio Doctor",
-        "description": "A diagnosis of concentration, drift and imbalance — with rebalancing suggested, never forced.",
+        "description": "A 0–100 health score with concentration, weak holdings and rebalancing ideas flagged.",
         "link": "/features/portfolio-doctor"
       },
       {
         "icon": "filter_alt",
         "title": "Screener & market screens",
-        "description": "Filter every listing on valuation, growth and momentum, and save the screens that work."
+        "description": "Filter stocks on valuation, growth and momentum, with analyst ratings and one-tap preset screens.",
+        "link": "/features/stock-screener"
       },
       {
         "icon": "swap_horiz",
         "title": "Paper trading",
-        "description": "Practise the discipline before it costs anything. Same data, no capital at risk.",
+        "description": "Practise buying and selling at live prices with virtual money. No capital at risk.",
         "link": "/features/paper-trading"
       },
       {
         "icon": "rule",
-        "title": "Strategy builder",
-        "description": "Compose rules and signals visually, then let them watch the market for you.",
+        "title": "Strategy library",
+        "description": "18 ready-made technical strategies — RSI, MACD, Supertrend and more — that can watch the market for you.",
         "link": "/features/backtesting-strategy"
       },
       {
         "icon": "history",
         "title": "Backtesting",
-        "description": "Walk a strategy back through history before you walk it forward with money.",
+        "description": "Walk a strategy back through years of history and read its returns and drawdowns.",
         "link": "/features/backtesting-strategy"
       },
       {
-        "icon": "apartment",
-        "title": "Institutional flow",
-        "description": "NSE bulk and block deals alongside global institutional filings — who is actually buying."
+        "icon": "candlestick_chart",
+        "title": "Stock pages & charts",
+        "description": "Candlestick charts with 10+ indicators, fundamentals, holders and news for any listing.",
+        "link": "/features/stock-analysis"
       },
       {
         "icon": "picture_as_pdf",
         "title": "Reports & exports",
-        "description": "Any analysis becomes a clean PDF, saved and shareable, with the reasoning intact."
+        "description": "Any analysis becomes a clean PDF or a private share link, with the reasoning intact.",
+        "link": "/features/reports-exports"
       },
       {
-        "icon": "notifications_active",
-        "title": "Alerts & background jobs",
-        "description": "Long analyses run with a live progress stepper and tell you — in-app or on Telegram — when they land."
+        "icon": "smartphone",
+        "title": "Mobile app & alerts",
+        "description": "The same account on Android and iPhone, with push, Telegram and email alerts.",
+        "link": "/features/mobile-app"
       }
     ],
     "featuredCard": {
       "icon": "bolt",
       "title": "Start with one ticker",
-      "description": "Type a symbol and watch the swarm work. Everything else grows from there.",
-      "link": "/features/workspace",
-      "linkText": "Explore workspace"
+      "description": "Type a symbol, read what the AI finds, then practise the trade with virtual money. Everything else grows from there.",
+      "link": "/features/learn-stock-market",
+      "linkText": "Start learning"
     }
   },
   "pathSection": {
@@ -242,524 +334,1822 @@
     "cardTitle": "The path of investment",
     "cardBody": "Wealth is not a destination. It is a path you walk with patience.",
     "sectionHeading": "Four steps, walked in order",
-    "sectionBody": "The workspace shapes itself around what you actually own — and keeps the record of every decision you made along the way.",
+    "sectionBody": "Whether you are placing your first trade or reviewing a portfolio you have held for years, the path is the same: learn, analyse, practise, then act with a record.",
     "steps": [
       {
         "number": "01",
-        "title": "Bring your holdings",
-        "description": "Add positions and the tickers you are watching."
+        "title": "Learn with virtual money",
+        "description": "Paper trade at live prices and see what actually moves a stock."
       },
       {
         "number": "02",
-        "title": "Let the swarm argue",
-        "description": "Six analysts research, debate and reach a verdict with levels attached."
+        "title": "Analyse before you act",
+        "description": "Let six AI analysts research, debate and explain a verdict with levels attached."
       },
       {
         "number": "03",
-        "title": "Test before you commit",
-        "description": "Backtest the strategy, paper trade the idea, read the Doctor's diagnosis."
+        "title": "Test the idea",
+        "description": "Backtest the strategy and read the Portfolio Doctor's diagnosis."
       },
       {
         "number": "04",
-        "title": "Walk, and keep the record",
-        "description": "Export the reasoning, set the alerts, and let patience do the rest."
+        "title": "Manage and keep the record",
+        "description": "Track your real holdings, set alerts and export the reasoning."
       }
     ],
-    "quote": "“A verdict is only worth as much as the argument behind it. Every score keeps its four readings, every debate keeps both cases in the words the agents used, and every report can still be opened a year later and checked against what actually happened.”",
+    "quote": "“The cheapest place to make a mistake is a simulation. Every score keeps its four readings, every debate keeps both cases in the words the agents used, and every paper trade is there to review — so you learn from the reasoning, not just the result.”",
     "quoteAuthor": "How NiveshMarg works",
-    "quoteSubtitle": "Auditable by design",
-    "quoteLinkText": "Read the method",
-    "quoteLinkHref": "/features/swarm"
+    "quoteSubtitle": "A playground with a memory",
+    "quoteLinkText": "See how it works",
+    "quoteLinkHref": "/features/path"
   },
   "featuresOverview": {
     "eyebrow": "Feature library",
-    "title": "One system. Complete investor toolkit.",
-    "description": "Each feature sits inside the same investment workflow: uncover the signal, challenge the thesis, manage the portfolio, and keep the decision trail intact.",
-    "learnMoreText": "Learn more"
+    "title": "Learn, analyse and manage — in one place",
+    "description": "NiveshMarg is a stock market playground. Practise with virtual money, research any stock with AI, and manage your real portfolio with the same tools, on the web and on your phone.",
+    "learnMoreText": "Learn more",
+    "categories": [
+      {
+        "key": "learn",
+        "eyebrow": "Learn & practise",
+        "title": "A safe place to learn the market",
+        "description": "Virtual money, real prices. Make the beginner mistakes where they cost nothing, and test strategies against years of history.",
+        "icon": "school"
+      },
+      {
+        "key": "analyse",
+        "eyebrow": "Analyse",
+        "title": "Research that shows its working",
+        "description": "Screen the market, open any company, and let AI analysts argue both sides before you decide.",
+        "icon": "query_stats"
+      },
+      {
+        "key": "manage",
+        "eyebrow": "Manage",
+        "title": "Keep your real portfolio healthy",
+        "description": "Track holdings across markets, catch concentration and risk early, and take it all with you on your phone.",
+        "icon": "account_balance_wallet"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Is NiveshMarg free to start?",
+        "a": "Yes. You can sign up, paper trade with virtual money, screen stocks, track a portfolio, use the watchlist and read stock pages on the free Starter plan. Backtesting is part of the Pro plan. AI features run on OpenRouter, and you can add your own OpenRouter key in Settings to choose from 300+ models."
+      },
+      {
+        "q": "Is paper trading on NiveshMarg real money?",
+        "a": "No. Paper trades use virtual money at live market prices. Nothing is sent to a broker and no real money is at risk, which is what makes it a safe way to learn."
+      },
+      {
+        "q": "Which markets does NiveshMarg cover?",
+        "a": "NSE and BSE in India, US exchanges and more than 30 exchanges worldwide. Prices, money and dates are shown in each market's own currency and format."
+      },
+      {
+        "q": "Does NiveshMarg give investment advice?",
+        "a": "No. NiveshMarg is an educational and research tool and is not a SEBI-registered adviser. AI output can be wrong; use it to learn and to organise your research, and consult a registered adviser before investing."
+      },
+      {
+        "q": "Is there a mobile app?",
+        "a": "Yes. The NiveshMarg app for Android and iPhone uses the same account as the web dashboard, so your portfolio, watchlist, paper trades and chats are on both."
+      }
+    ]
   },
   "featureDetailCommon": {
     "viewAllFeatures": "View all features",
     "backHome": "Back home",
-    "seeInAction": "See it in action",
-    "howItWorks": "A process built for real decisions",
+    "startCta": "Start practising free",
+    "howItWorks": "How it works, step by step",
     "howItWorksEyebrow": "How it works",
     "whyItMattersEyebrow": "Why it matters",
+    "capabilitiesEyebrow": "What's included",
+    "learnEyebrow": "What you'll learn",
+    "faqEyebrow": "Questions",
+    "faqTitle": "Frequently asked questions",
+    "relatedEyebrow": "Keep exploring",
+    "relatedTitle": "Related features",
     "exploreAllFeatures": "Explore all features",
-    "interactiveDemoTitle": "Interactive Feature Workspace"
+    "illustrative": "Illustrative example — not live data or a recommendation.",
+    "ctaTitle": "Try it with virtual money first",
+    "ctaBody": "Create a free account, practise with paper trades and explore every feature at your own pace. Nothing here needs real money until you decide it should."
   },
   "features": [
     {
-      "slug": "ai-score",
-      "accent": "rose",
-      "kicker": "Signal strength",
-      "title": "AI Score",
-      "summary": "Niveshmarg converts four independent market lenses into one clear signal so you can see both the trend and the evidence behind it.",
-      "badge": "4 readings • 25 points each",
-      "stats": [
-        { "label": "Forecast", "value": "25" },
-        { "label": "Technical", "value": "25" },
-        { "label": "Sentiment", "value": "25" },
-        { "label": "Trend", "value": "25" }
-      ],
-      "highlights": [
-        {
-          "title": "Evidence before verdict",
-          "detail": "A score looks reliable only when each pillar is visible. The workspace shows which readings are reinforcing one another and which ones are weakening the case."
-        },
-        {
-          "title": "Balanced by design",
-          "detail": "The model weighs the signal using four lenses instead of a single narrative, which reduces the risk of a strong story masking weak execution."
-        },
-        {
-          "title": "Decision-ready output",
-          "detail": "Whether you are screening a fast mover or validating a home-position thesis, the score becomes a shorthand for deeper due diligence."
-        }
-      ],
-      "process": [
-        "Collect short-term price momentum and trend structure.",
-        "Assess sentiment, news tone and market reaction.",
-        "Compare the result against fundamentals and valuation signals.",
-        "Present a single confidence score with all four readings visible."
-      ],
-      "impact": [
-        "Helps compare ideas without losing the underlying rationale.",
-        "Shortens the time between discovery and decision-making.",
-        "Makes portfolio reviews easier to defend with numbers."
-      ]
-    },
-    {
-      "slug": "swarm",
-      "accent": "amber",
-      "kicker": "The debate engine",
-      "title": "The Swarm",
-      "summary": "Six specialist AI analysts challenge one another, then converge into one actionable verdict with a clear bull case, bear case, and risk levels.",
-      "badge": "6 analysts • 1 verdict",
-      "stats": [
-        { "label": "Analysts", "value": "6" },
-        { "label": "Signals", "value": "84%" },
-        { "label": "Risk", "value": "1:2.6" },
-        { "label": "Bias check", "value": "Live" }
-      ],
-      "highlights": [
-        {
-          "title": "Every thesis is argued",
-          "detail": "Instead of one polished answer, the system produces a structured debate: what the bull case sees, what the bear case fears, and where the gap actually sits."
-        },
-        {
-          "title": "Risk is not hidden",
-          "detail": "The risk manager calls out downside, breaks the setup and highlights when conviction should weaken. That discipline protects against overconfidence."
-        },
-        {
-          "title": "Verdict with numbers",
-          "detail": "Entry, target and stop levels stay attached to the reasoning so users can evaluate whether the risk-reward matches the idea."
-        }
-      ],
-      "process": [
-        "Every analyst investigates a different dimension: valuation, momentum, news, macro, quality and risk.",
-        "Findings are compared and contested before a shared conclusion is drafted.",
-        "The final view includes risk levels and a concrete action range.",
-        "Users can revisit the argument instead of relying on a summary alone."
-      ],
-      "impact": [
-        "Reduces one-sided thinking in investment research.",
-        "Builds confidence through transparent disagreement.",
-        "Turns analysis into a reviewable decision trail."
-      ]
-    },
-    {
-      "slug": "workspace",
-      "accent": "sky",
-      "kicker": "Everything in one place",
-      "title": "Workspace",
-      "summary": "The workspace is where research, positions, strategy testing, and reporting live together, so the investor does not need to jump between tools.",
-      "badge": "Portfolio • research • trade",
-      "stats": [
-        { "label": "Holdings", "value": "Live" },
-        { "label": "Screens", "value": "Saved" },
-        { "label": "Reports", "value": "PDF" },
-        { "label": "Alerts", "value": "Live" }
-      ],
-      "highlights": [
-        {
-          "title": "A single operating surface",
-          "detail": "Dashboard, watchlist, portfolio diagnostics, screening, and paper trading remain connected, reducing friction between thought and action."
-        },
-        {
-          "title": "Research with discipline",
-          "detail": "The portfolio doctor highlights concentration, drift, and risk, while backtesting and strategy rules help validate ideas before capital is committed."
-        },
-        {
-          "title": "Decision records that travel",
-          "detail": "Reports and exports package the reasoning and the data in a simple format for follow-up, review or board-level communication."
-        }
-      ],
-      "process": [
-        "Bring in a portfolio, watchlist or one ticker you want to study.",
-        "Review live holdings, signals and diagnostic views in one screen.",
-        "Test ideas with paper trading, strategies and historical review.",
-        "Share or export the final record when the decision is ready."
-      ],
-      "impact": [
-        "Cuts the admin overhead of active investing.",
-        "Makes portfolio decisions easier to review and defend.",
-        "Keeps strategy and execution in the same system."
-      ]
-    },
-    {
-      "slug": "portfolio-doctor",
+      "slug": "learn-stock-market",
+      "category": "learn",
       "accent": "mint",
-      "kicker": "Portfolio health",
-      "title": "Portfolio Doctor",
-      "summary": "The Portfolio Doctor reviews your portfolio like a disciplined analyst, surfacing concentration, drift, imbalance and resilience before emotions or market noise take over.",
-      "badge": "Risk check • allocation • balance",
+      "icon": "school",
+      "kicker": "Stock market playground",
+      "title": "Learn the Stock Market",
+      "seoTitle": "Learn the Stock Market With Virtual Money — A Practice Playground",
+      "metaDescription": "Learn how the stock market works on NiveshMarg: paper trade NSE, BSE and global stocks with virtual money at live prices, read AI explanations, and backtest strategies before risking real money.",
+      "keywords": [
+        "learn stock market",
+        "stock market for beginners",
+        "virtual stock trading",
+        "stock market simulator India",
+        "practice trading",
+        "paper trading app"
+      ],
+      "summary": "NiveshMarg is a playground for learning the stock market. Trade with virtual money at live prices, read how AI analysts reason about a stock, and test strategies against history — so your first mistakes cost nothing.",
+      "badge": "Virtual money • live prices • real lessons",
       "stats": [
-        { "label": "Exposure", "value": "Live" },
-        { "label": "Risk", "value": "Scan" },
-        { "label": "Drift", "value": "Flagged" },
-        { "label": "Balance", "value": "Advised" }
+        {
+          "label": "Money at risk",
+          "value": "₹0"
+        },
+        {
+          "label": "Prices",
+          "value": "Live"
+        },
+        {
+          "label": "Strategies",
+          "value": "18"
+        },
+        {
+          "label": "Exchanges",
+          "value": "30+"
+        }
       ],
       "highlights": [
         {
-          "title": "Diagnose concentration early",
-          "detail": "The doctor highlights when too much of the portfolio lives in one theme, sector or stock so overconfidence is corrected before it becomes a problem."
+          "title": "Mistakes that cost nothing",
+          "detail": "Buying on a headline, selling in a panic, sizing a position too big — every beginner does it once. Here you do it with virtual money and see the result in your P&L without paying for the lesson."
         },
         {
-          "title": "Spot drift before it hurts",
-          "detail": "As positions move away from the strategic mix, the system flags where the portfolio is no longer aligned with the intended risk profile."
+          "title": "Reasoning you can read",
+          "detail": "The AI analysts explain why a stock looks strong or weak in plain language — valuation, momentum, news, risk. Reading the bull and the bear case side by side is how you learn what to look for."
         },
         {
-          "title": "Give actionable direction",
-          "detail": "Rather than leaving you with a warning, it suggests whether to rebalance, trim, rotate or hold based on the shape of the portfolio."
+          "title": "The same tools as real investing",
+          "detail": "The screener, charts, portfolio tracker and alerts are the ones you will use when you invest for real, so nothing you learn here needs to be unlearned later."
         }
       ],
+      "capabilities": [
+        {
+          "icon": "swap_horiz",
+          "title": "Paper trading",
+          "detail": "Buy and sell NSE, BSE and global stocks with virtual money at live prices."
+        },
+        {
+          "icon": "candlestick_chart",
+          "title": "Charts with indicators",
+          "detail": "Candlesticks with RSI, MACD, moving averages, Bollinger Bands, Supertrend and more."
+        },
+        {
+          "icon": "groups",
+          "title": "AI analyst debate",
+          "detail": "Six AI analysts argue the bull and bear case and explain their verdict."
+        },
+        {
+          "icon": "forum",
+          "title": "Ask anything",
+          "detail": "Stock Chat answers questions like “what is P/E?” or “why did ITC fall today?” with live data."
+        },
+        {
+          "icon": "history",
+          "title": "Backtesting",
+          "detail": "Run a strategy through years of history and read its returns and drawdowns."
+        },
+        {
+          "icon": "smartphone",
+          "title": "Practise anywhere",
+          "detail": "Your paper trades and watchlist follow you to the Android and iPhone app."
+        }
+      ],
+      "learn": [
+        "How prices, orders and P&L actually work",
+        "How to read a candlestick chart and common indicators",
+        "What P/E, market cap and analyst ratings tell you — and what they don't",
+        "Why position sizing and stop-losses matter more than stock picking"
+      ],
       "process": [
-        "Map your current holdings and allocation across sectors, themes and risk buckets.",
-        "Measure concentration, drift and diversification against your intended balance.",
-        "Highlight the largest sources of exposure and the signals that may be distorting the portfolio.",
-        "Recommend the next move: rebalance, reduce concentration, or keep holding with a clearer plan."
+        "Create a free account — no broker or bank details needed.",
+        "Pick a stock from the screener or a market screen and read its page and AI analysis.",
+        "Place a paper trade with virtual money and follow it at live prices.",
+        "Review what happened, backtest the idea, and try again with what you learned."
       ],
       "impact": [
-        "Helps investors avoid silent portfolio drift.",
-        "Turns portfolio reviews into proactive risk management.",
-        "Gives every holding a clearer place inside the wider plan."
+        "Build confidence before real money is involved.",
+        "Learn from the reasoning, not just whether a trade made money.",
+        "Move to real investing with habits that already work."
+      ],
+      "faqs": [
+        {
+          "q": "Can I learn the stock market without investing real money?",
+          "a": "Yes. NiveshMarg's paper trading uses virtual money at live market prices, so you can practise buying, selling and managing positions with nothing at risk."
+        },
+        {
+          "q": "Is NiveshMarg suitable for complete beginners?",
+          "a": "Yes. Start with paper trading and Stock Chat — you can ask basic questions in plain English and the AI explains terms and moves using live data."
+        },
+        {
+          "q": "Do I need a demat or broker account?",
+          "a": "No. You only need a NiveshMarg account to practise. A broker account is only needed if you later decide to invest real money, and that happens outside NiveshMarg."
+        }
+      ],
+      "related": [
+        "paper-trading",
+        "backtesting-strategy",
+        "stock-chat"
       ]
     },
     {
       "slug": "paper-trading",
+      "category": "learn",
       "accent": "amber",
+      "icon": "swap_horiz",
       "kicker": "Practice before risk",
       "title": "Paper Trading",
-      "summary": "Paper trading gives investors a safe environment to test strategy, hone execution and learn from market behavior without placing real capital on the line.",
-      "badge": "Practice • test • refine",
+      "seoTitle": "Paper Trading — Practise Stock Trading With Virtual Money",
+      "metaDescription": "Paper trade NSE, BSE and global stocks with virtual money at live prices. Go long or short, track mark-to-market P&L and learn trading without risking real capital.",
+      "keywords": [
+        "paper trading",
+        "virtual trading India",
+        "stock trading simulator",
+        "practice stock trading",
+        "demo trading NSE"
+      ],
+      "summary": "Paper trading lets you buy and sell real stocks with virtual money at live prices. Practise entries, exits and position sizing, watch mark-to-market P&L, and learn how trading feels — without placing real capital on the line.",
+      "badge": "Virtual money • live prices • long & short",
       "stats": [
-        { "label": "Capital", "value": "Virtual" },
-        { "label": "Execution", "value": "Live" },
-        { "label": "Review", "value": "Instant" },
-        { "label": "Learning", "value": "Fast" }
+        {
+          "label": "Capital",
+          "value": "Virtual"
+        },
+        {
+          "label": "Prices",
+          "value": "Live"
+        },
+        {
+          "label": "Positions",
+          "value": "Long/Short"
+        },
+        {
+          "label": "Risk",
+          "value": "₹0"
+        }
       ],
       "highlights": [
         {
           "title": "Build discipline without real risk",
-          "detail": "You can experiment with entries, exits and position sizing in a realistic market environment without exposing actual capital to the noise of emotion."
+          "detail": "Experiment with entries, exits and position sizing in a realistic market without exposing real money to the noise of emotion."
         },
         {
-          "title": "Test ideas against real market motion",
-          "detail": "Paper trading lets you replay monthly and weekly behaviour, evaluate setups and compare whether a thesis holds up under forward-moving conditions."
+          "title": "Real prices, forward in time",
+          "detail": "Trades are marked to live market prices, so you see how an idea actually plays out day by day — not how it looks in hindsight."
         },
         {
-          "title": "Turn mistakes into feedback",
-          "detail": "Every trade, win or miss, helps sharpen your decision structure and uncover where your strategy is reliable and where it needs adjustment."
+          "title": "Signals you can act on",
+          "detail": "Strategy signals from the strategy library can open a paper trade in one tap, so you can see whether a rule works before trusting it."
         }
+      ],
+      "capabilities": [
+        {
+          "icon": "trending_up",
+          "title": "Long and short",
+          "detail": "Practise both directions at live prices."
+        },
+        {
+          "icon": "monitoring",
+          "title": "Mark-to-market P&L",
+          "detail": "Open positions revalue as prices move."
+        },
+        {
+          "icon": "bolt",
+          "title": "One-tap from signals",
+          "detail": "Turn a strategy signal into a paper trade."
+        },
+        {
+          "icon": "dashboard",
+          "title": "Dashboard stats",
+          "detail": "Win rate and monthly P&L on your dashboard."
+        },
+        {
+          "icon": "public",
+          "title": "Many markets",
+          "detail": "NSE, BSE, US and other global exchanges."
+        },
+        {
+          "icon": "smartphone",
+          "title": "On your phone",
+          "detail": "Place and close paper trades in the mobile app."
+        }
+      ],
+      "learn": [
+        "How order entry, exits and stop-losses work",
+        "How position size changes your risk",
+        "How emotions affect decisions — safely",
+        "Whether a strategy's signals hold up going forward"
       ],
       "process": [
-        "Select a stock, strategy or setup you want to practice.",
-        "Place virtual trades using live price and position logic.",
-        "Review execution quality, risk control and result quality in context.",
-        "Refine the plan before moving from rehearsal to real capital."
+        "Choose a stock, strategy or setup you want to practise.",
+        "Place a virtual trade — long or short — at the live price.",
+        "Watch the position revalue and close it when your plan says so.",
+        "Review the result and refine the plan before real money is involved."
       ],
       "impact": [
-        "Reduces the cost of learning when market timing is tough.",
-        "Improves execution quality by removing emotional friction.",
-        "Builds confidence with a repeatable, evidence-based process."
+        "Makes the cost of learning zero.",
+        "Improves execution by removing emotional pressure.",
+        "Builds a repeatable, evidence-based process."
       ],
-      "media": [
+      "faqs": [
         {
-          "type": "image",
-          "title": "Live paper trading board",
-          "src": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1200&q=80",
-          "caption": "A market dashboard where strategy, entry levels and risk can be reviewed before real money is involved."
+          "q": "What is paper trading?",
+          "a": "Paper trading is simulated trading: you place buy and sell orders with virtual money at real market prices, and track the profit or loss as if the trade were real — without any real money changing hands."
         },
         {
-          "type": "video",
-          "title": "Simulation walkthrough",
-          "src": "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
-          "poster": "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=80",
-          "caption": "See how a paper trade can be monitored, evaluated and refined in realistic market conditions."
+          "q": "Are paper trading results the same as real trading?",
+          "a": "Not exactly. Simulated trades do not include brokerage, taxes, slippage or liquidity limits, and there is no emotional cost. Treat results as practice, not as a promise of real returns."
+        },
+        {
+          "q": "Can I short sell in paper trading?",
+          "a": "Yes. NiveshMarg paper trading supports both long and short positions so you can practise both directions."
         }
+      ],
+      "related": [
+        "learn-stock-market",
+        "backtesting-strategy",
+        "watchlist"
       ]
     },
     {
       "slug": "backtesting-strategy",
+      "category": "learn",
       "accent": "sky",
+      "icon": "history",
       "kicker": "Build and validate",
-      "title": "Backtesting & Strategy Builder",
-      "summary": "This feature combines historical validation with visual strategy design so investors can test ideas, refine rules, and see whether a system has edge before it reaches live capital.",
-      "badge": "Test • refine • repeat",
+      "title": "Backtesting & Strategy Library",
+      "seoTitle": "Backtesting & Strategy Library — Test Trading Strategies on History",
+      "metaDescription": "Backtest 18 ready-made technical strategies — RSI, MACD, Supertrend, Bollinger Bands, EMA crossovers — on years of price history, then let them watch the market and alert you.",
+      "keywords": [
+        "backtesting",
+        "strategy backtest India",
+        "trading strategy tester",
+        "RSI strategy",
+        "Supertrend strategy",
+        "MACD crossover backtest"
+      ],
+      "summary": "Test a trading idea on years of real price history before it touches real money. Pick from 18 ready-made technical strategies, tune their settings, read returns and drawdowns, then let the strategy watch the market and alert you.",
+      "badge": "18 strategies • years of history",
       "stats": [
-        { "label": "History", "value": "5Y+" },
-        { "label": "Rules", "value": "Visual" },
-        { "label": "Edge", "value": "Measured" },
-        { "label": "Learning", "value": "Systematic" }
+        {
+          "label": "Strategies",
+          "value": "18"
+        },
+        {
+          "label": "History",
+          "value": "Years"
+        },
+        {
+          "label": "Automations",
+          "value": "Live"
+        },
+        {
+          "label": "Code",
+          "value": "None"
+        }
       ],
       "highlights": [
         {
-          "title": "Design strategy without coding friction",
-          "detail": "The strategy builder lets you define conditions and rules visually, turning investment logic into a repeatable framework instead of a collection of ad hoc impulses."
+          "title": "Start from proven building blocks",
+          "detail": "RSI reversion, MACD crossover, Supertrend, golden cross, Bollinger Bands, Donchian breakouts, VWAP and more — each strategy is ready to run and explains what it looks for."
         },
         {
-          "title": "Test against real market history",
-          "detail": "Backtesting evaluates a strategy across historical market conditions so you can see if the framework survives noise, volatility, sector rotations and weak trends."
+          "title": "See the drawdowns, not just the returns",
+          "detail": "A backtest shows how deep a strategy fell as well as how far it rose, which is usually the more useful lesson."
         },
         {
-          "title": "Use evidence before increasing conviction",
-          "detail": "You can compare outcomes, understand drawdowns, and decide whether a setup deserves a forward test or more refinement before it becomes a live decision."
+          "title": "From test to watch",
+          "detail": "A strategy you like can run as an automation, checking the market on a schedule and sending a signal you can paper trade in one tap."
         }
+      ],
+      "capabilities": [
+        {
+          "icon": "library_books",
+          "title": "18 strategies",
+          "detail": "Trend, momentum, mean-reversion and pattern strategies."
+        },
+        {
+          "icon": "tune",
+          "title": "Adjustable settings",
+          "detail": "Change periods and thresholds without writing code."
+        },
+        {
+          "icon": "query_stats",
+          "title": "Returns & drawdown",
+          "detail": "Performance, trades and risk in one result."
+        },
+        {
+          "icon": "terminal",
+          "title": "Live terminal",
+          "detail": "Watch a strategy's signals update in real time."
+        },
+        {
+          "icon": "schedule",
+          "title": "Automations",
+          "detail": "Strategies that check the market for you on a schedule."
+        },
+        {
+          "icon": "notifications_active",
+          "title": "Signal alerts",
+          "detail": "In-app, push, Telegram or email when a rule fires."
+        }
+      ],
+      "learn": [
+        "How common technical strategies decide to buy or sell",
+        "Why a high return with a deep drawdown can be a bad strategy",
+        "How over-fitting to the past fools backtests",
+        "How to move from a backtest to a forward test"
       ],
       "process": [
-        "Map the market conditions, entry rules and risk controls you want to test.",
-        "Build the strategy with a visual logic layer that is easy to review and adjust.",
-        "Run it across historical data to measure performance, volatility and drawdown.",
-        "Refine the rules and repeat until the strategy is consistent, understandable and defensible."
+        "Pick a strategy from the library and a stock to test it on.",
+        "Adjust the settings you want to try.",
+        "Run it across historical data and read returns, trades and drawdown.",
+        "Refine, then run it as an automation or paper trade its signals."
       ],
       "impact": [
-        "Improves conviction by replacing guesswork with historical evidence.",
-        "Helps reduce overfitting by measuring performance across different phases.",
-        "Turns trading logic into a repeatable system that can be reviewed with clarity."
+        "Replaces guesswork with historical evidence.",
+        "Shows risk as clearly as reward.",
+        "Turns trading rules into a system you can review."
       ],
-      "media": [
+      "faqs": [
         {
-          "type": "image",
-          "title": "Strategy canvas",
-          "src": "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=1200&q=80",
-          "caption": "A visual strategy workspace showing how rules, timing and allocation can be structured before execution."
+          "q": "What is backtesting?",
+          "a": "Backtesting runs a trading strategy over historical prices to see how it would have performed — its returns, number of trades and worst drawdown — before you use it with real money."
         },
         {
-          "type": "video",
-          "title": "Backtest walkthrough",
-          "src": "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
-          "poster": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
-          "caption": "A walkthrough of a historical strategy test that reveals performance, risk exposure and trade quality."
-        }
-      ]
-    },
-    {
-      "slug": "watchlist",
-      "accent": "rose",
-      "kicker": "Stay focused",
-      "title": "Watchlist",
-      "summary": "The Watchlist keeps the names that matter most in a single, easy-to-scan workspace so investors can monitor opportunities, track conviction and capture changes without losing context.",
-      "badge": "Track • prioritize • monitor",
-      "stats": [
-        { "label": "Names", "value": "Live" },
-        { "label": "Alerts", "value": "On" },
-        { "label": "Priority", "value": "Ranked" },
-        { "label": "Context", "value": "Saved" }
-      ],
-      "highlights": [
-        {
-          "title": "Keep the right names in view",
-          "detail": "Track your current opportunities, watchlists and ideas in one place without losing the context that made them worth revisiting."
+          "q": "Do I need to code to backtest?",
+          "a": "No. Every strategy in the library is ready to run and its settings can be changed from the screen."
         },
         {
-          "title": "Prioritize with intent",
-          "detail": "Rank positions by conviction, urgency and research stage so your attention follows the ideas with the highest chance of pay-off."
-        },
-        {
-          "title": "Monitor changes without noise",
-          "detail": "Watch price moves, signal updates, and note changes over time so you can respond to real shifts instead of reacting to every headline."
+          "q": "Does a good backtest mean the strategy will make money?",
+          "a": "No. Past performance does not guarantee future results. A backtest is a first filter; paper trade a strategy going forward before trusting it."
         }
       ],
-      "process": [
-        "Add the names you want to follow and assign them to the right priority bucket.",
-        "Track price action, AI score changes and research context alongside your notes.",
-        "Monitor catalysts, thresholds and momentum shifts without searching across multiple tools.",
-        "Use the list to decide when to act, revisit, or remove a name from focus."
-      ],
-      "impact": [
-        "Improves focus by limiting attention to a curated set of names.",
-        "Makes opportunity tracking more consistent across busy market days.",
-        "Helps investors use context rather than impulse when they decide to act."
-      ],
-      "media": [
-        {
-          "type": "image",
-          "title": "Priority watchlist grid",
-          "src": "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=1200&q=80",
-          "caption": "A clean tracking board that helps investors monitor priority names, easy reads and shifts in conviction."
-        },
-        {
-          "type": "video",
-          "title": "Watchlist alert flow",
-          "src": "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
-          "poster": "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=80",
-          "caption": "A simple walkthrough of how alerts and updates can surface the meaningful changes in a watchlist."
-        }
-      ]
-    },
-    {
-      "slug": "stock-chat",
-      "accent": "sky",
-      "kicker": "Ask the market naturally",
-      "title": "Stock Chat",
-      "summary": "Stock Chat turns natural-language questions into market insight, helping investors ask for context, comparison and reasoning without wading through tabs or raw data dumps.",
-      "badge": "Ask • compare • decide",
-      "stats": [
-        { "label": "Inputs", "value": "10+" },
-        { "label": "Context", "value": "Live" },
-        { "label": "Reasoning", "value": "AI" },
-        { "label": "Speed", "value": "Instant" }
-      ],
-      "highlights": [
-        {
-          "title": "Ask in plain English",
-          "detail": "Instead of forcing users into technical queries, the chat layer understands natural questions like what is driving momentum, how this compares with peers, or what risks matter most."
-        },
-        {
-          "title": "Ground the answer in your context",
-          "detail": "It can work from live prices, indicators, fundamentals, news and portfolio context so answers stay actionable instead of generic commentary."
-        },
-        {
-          "title": "Use it as a research companion",
-          "detail": "The conversation becomes a guided way to challenge assumptions, compare themes and narrow down where deeper review is worth your time."
-        }
-      ],
-      "process": [
-        "Ask a question in your own words about a stock, sector or portfolio theme.",
-        "Pull in live market, fundamentals and portfolio context for the answer.",
-        "Summarise the likely drivers, risks and next checks in plain language.",
-        "Use the response to decide where to dive deeper or to keep the thesis in view."
-      ],
-      "impact": [
-        "Makes market research more conversational and less manual.",
-        "Helps investors understand the 'why' behind a move faster.",
-        "Transforms raw data into a faster decision-making loop."
-      ]
-    },
-    {
-      "slug": "institutional-flow",
-      "accent": "amber",
-      "kicker": "See the tape clearly",
-      "title": "Institutional Flow",
-      "summary": "Institutional Flow brings attention to the forces that move the market beyond headline noise, surfacing where smart money is leaning and how that interacts with your own portfolio decisions.",
-      "badge": "Flow • attention • conviction",
-      "stats": [
-        { "label": "Signals", "value": "Live" },
-        { "label": "Focus", "value": "Smart" },
-        { "label": "Bias", "value": "Tracked" },
-        { "label": "Action", "value": "Context" }
-      ],
-      "highlights": [
-        {
-          "title": "Track where interest is building",
-          "detail": "The feature helps you understand whether risk is rotating into a theme, sector or idea so you can better interpret broader market behaviour."
-        },
-        {
-          "title": "Separate signal from hype",
-          "detail": "By pairing flow signals with your own portfolio context, it becomes easier to tell whether attention is becoming conviction or just another short-lived headline."
-        },
-        {
-          "title": "Support calmer decisions",
-          "detail": "Institutional flow adds a wider lens to your process, reducing the chance that you react to isolated moves without understanding the bigger structure."
-        }
-      ],
-      "process": [
-        "Review the trend in participation, focus and leadership across sectors or stocks.",
-        "Compare current flow with the broader market backdrop and your own exposure.",
-        "Look for shifts in conviction, risk appetite and concentration before acting.",
-        "Use the context to refine timing, sizing and risk management."
-      ],
-      "impact": [
-        "Helps investors read the market with more context.",
-        "Adds a macro lens without overwhelming day-to-day decisions.",
-        "Improves risk-awareness when momentum changes quickly."
-      ]
-    },
-    {
-      "slug": "reports-exports",
-      "accent": "mint",
-      "kicker": "Share the story",
-      "title": "Reports & Exports",
-      "summary": "Reports & Exports turns research and portfolio decisions into clean, board-ready summaries so you can review a thesis, share a result, or document the logic behind an action.",
-      "badge": "Document • share • review",
-      "stats": [
-        { "label": "Format", "value": "PDF" },
-        { "label": "Share", "value": "Ready" },
-        { "label": "Clarity", "value": "High" },
-        { "label": "Review", "value": "Simple" }
-      ],
-      "highlights": [
-        {
-          "title": "Package the decision, not just the data",
-          "detail": "The export captures the reasoning, trade logic and key risk points so a decision can be reviewed later without needing to reconstruct the whole story."
-        },
-        {
-          "title": "Helpful for team or family review",
-          "detail": "Whether you are reviewing a thesis with a partner or preparing a summary for a stakeholder, the output keeps the answer concise and readable."
-        },
-        {
-          "title": "Build better habits around review",
-          "detail": "Good records make it easier to learn from the process, understand mistakes and improve portfolio decisions over time."
-        }
-      ],
-      "process": [
-        "Collect the portfolio, chart or strategy context you want to summarise.",
-        "Turn the research notes into a structured recommendation or review document.",
-        "Export the record in a clean format for future reference or sharing.",
-        "Use the report to revisit the idea, compare outcomes and learn from your process."
-      ],
-      "impact": [
-        "Improves accountability in research and investing decisions.",
-        "Makes it easier to communicate a thesis clearly and confidently.",
-        "Creates a durable record for learning and follow-through."
+      "related": [
+        "paper-trading",
+        "learn-stock-market",
+        "stock-screener"
       ]
     },
     {
       "slug": "path",
+      "category": "learn",
       "accent": "mint",
+      "icon": "alt_route",
       "kicker": "The path of investment",
-      "title": "How it Works",
-      "summary": "The experience is designed around a disciplined investment path: gather positions, run the debate, test the idea, then keep a record of the decision.",
-      "badge": "4 steps • 1 system",
+      "title": "How NiveshMarg Works",
+      "seoTitle": "How NiveshMarg Works — Learn, Analyse, Practise, Manage",
+      "metaDescription": "See how NiveshMarg works: learn with virtual money, analyse stocks with AI, test ideas with backtests and paper trades, then manage your real portfolio with a record of every decision.",
+      "keywords": [
+        "how NiveshMarg works",
+        "investing workflow",
+        "learn to invest",
+        "stock research process"
+      ],
+      "summary": "NiveshMarg follows a simple path: learn with virtual money, analyse before you act, test the idea, then manage your real portfolio — keeping a record of every decision along the way.",
+      "badge": "4 steps • 1 workspace",
       "stats": [
-        { "label": "Track", "value": "1" },
-        { "label": "Assess", "value": "2" },
-        { "label": "Test", "value": "3" },
-        { "label": "Review", "value": "4" }
+        {
+          "label": "Learn",
+          "value": "1"
+        },
+        {
+          "label": "Analyse",
+          "value": "2"
+        },
+        {
+          "label": "Test",
+          "value": "3"
+        },
+        {
+          "label": "Manage",
+          "value": "4"
+        }
       ],
       "highlights": [
         {
-          "title": "Start with what you own",
-          "detail": "The workflow is anchored around your actual holdings and the names you are watching, not a disconnected market dashboard."
+          "title": "Start where you are",
+          "detail": "New to markets? Start with paper trading. Already investing? Import your holdings and start with the Portfolio Doctor."
         },
         {
           "title": "Let the process do the heavy lifting",
-          "detail": "From research swarm to risk checks and strategy testing, the product keeps a consistent thread between idea generation and action."
+          "detail": "From the AI debate to backtests and risk checks, the same thread runs from an idea to a decision."
         },
         {
           "title": "Keep the record, not just the result",
-          "detail": "Reports remain auditable long after the decision was made, making learning and review more straightforward."
+          "detail": "Analyses, chats and reports stay saved, so you can look back and learn from what you decided and why."
         }
       ],
+      "capabilities": [
+        {
+          "icon": "school",
+          "title": "Learn",
+          "detail": "Paper trading and plain-language AI explanations."
+        },
+        {
+          "icon": "query_stats",
+          "title": "Analyse",
+          "detail": "Screener, stock pages, AI Score and the analyst swarm."
+        },
+        {
+          "icon": "science",
+          "title": "Test",
+          "detail": "Backtests, automations and paper trades."
+        },
+        {
+          "icon": "account_balance_wallet",
+          "title": "Manage",
+          "detail": "Portfolio tracking, Doctor, stress tests and alerts."
+        },
+        {
+          "icon": "description",
+          "title": "Record",
+          "detail": "Saved analyses and PDF reports."
+        },
+        {
+          "icon": "smartphone",
+          "title": "Anywhere",
+          "detail": "The same account on web, Android and iPhone."
+        }
+      ],
+      "learn": [
+        "A repeatable routine for looking at any stock",
+        "How to separate research from action",
+        "How to review decisions honestly"
+      ],
       "process": [
-        "Bring your holdings and target names into the workspace.",
-        "Run the swarm and review the evidence behind each conclusion.",
-        "Backtest or paper trade the logic before the money is committed.",
-        "Export the verdict and continue the journey with a clear record."
+        "Learn with virtual money and live prices.",
+        "Analyse a stock with the screener, charts and AI analysts.",
+        "Test the idea with a backtest or a paper trade.",
+        "Manage your real holdings, set alerts and keep the record."
       ],
       "impact": [
-        "Makes decision-making feel deliberate rather than reactive.",
-        "Builds a habit of reviewing the logic behind outcomes.",
+        "Makes decisions deliberate rather than reactive.",
+        "Builds the habit of reviewing the logic behind outcomes.",
         "Turns investing into a repeatable, teachable system."
+      ],
+      "faqs": [
+        {
+          "q": "Where should a beginner start on NiveshMarg?",
+          "a": "Start with paper trading and Stock Chat. Once you are comfortable, try the screener and the AI analysis, and backtest any strategy before using it."
+        },
+        {
+          "q": "Can I use NiveshMarg for my existing portfolio?",
+          "a": "Yes. Import holdings from Zerodha, Groww, Fyers or a CSV to track live P&L and get a Portfolio Doctor health check."
+        }
+      ],
+      "related": [
+        "learn-stock-market",
+        "stock-analysis",
+        "portfolio-management"
+      ]
+    },
+    {
+      "slug": "stock-analysis",
+      "category": "analyse",
+      "accent": "sky",
+      "icon": "candlestick_chart",
+      "kicker": "Company research",
+      "title": "Stock Analysis",
+      "seoTitle": "Stock Analysis — Charts, Fundamentals, News and AI Research",
+      "metaDescription": "Analyse any NSE, BSE or global stock on NiveshMarg: candlestick charts with 10+ indicators, fundamentals, institutional holders, news and AI analysis in one company page.",
+      "keywords": [
+        "stock analysis",
+        "stock research India",
+        "technical analysis charts",
+        "fundamental analysis",
+        "NSE stock analysis",
+        "company research"
+      ],
+      "summary": "Every listed company gets one research page: candlestick charts with 10+ technical indicators, key fundamentals, major holders, latest news and AI analysis — so you can understand a stock before you trade it, even with virtual money.",
+      "badge": "Charts • fundamentals • news • AI",
+      "stats": [
+        {
+          "label": "Indicators",
+          "value": "10+"
+        },
+        {
+          "label": "Exchanges",
+          "value": "30+"
+        },
+        {
+          "label": "Timeframes",
+          "value": "1D–5Y"
+        },
+        {
+          "label": "AI",
+          "value": "Built in"
+        }
+      ],
+      "highlights": [
+        {
+          "title": "Charts that teach",
+          "detail": "Overlay RSI, MACD, moving averages, Bollinger Bands, Supertrend, VWAP, ATR, Stochastic and ADX on a candlestick chart and see how each indicator reads the same price action."
+        },
+        {
+          "title": "The numbers behind the story",
+          "detail": "Market cap, P/E, 52-week range, sector, industry and institutional holders sit beside the chart, so a price move always has context."
+        },
+        {
+          "title": "One tap to the AI",
+          "detail": "From any company page, run the AI analyst swarm, open the AI Score or ask Stock Chat a question about it."
+        }
+      ],
+      "capabilities": [
+        {
+          "icon": "candlestick_chart",
+          "title": "Candlestick charts",
+          "detail": "1D to 5Y with 10+ indicator overlays."
+        },
+        {
+          "icon": "account_balance",
+          "title": "Fundamentals",
+          "detail": "Market cap, P/E, 52-week range, sector and industry."
+        },
+        {
+          "icon": "groups",
+          "title": "Major holders",
+          "detail": "Institutional and fund holders where available."
+        },
+        {
+          "icon": "newspaper",
+          "title": "Latest news",
+          "detail": "Recent headlines for the company."
+        },
+        {
+          "icon": "auto_awesome",
+          "title": "AI analysis",
+          "detail": "Swarm verdict, AI Score and Stock Chat from the page."
+        },
+        {
+          "icon": "link",
+          "title": "Shareable pages",
+          "detail": "Clean links such as /stock/RELIANCE."
+        }
+      ],
+      "learn": [
+        "How to read price action alongside indicators",
+        "Which fundamentals matter for which kind of company",
+        "How news and institutional ownership relate to price"
+      ],
+      "process": [
+        "Search any symbol or open one from the screener or your watchlist.",
+        "Read the chart, add indicators and switch timeframes.",
+        "Check fundamentals, holders and news for context.",
+        "Run the AI analysis or paper trade what you learned."
+      ],
+      "impact": [
+        "Puts everything about a stock on one page.",
+        "Makes technical and fundamental analysis easier to learn.",
+        "Connects research directly to practice."
+      ],
+      "faqs": [
+        {
+          "q": "Which indicators are available on the charts?",
+          "a": "RSI, MACD, 20 EMA, 50 and 200 SMA, Bollinger Bands, Supertrend, VWAP, ATR, Stochastic, ADX and a volume surge indicator, across timeframes from one day to five years."
+        },
+        {
+          "q": "Can I analyse stocks outside India?",
+          "a": "Yes. NiveshMarg covers NSE and BSE plus US and 30+ other exchanges, with prices shown in each market's currency."
+        },
+        {
+          "q": "Is the AI analysis a buy or sell recommendation?",
+          "a": "No. It is automated research to help you learn and organise your thinking. It can be wrong and is not investment advice."
+        }
+      ],
+      "related": [
+        "swarm",
+        "ai-score",
+        "stock-screener"
+      ]
+    },
+    {
+      "slug": "stock-screener",
+      "category": "analyse",
+      "accent": "rose",
+      "icon": "filter_alt",
+      "kicker": "Find ideas",
+      "title": "Stock Screener & Market Screens",
+      "seoTitle": "Stock Screener — Filter NSE & Global Stocks by Valuation, Growth and Momentum",
+      "metaDescription": "Screen NSE, BSE and global stocks by valuation, growth, profitability and momentum. See analyst ratings, use one-tap preset market screens and save your own screens.",
+      "keywords": [
+        "stock screener",
+        "NSE stock screener",
+        "stock filter India",
+        "value stocks screener",
+        "momentum stocks",
+        "analyst ratings"
+      ],
+      "summary": "Filter the market down to the stocks worth studying. Screen by valuation, growth, profitability and momentum, see each stock's analyst rating, start from one-tap preset screens, and save the screens that work for you.",
+      "badge": "Filters • presets • analyst ratings",
+      "stats": [
+        {
+          "label": "Filters",
+          "value": "Dozens"
+        },
+        {
+          "label": "Presets",
+          "value": "1-tap"
+        },
+        {
+          "label": "Ratings",
+          "value": "Analyst"
+        },
+        {
+          "label": "Screens",
+          "value": "Saved"
+        }
+      ],
+      "highlights": [
+        {
+          "title": "Start from a preset",
+          "detail": "High dividend yielders, undervalued growth, momentum leaders and more — one tap runs a ready-made screen, and you can see exactly which filters it uses."
+        },
+        {
+          "title": "Filter on what matters",
+          "detail": "Combine market cap, P/E, price-to-book, growth, margins, returns and price change. Each active filter shows as a chip you can remove."
+        },
+        {
+          "title": "Analyst consensus at a glance",
+          "detail": "Every result shows its analyst rating — Strong Buy, Buy, Hold or Sell — as a colour-coded chip, alongside price, change and market cap."
+        }
+      ],
+      "capabilities": [
+        {
+          "icon": "tune",
+          "title": "Multi-factor filters",
+          "detail": "Valuation, growth, quality and momentum."
+        },
+        {
+          "icon": "bolt",
+          "title": "Preset screens",
+          "detail": "Ready-made market screens in one tap."
+        },
+        {
+          "icon": "thumbs_up_down",
+          "title": "Analyst ratings",
+          "detail": "Colour-coded consensus on each result."
+        },
+        {
+          "icon": "bookmark",
+          "title": "Saved screens",
+          "detail": "Keep screens and re-run them on web or mobile."
+        },
+        {
+          "icon": "swap_vert",
+          "title": "Sort any column",
+          "detail": "Order results by the figure you care about."
+        },
+        {
+          "icon": "public",
+          "title": "Many markets",
+          "detail": "Switch exchange without losing your filters."
+        }
+      ],
+      "learn": [
+        "What valuation, growth and quality ratios mean",
+        "How different investing styles translate into filters",
+        "Why an analyst rating is a starting point, not a verdict"
+      ],
+      "process": [
+        "Pick an exchange and a preset, or start with an empty screen.",
+        "Add or remove filters and sort the results.",
+        "Open a result's company page or AI analysis.",
+        "Save the screen, add names to your watchlist, or paper trade them."
+      ],
+      "impact": [
+        "Narrows thousands of stocks to a short list.",
+        "Teaches how investing styles are defined.",
+        "Keeps idea generation consistent."
+      ],
+      "faqs": [
+        {
+          "q": "What is a stock screener?",
+          "a": "A stock screener filters a whole exchange down to the companies that match criteria you choose — for example a P/E below 20 and revenue growth above 10%."
+        },
+        {
+          "q": "Where do the analyst ratings come from?",
+          "a": "They are the consensus of published analyst ratings from the market data provider, normalised to Strong Buy, Buy, Hold, Underperform or Sell. They can be delayed and are not a recommendation from NiveshMarg."
+        },
+        {
+          "q": "Can I save a screen?",
+          "a": "Yes. Saved screens replay the same filters on the web and in the mobile app."
+        }
+      ],
+      "related": [
+        "stock-analysis",
+        "watchlist",
+        "backtesting-strategy"
+      ]
+    },
+    {
+      "slug": "ai-score",
+      "category": "analyse",
+      "accent": "rose",
+      "icon": "bar_chart",
+      "kicker": "Signal strength",
+      "title": "AI Score",
+      "seoTitle": "AI Score — A Four-Part AI Stock Rating With Its Evidence Visible",
+      "metaDescription": "NiveshMarg's AI Score rates a stock out of 100 from four independent readings — a Chronos price forecast, technicals, news sentiment and market trend — and shows each one.",
+      "keywords": [
+        "AI stock score",
+        "AI stock rating",
+        "stock forecast",
+        "Chronos forecast",
+        "AI stock analysis India"
+      ],
+      "summary": "The AI Score turns four independent readings — a machine-learning price forecast, technicals, news sentiment and market trend — into one score out of 100, with every reading visible so you can see where the evidence agrees and where it doesn't.",
+      "badge": "4 readings • 25 points each",
+      "stats": [
+        {
+          "label": "Forecast",
+          "value": "25"
+        },
+        {
+          "label": "Technical",
+          "value": "25"
+        },
+        {
+          "label": "Sentiment",
+          "value": "25"
+        },
+        {
+          "label": "Trend",
+          "value": "25"
+        }
+      ],
+      "highlights": [
+        {
+          "title": "Evidence before verdict",
+          "detail": "A score only means something when you can see what built it. Each of the four readings is shown on its own, with the reasoning behind it."
+        },
+        {
+          "title": "Balanced by design",
+          "detail": "Four separate lenses stop one strong story from hiding weak technicals or poor sentiment."
+        },
+        {
+          "title": "A forecast with a range",
+          "detail": "The forecast reading comes from Amazon's Chronos time-series model and is shown as a band, not a single price — a useful lesson in uncertainty."
+        }
+      ],
+      "capabilities": [
+        {
+          "icon": "timeline",
+          "title": "Price forecast",
+          "detail": "Chronos model forecast with a confidence band."
+        },
+        {
+          "icon": "ssid_chart",
+          "title": "Technicals",
+          "detail": "Trend and momentum indicators scored."
+        },
+        {
+          "icon": "newspaper",
+          "title": "News sentiment",
+          "detail": "Recent headlines read and scored."
+        },
+        {
+          "icon": "show_chart",
+          "title": "Market trend",
+          "detail": "The stock against the wider market."
+        },
+        {
+          "icon": "forum",
+          "title": "Bull vs bear debate",
+          "detail": "The case for and against, in plain language."
+        },
+        {
+          "icon": "picture_as_pdf",
+          "title": "Exportable report",
+          "detail": "Save or share the full score report."
+        }
+      ],
+      "learn": [
+        "How forecasts, technicals and sentiment differ as evidence",
+        "Why agreement across signals matters",
+        "How to read a forecast range instead of a single target"
+      ],
+      "process": [
+        "Choose a stock from its page, your watchlist or the screener.",
+        "The four readings are computed in the background.",
+        "Read each reading and the combined score out of 100.",
+        "Use it as a starting point for your own research."
+      ],
+      "impact": [
+        "Compares ideas without losing the reasoning.",
+        "Teaches how different kinds of evidence combine.",
+        "Makes reviews easier to explain."
+      ],
+      "faqs": [
+        {
+          "q": "How is the AI Score calculated?",
+          "a": "Four readings — forecast, technical, sentiment and trend — are each scored out of 25 and added to a score out of 100. Each reading is shown separately."
+        },
+        {
+          "q": "Is a high AI Score a buy signal?",
+          "a": "No. It is an automated summary of evidence that can be wrong or stale. Use it to learn and to prioritise research, not as advice."
+        }
+      ],
+      "related": [
+        "swarm",
+        "stock-analysis",
+        "stock-chat"
+      ]
+    },
+    {
+      "slug": "swarm",
+      "category": "analyse",
+      "accent": "amber",
+      "icon": "groups",
+      "kicker": "The debate engine",
+      "title": "AI Analyst Swarm",
+      "seoTitle": "AI Analyst Swarm — Six AI Analysts Debate a Stock",
+      "metaDescription": "Six specialist AI analysts research a stock — statistics, technicals, news, valuation — argue the bull and bear case, and write one verdict with entry, target and stop levels you can audit.",
+      "keywords": [
+        "AI stock research",
+        "AI analyst",
+        "bull vs bear analysis",
+        "multi-agent AI stocks",
+        "stock verdict"
+      ],
+      "summary": "Six specialist AI analysts research a stock in parallel, argue the bull case against the bear case, and hand you one verdict with entry, target and stop levels — with every argument kept so you can read how they got there.",
+      "badge": "6 analysts • 1 verdict",
+      "stats": [
+        {
+          "label": "Analysts",
+          "value": "6"
+        },
+        {
+          "label": "Cases",
+          "value": "Bull+Bear"
+        },
+        {
+          "label": "Levels",
+          "value": "Entry/Stop"
+        },
+        {
+          "label": "Record",
+          "value": "Saved"
+        }
+      ],
+      "highlights": [
+        {
+          "title": "Every thesis is argued",
+          "detail": "Instead of one polished answer, you get a structured debate: what the bull sees, what the bear fears, and where the gap actually sits."
+        },
+        {
+          "title": "Risk is not hidden",
+          "detail": "The bear case calls out what breaks the setup and the level that proves it — the part of analysis most beginners skip."
+        },
+        {
+          "title": "Verdict with numbers",
+          "detail": "Entry, target and stop levels stay attached to the reasoning, so you can judge whether the risk-reward fits the idea."
+        }
+      ],
+      "capabilities": [
+        {
+          "icon": "analytics",
+          "title": "Statistics analyst",
+          "detail": "Returns, volatility and key ratios."
+        },
+        {
+          "icon": "ssid_chart",
+          "title": "Technical analyst",
+          "detail": "Trend, momentum and levels."
+        },
+        {
+          "icon": "newspaper",
+          "title": "News analyst",
+          "detail": "What the headlines say and why it matters."
+        },
+        {
+          "icon": "account_balance",
+          "title": "Valuation analyst",
+          "detail": "Is the price reasonable for the business?"
+        },
+        {
+          "icon": "balance",
+          "title": "Bull vs bear debate",
+          "detail": "Both sides argued with evidence."
+        },
+        {
+          "icon": "gavel",
+          "title": "Synthesis verdict",
+          "detail": "One conclusion with levels attached."
+        }
+      ],
+      "learn": [
+        "How professional analysts break a stock into parts",
+        "How to argue against your own idea",
+        "How entry, target and stop levels define risk"
+      ],
+      "process": [
+        "Pick a stock and start the analysis — it runs in the background.",
+        "Each analyst researches its own dimension.",
+        "The bull and bear cases are argued and compared.",
+        "Read the verdict and the full debate, then save or export it."
+      ],
+      "impact": [
+        "Reduces one-sided thinking.",
+        "Builds understanding through transparent disagreement.",
+        "Turns analysis into a reviewable record."
+      ],
+      "faqs": [
+        {
+          "q": "What does the AI swarm analyse?",
+          "a": "Statistics, technicals, news and valuation are researched by separate AI analysts, then a bull and a bear case are argued before a final verdict is written."
+        },
+        {
+          "q": "Can I trust the verdict?",
+          "a": "Treat it as a well-organised second opinion to learn from, not advice. AI models can make mistakes, and market conditions change."
+        }
+      ],
+      "related": [
+        "ai-score",
+        "stock-chat",
+        "reports-exports"
+      ]
+    },
+    {
+      "slug": "stock-chat",
+      "category": "analyse",
+      "accent": "sky",
+      "icon": "forum",
+      "kicker": "Ask the market naturally",
+      "title": "Stock Chat",
+      "seoTitle": "Stock Chat — Ask an AI About Any Stock in Plain English",
+      "metaDescription": "Ask questions about stocks, sectors or your own portfolio in plain English. NiveshMarg's Stock Chat uses live prices, indicators, fundamentals, news and your holdings to answer — with tables and clear formatting.",
+      "keywords": [
+        "AI stock chat",
+        "stock market chatbot",
+        "ask AI about stocks",
+        "AI investing assistant",
+        "learn stock market AI"
+      ],
+      "summary": "Ask about any stock, sector or your own portfolio in plain English. Stock Chat reaches for live prices, indicators, fundamentals, news and your holdings, shows which tools it used, and answers with clear headings, lists and tables.",
+      "badge": "10 live tools • your portfolio",
+      "stats": [
+        {
+          "label": "Tools",
+          "value": "10"
+        },
+        {
+          "label": "Data",
+          "value": "Live"
+        },
+        {
+          "label": "Models",
+          "value": "300+"
+        },
+        {
+          "label": "History",
+          "value": "Saved"
+        }
+      ],
+      "highlights": [
+        {
+          "title": "Ask in your own words",
+          "detail": "“What is driving HDFC Bank this week?”, “Compare ITC and HUL on valuation” or “What does RSI mean?” — no query language needed."
+        },
+        {
+          "title": "Grounded in live data and your holdings",
+          "detail": "Answers draw on live prices, indicators, fundamentals, news and your own portfolio and watchlist, and show which tools were used."
+        },
+        {
+          "title": "A patient tutor",
+          "detail": "Stuck on a term or a chart pattern? Ask. It is the fastest way to turn something you saw into something you understand."
+        }
+      ],
+      "capabilities": [
+        {
+          "icon": "price_change",
+          "title": "Live prices",
+          "detail": "Current quotes and recent moves."
+        },
+        {
+          "icon": "ssid_chart",
+          "title": "Indicators",
+          "detail": "RSI, MACD, moving averages and more."
+        },
+        {
+          "icon": "account_balance",
+          "title": "Fundamentals",
+          "detail": "Valuation and financial figures."
+        },
+        {
+          "icon": "newspaper",
+          "title": "News",
+          "detail": "Recent headlines for context."
+        },
+        {
+          "icon": "account_balance_wallet",
+          "title": "Your portfolio",
+          "detail": "Questions about your own holdings and watchlist."
+        },
+        {
+          "icon": "table_chart",
+          "title": "Tables & formatting",
+          "detail": "Comparisons as tables, answers with headings — on web and mobile."
+        }
+      ],
+      "learn": [
+        "Market terms explained with real examples",
+        "How to compare two companies",
+        "What is behind a specific price move"
+      ],
+      "process": [
+        "Ask a question in your own words.",
+        "The assistant picks the tools it needs — prices, indicators, news, your holdings.",
+        "Read a formatted answer and see which tools it used.",
+        "Follow up, or jump to the stock page or a paper trade."
+      ],
+      "impact": [
+        "Makes research conversational.",
+        "Explains the why behind a move faster.",
+        "Turns curiosity into understanding."
+      ],
+      "faqs": [
+        {
+          "q": "Which AI model does Stock Chat use?",
+          "a": "Stock Chat runs on OpenRouter. Add your own OpenRouter key in Settings on the web or in the app and choose from 300+ models."
+        },
+        {
+          "q": "Can Stock Chat see my portfolio?",
+          "a": "Yes, if you ask about it. It can read your own holdings and watchlist to answer questions about them. Your data is only used for your own chats."
+        },
+        {
+          "q": "Is Stock Chat available in the mobile app?",
+          "a": "Yes. Conversations are shared between the web dashboard and the Android and iPhone app."
+        }
+      ],
+      "related": [
+        "learn-stock-market",
+        "ai-score",
+        "portfolio-management"
+      ]
+    },
+    {
+      "slug": "portfolio-management",
+      "category": "manage",
+      "accent": "mint",
+      "icon": "account_balance_wallet",
+      "kicker": "Your real holdings",
+      "title": "Portfolio Management",
+      "seoTitle": "Portfolio Management — Track Holdings and Live P&L Across Markets",
+      "metaDescription": "Track your stock portfolio on NiveshMarg: import holdings from Zerodha, Groww or Fyers, see live value and P&L in each market's currency, stress-test it and get a Portfolio Doctor health check.",
+      "keywords": [
+        "portfolio tracker",
+        "stock portfolio management",
+        "Zerodha portfolio import",
+        "Groww portfolio tracker",
+        "portfolio P&L",
+        "portfolio stress test"
+      ],
+      "summary": "Keep your real portfolio in one place. Import holdings from your broker, see live value and unrealised P&L in each market's own currency, stress-test it against market scenarios, and get a health check from the Portfolio Doctor.",
+      "badge": "Import • track • stress-test",
+      "stats": [
+        {
+          "label": "Brokers",
+          "value": "CSV import"
+        },
+        {
+          "label": "P&L",
+          "value": "Live"
+        },
+        {
+          "label": "Currencies",
+          "value": "Per market"
+        },
+        {
+          "label": "Scenarios",
+          "value": "5+"
+        }
+      ],
+      "highlights": [
+        {
+          "title": "Bring your holdings in minutes",
+          "detail": "Upload the holdings export from Zerodha, Groww or Fyers — or any CSV — and symbols are cleaned and matched for you. Adding a single position by hand works too."
+        },
+        {
+          "title": "Every market in its own money",
+          "detail": "An Indian holding shows in rupees and a US holding in dollars, each formatted the way that market reads, with value and P&L updating from live prices."
+        },
+        {
+          "title": "Ask “what if?”",
+          "detail": "Stress-test the whole portfolio against scenarios such as an RBI rate hike, an oil price spike, rupee depreciation or a liquidity crunch, and see which holdings take the hit."
+        }
+      ],
+      "capabilities": [
+        {
+          "icon": "upload_file",
+          "title": "Broker CSV import",
+          "detail": "Zerodha, Groww, Fyers or generic CSV."
+        },
+        {
+          "icon": "monitoring",
+          "title": "Live P&L",
+          "detail": "Value and unrealised P&L from live prices."
+        },
+        {
+          "icon": "currency_exchange",
+          "title": "Multi-market",
+          "detail": "Each holding in its market's currency."
+        },
+        {
+          "icon": "stethoscope",
+          "title": "Portfolio Doctor",
+          "detail": "A 0–100 health score with issues flagged."
+        },
+        {
+          "icon": "thunderstorm",
+          "title": "Stress tests",
+          "detail": "Preset and custom market scenarios."
+        },
+        {
+          "icon": "smartphone",
+          "title": "On your phone",
+          "detail": "Holdings and P&L in the mobile app."
+        }
+      ],
+      "learn": [
+        "How cost basis, value and unrealised P&L relate",
+        "How diversification actually reduces risk",
+        "How macro events can move a portfolio"
+      ],
+      "process": [
+        "Import your broker CSV or add holdings by hand.",
+        "See value and P&L update against live prices.",
+        "Run the Portfolio Doctor and a stress test.",
+        "Act on what you find, and keep watching from web or mobile."
+      ],
+      "impact": [
+        "One view of everything you own.",
+        "Risk becomes visible before it becomes a loss.",
+        "Decisions grounded in your real numbers."
+      ],
+      "faqs": [
+        {
+          "q": "Which brokers can I import from?",
+          "a": "Zerodha (Console holdings), Groww (stocks report) and Fyers (holdings) CSV exports are recognised, and any CSV with symbol, quantity and price columns works too."
+        },
+        {
+          "q": "Does NiveshMarg connect to my broker or place trades?",
+          "a": "No. NiveshMarg reads the holdings you import or enter. It never connects to your broker account and never places real trades."
+        },
+        {
+          "q": "Can I track US and Indian stocks together?",
+          "a": "Yes. Each holding keeps its own market and currency, and values and P&L are shown in that currency."
+        }
+      ],
+      "related": [
+        "portfolio-doctor",
+        "watchlist",
+        "mobile-app"
+      ]
+    },
+    {
+      "slug": "portfolio-doctor",
+      "category": "manage",
+      "accent": "mint",
+      "icon": "stethoscope",
+      "kicker": "Portfolio health",
+      "title": "Portfolio Doctor",
+      "seoTitle": "Portfolio Doctor — AI Portfolio Health Check and Risk Analysis",
+      "metaDescription": "Get an AI health check of your portfolio: a 0–100 health score, sector concentration, weak holdings and rebalancing suggestions from NiveshMarg's Portfolio Doctor.",
+      "keywords": [
+        "portfolio health check",
+        "portfolio risk analysis",
+        "portfolio diversification",
+        "AI portfolio review",
+        "sector concentration"
+      ],
+      "summary": "The Portfolio Doctor reviews your holdings like a disciplined analyst: a 0–100 health score, sector concentration, weak holdings and rebalancing ideas — surfaced before emotions or market noise take over.",
+      "badge": "Health score • concentration • balance",
+      "stats": [
+        {
+          "label": "Health",
+          "value": "0–100"
+        },
+        {
+          "label": "Sectors",
+          "value": "Mapped"
+        },
+        {
+          "label": "Weak spots",
+          "value": "Flagged"
+        },
+        {
+          "label": "Ideas",
+          "value": "Suggested"
+        }
+      ],
+      "highlights": [
+        {
+          "title": "Diagnose concentration early",
+          "detail": "See when too much of the portfolio sits in one sector or stock, so overconfidence is corrected before it becomes a problem."
+        },
+        {
+          "title": "Weak holdings, named",
+          "detail": "Positions dragging on the portfolio are flagged with the reason, so you can decide whether the thesis still holds."
+        },
+        {
+          "title": "Suggestions, never orders",
+          "detail": "The Doctor suggests whether to rebalance, trim or hold — you decide what, if anything, to do."
+        }
+      ],
+      "capabilities": [
+        {
+          "icon": "health_and_safety",
+          "title": "Health score",
+          "detail": "One 0–100 number for the whole portfolio."
+        },
+        {
+          "icon": "donut_large",
+          "title": "Sector map",
+          "detail": "Where your money actually sits."
+        },
+        {
+          "icon": "warning",
+          "title": "Weak holdings",
+          "detail": "Positions that drag, and why."
+        },
+        {
+          "icon": "balance",
+          "title": "Rebalancing ideas",
+          "detail": "Suggested, never forced."
+        },
+        {
+          "icon": "thunderstorm",
+          "title": "Stress tests",
+          "detail": "How scenarios would hit your holdings."
+        },
+        {
+          "icon": "picture_as_pdf",
+          "title": "Report",
+          "detail": "Save or export the diagnosis."
+        }
+      ],
+      "learn": [
+        "What concentration risk looks like in practice",
+        "How sector exposure builds up unnoticed",
+        "How to rebalance without overtrading"
+      ],
+      "process": [
+        "Import or add your holdings.",
+        "Run the Doctor — it maps sectors, weights and performance.",
+        "Read the health score and flagged issues.",
+        "Decide on any changes and re-check later."
+      ],
+      "impact": [
+        "Avoids silent drift.",
+        "Turns reviews into proactive risk management.",
+        "Gives every holding a clear place in the plan."
+      ],
+      "faqs": [
+        {
+          "q": "What does the Portfolio Doctor check?",
+          "a": "Sector and stock concentration, weak or lagging holdings and overall balance, combined into a 0–100 health score with suggestions."
+        },
+        {
+          "q": "Will it rebalance my portfolio automatically?",
+          "a": "No. NiveshMarg never trades for you. The Doctor only suggests; every decision is yours."
+        }
+      ],
+      "related": [
+        "portfolio-management",
+        "reports-exports",
+        "stock-chat"
+      ]
+    },
+    {
+      "slug": "watchlist",
+      "category": "manage",
+      "accent": "rose",
+      "icon": "visibility",
+      "kicker": "Stay focused",
+      "title": "Watchlist",
+      "seoTitle": "Stock Watchlist — Track Stocks With Priority Alerts and Notes",
+      "metaDescription": "Keep the stocks you are studying in a NiveshMarg watchlist with live prices, daily change, priority alerts and notes — synced between web and the mobile app.",
+      "keywords": [
+        "stock watchlist",
+        "watchlist app India",
+        "stock alerts",
+        "track stocks",
+        "priority alerts"
+      ],
+      "summary": "Keep the stocks you are studying in one easy-to-scan list — live price, daily change, a priority for how closely to watch each one, and notes on why it is there — synced between the web and your phone.",
+      "badge": "Track • prioritise • note",
+      "stats": [
+        {
+          "label": "Prices",
+          "value": "Live"
+        },
+        {
+          "label": "Priority",
+          "value": "P1–P3"
+        },
+        {
+          "label": "Notes",
+          "value": "Saved"
+        },
+        {
+          "label": "Sync",
+          "value": "Web+App"
+        }
+      ],
+      "highlights": [
+        {
+          "title": "Prioritise with intent",
+          "detail": "Mark each name P1, P2 or P3. A high-alert name gets priority notifications; a quiet one stays out of your way."
+        },
+        {
+          "title": "Remember why",
+          "detail": "A note beside each ticker keeps the reason you added it, so you revisit ideas with context instead of impulse."
+        },
+        {
+          "title": "One tap to research",
+          "detail": "Open the company page, run the AI analysis or paper trade straight from the list."
+        }
+      ],
+      "capabilities": [
+        {
+          "icon": "price_change",
+          "title": "Live prices",
+          "detail": "Price and daily change, updating live."
+        },
+        {
+          "icon": "flag",
+          "title": "Priority P1–P3",
+          "detail": "Colour-coded urgency for each name."
+        },
+        {
+          "icon": "notifications_active",
+          "title": "Alerts",
+          "detail": "Push, Telegram or email for priority names."
+        },
+        {
+          "icon": "sticky_note_2",
+          "title": "Notes",
+          "detail": "Your thesis beside every ticker."
+        },
+        {
+          "icon": "auto_awesome",
+          "title": "AI shortcuts",
+          "detail": "Analysis and chat from the list."
+        },
+        {
+          "icon": "sync",
+          "title": "Synced",
+          "detail": "The same list on web and mobile."
+        }
+      ],
+      "learn": [
+        "How to build a focused research list",
+        "Why writing down a thesis improves decisions"
+      ],
+      "process": [
+        "Add a ticker and choose a priority.",
+        "Write a note on why you are watching it.",
+        "Follow live price and change, and get alerts for priority names.",
+        "Research, paper trade, or remove it when the idea is done."
+      ],
+      "impact": [
+        "Focus on a curated set of names.",
+        "Consistent tracking on busy days.",
+        "Decisions made with context, not impulse."
+      ],
+      "faqs": [
+        {
+          "q": "How many stocks can I add to my watchlist?",
+          "a": "Add as many as you are actively studying. Priorities help keep a longer list manageable."
+        },
+        {
+          "q": "Does the watchlist sync with the app?",
+          "a": "Yes. The watchlist is the same on the web dashboard and the Android and iPhone app."
+        }
+      ],
+      "related": [
+        "stock-screener",
+        "paper-trading",
+        "mobile-app"
+      ]
+    },
+    {
+      "slug": "reports-exports",
+      "category": "manage",
+      "accent": "mint",
+      "icon": "picture_as_pdf",
+      "kicker": "Keep the record",
+      "title": "Reports & Exports",
+      "seoTitle": "Reports & Exports — Save AI Stock Analyses as PDF and Share Links",
+      "metaDescription": "Save any NiveshMarg analysis — AI Score, swarm verdict, Portfolio Doctor or backtest — as a clean PDF or a private share link, with the reasoning intact.",
+      "keywords": [
+        "stock report PDF",
+        "share stock analysis",
+        "investment journal",
+        "portfolio report"
+      ],
+      "summary": "Turn any analysis — an AI Score, a swarm verdict, a Portfolio Doctor diagnosis or a backtest — into a clean PDF or a private share link, so the reasoning behind a decision is there to review later.",
+      "badge": "PDF • share links • history",
+      "stats": [
+        {
+          "label": "Format",
+          "value": "PDF"
+        },
+        {
+          "label": "Links",
+          "value": "Private"
+        },
+        {
+          "label": "History",
+          "value": "Saved"
+        },
+        {
+          "label": "Reasoning",
+          "value": "Intact"
+        }
+      ],
+      "highlights": [
+        {
+          "title": "Package the decision, not just the data",
+          "detail": "Exports keep the reasoning, levels and risks, so you can revisit a decision without reconstructing it."
+        },
+        {
+          "title": "Share with a link",
+          "detail": "Send a private link to a partner, a friend or a study group — they can read the report without an account."
+        },
+        {
+          "title": "A journal that writes itself",
+          "detail": "Saved analyses become a record you can compare against what actually happened — one of the best ways to improve."
+        }
+      ],
+      "capabilities": [
+        {
+          "icon": "picture_as_pdf",
+          "title": "PDF export",
+          "detail": "Print-ready reports."
+        },
+        {
+          "icon": "link",
+          "title": "Share links",
+          "detail": "Private, tokenised links."
+        },
+        {
+          "icon": "folder",
+          "title": "Saved reports",
+          "detail": "Every analysis kept in one place."
+        },
+        {
+          "icon": "work_history",
+          "title": "Background jobs",
+          "detail": "Long runs finish in the background and notify you."
+        }
+      ],
+      "learn": [
+        "How to review past decisions honestly",
+        "How to explain a thesis clearly to someone else"
+      ],
+      "process": [
+        "Run an analysis, score, diagnosis or backtest.",
+        "Open it from your saved reports.",
+        "Export a PDF or create a share link.",
+        "Revisit it later and compare with what happened."
+      ],
+      "impact": [
+        "Accountability in your research.",
+        "Clearer communication of a thesis.",
+        "A durable record to learn from."
+      ],
+      "faqs": [
+        {
+          "q": "Can people without an account open a shared report?",
+          "a": "Yes. A share link opens a read-only report without signing in. Only people with the link can see it."
+        }
+      ],
+      "related": [
+        "swarm",
+        "portfolio-doctor",
+        "ai-score"
+      ]
+    },
+    {
+      "slug": "mobile-app",
+      "category": "manage",
+      "accent": "amber",
+      "icon": "smartphone",
+      "kicker": "In your pocket",
+      "title": "Mobile App",
+      "seoTitle": "NiveshMarg Mobile App — Portfolio, Watchlist and AI Stock Chat on Android & iPhone",
+      "metaDescription": "The NiveshMarg app for Android and iPhone: your portfolio and live P&L, watchlist, screener, paper trading and AI Stock Chat, on the same account as the web dashboard.",
+      "keywords": [
+        "stock market app",
+        "portfolio tracker app",
+        "paper trading app",
+        "AI stock app India",
+        "watchlist app"
+      ],
+      "summary": "Everything you do on the web, in your pocket. The NiveshMarg app for Android and iPhone brings your portfolio and live P&L, watchlist, screener, paper trading and AI Stock Chat onto the same account — phone and tablet.",
+      "badge": "Android • iPhone • tablet",
+      "stats": [
+        {
+          "label": "Platforms",
+          "value": "Android+iOS"
+        },
+        {
+          "label": "Prices",
+          "value": "Live"
+        },
+        {
+          "label": "Account",
+          "value": "Shared"
+        },
+        {
+          "label": "Alerts",
+          "value": "Push"
+        }
+      ],
+      "highlights": [
+        {
+          "title": "The same account everywhere",
+          "detail": "Holdings, watchlist, paper trades, saved screens and chats are the same on your phone and on the web — no separate setup."
+        },
+        {
+          "title": "Live prices, streaming",
+          "detail": "Portfolio and watchlist prices update live, so a glance at your phone shows where things stand."
+        },
+        {
+          "title": "Built for phone and tablet",
+          "detail": "Layouts adapt from a small phone to a large tablet, with tables and charts that stay readable."
+        }
+      ],
+      "capabilities": [
+        {
+          "icon": "account_balance_wallet",
+          "title": "Portfolio & P&L",
+          "detail": "Holdings and live P&L."
+        },
+        {
+          "icon": "visibility",
+          "title": "Watchlist",
+          "detail": "Prices, priorities and one-tap delete."
+        },
+        {
+          "icon": "filter_alt",
+          "title": "Screener",
+          "detail": "Filters, presets and analyst ratings."
+        },
+        {
+          "icon": "swap_horiz",
+          "title": "Paper trading",
+          "detail": "Practise trades on the go."
+        },
+        {
+          "icon": "forum",
+          "title": "Stock Chat",
+          "detail": "Formatted answers with tables."
+        },
+        {
+          "icon": "notifications_active",
+          "title": "Push alerts",
+          "detail": "Signals and priority alerts."
+        }
+      ],
+      "learn": [
+        "Build a daily habit of checking — not reacting to — the market"
+      ],
+      "process": [
+        "Install the app and sign in with your NiveshMarg account.",
+        "Your portfolio, watchlist and chats are already there.",
+        "Turn on push notifications for signals and priority alerts.",
+        "Pick up on the web exactly where you left off."
+      ],
+      "impact": [
+        "Stay informed without a laptop.",
+        "Practise and research in spare minutes.",
+        "One account, one record, every device."
+      ],
+      "faqs": [
+        {
+          "q": "Is the NiveshMarg app free?",
+          "a": "The app uses your NiveshMarg account, so the same Starter and Pro features apply on mobile as on the web."
+        },
+        {
+          "q": "Can I set my AI model in the app?",
+          "a": "Yes. Settings in the app include your OpenRouter key and model, and your LangSmith key and project."
+        }
+      ],
+      "related": [
+        "portfolio-management",
+        "watchlist",
+        "stock-chat"
+      ]
+    },
+    {
+      "slug": "workspace",
+      "category": "manage",
+      "accent": "sky",
+      "icon": "dashboard",
+      "kicker": "Everything in one place",
+      "title": "Workspace & Dashboard",
+      "seoTitle": "Investor Workspace & Dashboard — Research, Practise and Manage in One Place",
+      "metaDescription": "NiveshMarg's workspace brings your dashboard, portfolio, watchlist, screener, paper trading, strategies, alerts and reports together — on the web and in the mobile app.",
+      "keywords": [
+        "investing dashboard",
+        "stock market workspace",
+        "investor tools",
+        "portfolio dashboard"
+      ],
+      "summary": "The workspace is where learning, research, practice and your real portfolio live together — a dashboard with holdings, paper-trade performance, strategy signals and monthly P&L, one tap from every tool.",
+      "badge": "Dashboard • tools • alerts",
+      "stats": [
+        {
+          "label": "Holdings",
+          "value": "Live"
+        },
+        {
+          "label": "Signals",
+          "value": "Active"
+        },
+        {
+          "label": "Reports",
+          "value": "PDF"
+        },
+        {
+          "label": "Alerts",
+          "value": "4 channels"
+        }
+      ],
+      "highlights": [
+        {
+          "title": "A single operating surface",
+          "detail": "Dashboard, watchlist, portfolio, screener and paper trading stay connected, so there is no friction between a thought and a test."
+        },
+        {
+          "title": "Alerts where you are",
+          "detail": "Signals and priority alerts reach you in-app, by push notification, on Telegram or by email."
+        },
+        {
+          "title": "Your AI, your choice",
+          "detail": "Add your own OpenRouter key and pick the model that powers chat and analysis; add a LangSmith key to trace every run."
+        }
+      ],
+      "capabilities": [
+        {
+          "icon": "dashboard",
+          "title": "Dashboard",
+          "detail": "KPIs, paper P&L and active signals."
+        },
+        {
+          "icon": "notifications_active",
+          "title": "Alerts",
+          "detail": "In-app, push, Telegram and email."
+        },
+        {
+          "icon": "work_history",
+          "title": "Background jobs",
+          "detail": "Progress for long-running analyses."
+        },
+        {
+          "icon": "key",
+          "title": "Bring your own AI key",
+          "detail": "OpenRouter key and model choice."
+        },
+        {
+          "icon": "public",
+          "title": "Default market",
+          "detail": "Your home exchange, remembered."
+        },
+        {
+          "icon": "smartphone",
+          "title": "Web + mobile",
+          "detail": "The same workspace on every device."
+        }
+      ],
+      "learn": [
+        "How to organise research so nothing gets lost"
+      ],
+      "process": [
+        "Sign in and set your default market and preferences.",
+        "Add holdings, a watchlist or one ticker to study.",
+        "Research, backtest and paper trade from the same place.",
+        "Export and share when a decision is made."
+      ],
+      "impact": [
+        "Less switching between tools.",
+        "Easier to review and defend decisions.",
+        "Strategy and practice in one system."
+      ],
+      "faqs": [
+        {
+          "q": "Which alert channels are supported?",
+          "a": "In-app notifications, mobile push, Telegram and email. Choose which ones you want in Settings."
+        }
+      ],
+      "related": [
+        "portfolio-management",
+        "mobile-app",
+        "path"
       ]
     }
   ]

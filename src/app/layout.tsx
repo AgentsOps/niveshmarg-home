@@ -26,31 +26,38 @@ const notoSansDevanagari = Noto_Sans_Devanagari({
   display: "swap",
 });
 
+const siteTitle = "NiveshMarg — Stock Market Playground to Learn, Analyse and Manage";
+const siteDescription =
+  "Learn the stock market with virtual money, analyse any stock with AI and manage your portfolio. Paper trading, backtesting, a stock screener, AI Stock Chat and a Portfolio Doctor for NSE, BSE and 30+ global exchanges.";
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://niveshmarg.com"),
   title: {
-    default: "Niveshmarg — The path of investment",
+    default: siteTitle,
     template: "%s | NiveshMarg",
   },
-  description:
-    "Niveshmarg is an AI stock and portfolio workspace: a six-agent research swarm, a four-part AI Score, a conversational market analyst, paper trading, backtesting and board-ready reports.",
+  description: siteDescription,
+  applicationName: "NiveshMarg",
   keywords: [
     "NiveshMarg",
-    "AI stock analysis",
-    "portfolio workspace",
-    "stock research",
+    "learn stock market",
+    "stock market playground",
     "paper trading",
-    "strategy builder",
-    "portfolio doctor",
-    "watchlist",
+    "virtual stock trading India",
+    "AI stock analysis",
+    "stock screener",
+    "portfolio tracker",
+    "portfolio management",
+    "backtesting",
+    "NSE",
+    "BSE",
   ],
-  alternates: {
-    canonical: "/",
-  },
+  // No site-wide canonical here: a canonical in the root layout is inherited
+  // by every page that does not set its own, which told search engines each
+  // feature page was a duplicate of the home page.
   openGraph: {
-    title: "Niveshmarg — The path of investment",
-    description:
-      "AI stock research, portfolio analysis and disciplined investment workflows for modern investors.",
+    title: siteTitle,
+    description: siteDescription,
     url: "https://niveshmarg.com",
     siteName: "NiveshMarg",
     locale: "en_IN",
@@ -58,10 +65,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Niveshmarg — The path of investment",
-    description:
-      "AI stock research, portfolio analysis and disciplined investment workflows for modern investors.",
+    title: siteTitle,
+    description: siteDescription,
   },
+  robots: { index: true, follow: true },
 };
 
 export default function RootLayout({

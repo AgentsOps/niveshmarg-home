@@ -102,6 +102,8 @@ export default function Footer() {
           </div>
           <p className="text-[12.5px] text-mute">© {currentYear} {siteInfo.name}. {footerData.copyright}</p>
         </div>
+
+        <p className="mt-6 text-[10.5px] leading-[1.7] text-mute/80">{footerData.legalDisclaimer}</p>
       </div>
     </footer>
   );
