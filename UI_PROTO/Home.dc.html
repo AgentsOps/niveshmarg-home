@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;background:#f5f5fb;color:#16153b;font-family:'Schibsted Grotesk',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#4f46e5;text-decoration:none}
+a:hover{color:#3730a3}
+</style>
+</helmet>
+<div ref="{{ rootRef }}" style="position:relative;overflow-x:clip;font-size:17px;line-height:1.55;color:#3d3c5c">
+
+<div data-blob style="position:absolute;top:-260px;left:-200px;width:820px;height:820px;border-radius:50%;background:radial-gradient(circle,rgba(var(--acc-rgb,99,102,241),.22),rgba(var(--acc-rgb,99,102,241),0) 68%);pointer-events:none"></div>
+<div data-blob style="position:absolute;top:-120px;right:-260px;width:760px;height:760px;border-radius:50%;background:radial-gradient(circle,rgba(125,190,255,.26),rgba(125,190,255,0) 68%);pointer-events:none"></div>
+<div data-blob style="position:absolute;top:520px;left:34%;width:640px;height:640px;border-radius:50%;background:radial-gradient(circle,rgba(242,169,59,.13),rgba(242,169,59,0) 68%);pointer-events:none"></div>
+
+<div style="position:sticky;top:12px;z-index:50"><dc-import name="SiteNav" active="home" hint-size="100%,72px"></dc-import></div>
+
+<section id="top" data-hero data-screen-label="Hero" style="position:relative;max-width:1200px;margin:0 auto;padding:72px 24px 40px;text-align:center">
+  <div data-reveal style="display:inline-flex;align-items:center;gap:10px;padding:7px 14px 7px 10px;border-radius:999px;background:rgba(255,255,255,.7);border:1px solid rgba(22,21,59,.08);font:500 12px/1 'JetBrains Mono',monospace;letter-spacing:.08em;color:#3d3c5c">
+    <span data-pulse style="width:8px;height:8px;border-radius:50%;background:#2fbf71;display:block"></span>
+    <span>NSE · BSE · CRYPTO PERPETUALS</span>
+  </div>
+  <h1 data-reveal data-delay="80" style="margin:26px auto 0;max-width:980px;font-size:clamp(40px,7.2vw,88px);line-height:.98;letter-spacing:-.045em;font-weight:800;color:#16153b;text-wrap:balance">Strategies you can <span style="color:var(--acc,#4f46e5)">prove</span> before you trade.</h1>
+  <p data-reveal data-delay="160" style="margin:26px auto 0;max-width:680px;font-size:clamp(17px,1.6vw,20px);line-height:1.55;color:#3d3c5c;text-wrap:pretty">Niveshmarg Edge is a visual strategy builder, a zero look-ahead backtester, an AI research desk and a risk-checked execution engine for Indian markets, in one platform.</p>
+  <div data-reveal data-delay="240" style="margin-top:34px;display:flex;flex-wrap:wrap;justify-content:center;gap:12px">
+    <a href="Contact.dc.html" style="padding:15px 26px;border-radius:999px;background:var(--acc,#4f46e5);color:#fff;font-weight:600;font-size:16px;box-shadow:0 14px 30px -12px rgba(var(--acc-rgb,99,102,241),.75),inset 0 1px 0 rgba(255,255,255,.25);transition:transform .2s" style-hover="transform:translateY(-2px);color:#fff">Request a demo</a>
+    <a href="#build" style="padding:15px 26px;border-radius:999px;background:rgba(255,255,255,.75);border:1px solid rgba(22,21,59,.12);color:#16153b;font-weight:600;font-size:16px;transition:transform .2s" style-hover="transform:translateY(-2px);color:#16153b">See how it works</a>
+  </div>
+
+  <div data-reveal="scale" data-delay="320" style="position:relative;margin:64px auto 0;max-width:1100px;text-align:left">
+    <div data-tilt style="position:relative;border-radius:18px;background:#0d0c22;border:1px solid rgba(255,255,255,.1);box-shadow:0 70px 120px -50px rgba(22,21,59,.6),0 0 0 1px rgba(22,21,59,.5);overflow:hidden">
+      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;padding:10px 14px;border-bottom:1px solid rgba(255,255,255,.07);font:500 12px/1 'JetBrains Mono',monospace;color:#a8a6c9">
+        <div style="display:flex;align-items:center;gap:8px">
+          <span style="color:#eeedfb;font-weight:600">NIFTY50-INDEX</span>
+          <span style="padding:3px 6px;border-radius:4px;background:rgba(255,255,255,.08);font-size:10px">NSE</span>
+        </div>
+        <div style="display:flex;align-items:baseline;gap:8px">
+          <span data-px style="color:#eeedfb;font-size:14px;font-weight:600">24,180.35</span>
+          <span data-chg style="color:#2fbf71">+0.42%</span>
+        </div>
+        <div style="display:flex;gap:2px;padding:2px;border-radius:7px;background:rgba(255,255,255,.05)">
+          <span style="padding:5px 8px">1m</span><span style="padding:5px 8px">5m</span><span style="padding:5px 8px;border-radius:5px;background:var(--acc,#4f46e5);color:#fff">15m</span><span style="padding:5px 8px">1h</span><span style="padding:5px 8px">1D</span>
+        </div>
+        <div style="margin-left:auto;display:flex;flex-wrap:wrap;align-items:center;gap:10px">
+          <span style="padding:5px 9px;border-radius:999px;border:1px solid rgba(47,191,113,.35);color:#7fe0aa">Trending Bullish · 0.82</span>
+          <span style="display:flex;align-items:center;gap:6px;padding:5px 9px;border-radius:999px;background:rgba(255,255,255,.06);color:#eeedfb"><span data-pulse style="width:7px;height:7px;border-radius:50%;background:#2fbf71;display:block"></span><span>Runner · PAPER</span></span>
+        </div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:4px 14px;padding:8px 14px 0;font:400 11px/1.4 'JetBrains Mono',monospace;color:#8e8cb3">
+        <span style="color:#8b8fff">EMA 20</span><span style="color:#f2a93b">EMA 50</span><span style="color:#7fe0aa">SMC · Order blocks</span><span>All times IST</span>
+      </div>
+      <canvas ref="{{ chartRef }}" style="display:block;width:100%;height:clamp(250px,36vw,440px)"></canvas>
+      <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 16px;padding:9px 14px;border-top:1px solid rgba(255,255,255,.07);font:400 11px/1 'JetBrains Mono',monospace;color:#8e8cb3">
+        <div style="display:flex;gap:14px"><span>1D</span><span>5D</span><span style="color:#eeedfb">1M</span><span>3M</span><span>1Y</span></div>
+        <div style="display:flex;gap:14px"><span>% · log · auto</span><span>Market open</span><span data-clock style="color:#eeedfb">10:42:07</span><span>IST</span></div>
+      </div>
+    </div>
+    <div data-par="-22" style="position:absolute;left:-18px;bottom:-34px;z-index:2">
+      <div data-float style="width:232px;padding:14px 16px;border-radius:16px;background:rgba(255,255,255,.88);border:1px solid rgba(22,21,59,.08);box-shadow:inset 0 1px 0 #fff,0 24px 50px -20px rgba(22,21,59,.5);backdrop-filter:blur(14px)">
+        <div style="font:600 10.5px/1 'JetBrains Mono',monospace;letter-spacing:.12em;color:#5d5c7a">RISK ENGINE</div>
+        <div style="margin-top:10px;display:flex;flex-direction:column;gap:8px;font-size:13.5px;color:#16153b">
+          <div style="display:flex;justify-content:space-between;gap:8px"><span>Daily loss limit</span><span style="font:600 11.5px/1.6 'JetBrains Mono',monospace;color:#0f8a4b">pass</span></div>
+          <div style="display:flex;justify-content:space-between;gap:8px"><span>Per-trade risk cap</span><span style="font:600 11.5px/1.6 'JetBrains Mono',monospace;color:#0f8a4b">pass</span></div>
+          <div style="display:flex;justify-content:space-between;gap:8px"><span>Square-off 15:15 IST</span><span style="font:600 11.5px/1.6 'JetBrains Mono',monospace;color:#0f8a4b">armed</span></div>
+        </div>
+      </div>
+    </div>
+    <div data-par="26" style="position:absolute;right:-18px;top:92px;z-index:2">
+      <div data-float style="width:214px;padding:14px 16px;border-radius:16px;background:rgba(255,255,255,.88);border:1px solid rgba(22,21,59,.08);box-shadow:inset 0 1px 0 #fff,0 24px 50px -20px rgba(22,21,59,.5);backdrop-filter:blur(14px)">
+        <div style="font:600 10.5px/1 'JetBrains Mono',monospace;letter-spacing:.12em;color:#5d5c7a">AI MARKET REGIME</div>
+        <div style="margin-top:9px;font-size:16px;font-weight:700;color:#16153b">Trending Bullish</div>
+        <div style="margin-top:9px;height:6px;border-radius:99px;background:rgba(22,21,59,.08);overflow:hidden"><div data-bar="82" style="height:100%;width:82%;border-radius:99px;background:var(--acc,#4f46e5)"></div></div>
+        <div style="margin-top:7px;font:500 11px/1 'JetBrains Mono',monospace;color:#5d5c7a">Conviction 0.82</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<sc-if value="{{ showTicker }}" hint-placeholder-val="{{ true }}">
+<div style="margin-top:84px;border-top:1px solid rgba(22,21,59,.08);border-bottom:1px solid rgba(22,21,59,.08);overflow:hidden;background:rgba(255,255,255,.45)">
+  <div data-marquee style="display:flex;width:max-content;font:500 13px/1 'JetBrains Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#5d5c7a">
+    <div style="display:flex;gap:44px;padding:18px 22px">
+      <span>Fyers</span><span style="color:var(--acc,#4f46e5)">◆</span><span>Zerodha Kite</span><span style="color:var(--acc,#4f46e5)">◆</span><span>Groww</span><span style="color:var(--acc,#4f46e5)">◆</span><span>Delta Exchange</span><span style="color:var(--acc,#4f46e5)">◆</span><span>Smart Money Concepts</span><span style="color:var(--acc,#4f46e5)">◆</span><span>Walk-forward validation</span><span style="color:var(--acc,#4f46e5)">◆</span><span>DuckDB + Parquet</span><span style="color:var(--acc,#4f46e5)">◆</span><span>WebSocket streaming</span><span style="color:var(--acc,#4f46e5)">◆</span><span>MCP for Claude &amp; Cursor</span><span style="color:var(--acc,#4f46e5)">◆</span>
+    </div>
+    <div style="display:flex;gap:44px;padding:18px 22px">
+      <span>Fyers</span><span style="color:var(--acc,#4f46e5)">◆</span><span>Zerodha Kite</span><span style="color:var(--acc,#4f46e5)">◆</span><span>Groww</span><span style="color:var(--acc,#4f46e5)">◆</span><span>Delta Exchange</span><span style="color:var(--acc,#4f46e5)">◆</span><span>Smart Money Concepts</span><span style="color:var(--acc,#4f46e5)">◆</span><span>Walk-forward validation</span><span style="color:var(--acc,#4f46e5)">◆</span><span>DuckDB + Parquet</span><span style="color:var(--acc,#4f46e5)">◆</span><span>WebSocket streaming</span><span style="color:var(--acc,#4f46e5)">◆</span><span>MCP for Claude &amp; Cursor</span><span style="color:var(--acc,#4f46e5)">◆</span>
+    </div>
+  </div>
+</div>
+</sc-if>
+
+<section data-screen-label="Stats" style="max-width:1200px;margin:0 auto;padding:64px 24px 0">
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:28px 24px">
+    <div data-reveal><div style="font-size:clamp(40px,5vw,60px);font-weight:800;letter-spacing:-.04em;line-height:1;color:#16153b"><span data-count="200" data-suf="+">200+</span></div><div style="margin-top:10px;font-size:15px;color:#5d5c7a">strategy node types with typed ports</div></div>
+    <div data-reveal data-delay="70"><div style="font-size:clamp(40px,5vw,60px);font-weight:800;letter-spacing:-.04em;line-height:1;color:#16153b"><span data-count="0">0</span></div><div style="margin-top:10px;font-size:15px;color:#5d5c7a">look-ahead bias in every backtest</div></div>
+    <div data-reveal data-delay="140"><div style="font-size:clamp(40px,5vw,60px);font-weight:800;letter-spacing:-.04em;line-height:1;color:#16153b"><span data-count="4">4</span></div><div style="margin-top:10px;font-size:15px;color:#5d5c7a">brokers behind one interface</div></div>
+    <div data-reveal data-delay="210"><div style="font-size:clamp(40px,5vw,60px);font-weight:800;letter-spacing:-.04em;line-height:1;color:#16153b"><span data-count="24">24</span></div><div style="margin-top:10px;font-size:15px;color:#5d5c7a">MCP tools for AI agents</div></div>
+    <div data-reveal data-delay="280"><div style="font-size:clamp(40px,5vw,60px);font-weight:800;letter-spacing:-.04em;line-height:1;color:#16153b"><span data-count="5">5</span><span style="font-size:.5em;letter-spacing:0"> sessions</span></div><div style="margin-top:10px;font-size:15px;color:#5d5c7a">of paper trading before anything goes live</div></div>
+  </div>
+</section>
+
+<section id="build" data-screen-label="Build" style="max-width:1200px;margin:0 auto;padding:130px 24px 0">
+  <div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px 60px">
+    <div data-reveal style="flex:1 1 460px;max-width:680px">
+      <div style="font:500 12px/1 'JetBrains Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--acc,#4f46e5)">01 — Build</div>
+      <h2 style="margin:18px 0 0;font-size:clamp(30px,4.4vw,54px);line-height:1.04;letter-spacing:-.035em;font-weight:700;color:#16153b;text-wrap:balance">Wire a strategy like a circuit. Skip the boilerplate.</h2>
+    </div>
+    <p data-reveal data-delay="100" style="flex:1 1 320px;max-width:420px;margin:0;text-wrap:pretty">Drag indicators, Smart Money Concepts, conditions and exits onto a full-screen canvas. Ports are typed, so a wrong wire is refused before it ever reaches a backtest.</p>
+  </div>
+
+  <div data-reveal="scale" style="margin-top:44px;border-radius:18px;background:#0d0c22;border:1px solid rgba(255,255,255,.1);box-shadow:0 60px 110px -50px rgba(22,21,59,.6);overflow:hidden">
+    <div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;padding:10px 14px;border-bottom:1px solid rgba(255,255,255,.07);font:500 12px/1 'JetBrains Mono',monospace;color:#a8a6c9">
+      <span style="color:#eeedfb;font-weight:600;font-family:'Schibsted Grotesk',sans-serif;font-size:14px">EMA Pullback</span>
+      <span style="padding:3px 6px;border-radius:4px;background:rgba(255,255,255,.08);font-size:10px">v3</span>
+      <div style="margin-left:auto;display:flex;flex-wrap:wrap;gap:8px">
+        <span style="padding:7px 10px;border-radius:7px;background:rgba(255,255,255,.05)">Templates</span>
+        <span style="padding:7px 10px;border-radius:7px;background:rgba(255,255,255,.05)">Auto-layout</span>
+        <span style="padding:7px 10px;border-radius:7px;background:rgba(255,255,255,.05)">Canvas | JSON</span>
+        <span style="display:flex;align-items:center;gap:6px;padding:7px 10px;border-radius:7px;background:rgba(47,191,113,.12);color:#7fe0aa"><span data-pulse style="width:7px;height:7px;border-radius:50%;background:#2fbf71;display:block"></span><span>Live Preview</span></span>
+        <span style="padding:7px 10px;border-radius:7px;background:var(--acc,#4f46e5);color:#fff">Run Backtest</span>
+      </div>
+    </div>
+    <div data-fit="1175" data-fit-h="400" data-fit-min="0.5" style="overflow-x:auto;overflow-y:hidden;height:400px;background-color:#0d0c22;background-image:radial-gradient(rgba(255,255,255,.07) 1px,transparent 1px);background-size:22px 22px">
+      <div data-seq="300" style="position:relative;width:1175px;height:400px;transform-origin:0 0;font-family:'Schibsted Grotesk',sans-serif">
+        <svg width="1175" height="400" style="position:absolute;left:0;top:0;overflow:visible">
+          <path data-wire d="M180 210 C198 210 198 92 215 92" style="fill:none;stroke:#6ea8ff;stroke-width:1.8;stroke-dasharray:6 5"></path>
+          <path data-wire d="M180 210 L215 210" style="fill:none;stroke:#6ea8ff;stroke-width:1.8;stroke-dasharray:6 5"></path>
+          <path data-wire d="M180 210 C198 210 198 328 215 328" style="fill:none;stroke:#6ea8ff;stroke-width:1.8;stroke-dasharray:6 5"></path>
+          <path data-wire d="M375 92 C393 92 393 150 410 150" style="fill:none;stroke:#f2a93b;stroke-width:1.8;stroke-dasharray:6 5"></path>
+          <path data-wire d="M375 210 C393 210 393 150 410 150" style="fill:none;stroke:#f2a93b;stroke-width:1.8;stroke-dasharray:6 5"></path>
+          <path data-wire d="M375 328 L800 328" style="fill:none;stroke:#f2a93b;stroke-width:1.8;stroke-dasharray:6 5"></path>
+          <path data-wire d="M570 150 C588 150 588 210 605 210" style="fill:none;stroke:#b79bff;stroke-width:1.8;stroke-dasharray:6 5"></path>
+          <path data-wire d="M570 268 C588 268 588 210 605 210" style="fill:none;stroke:#b79bff;stroke-width:1.8;stroke-dasharray:6 5"></path>
+          <path data-wire d="M765 210 L800 210" style="fill:none;stroke:#b79bff;stroke-width:1.8;stroke-dasharray:6 5"></path>
+          <path data-wire d="M960 210 L995 210" style="fill:none;stroke:#b79bff;stroke-width:1.8;stroke-dasharray:6 5"></path>
+          <path data-wire d="M960 328 C978 328 978 228 995 228" style="fill:none;stroke:#ff8095;stroke-width:1.8;stroke-dasharray:6 5"></path>
+        </svg>
+        <div data-i="0" style="position:absolute;left:20px;top:178px;width:160px;height:64px;box-sizing:border-box;border-radius:12px;background:#17163a;border:1px solid rgba(255,255,255,.14);padding:0 14px;display:flex;flex-direction:column;justify-content:center;gap:7px">
+          <div style="font-size:13px;font-weight:600;line-height:1;color:#eeedfb">Market &amp; Timeframe</div>
+          <div style="font:500 10.5px/1 'JetBrains Mono',monospace;color:#a8a6c9">NIFTY50 · 15m</div>
+          <span style="position:absolute;right:-5px;top:27px;width:9px;height:9px;border-radius:50%;background:#6ea8ff"></span>
+        </div>
+        <div data-i="1" style="position:absolute;left:215px;top:60px;width:160px;height:64px;box-sizing:border-box;border-radius:12px;background:#17163a;border:1px solid rgba(255,255,255,.14);padding:0 14px;display:flex;flex-direction:column;justify-content:center;gap:7px">
+          <div style="font-size:13px;font-weight:600;line-height:1;color:#eeedfb">EMA</div>
+          <div style="font:500 10.5px/1 'JetBrains Mono',monospace;color:#a8a6c9">20 → <span style="color:#f2a93b">24,196.4</span></div>
+          <span style="position:absolute;left:-5px;top:27px;width:9px;height:9px;border-radius:50%;background:#6ea8ff"></span><span style="position:absolute;right:-5px;top:27px;width:9px;height:9px;border-radius:50%;background:#f2a93b"></span>
+        </div>
+        <div data-i="1" style="position:absolute;left:215px;top:178px;width:160px;height:64px;box-sizing:border-box;border-radius:12px;background:#17163a;border:1px solid rgba(255,255,255,.14);padding:0 14px;display:flex;flex-direction:column;justify-content:center;gap:7px">
+          <div style="font-size:13px;font-weight:600;line-height:1;color:#eeedfb">EMA</div>
+          <div style="font:500 10.5px/1 'JetBrains Mono',monospace;color:#a8a6c9">50 → <span style="color:#f2a93b">24,121.9</span></div>
+          <span style="position:absolute;left:-5px;top:27px;width:9px;height:9px;border-radius:50%;background:#6ea8ff"></span><span style="position:absolute;right:-5px;top:27px;width:9px;height:9px;border-radius:50%;background:#f2a93b"></span>
+        </div>
+        <div data-i="1" style="position:absolute;left:215px;top:296px;width:160px;height:64px;box-sizing:border-box;border-radius:12px;background:#17163a;border:1px solid rgba(255,255,255,.14);padding:0 14px;display:flex;flex-direction:column;justify-content:center;gap:7px">
+          <div style="font-size:13px;font-weight:600;line-height:1;color:#eeedfb">ATR</div>
+          <div style="font:500 10.5px/1 'JetBrains Mono',monospace;color:#a8a6c9">14 → <span style="color:#f2a93b">38.6</span></div>
+          <span style="position:absolute;left:-5px;top:27px;width:9px;height:9px;border-radius:50%;background:#6ea8ff"></span><span style="position:absolute;right:-5px;top:27px;width:9px;height:9px;border-radius:50%;background:#f2a93b"></span>
+        </div>
+        <div data-i="2" style="position:absolute;left:410px;top:118px;width:160px;height:64px;box-sizing:border-box;border-radius:12px;background:#17163a;border:1px solid rgba(255,255,255,.14);padding:0 14px;display:flex;flex-direction:column;justify-content:center;gap:7px">
+          <div style="font-size:13px;font-weight:600;line-height:1;color:#eeedfb">Compare</div>
+          <div style="font:500 10.5px/1 'JetBrains Mono',monospace;color:#a8a6c9">crosses above → <span style="color:#b79bff">true</span></div>
+          <span style="position:absolute;left:-5px;top:27px;width:9px;height:9px;border-radius:50%;background:#f2a93b"></span><span style="position:absolute;right:-5px;top:27px;width:9px;height:9px;border-radius:50%;background:#b79bff"></span>
+        </div>
+        <div data-i="2" style="position:absolute;left:410px;top:236px;width:160px;height:64px;box-sizing:border-box;border-radius:12px;background:#17163a;border:1px solid rgba(255,255,255,.14);padding:0 14px;display:flex;flex-direction:column;justify-content:center;gap:7px">
+          <div style="font-size:13px;font-weight:600;line-height:1;color:#eeedfb">Market Regime Filter</div>
+          <div style="font:500 10.5px/1 'JetBrains Mono',monospace;color:#a8a6c9">Trending Bullish</div>
+          <span style="position:absolute;right:-5px;top:27px;width:9px;height:9px;border-radius:50%;background:#b79bff"></span>
+        </div>
+        <div data-i="3" style="position:absolute;left:605px;top:178px;width:160px;height:64px;box-sizing:border-box;border-radius:12px;background:#17163a;border:1px solid rgba(255,255,255,.14);padding:0 14px;display:flex;flex-direction:column;justify-content:center;gap:7px">
+          <div style="font-size:13px;font-weight:600;line-height:1;color:#eeedfb">AND</div>
+          <div style="font:500 10.5px/1 'JetBrains Mono',monospace;color:#a8a6c9">2 inputs → <span style="color:#b79bff">true</span></div>
+          <span style="position:absolute;left:-5px;top:27px;width:9px;height:9px;border-radius:50%;background:#b79bff"></span><span style="position:absolute;right:-5px;top:27px;width:9px;height:9px;border-radius:50%;background:#b79bff"></span>
+        </div>
+        <div data-i="4" style="position:absolute;left:800px;top:178px;width:160px;height:64px;box-sizing:border-box;border-radius:12px;background:#17163a;border:1px solid rgba(255,255,255,.14);padding:0 14px;display:flex;flex-direction:column;justify-content:center;gap:7px">
+          <div style="font-size:13px;font-weight:600;line-height:1;color:#eeedfb">Position Sizing</div>
+          <div style="font:500 10.5px/1 'JetBrains Mono',monospace;color:#a8a6c9">risk 1% of equity</div>
+          <span style="position:absolute;left:-5px;top:27px;width:9px;height:9px;border-radius:50%;background:#b79bff"></span><span style="position:absolute;right:-5px;top:27px;width:9px;height:9px;border-radius:50%;background:#b79bff"></span>
+        </div>
+        <div data-i="4" style="position:absolute;left:800px;top:296px;width:160px;height:64px;box-sizing:border-box;border-radius:12px;background:#17163a;border:1px solid rgba(255,255,255,.14);padding:0 14px;display:flex;flex-direction:column;justify-content:center;gap:7px">
+          <div style="font-size:13px;font-weight:600;line-height:1;color:#eeedfb">ATR Stop</div>
+          <div style="font:500 10.5px/1 'JetBrains Mono',monospace;color:#a8a6c9">1.5 × ATR</div>
+          <span style="position:absolute;left:-5px;top:27px;width:9px;height:9px;border-radius:50%;background:#f2a93b"></span><span style="position:absolute;right:-5px;top:27px;width:9px;height:9px;border-radius:50%;background:#ff8095"></span>
+        </div>
+        <div data-i="5" style="position:absolute;left:995px;top:178px;width:160px;height:64px;box-sizing:border-box;border-radius:12px;background:#12281f;border:1px solid rgba(47,191,113,.55);padding:0 14px;display:flex;flex-direction:column;justify-content:center;gap:7px">
+          <div style="font-size:13px;font-weight:600;line-height:1;color:#eeedfb">Enter Long</div>
+          <div style="font:500 10.5px/1 'JetBrains Mono',monospace;color:#7fe0aa">fills at T+1 open</div>
+          <span style="position:absolute;left:-5px;top:27px;width:9px;height:9px;border-radius:50%;background:#b79bff"></span><span style="position:absolute;left:-5px;top:45px;width:9px;height:9px;border-radius:50%;background:#ff8095"></span>
+        </div>
+        <div style="position:absolute;left:20px;top:18px;display:flex;gap:16px;font:500 10.5px/1 'JetBrains Mono',monospace;color:#a8a6c9">
+          <span style="display:flex;align-items:center;gap:6px"><span style="width:8px;height:8px;border-radius:50%;background:#6ea8ff;display:block"></span>candles</span>
+          <span style="display:flex;align-items:center;gap:6px"><span style="width:8px;height:8px;border-radius:50%;background:#f2a93b;display:block"></span>series</span>
+          <span style="display:flex;align-items:center;gap:6px"><span style="width:8px;height:8px;border-radius:50%;background:#b79bff;display:block"></span>signal</span>
+          <span style="display:flex;align-items:center;gap:6px"><span style="width:8px;height:8px;border-radius:50%;background:#ff8095;display:block"></span>exit</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top:36px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px 40px">
+    <div data-reveal><div style="font-size:19px;font-weight:700;color:#16153b">Live preview with telemetry</div><p style="margin:8px 0 0;font-size:16px">Watch every node's inputs and outputs update over WebSockets as real bars arrive.</p></div>
+    <div data-reveal data-delay="90"><div style="font-size:19px;font-weight:700;color:#16153b">The full indicator shelf</div><p style="margin:8px 0 0;font-size:16px">The TA-Lib catalogue, order blocks, fair value gaps, swing patterns, maths, risk guards and exits.</p></div>
+    <div data-reveal data-delay="180"><div style="font-size:19px;font-weight:700;color:#16153b">Start from a template</div><p style="margin:8px 0 0;font-size:16px">EMA Pullback, SMC Order Block &amp; FVG, Crypto Trend Rider and Bollinger Breakout, ready to edit.</p></div>
+  </div>
+</section>
+
+<section id="prove" data-screen-label="Prove" style="max-width:1200px;margin:0 auto;padding:140px 24px 0">
+  <div style="display:flex;flex-wrap:wrap;gap:48px 64px;align-items:center">
+    <div style="flex:1 1 400px;min-width:0">
+      <div data-reveal>
+        <div style="font:500 12px/1 'JetBrains Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--acc,#4f46e5)">02 — Prove</div>
+        <h2 style="margin:18px 0 0;font-size:clamp(30px,4.4vw,54px);line-height:1.04;letter-spacing:-.035em;font-weight:700;color:#16153b;text-wrap:balance">Backtests that refuse to flatter you.</h2>
+        <p style="margin:20px 0 0;max-width:520px;text-wrap:pretty">Most backtests look good because they cheat. Ours is built so it can't: three rules apply to every run, and none of them can be switched off.</p>
+      </div>
+      <div style="margin-top:30px;display:flex;flex-direction:column">
+        <div data-reveal style="display:flex;gap:18px;padding:20px 0;border-top:1px solid rgba(22,21,59,.1)">
+          <div style="font:600 13px/1.7 'JetBrains Mono',monospace;color:var(--acc,#4f46e5)">T+1</div>
+          <div><div style="font-size:18px;font-weight:700;color:#16153b">Zero look-ahead</div><div style="margin-top:4px;font-size:16px">A signal on one bar's close fills at the next bar's open. Smart Money detectors only see the past.</div></div>
+        </div>
+        <div data-reveal data-delay="80" style="display:flex;gap:18px;padding:20px 0;border-top:1px solid rgba(22,21,59,.1)">
+          <div style="font:600 13px/1.7 'JetBrains Mono',monospace;color:var(--acc,#4f46e5)">SL▸</div>
+          <div><div style="font-size:18px;font-weight:700;color:#16153b">Pessimistic fills</div><div style="margin-top:4px;font-size:16px">When one candle touches both the stop and the target, the stop-loss triggers first.</div></div>
+        </div>
+        <div data-reveal data-delay="160" style="display:flex;gap:18px;padding:20px 0;border-top:1px solid rgba(22,21,59,.1);border-bottom:1px solid rgba(22,21,59,.1)">
+          <div style="font:600 13px/1.7 'JetBrains Mono',monospace;color:var(--acc,#4f46e5)">₹₹₹</div>
+          <div><div style="font-size:18px;font-weight:700;color:#16153b">Real Indian costs</div><div style="margin-top:4px;font-size:16px">STT, exchange charges, GST, SEBI fees, stamp duty and slippage are charged on every fill.</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div data-reveal="scale" style="flex:1 1 460px;min-width:0;border-radius:22px;background:rgba(255,255,255,.7);border:1px solid rgba(22,21,59,.08);box-shadow:inset 0 1px 0 rgba(255,255,255,.95),0 40px 80px -44px rgba(22,21,59,.45);backdrop-filter:blur(14px);padding:22px">
+      <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 12px">
+        <div><div style="font-size:15px;font-weight:700;color:#16153b">Backtest run · EMA Pullback v3</div><div style="margin-top:3px;font:400 11.5px/1.4 'JetBrains Mono',monospace;color:#5d5c7a">Sample run, for illustration</div></div>
+        <span style="font:600 11px/1 'JetBrains Mono',monospace;padding:6px 9px;border-radius:999px;background:rgba(15,138,75,.1);color:#0f8a4b;box-shadow:inset 0 0 0 1px rgba(15,138,75,.25)">Completed</span>
+      </div>
+      <div style="margin-top:14px;display:flex;gap:16px;font:500 11px/1 'JetBrains Mono',monospace;color:#5d5c7a">
+        <span style="display:flex;align-items:center;gap:6px"><span style="width:14px;height:3px;border-radius:2px;background:var(--acc,#4f46e5);display:block"></span>Strategy</span>
+        <span style="display:flex;align-items:center;gap:6px"><span style="width:14px;height:3px;border-radius:2px;background:#9a99b5;display:block"></span>Buy &amp; hold</span>
+        <span style="display:flex;align-items:center;gap:6px"><span style="width:10px;height:10px;border-radius:2px;background:rgba(210,47,74,.2);display:block"></span>Drawdown</span>
+      </div>
+      <canvas data-eq ref="{{ eqRef }}" style="display:block;width:100%;height:240px;margin-top:8px"></canvas>
+      <div style="margin-top:14px;display:grid;grid-template-columns:repeat(auto-fit,minmax(104px,1fr));gap:10px">
+        <div style="padding:12px;border-radius:12px;background:rgba(22,21,59,.04)"><div style="font-size:12px;color:#5d5c7a">Net P&amp;L</div><div style="margin-top:4px;font-size:19px;font-weight:700;color:#0f8a4b;font-variant-numeric:tabular-nums"><span data-count="24500" data-pre="+₹">+₹24,500</span></div></div>
+        <div style="padding:12px;border-radius:12px;background:rgba(22,21,59,.04)"><div style="font-size:12px;color:#5d5c7a">CAGR</div><div style="margin-top:4px;font-size:19px;font-weight:700;color:#16153b;font-variant-numeric:tabular-nums"><span data-count="24.5" data-dec="1" data-suf="%">24.5%</span></div></div>
+        <div style="padding:12px;border-radius:12px;background:rgba(22,21,59,.04)"><div style="font-size:12px;color:#5d5c7a">Sharpe</div><div style="margin-top:4px;font-size:19px;font-weight:700;color:#16153b;font-variant-numeric:tabular-nums"><span data-count="1.82" data-dec="2">1.82</span></div></div>
+        <div style="padding:12px;border-radius:12px;background:rgba(22,21,59,.04)"><div style="font-size:12px;color:#5d5c7a">Max drawdown</div><div style="margin-top:4px;font-size:19px;font-weight:700;color:#d22f4a;font-variant-numeric:tabular-nums"><span data-count="7.8" data-dec="1" data-pre="−" data-suf="%">−7.8%</span></div></div>
+        <div style="padding:12px;border-radius:12px;background:rgba(22,21,59,.04)"><div style="font-size:12px;color:#5d5c7a">Win rate</div><div style="margin-top:4px;font-size:19px;font-weight:700;color:#16153b;font-variant-numeric:tabular-nums"><span data-count="64.2" data-dec="1" data-suf="%">64.2%</span></div></div>
+      </div>
+      <div data-seq="420" style="margin-top:16px;display:flex;flex-wrap:wrap;gap:6px;font:500 10.5px/1 'JetBrains Mono',monospace;color:#3d3c5c">
+        <span data-i="0" style="padding:6px 8px;border-radius:6px;background:rgba(22,21,59,.05)">Check history</span>
+        <span data-i="1" style="padding:6px 8px;border-radius:6px;background:rgba(22,21,59,.05)">Fetch missing candles</span>
+        <span data-i="2" style="padding:6px 8px;border-radius:6px;background:rgba(22,21,59,.05)">Validate data</span>
+        <span data-i="3" style="padding:6px 8px;border-radius:6px;background:rgba(22,21,59,.05)">Run</span>
+        <span data-i="4" style="padding:6px 8px;border-radius:6px;background:var(--acc-soft,#ecebff);color:var(--acc,#4f46e5)">Walk-forward</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="run" data-screen-label="Run" style="margin:140px 14px 0;border-radius:36px;background:#0d0c22;color:#a8a6c9;position:relative;overflow:hidden">
+  <div data-blob style="position:absolute;top:-300px;right:-200px;width:800px;height:800px;border-radius:50%;background:radial-gradient(circle,rgba(var(--acc-rgb,99,102,241),.3),rgba(var(--acc-rgb,99,102,241),0) 68%);pointer-events:none"></div>
+  <div style="position:relative;max-width:1200px;margin:0 auto;padding:clamp(64px,9vw,120px) clamp(10px,3vw,24px)">
+    <div data-reveal style="max-width:820px">
+      <div style="font:500 12px/1 'JetBrains Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--acc-lite,#a5b4fc)">03 — Run</div>
+      <h2 style="margin:18px 0 0;font-size:clamp(30px,4.6vw,58px);line-height:1.03;letter-spacing:-.035em;font-weight:700;color:#fff;text-wrap:balance">AI does the research. Maths places the orders.</h2>
+      <p style="margin:20px 0 0;max-width:620px;text-wrap:pretty">Every order, paper or live, passes a deterministic risk engine first. AI classifies regimes and writes reports. It never places a live trade.</p>
+    </div>
+
+    <div style="margin-top:56px;display:flex;flex-wrap:wrap;gap:40px 64px">
+      <div style="flex:1 1 380px;min-width:0">
+        <div style="font:600 11px/1 'JetBrains Mono',monospace;letter-spacing:.12em;color:#8e8cb3">THE FOUR GATES TO LIVE</div>
+        <div style="margin-top:18px;display:flex;flex-direction:column">
+          <div data-reveal style="display:flex;gap:18px;padding:18px 0;border-top:1px solid rgba(255,255,255,.09)">
+            <div style="flex:none;width:34px;height:34px;border-radius:50%;border:1px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;font:600 12px/1 'JetBrains Mono',monospace;color:#fff">1</div>
+            <div><div style="font-size:18px;font-weight:700;color:#fff">Draft</div><div style="margin-top:3px;font-size:15.5px">Build in the visual builder and pass canvas validation.</div></div>
+          </div>
+          <div data-reveal data-delay="120" style="display:flex;gap:18px;padding:18px 0;border-top:1px solid rgba(255,255,255,.09)">
+            <div style="flex:none;width:34px;height:34px;border-radius:50%;border:1px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;font:600 12px/1 'JetBrains Mono',monospace;color:#fff">2</div>
+            <div><div style="font-size:18px;font-weight:700;color:#fff">Backtest</div><div style="margin-top:3px;font-size:15.5px">A run of the exact strategy version is linked to the runner. Edit the strategy and the run goes stale.</div></div>
+          </div>
+          <div data-reveal data-delay="240" style="display:flex;gap:18px;padding:18px 0;border-top:1px solid rgba(255,255,255,.09)">
+            <div style="flex:none;width:34px;height:34px;border-radius:50%;border:1px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;font:600 12px/1 'JetBrains Mono',monospace;color:#fff">3</div>
+            <div><div style="font-size:18px;font-weight:700;color:#fff">Paper trade</div><div style="margin-top:3px;font-size:15.5px">At least five live-market paper sessions, with a win rate within 15 points of the backtest.</div></div>
+          </div>
+          <div data-reveal data-delay="360" style="display:flex;gap:18px;padding:18px 0;border-top:1px solid rgba(255,255,255,.09);border-bottom:1px solid rgba(255,255,255,.09)">
+            <div style="flex:none;width:34px;height:34px;border-radius:50%;background:var(--acc,#4f46e5);display:flex;align-items:center;justify-content:center;font:600 12px/1 'JetBrains Mono',monospace;color:#fff">4</div>
+            <div><div style="font-size:18px;font-weight:700;color:#fff">Go live</div><div style="margin-top:3px;font-size:15.5px">A staff member picks a connected broker account and types <span style="font:600 13px/1 'JetBrains Mono',monospace;padding:2px 6px;border-radius:5px;background:rgba(255,255,255,.1);color:#fff">LIVE</span> to confirm.</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div data-reveal="scale" style="flex:1 1 400px;min-width:0;align-self:flex-start;border-radius:20px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);box-shadow:inset 0 1px 0 rgba(255,255,255,.08);padding:22px">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
+          <div style="font:600 11px/1 'JetBrains Mono',monospace;letter-spacing:.12em;color:#8e8cb3">RISK ENGINE · LIVE CHECK</div>
+          <span data-pulse style="width:8px;height:8px;border-radius:50%;background:#2fbf71;display:block"></span>
+        </div>
+        <div style="margin-top:14px;padding:12px 14px;border-radius:12px;background:#17163a;border:1px solid rgba(255,255,255,.1);font:500 13px/1.4 'JetBrains Mono',monospace;color:#fff"><span data-ticket>BUY 50 · NSE:SBIN-EQ · 10:42 IST</span></div>
+        <div style="margin-top:12px;display:flex;flex-direction:column;gap:4px;font-size:15.5px;color:#eeedfb">
+          <div data-gate style="display:flex;justify-content:space-between;gap:12px;padding:11px 12px;border-radius:10px;transition:background .3s"><span>Kill switch &amp; runner state</span><span data-s style="font:600 12px/1.7 'JetBrains Mono',monospace;color:#2fbf71">pass</span></div>
+          <div data-gate style="display:flex;justify-content:space-between;gap:12px;padding:11px 12px;border-radius:10px;transition:background .3s"><span>Daily loss limit</span><span data-s style="font:600 12px/1.7 'JetBrains Mono',monospace;color:#2fbf71">pass</span></div>
+          <div data-gate style="display:flex;justify-content:space-between;gap:12px;padding:11px 12px;border-radius:10px;transition:background .3s"><span>Per-trade risk cap</span><span data-s style="font:600 12px/1.7 'JetBrains Mono',monospace;color:#2fbf71">pass</span></div>
+          <div data-gate style="display:flex;justify-content:space-between;gap:12px;padding:11px 12px;border-radius:10px;transition:background .3s"><span>Gross exposure &amp; open positions</span><span data-s style="font:600 12px/1.7 'JetBrains Mono',monospace;color:#2fbf71">pass</span></div>
+          <div data-gate style="display:flex;justify-content:space-between;gap:12px;padding:11px 12px;border-radius:10px;transition:background .3s"><span>Intraday square-off window</span><span data-s style="font:600 12px/1.7 'JetBrains Mono',monospace;color:#2fbf71">pass</span></div>
+        </div>
+        <div style="margin-top:12px;padding-top:14px;border-top:1px solid rgba(255,255,255,.09);font:600 13px/1.4 'JetBrains Mono',monospace"><span data-gate-result style="color:#2fbf71">Passed · routed to broker</span></div>
+      </div>
+    </div>
+
+    <div style="margin-top:64px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px">
+      <div data-reveal style="padding:20px;border-radius:16px;border:1px solid rgba(255,255,255,.1)"><div style="font-size:19px;font-weight:700;color:#fff">Fyers</div><div style="margin-top:6px;font-size:14.5px">NSE and BSE. OAuth2 login, live WebSocket feed and candle history.</div></div>
+      <div data-reveal data-delay="80" style="padding:20px;border-radius:16px;border:1px solid rgba(255,255,255,.1)"><div style="font-size:19px;font-weight:700;color:#fff">Zerodha Kite</div><div style="margin-top:6px;font-size:14.5px">Risk-checked, idempotent order routing to your Kite account.</div></div>
+      <div data-reveal data-delay="160" style="padding:20px;border-radius:16px;border:1px solid rgba(255,255,255,.1)"><div style="font-size:19px;font-weight:700;color:#fff">Groww</div><div style="margin-top:6px;font-size:14.5px">The same runner and the same guardrails, on a Groww account.</div></div>
+      <div data-reveal data-delay="240" style="padding:20px;border-radius:16px;border:1px solid rgba(255,255,255,.1)"><div style="font-size:19px;font-weight:700;color:#fff">Delta Exchange</div><div style="margin-top:6px;font-size:14.5px">Crypto perpetuals, 24x7, capitalised in USD. Never squared off at the NSE close.</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="platform" data-screen-label="Research desk" style="max-width:1200px;margin:0 auto;padding:140px 24px 0">
+  <div data-reveal style="max-width:760px">
+    <div style="font:500 12px/1 'JetBrains Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--acc,#4f46e5)">The research desk</div>
+    <h2 style="margin:18px 0 0;font-size:clamp(30px,4.4vw,54px);line-height:1.04;letter-spacing:-.035em;font-weight:700;color:#16153b;text-wrap:balance">Everything around the trade, in the same place.</h2>
+  </div>
+  <div style="margin-top:44px;display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:18px">
+
+    <div data-reveal style="display:flex;flex-direction:column;gap:18px;padding:26px;border-radius:22px;background:rgba(255,255,255,.68);border:1px solid rgba(22,21,59,.08);box-shadow:inset 0 1px 0 rgba(255,255,255,.95),0 24px 50px -34px rgba(22,21,59,.4)">
+      <div><div style="font-size:21px;font-weight:700;color:#16153b">AI stock reports</div><p style="margin:8px 0 0;font-size:16px">Four specialist agents read the fundamentals, the chart, the news and the risks. A fifth writes the verdict.</p></div>
+      <div data-seq="380" style="margin-top:auto;display:flex;flex-direction:column;gap:8px;font:500 12px/1 'JetBrains Mono',monospace;color:#3d3c5c">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+          <span data-i="0" style="padding:10px;border-radius:9px;background:rgba(22,21,59,.05)">Fundamental</span>
+          <span data-i="1" style="padding:10px;border-radius:9px;background:rgba(22,21,59,.05)">Technical</span>
+          <span data-i="2" style="padding:10px;border-radius:9px;background:rgba(22,21,59,.05)">News</span>
+          <span data-i="3" style="padding:10px;border-radius:9px;background:rgba(22,21,59,.05)">Risk auditor</span>
+        </div>
+        <span data-i="4" style="padding:11px 10px;border-radius:9px;background:var(--acc,#4f46e5);color:#fff;text-align:center">Synthesizer → verdict</span>
+      </div>
+    </div>
+
+    <div data-reveal data-delay="80" style="display:flex;flex-direction:column;gap:18px;padding:26px;border-radius:22px;background:rgba(255,255,255,.68);border:1px solid rgba(22,21,59,.08);box-shadow:inset 0 1px 0 rgba(255,255,255,.95),0 24px 50px -34px rgba(22,21,59,.4)">
+      <div><div style="font-size:21px;font-weight:700;color:#16153b">Swing Trading Suite</div><p style="margin:8px 0 0;font-size:16px">Every evening after the close, analyzers scan your universe and tell you what to do with each setup.</p></div>
+      <div style="margin-top:auto;display:flex;flex-direction:column;font-size:14.5px;color:#16153b">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;padding:9px 0;border-top:1px solid rgba(22,21,59,.08)"><span>VCP Breakout</span><span style="font:600 11px/1 'JetBrains Mono',monospace;padding:5px 8px;border-radius:999px;background:rgba(15,138,75,.1);color:#0f8a4b">Buy</span></div>
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;padding:9px 0;border-top:1px solid rgba(22,21,59,.08)"><span>Momentum Flag</span><span style="font:600 11px/1 'JetBrains Mono',monospace;padding:5px 8px;border-radius:999px;background:rgba(180,83,9,.1);color:#9a4a06">Wait for retest</span></div>
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;padding:9px 0;border-top:1px solid rgba(22,21,59,.08)"><span>IPO / SME Base</span><span style="font:600 11px/1 'JetBrains Mono',monospace;padding:5px 8px;border-radius:999px;background:rgba(15,138,75,.1);color:#0f8a4b">Buy</span></div>
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;padding:9px 0;border-top:1px solid rgba(22,21,59,.08)"><span>21 EMA Retest</span><span style="font:600 11px/1 'JetBrains Mono',monospace;padding:5px 8px;border-radius:999px;background:rgba(22,21,59,.06);color:#3d3c5c">Watching</span></div>
+      </div>
+    </div>
+
+    <div data-reveal data-delay="160" style="display:flex;flex-direction:column;gap:18px;padding:26px;border-radius:22px;background:rgba(255,255,255,.68);border:1px solid rgba(22,21,59,.08);box-shadow:inset 0 1px 0 rgba(255,255,255,.95),0 24px 50px -34px rgba(22,21,59,.4)">
+      <div><div style="font-size:21px;font-weight:700;color:#16153b">Screener</div><p style="margin:8px 0 0;font-size:16px">Filter about 3,600 NSE stocks and ETFs on valuation, growth, profitability and momentum. Refreshed daily at 18:30 IST.</p></div>
+      <div style="margin-top:auto;display:flex;flex-wrap:wrap;gap:7px;font-size:13.5px;font-weight:500;color:#3d3c5c">
+        <span style="padding:7px 11px;border-radius:999px;background:var(--acc-soft,#ecebff);color:var(--acc,#4f46e5)">Momentum</span>
+        <span style="padding:7px 11px;border-radius:999px;border:1px solid rgba(22,21,59,.12)">Undervalued</span>
+        <span style="padding:7px 11px;border-radius:999px;border:1px solid rgba(22,21,59,.12)">High growth</span>
+        <span style="padding:7px 11px;border-radius:999px;border:1px solid rgba(22,21,59,.12)">Low debt</span>
+        <span style="padding:7px 11px;border-radius:999px;border:1px solid rgba(22,21,59,.12)">High dividend</span>
+        <span style="padding:7px 11px;border-radius:999px;border:1px solid rgba(22,21,59,.12)">Deep value</span>
+        <span style="padding:7px 11px;border-radius:999px;border:1px solid rgba(22,21,59,.12)">Large caps</span>
+      </div>
+    </div>
+
+    <div data-reveal style="display:flex;flex-direction:column;gap:18px;padding:26px;border-radius:22px;background:#0d0c22;border:1px solid rgba(255,255,255,.1);box-shadow:0 24px 50px -34px rgba(22,21,59,.6);color:#a8a6c9">
+      <div><div style="font-size:21px;font-weight:700;color:#fff">MCP server for AI agents</div><p style="margin:8px 0 0;font-size:16px">Let Claude Desktop or Cursor query data, run backtests and draw on your charts, behind the same risk engine.</p></div>
+      <div style="margin-top:auto;padding:14px;border-radius:12px;background:#17163a;border:1px solid rgba(255,255,255,.08);font:400 12px/1.6 'JetBrains Mono',monospace;min-height:112px">
+        <div style="color:#eeedfb"><span style="color:var(--acc-lite,#a5b4fc)">› </span><span data-type>Mark support and resistance on NSE:SBIN-EQ and draw a trade setup.</span><span data-pulse style="display:inline-block;width:7px;height:13px;margin-left:2px;vertical-align:-2px;background:var(--acc-lite,#a5b4fc)"></span></div>
+        <div style="margin-top:8px;color:#7fe0aa">→ drawing saved · /chart/NSE:SBIN-EQ/</div>
+      </div>
+    </div>
+
+    <div data-reveal data-delay="80" style="display:flex;flex-direction:column;gap:18px;padding:26px;border-radius:22px;background:rgba(255,255,255,.68);border:1px solid rgba(22,21,59,.08);box-shadow:inset 0 1px 0 rgba(255,255,255,.95),0 24px 50px -34px rgba(22,21,59,.4)">
+      <div><div style="font-size:21px;font-weight:700;color:#16153b">Chart workspace</div><p style="margin:8px 0 0;font-size:16px">Full-screen charts with order blocks, fair value gaps and every backtest trade drawn on the candles.</p></div>
+      <div style="margin-top:auto;display:flex;flex-direction:column;gap:8px;font-size:14.5px;color:#16153b">
+        <div style="display:flex;align-items:center;gap:10px"><span style="font:600 11px/1 'JetBrains Mono',monospace;padding:6px 8px;border-radius:6px;background:#16153b;color:#fff">⌘K</span><span>Command palette for symbols and studies</span></div>
+        <div style="display:flex;align-items:center;gap:10px"><span style="font:600 11px/1 'JetBrains Mono',monospace;padding:6px 8px;border-radius:6px;background:#16153b;color:#fff">[ ]</span><span>Step through trades one by one</span></div>
+        <div style="display:flex;align-items:center;gap:10px"><span style="font:600 11px/1 'JetBrains Mono',monospace;padding:6px 8px;border-radius:6px;background:#16153b;color:#fff">1–6</span><span>Switch timeframes, 1m to 1D</span></div>
+      </div>
+    </div>
+
+    <div data-reveal data-delay="160" style="display:flex;flex-direction:column;gap:18px;padding:26px;border-radius:22px;background:rgba(255,255,255,.68);border:1px solid rgba(22,21,59,.08);box-shadow:inset 0 1px 0 rgba(255,255,255,.95),0 24px 50px -34px rgba(22,21,59,.4)">
+      <div><div style="font-size:21px;font-weight:700;color:#16153b">A warehouse built for candles</div><p style="margin:8px 0 0;font-size:16px">Years of bars live in Parquet files queried by DuckDB, so a heavy backtest never slows a live order.</p></div>
+      <div style="margin-top:auto;padding:14px;border-radius:12px;background:rgba(22,21,59,.04);font:400 12px/1.7 'JetBrains Mono',monospace;color:#3d3c5c;overflow:hidden">
+        <div>instrument=NSE_SBIN-EQ/</div>
+        <div style="padding-left:14px">timeframe=15m/ <span style="color:var(--acc,#4f46e5)">2026.parquet</span></div>
+        <div style="padding-left:14px">timeframe=1d/ <span style="color:var(--acc,#4f46e5)">2023 … 2026.parquet</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="evidence" data-screen-label="Evidence" style="max-width:1200px;margin:0 auto;padding:140px 24px 0">
+  <div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px 60px">
+    <div data-reveal style="flex:1 1 460px;max-width:720px">
+      <div style="font:500 12px/1 'JetBrains Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--acc,#4f46e5)">Validated strategies</div>
+      <h2 style="margin:18px 0 0;font-size:clamp(30px,4.4vw,54px);line-height:1.04;letter-spacing:-.035em;font-weight:700;color:#16153b;text-wrap:balance">We publish the ones that failed, too.</h2>
+    </div>
+    <p data-reveal data-delay="100" style="flex:1 1 320px;max-width:420px;margin:0;text-wrap:pretty">Our own strategies go through development data, an untouched hold-out and a rolling walk-forward, after all costs. Here is what the last study found.</p>
+  </div>
+  <div style="margin-top:44px;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:18px">
+    <div data-reveal style="padding:30px;border-radius:22px;background:rgba(255,255,255,.68);border:1px solid rgba(15,138,75,.28);box-shadow:inset 0 1px 0 rgba(255,255,255,.95),0 24px 50px -34px rgba(22,21,59,.4)">
+      <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px"><span style="font:600 11px/1 'JetBrains Mono',monospace;letter-spacing:.12em;padding:7px 10px;border-radius:999px;background:rgba(15,138,75,.1);color:#0f8a4b">PASSED · PAPER TRADING ONLY</span><span style="font:500 12px/1 'JetBrains Mono',monospace;color:#5d5c7a">Swing · v6</span></div>
+      <div style="margin-top:20px;font-size:26px;font-weight:700;letter-spacing:-.02em;color:#16153b">RS Momentum Trend Swing</div>
+      <p style="margin:10px 0 0;font-size:16px">A positive edge per trade in development (2012–2019) and in the untouched hold-out (2020–2026). Ready for paper trading, not for live money.</p>
+      <div style="margin-top:22px;display:flex;flex-wrap:wrap;gap:28px;padding-top:20px;border-top:1px solid rgba(22,21,59,.08)">
+        <div><div style="font-size:34px;font-weight:800;letter-spacing:-.03em;line-height:1;color:#16153b"><span data-count="1.56" data-dec="2">1.56</span></div><div style="margin-top:6px;font-size:13.5px;color:#5d5c7a">walk-forward profit factor</div></div>
+        <div><div style="font-size:34px;font-weight:800;letter-spacing:-.03em;line-height:1;color:#16153b"><span data-count="7">7</span><span style="font-size:.55em;font-weight:600;letter-spacing:0"> of 10</span></div><div style="margin-top:6px;font-size:13.5px;color:#5d5c7a">out-of-sample years profitable</div></div>
+      </div>
+    </div>
+    <div data-reveal data-delay="120" style="padding:30px;border-radius:22px;background:rgba(255,255,255,.68);border:1px solid rgba(210,47,74,.28);box-shadow:inset 0 1px 0 rgba(255,255,255,.95),0 24px 50px -34px rgba(22,21,59,.4)">
+      <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px"><span style="font:600 11px/1 'JetBrains Mono',monospace;letter-spacing:.12em;padding:7px 10px;border-radius:999px;background:rgba(210,47,74,.09);color:#c12843">FAILED · DO NOT TRADE</span><span style="font:500 12px/1 'JetBrains Mono',monospace;color:#5d5c7a">Intraday · v4</span></div>
+      <div style="margin-top:20px;font-size:26px;font-weight:700;letter-spacing:-.02em;color:#16153b">Opening Range Retest</div>
+      <p style="margin:10px 0 0;font-size:16px">Loses after costs in development, in the hold-out and in every walk-forward fold. It still loses with zero slippage.</p>
+      <div style="margin-top:22px;padding-top:20px;border-top:1px solid rgba(22,21,59,.08);font-size:15.5px;color:#3d3c5c">Kept in the platform as a research template, labelled as failed, so nobody has to rediscover it the expensive way.</div>
+    </div>
+  </div>
+</section>
+
+<section id="cta" data-screen-label="CTA" style="max-width:1200px;margin:0 auto;padding:140px 24px 0">
+  <div data-reveal="scale" style="position:relative;overflow:hidden;border-radius:28px;background:rgba(255,255,255,.7);border:1px solid rgba(22,21,59,.08);box-shadow:inset 0 1px 0 rgba(255,255,255,.95),0 40px 80px -48px rgba(22,21,59,.45);backdrop-filter:blur(14px);padding:clamp(32px,5vw,64px);display:flex;flex-wrap:wrap;align-items:center;gap:36px 64px">
+    <div data-blob style="position:absolute;right:-220px;top:-260px;width:620px;height:620px;border-radius:50%;background:radial-gradient(circle,rgba(var(--acc-rgb,99,102,241),.2),rgba(var(--acc-rgb,99,102,241),0) 68%);pointer-events:none"></div>
+    <div style="position:relative;flex:1 1 440px;min-width:0">
+      <div style="font:500 12px/1 'JetBrains Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--acc,#4f46e5)">Get started</div>
+      <h2 style="margin:18px 0 0;max-width:620px;font-size:clamp(30px,4.4vw,54px);line-height:1.04;letter-spacing:-.035em;font-weight:700;color:#16153b;text-wrap:balance">See your strategy run before your money does.</h2>
+      <p style="margin:18px 0 0;max-width:520px;text-wrap:pretty">Book a walkthrough of the builder, the backtester and the live cockpit on your own instruments.</p>
+    </div>
+    <div style="position:relative;flex:0 1 300px;min-width:0;display:flex;flex-direction:column;gap:12px">
+      <a href="Contact.dc.html" style="padding:16px 26px;border-radius:999px;background:var(--acc,#4f46e5);color:#fff;font-weight:600;font-size:16px;text-align:center;box-shadow:0 14px 30px -12px rgba(var(--acc-rgb,99,102,241),.75),inset 0 1px 0 rgba(255,255,255,.25);transition:transform .2s" style-hover="transform:translateY(-2px);color:#fff">Request a demo</a>
+      <a href="Docs.dc.html" style="padding:16px 26px;border-radius:999px;background:rgba(255,255,255,.75);border:1px solid rgba(22,21,59,.12);color:#16153b;font-weight:600;font-size:16px;text-align:center;transition:transform .2s" style-hover="transform:translateY(-2px);color:#16153b">Read the documentation</a>
+      <div style="margin-top:4px;font:500 11.5px/1.5 'JetBrains Mono',monospace;color:#5d5c7a;text-align:center">Paper trading first. Live only after the four gates.</div>
+    </div>
+  </div>
+</section>
+
+<dc-import name="SiteFooter" hint-size="100%,320px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;skin&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Indigo sky&quot;,&quot;Ocean&quot;,&quot;Forest&quot;,&quot;Saffron&quot;],&quot;default&quot;:&quot;Indigo sky&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Theme&quot;},&quot;motion&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Full&quot;,&quot;Subtle&quot;,&quot;Off&quot;],&quot;default&quot;:&quot;Full&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Motion&quot;},&quot;showTicker&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Layout&quot;}}">
+class Component extends DCLogic {
+  rootRef = React.createRef(); chartRef = React.createRef(); eqRef = React.createRef();
+  SKINS = {
+    'Indigo sky': ['#4f46e5', '#ecebff', '99,102,241', '#a5b4fc'],
+    'Ocean': ['#0e7490', '#dff4f9', '14,165,200', '#67e8f9'],
+    'Forest': ['#15803d', '#e2f5e9', '34,160,90', '#86efac'],
+    'Saffron': ['#b45309', '#fcefd9', '230,140,30', '#fcd34d']
+  };
+  componentDidMount() { this.boot(); }
+  componentDidUpdate(pp) {
+    if (pp.skin !== this.props.skin) this.applySkin();
+    if (pp.motion !== this.props.motion || pp.showTicker !== this.props.showTicker) { this.teardown(); this.boot(); }
+  }
+  componentWillUnmount() { this.teardown(); }
+  renderVals() { return { rootRef: this.rootRef, chartRef: this.chartRef, eqRef: this.eqRef, showTicker: this.props.showTicker ?? true }; }
+
+  q(sel) { return [...this.root.querySelectorAll(sel)]; }
+  anim(el, kf, opt) { const a = el.animate(kf, opt); this.cleanup.push(() => a.cancel()); return a; }
+  later(fn, ms) { const id = setTimeout(() => { if (this.alive) fn(); }, ms); this.cleanup.push(() => clearTimeout(id)); }
+  every(fn, ms) { const id = setInterval(() => { if (this.alive) fn(); }, ms); this.cleanup.push(() => clearInterval(id)); }
+  setText(el, t) { if (el && el.firstChild) el.firstChild.nodeValue = t; }
+
+  boot() {
+    const root = this.rootRef.current; if (!root) return;
+    this.root = root; this.cleanup = []; this.alive = true;
+    const m = this.props.motion ?? 'Full';
+    this.still = m === 'Off' || matchMedia('(prefers-reduced-motion: reduce)').matches;
+    this.amp = m === 'Subtle' ? 0.4 : 1;
+    this.applySkin(); this.fit(); this.chart(); this.equity(); this.clock();
+    if (!this.still) { this.reveal(); this.triggers(); this.loops(); this.gates(); this.tilt(); }
+  }
+  teardown() { this.alive = false; (this.cleanup || []).forEach(f => { try { f(); } catch (e) {} }); this.cleanup = []; }
+
+  applySkin() {
+    const s = this.SKINS[this.props.skin] || this.SKINS['Indigo sky'], st = this.rootRef.current && this.rootRef.current.style; if (!st) return;
+    st.setProperty('--acc', s[0]); st.setProperty('--acc-soft', s[1]); st.setProperty('--acc-rgb', s[2]); st.setProperty('--acc-lite', s[3]);
+    this.acc = s[0]; this.accRgb = s[2]; if (this.eqDraw) this.eqDraw();
+  }
+
+  fit() {
+    const ro = new ResizeObserver(es => es.forEach(e => {
+      const box = e.target, inner = box.firstElementChild, w = +box.dataset.fit, h = +box.dataset.fitH;
+      const s = Math.min(1, Math.max(+box.dataset.fitMin || 0.4, box.clientWidth / w));
+      inner.style.transform = 'scale(' + s + ')'; box.style.height = Math.round(h * s) + 'px';
+    }));
+    this.q('[data-fit]').forEach(b => ro.observe(b)); this.cleanup.push(() => ro.disconnect());
+  }
+
+  reveal() {
+    const ease = 'cubic-bezier(.2,.7,.2,1)', vh = window.innerHeight;
+    const from = el => el.dataset.reveal === 'scale' ? 'translateY(26px) scale(.97)' : 'translateY(26px)';
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (!e.isIntersecting) return; const el = e.target; io.unobserve(el);
+      el.style.opacity = ''; el.style.transform = '';
+      el.addEventListener('transitionend', () => { el.style.transition = ''; }, { once: true });
+    }), { threshold: 0.12 });
+    this.q('[data-reveal]').forEach(el => {
+      const d = +el.dataset.delay || 0;
+      if (el.getBoundingClientRect().top < vh * 0.92) { el.animate([{ opacity: 0, transform: from(el) }, { opacity: 1, transform: 'none' }], { duration: 900, delay: d, easing: ease, fill: 'backwards' }); return; }
+      el.style.transition = 'opacity .8s ' + ease + ' ' + d + 'ms, transform .8s ' + ease + ' ' + d + 'ms';
+      el.style.opacity = '0'; el.style.transform = from(el); io.observe(el);
+    });
+    this.cleanup.push(() => { io.disconnect(); this.q('[data-reveal]').forEach(el => { el.style.opacity = ''; el.style.transform = ''; el.style.transition = ''; }); });
+  }
+
+  triggers() {
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (!e.isIntersecting) return; const el = e.target, d = el.dataset; io.unobserve(el);
+      if ('count' in d) this.count(el);
+      if ('bar' in d) { el.style.transition = 'width 1.4s cubic-bezier(.2,.7,.2,1) .3s'; el.style.width = d.bar + '%'; }
+      if ('eq' in d && this.eqPlay) this.eqPlay();
+      if ('type' in d) this.type(el);
+    }), { threshold: 0.35 });
+    this.q('[data-count],[data-bar],[data-eq],[data-type]').forEach(el => {
+      const d = el.dataset;
+      if ('bar' in d) el.style.width = '0%';
+      if ('type' in d && el.firstChild) { if (!d.full) d.full = el.firstChild.nodeValue; }
+      io.observe(el);
+    });
+    this.cleanup.push(() => { io.disconnect(); this.q('[data-type]').forEach(el => { if (el.dataset.full) this.setText(el, el.dataset.full); }); this.q('[data-bar]').forEach(el => { el.style.transition = ''; el.style.width = el.dataset.bar + '%'; }); });
+  }
+  count(el) {
+    const d = el.dataset, to = +d.count, dec = +d.dec || 0, pre = d.pre || '', suf = d.suf || '', t0 = performance.now();
+    const fmt = v => pre + Number(v.toFixed(dec)).toLocaleString('en-IN', { minimumFractionDigits: dec, maximumFractionDigits: dec }) + suf;
+    const step = t => { if (!this.alive) return; const p = Math.min(1, (t - t0) / 1500), e = 1 - Math.pow(1 - p, 3); this.setText(el, fmt(to * e)); if (p < 1) requestAnimationFrame(step); };
+    requestAnimationFrame(step); this.cleanup.push(() => this.setText(el, fmt(to)));
+  }
+  type(el) {
+    const full = el.dataset.full || ''; let i = 0;
+    const tick = () => { i++; this.setText(el, full.slice(0, i) || ' '); if (i < full.length) this.later(tick, 26); else this.later(() => { i = 0; tick(); }, 5200); };
+    this.setText(el, ' '); tick();
+  }
+
+  loops() {
+    const A = this.amp;
+    this.q('[data-marquee]').forEach(el => this.anim(el, [{ transform: 'translateX(0)' }, { transform: 'translateX(-50%)' }], { duration: 42000, iterations: Infinity }));
+    this.q('[data-wire]').forEach(el => this.anim(el, [{ strokeDashoffset: 0 }, { strokeDashoffset: -22 }], { duration: 900, iterations: Infinity }));
+    this.q('[data-float]').forEach((el, i) => this.anim(el, [{ transform: 'translateY(0)' }, { transform: 'translateY(' + (-12 * A) + 'px)' }], { duration: 3200 + i * 900, iterations: Infinity, direction: 'alternate', easing: 'ease-in-out' }));
+    this.q('[data-blob]').forEach((el, i) => this.anim(el, [{ transform: 'translate(0,0) scale(1)' }, { transform: 'translate(' + (i % 2 ? -70 : 80) * A + 'px,' + (i % 2 ? 60 : -50) * A + 'px) scale(1.12)' }], { duration: 14000 + i * 3000, iterations: Infinity, direction: 'alternate', easing: 'ease-in-out' }));
+    this.q('[data-pulse]').forEach(el => this.anim(el, [{ opacity: 1 }, { opacity: 0.25 }], { duration: 850, iterations: Infinity, direction: 'alternate', easing: 'ease-in-out' }));
+    this.q('[data-seq]').forEach(g => {
+      const items = [...g.querySelectorAll('[data-i]')], step = +g.dataset.seq || 300, max = Math.max(...items.map(it => +it.dataset.i));
+      const run = () => items.forEach(it => this.later(() => {
+        const r = this.accRgb || '99,102,241';
+        it.animate([{ boxShadow: '0 0 0 0 rgba(' + r + ',.75)', transform: 'translateY(0)' }, { boxShadow: '0 0 0 9px rgba(' + r + ',0)', transform: 'translateY(-3px)', offset: 0.45 }, { boxShadow: '0 0 0 0 rgba(' + r + ',0)', transform: 'translateY(0)' }], { duration: 800, easing: 'ease-out' });
+      }, +it.dataset.i * step));
+      this.later(run, 600); this.every(run, (max + 1) * step + 1700);
+    });
+  }
+
+  gates() {
+    const rows = this.q('[data-gate]'), res = this.root.querySelector('[data-gate-result]'), tk = this.root.querySelector('[data-ticket]');
+    if (!rows.length || !res || !tk) return;
+    const sc = [{ t: 'BUY 50 · NSE:SBIN-EQ · 10:42 IST', fail: -1, r: 'Passed · routed to broker' }, { t: 'BUY 120 · NSE:SBIN-EQ · 15:16 IST', fail: 4, r: 'Refused · after the 15:15 IST square-off' }];
+    const C = { wait: ['#8e8cb3', 'queued', 'transparent'], run: ['#f2a93b', 'checking', 'rgba(242,169,59,.09)'], ok: ['#2fbf71', 'pass', 'rgba(47,191,113,.07)'], no: ['#f0556a', 'refused', 'rgba(240,85,106,.12)'] };
+    const paint = (row, st) => { const s = row.querySelector('[data-s]'), c = C[st]; this.setText(s, c[1]); s.style.color = c[0]; row.style.background = c[2]; };
+    let n = 0;
+    const run = () => {
+      const S = sc[n++ % sc.length], last = S.fail >= 0 ? S.fail : rows.length - 1;
+      this.setText(tk, S.t); rows.forEach(r => paint(r, 'wait')); this.setText(res, 'Evaluating…'); res.style.color = '#a8a6c9';
+      rows.forEach((r, i) => { if (i > last) return; this.later(() => paint(r, 'run'), 500 + i * 520); this.later(() => paint(r, S.fail === i ? 'no' : 'ok'), 880 + i * 520); });
+      const end = 1100 + last * 520;
+      this.later(() => { this.setText(res, S.r); res.style.color = S.fail >= 0 ? '#f0556a' : '#2fbf71'; }, end); this.later(run, end + 2800);
+    };
+    this.later(run, 1200);
+  }
+
+  tilt() {
+    const hero = this.root.querySelector('[data-hero]'), el = this.root.querySelector('[data-tilt]'); if (!hero || !el) return;
+    const pars = this.q('[data-par]'), A = this.amp;
+    el.style.transition = 'transform .3s ease-out'; pars.forEach(p => p.style.transition = 'transform .35s ease-out');
+    const mv = e => {
+      const r = hero.getBoundingClientRect(), nx = (e.clientX - r.left) / r.width - 0.5, ny = (e.clientY - r.top) / r.height - 0.5;
+      el.style.transform = 'perspective(1600px) rotateX(' + (-ny * 3 * A).toFixed(2) + 'deg) rotateY(' + (nx * 4 * A).toFixed(2) + 'deg)';
+      pars.forEach(p => { const d = +p.dataset.par * A; p.style.transform = 'translate3d(' + (nx * d).toFixed(1) + 'px,' + (ny * d).toFixed(1) + 'px,0)'; });
+    };
+    const out = () => { el.style.transform = ''; pars.forEach(p => p.style.transform = ''); };
+    hero.addEventListener('pointermove', mv); hero.addEventListener('pointerleave', out);
+    this.cleanup.push(() => { hero.removeEventListener('pointermove', mv); hero.removeEventListener('pointerleave', out); out(); });
+  }
+
+  clock() {
+    const el = this.root.querySelector('[data-clock]'); if (!el) return;
+    const up = () => this.setText(el, new Date().toLocaleTimeString('en-GB', { timeZone: 'Asia/Kolkata', hour12: false }));
+    up(); this.every(up, 1000);
+  }
+
+  chart() {
+    const cv = this.chartRef.current; if (!cv) return; const ctx = cv.getContext('2d');
+    const pxEl = this.root.querySelector('[data-px]'), chEl = this.root.querySelector('[data-chg]');
+    let W = 0, H = 0, s = 11; const rnd = () => (s = (s * 16807) % 2147483647) / 2147483647;
+    const cs = []; let p = 24050;
+    for (let i = 0; i < 150; i++) { const c = p + (rnd() - 0.44) * 46; cs.push({ o: p, c, h: Math.max(p, c) + rnd() * 20, l: Math.min(p, c) - rnd() * 20, v: 0.25 + rnd() * 0.75 }); p = c; }
+    const ref = cs[70].c; let base = 0, slide = 0, lo = 0, hi = 0, goal = p, ob = null, on = true;
+    const pick = () => { const L = cs.length; let i = L - 30; for (let j = L - 36; j < L - 22; j++) if (cs[j].c < cs[j].o && cs[j + 1].c > cs[j + 1].o) { i = j; break; } ob = { i: base + i, top: cs[i].o, bot: cs[i].l }; };
+    pick();
+    const ema = n => { const k = 2 / (n + 1); let e = cs[0].c; return cs.map(c => (e = c.c * k + e * (1 - k))); };
+    const mono = (sz, w) => (w || 500) + ' ' + sz + "px 'JetBrains Mono',monospace";
+    const draw = () => {
+      if (!W) return; ctx.clearRect(0, 0, W, H);
+      const padR = 62, padT = 12, padB = 8, L = cs.length, n = Math.max(22, Math.min(74, Math.floor((W - padR) / 12))), st = L - n, cw = (W - padR) / n, ch = H - padT - padB;
+      let mn = Infinity, mx = -Infinity; for (let j = st; j < L; j++) { mn = Math.min(mn, cs[j].l); mx = Math.max(mx, cs[j].h); }
+      const pad = (mx - mn) * 0.14; mn -= pad * 2.2; mx += pad; lo = lo ? lo + (mn - lo) * 0.08 : mn; hi = hi ? hi + (mx - hi) * 0.08 : mx;
+      const y = v => padT + (hi - v) / (hi - lo) * ch, x = j => (j - st + slide) * cw + cw / 2;
+      ctx.lineWidth = 1; ctx.font = mono(10); ctx.textBaseline = 'middle';
+      for (let g = 1; g < 5; g++) { const v = lo + (hi - lo) * g / 5, yy = Math.round(y(v)) + 0.5; ctx.strokeStyle = 'rgba(255,255,255,.05)'; ctx.beginPath(); ctx.moveTo(0, yy); ctx.lineTo(W - padR, yy); ctx.stroke(); ctx.fillStyle = '#8e8cb3'; ctx.fillText(v.toFixed(0), W - padR + 10, yy); }
+      ctx.save(); ctx.beginPath(); ctx.rect(0, 0, W - padR, H); ctx.clip();
+      if (ob.i - base < st + 2) pick();
+      const ox = x(ob.i - base) - cw / 2, oy = y(ob.top), oh = Math.max(6, y(ob.bot) - oy);
+      ctx.fillStyle = 'rgba(47,191,113,.11)'; ctx.fillRect(ox, oy, W, oh); ctx.fillStyle = 'rgba(47,191,113,.55)'; ctx.fillRect(ox, oy, W, 1);
+      ctx.fillStyle = '#7fe0aa'; ctx.fillText('Bull OB', ox + 6, oy - 8);
+      for (let j = st - 1; j < L; j++) { const c = cs[j]; ctx.fillStyle = c.c >= c.o ? 'rgba(47,191,113,.22)' : 'rgba(240,85,106,.22)'; const vh = c.v * ch * 0.15; ctx.fillRect(x(j) - cw * 0.32, H - vh, cw * 0.64, vh); }
+      [[ema(20), '#8b8fff'], [ema(50), '#f2a93b']].forEach(([e, col]) => { ctx.strokeStyle = col; ctx.lineWidth = 1.5; ctx.beginPath(); for (let j = st - 1; j < L; j++) { j === st - 1 ? ctx.moveTo(x(j), y(e[j])) : ctx.lineTo(x(j), y(e[j])); } ctx.stroke(); });
+      for (let j = st - 1; j < L; j++) { const c = cs[j], up = c.c >= c.o, col = up ? '#2fbf71' : '#f0556a', xx = x(j); ctx.strokeStyle = col; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(Math.round(xx) + 0.5, y(c.h)); ctx.lineTo(Math.round(xx) + 0.5, y(c.l)); ctx.stroke(); ctx.fillStyle = col; const a = y(Math.max(c.o, c.c)), b = y(Math.min(c.o, c.c)); ctx.fillRect(xx - cw * 0.32, a, cw * 0.64, Math.max(1, b - a)); }
+      const mj = ob.i - base + 3; if (mj >= st && mj < L) { const xx = x(mj), yy = y(cs[mj].l) + 10; ctx.fillStyle = '#2fbf71'; ctx.beginPath(); ctx.moveTo(xx, yy); ctx.lineTo(xx - 5, yy + 8); ctx.lineTo(xx + 5, yy + 8); ctx.closePath(); ctx.fill(); ctx.font = mono(9, 600); ctx.textAlign = 'center'; ctx.fillText('LONG', xx, yy + 17); ctx.textAlign = 'left'; ctx.font = mono(10); }
+      ctx.restore();
+      const k = cs[L - 1], up = k.c >= k.o, yl = Math.round(y(k.c)) + 0.5, col = up ? '#2fbf71' : '#f0556a';
+      ctx.setLineDash([3, 4]); ctx.strokeStyle = col; ctx.beginPath(); ctx.moveTo(0, yl); ctx.lineTo(W - padR, yl); ctx.stroke(); ctx.setLineDash([]);
+      ctx.fillStyle = col; ctx.fillRect(W - padR, yl - 9, padR, 18); ctx.fillStyle = '#0d0c22'; ctx.font = mono(10, 600); ctx.fillText(k.c.toFixed(2), W - padR + 6, yl);
+    };
+    const size = () => { const d = Math.min(2, window.devicePixelRatio || 1); W = cv.clientWidth; H = cv.clientHeight; if (!W || !H) return; cv.width = Math.round(W * d); cv.height = Math.round(H * d); ctx.setTransform(d, 0, 0, d, 0, 0); draw(); };
+    const ro = new ResizeObserver(size); ro.observe(cv); size(); this.cleanup.push(() => ro.disconnect());
+    if (this.still) return;
+    const io = new IntersectionObserver(e => { on = e[0].isIntersecting; }); io.observe(cv); this.cleanup.push(() => io.disconnect());
+    const hud = () => { const c = cs[cs.length - 1].c, g = (c / ref - 1) * 100; this.setText(pxEl, c.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })); this.setText(chEl, (g >= 0 ? '+' : '−') + Math.abs(g).toFixed(2) + '%'); if (chEl) chEl.style.color = g >= 0 ? '#2fbf71' : '#f0556a'; };
+    let lastT = 0, tk = 0;
+    const frame = t => {
+      if (!this.alive) return; requestAnimationFrame(frame); if (!on) return;
+      const k = cs[cs.length - 1]; k.c += (goal - k.c) * 0.12; k.h = Math.max(k.h, k.c); k.l = Math.min(k.l, k.c); slide *= 0.88; if (slide < 0.002) slide = 0;
+      if (t - lastT > 480) { lastT = t; tk++; if (tk % 7 === 0) { cs.push({ o: k.c, c: k.c, h: k.c, l: k.c, v: 0.25 + rnd() * 0.75 }); cs.shift(); base++; slide = 1; goal = k.c + (rnd() - 0.44) * 30; } else goal = k.c + (rnd() - 0.46) * 28; hud(); }
+      draw();
+    };
+    requestAnimationFrame(frame);
+  }
+
+  equity() {
+    const cv = this.eqRef.current; if (!cv) return; const ctx = cv.getContext('2d');
+    let W = 0, H = 0, prog = this.still ? 1 : 0, s = 5; const rnd = () => (s = (s * 16807) % 2147483647) / 2147483647;
+    const N = 130, a = [100], b = [100];
+    for (let i = 1; i < N; i++) { a.push(a[i - 1] * (1 + (rnd() - 0.44) * 0.02)); b.push(b[i - 1] * (1 + (rnd() - 0.48) * 0.026)); }
+    const fix = (arr, end) => { const d = end - arr[N - 1]; return arr.map((v, i) => v + d * i / (N - 1)); };
+    const A = fix(a, 124.5), B = fix(b, 111.2); const mn = Math.min(...A, ...B) - 2, mx = Math.max(...A, ...B) + 3;
+    const draw = () => {
+      if (!W) return; ctx.clearRect(0, 0, W, H); const acc = this.acc || '#4f46e5', padB = 6, padT = 8;
+      const x = i => i / (N - 1) * (W - 2) + 1, y = v => padT + (mx - v) / (mx - mn) * (H - padT - padB), end = Math.max(1, Math.floor(prog * (N - 1)));
+      ctx.lineWidth = 1; ctx.strokeStyle = 'rgba(22,21,59,.07)'; for (let g = 0; g < 5; g++) { const yy = Math.round(padT + g * (H - padT - padB) / 4) + 0.5; ctx.beginPath(); ctx.moveTo(0, yy); ctx.lineTo(W, yy); ctx.stroke(); }
+      let pk = A[0]; ctx.fillStyle = 'rgba(210,47,74,.16)'; ctx.beginPath(); ctx.moveTo(x(0), y(A[0])); const peaks = [];
+      for (let i = 0; i <= end; i++) { pk = Math.max(pk, A[i]); peaks.push(pk); ctx.lineTo(x(i), y(pk)); } for (let i = end; i >= 0; i--) ctx.lineTo(x(i), y(A[i])); ctx.closePath(); ctx.fill();
+      ctx.globalAlpha = 0.1; ctx.fillStyle = acc; ctx.beginPath(); ctx.moveTo(x(0), H); for (let i = 0; i <= end; i++) ctx.lineTo(x(i), y(A[i])); ctx.lineTo(x(end), H); ctx.closePath(); ctx.fill(); ctx.globalAlpha = 1;
+      ctx.lineJoin = 'round'; ctx.strokeStyle = '#9a99b5'; ctx.lineWidth = 1.5; ctx.beginPath(); for (let i = 0; i <= end; i++) i ? ctx.lineTo(x(i), y(B[i])) : ctx.moveTo(x(i), y(B[i])); ctx.stroke();
+      ctx.strokeStyle = acc; ctx.lineWidth = 2.4; ctx.beginPath(); for (let i = 0; i <= end; i++) i ? ctx.lineTo(x(i), y(A[i])) : ctx.moveTo(x(i), y(A[i])); ctx.stroke();
+      ctx.fillStyle = acc; ctx.beginPath(); ctx.arc(Math.min(x(end), W - 5), y(A[end]), 4.5, 0, 7); ctx.fill(); ctx.globalAlpha = 0.2; ctx.beginPath(); ctx.arc(Math.min(x(end), W - 5), y(A[end]), 9, 0, 7); ctx.fill(); ctx.globalAlpha = 1;
+    };
+    const size = () => { const d = Math.min(2, window.devicePixelRatio || 1); W = cv.clientWidth; H = cv.clientHeight; if (!W || !H) return; cv.width = Math.round(W * d); cv.height = Math.round(H * d); ctx.setTransform(d, 0, 0, d, 0, 0); draw(); };
+    const ro = new ResizeObserver(size); ro.observe(cv); size();
+    this.eqDraw = draw;
+    this.eqPlay = () => { const t0 = performance.now(); const step = t => { if (!this.alive) return; const p = Math.min(1, (t - t0) / 2600); prog = 1 - Math.pow(1 - p, 2.2); draw(); if (p < 1) requestAnimationFrame(step); }; requestAnimationFrame(step); };
+    this.cleanup.push(() => { ro.disconnect(); this.eqDraw = null; this.eqPlay = null; });
+  }
+}
+</script>
+</body>
+</html>

@@ -1,44 +1,28 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Self-contained server bundle in .next/standalone for deployment.
   output: "standalone",
-  // Permanent: these short URLs are shared links, and a temporary redirect
-  // tells search engines to keep indexing the short form instead of the page.
+  // The previous site's feature URLs are shared links; send them to the closest new page.
   async redirects() {
-    const aliases: Record<string, string> = {
-      "ai-score": "ai-score",
-      swarm: "swarm",
-      workspace: "workspace",
-      "portfolio-doctor": "portfolio-doctor",
-      portfolio: "portfolio-management",
-      "portfolio-management": "portfolio-management",
-      "paper-trading": "paper-trading",
-      backtesting: "backtesting-strategy",
-      "backtesting-strategy": "backtesting-strategy",
-      watchlist: "watchlist",
-      "stock-chat": "stock-chat",
-      chat: "stock-chat",
-      "stock-analysis": "stock-analysis",
-      "stock-screener": "stock-screener",
-      screener: "stock-screener",
-      learn: "learn-stock-market",
-      "learn-stock-market": "learn-stock-market",
-      "mobile-app": "mobile-app",
-      app: "mobile-app",
-      "reports-exports": "reports-exports",
-      path: "path",
-      "how-it-works": "path",
-      // The institutional-flow page described a feature the product no
-      // longer has; its nearest successor is the company research page.
-      "institutional-flow": "stock-analysis",
+    const moved: Record<string, string> = {
+      "backtesting-strategy": "/backtesting",
+      "paper-trading": "/live",
+      "stock-screener": "/research",
+      "stock-analysis": "/research",
+      "stock-chat": "/research",
+      "ai-score": "/research",
+      swarm: "/research",
+      "institutional-flow": "/research",
+      workspace: "/charts",
     };
     return [
-      ...Object.entries(aliases).map(([source, slug]) => ({
-        source: `/${source}`,
-        destination: `/features/${slug}`,
+      ...Object.entries(moved).map(([slug, destination]) => ({
+        source: `/features/${slug}`,
+        destination,
         permanent: true,
       })),
-      { source: "/features/institutional-flow", destination: "/features/stock-analysis", permanent: true },
+      { source: "/features/:path*", destination: "/", permanent: true },
     ];
   },
 };

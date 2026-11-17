@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;background:#f5f5fb;color:#16153b;font-family:'Schibsted Grotesk',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#4f46e5;text-decoration:none}
+a:hover{color:#3730a3}
+button,input{font-family:inherit}
+input::placeholder{color:#8e8cb3}
+</style>
+<script src="site-motion.js"></script>
+</helmet>
+<div ref="{{ rootRef }}" style="position:relative;overflow-x:clip;font-size:17px;line-height:1.55;color:#3d3c5c">
+<div data-blob style="position:absolute;top:-260px;left:-200px;width:780px;height:780px;border-radius:50%;background:radial-gradient(circle,rgba(var(--acc-rgb,99,102,241),.2),rgba(var(--acc-rgb,99,102,241),0) 68%);pointer-events:none"></div>
+<div data-blob style="position:absolute;top:-60px;right:-260px;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(125,190,255,.24),rgba(125,190,255,0) 68%);pointer-events:none"></div>
+
+<div style="position:sticky;top:12px;z-index:50"><dc-import name="SiteNav" active="docs" hint-size="100%,72px"></dc-import></div>
+
+<section data-screen-label="Docs hero" style="position:relative;max-width:1200px;margin:0 auto;padding:72px 24px 0;text-align:center">
+  <div data-reveal style="font:500 12px/1 'JetBrains Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--acc,#4f46e5)">Documentation</div>
+  <h1 data-reveal data-delay="80" style="margin:22px auto 0;max-width:820px;font-size:clamp(38px,6vw,72px);line-height:1;letter-spacing:-.045em;font-weight:800;color:#16153b;text-wrap:balance">Everything about Niveshmarg Edge, written down.</h1>
+  <div data-reveal data-delay="160" style="margin:34px auto 0;max-width:620px;display:flex;align-items:center;gap:12px;padding:8px 8px 8px 20px;border-radius:999px;background:rgba(255,255,255,.85);border:1px solid rgba(22,21,59,.1);box-shadow:inset 0 1px 0 #fff,0 24px 50px -30px rgba(22,21,59,.45)">
+    <span style="font:500 15px/1 'JetBrains Mono',monospace;color:var(--acc,#4f46e5)">/</span>
+    <input value="{{ query }}" onChange="{{ onQuery }}" placeholder="Search guides: backtest, broker, MCP…" style="flex:1;min-width:0;border:0;outline:0;background:transparent;font-size:16px;color:#16153b;padding:10px 0">
+    <span style="padding:10px 14px;border-radius:999px;background:#16153b;color:#fff;font:500 12px/1 'JetBrains Mono',monospace">{{ countLabel }}</span>
+  </div>
+  <div data-reveal data-delay="220" style="margin-top:18px;display:flex;flex-wrap:wrap;justify-content:center;gap:8px">
+    <sc-for list="{{ groups }}" as="g" hint-placeholder-count="5">
+      <button onClick="{{ g.pick }}" style="border:1px solid rgba(22,21,59,.1);cursor:pointer;padding:9px 14px;border-radius:999px;font-size:14px;font-weight:500;background:{{ g.bg }};color:{{ g.fg }}">{{ g.label }}</button>
+    </sc-for>
+  </div>
+</section>
+
+<section data-screen-label="Doc grid" style="max-width:1200px;margin:0 auto;padding:56px 24px 0">
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px">
+    <sc-for list="{{ docs }}" as="d" hint-placeholder-count="9">
+      <a href="#" style="display:flex;flex-direction:column;gap:10px;padding:22px;border-radius:20px;background:rgba(255,255,255,.7);border:1px solid rgba(22,21,59,.08);box-shadow:inset 0 1px 0 rgba(255,255,255,.95),0 20px 44px -34px rgba(22,21,59,.45);color:#3d3c5c;transition:transform .25s,box-shadow .25s" style-hover="transform:translateY(-4px);color:#3d3c5c;box-shadow:inset 0 1px 0 rgba(255,255,255,.95),0 30px 60px -34px rgba(22,21,59,.55)">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:10px"><span style="font:600 12px/1 'JetBrains Mono',monospace;color:var(--acc,#4f46e5)">{{ d.num }}</span><span style="font:500 11px/1 'JetBrains Mono',monospace;letter-spacing:.08em;padding:5px 8px;border-radius:6px;background:rgba(22,21,59,.05);color:#5d5c7a">{{ d.group }}</span></div>
+        <span style="font-size:19px;font-weight:700;line-height:1.25;color:#16153b">{{ d.title }}</span>
+        <span style="font-size:15px">{{ d.desc }}</span>
+      </a>
+    </sc-for>
+  </div>
+  <sc-if value="{{ empty }}" hint-placeholder-val="{{ false }}">
+    <div style="padding:60px 20px;text-align:center;font-size:17px;color:#5d5c7a">No guides match that search.</div>
+  </sc-if>
+</section>
+
+<section data-screen-label="Quickstart" style="max-width:1200px;margin:0 auto;padding:120px 24px 0">
+  <div data-reveal="scale" style="border-radius:28px;background:#0d0c22;color:#a8a6c9;padding:clamp(28px,5vw,56px);display:flex;flex-wrap:wrap;gap:36px 64px;align-items:center;position:relative;overflow:hidden">
+    <div data-blob style="position:absolute;top:-260px;right:-200px;width:620px;height:620px;border-radius:50%;background:radial-gradient(circle,rgba(var(--acc-rgb,99,102,241),.3),rgba(var(--acc-rgb,99,102,241),0) 68%);pointer-events:none"></div>
+    <div style="position:relative;flex:1 1 340px;min-width:0">
+      <div style="font:500 12px/1 'JetBrains Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--acc-lite,#a5b4fc)">Quickstart</div>
+      <h2 style="margin:18px 0 0;font-size:clamp(28px,3.8vw,46px);line-height:1.06;letter-spacing:-.035em;font-weight:700;color:#fff;text-wrap:balance">Up and running with Docker.</h2>
+      <p style="margin:16px 0 0;max-width:440px;text-wrap:pretty">The Getting Started guide walks through configuration, your first broker login and your first backtest.</p>
+    </div>
+    <div style="position:relative;flex:1 1 420px;min-width:0;padding:18px 20px;border-radius:14px;background:#17163a;border:1px solid rgba(255,255,255,.08);font:400 13px/1.9 'JetBrains Mono',monospace;color:#eeedfb;overflow-x:auto;white-space:nowrap">
+      <div><span style="color:var(--acc-lite,#a5b4fc)">$ </span>docker compose up -d</div>
+      <div><span style="color:var(--acc-lite,#a5b4fc)">$ </span>docker compose exec web python manage.py migrate</div>
+      <div><span style="color:var(--acc-lite,#a5b4fc)">$ </span>docker compose exec web python manage.py sync_starter_templates</div>
+      <div style="color:#7fe0aa">✓ open /admin/ and sign in</div>
+    </div>
+  </div>
+</section>
+
+<dc-import name="SiteFooter" hint-size="100%,320px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;skin&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Indigo sky&quot;,&quot;Ocean&quot;,&quot;Forest&quot;,&quot;Saffron&quot;],&quot;default&quot;:&quot;Indigo sky&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Theme&quot;},&quot;motion&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Full&quot;,&quot;Subtle&quot;,&quot;Off&quot;],&quot;default&quot;:&quot;Full&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Motion&quot;}}">
+class Component extends DCLogic {
+  rootRef = React.createRef();
+  state = { q: '', group: 'All' };
+  DOCS = [
+    ['01', 'Getting started', 'Start here', 'Install, configure and run your first backtest.'],
+    ['02', 'Visual strategy builder', 'Build', 'Nodes, typed ports, live preview and templates.'],
+    ['03', 'Chart workspace & SMC', 'Build', 'Streaming charts, Smart Money overlays and the chart assistant.'],
+    ['04', 'Backtesting & optimization', 'Test', 'Invariants, data checks, walk-forward and portfolio runs.'],
+    ['05', 'Trading runners & risk', 'Trade', 'Paper and live runners, risk profiles and promotion.'],
+    ['06', 'Broker integrations', 'Trade', 'Connect Fyers, Zerodha, Groww and Delta Exchange.'],
+    ['07', 'Market data & DuckDB', 'Platform', 'The Parquet warehouse and how candles are stored.'],
+    ['08', 'AI stock analysis', 'Research', 'Multi-agent reports, news scout and market regimes.'],
+    ['09', 'Admin dashboard & operations', 'Platform', 'The cockpit, tenants, schedules, health and backups.'],
+    ['10', 'MCP server', 'Platform', 'Connect Claude, Cursor and other agents to 24 tools.'],
+    ['11', 'Commands & CLI reference', 'Platform', 'Every management command in one place.'],
+    ['12', 'Swing trading suite', 'Research', 'Analyzers, universe, scheduling and builder nodes.'],
+    ['13', 'Swing suite user guide', 'Research', 'The daily routine, stages and acting on a Buy.'],
+    ['14', 'Screener', 'Research', 'Filters, presets and the daily refresh.'],
+    ['15', 'Validated strategies', 'Test', 'Our research method, results and limitations.'],
+    ['16', 'UI design system', 'Platform', 'The Glass visual language used across the app.']
+  ];
+  componentDidMount() { this.start(); }
+  componentDidUpdate(pp) { if (pp.skin !== this.props.skin || pp.motion !== this.props.motion) { this.stop(); this.start(); } }
+  componentWillUnmount() { this.stop(); }
+  start() { const go = () => { const r = this.rootRef.current; if (!r) return; if (!window.NMSite) { this.t = setTimeout(go, 60); return; } this.h = window.NMSite.boot(r, { skin: this.props.skin, motion: this.props.motion }); }; go(); }
+  stop() { clearTimeout(this.t); if (this.h) this.h.stop(); this.h = null; }
+  renderVals() {
+    const q = this.state.q.trim().toLowerCase(), G = this.state.group;
+    const docs = this.DOCS.filter(d => (G === 'All' || d[2] === G) && (!q || (d[1] + ' ' + d[3]).toLowerCase().includes(q)))
+      .map(d => ({ num: d[0], title: d[1], group: d[2], desc: d[3] }));
+    const groups = ['All', 'Start here', 'Build', 'Test', 'Trade', 'Research', 'Platform'].map(label => ({
+      label, bg: label === G ? 'var(--acc,#4f46e5)' : 'rgba(255,255,255,.75)', fg: label === G ? '#fff' : '#3d3c5c',
+      pick: () => this.setState({ group: label })
+    }));
+    return {
+      rootRef: this.rootRef, query: this.state.q, onQuery: e => this.setState({ q: e.target.value }),
+      docs, groups, empty: docs.length === 0, countLabel: docs.length + (docs.length === 1 ? ' guide' : ' guides')
+    };
+  }
+}
+</script>
+</body>
+</html>

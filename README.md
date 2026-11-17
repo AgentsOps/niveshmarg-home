@@ -1,249 +1,84 @@
-# Niveshmarg
-
-Niveshmarg is a modern marketing and product landing page for an AI-powered stock and portfolio workspace. The app presents the platform’s value proposition, AI scoring concepts, portfolio tools, and investment workflow in a polished single-page experience built with Next.js.
-
-## Overview
-
-This project is a frontend marketing site for:
-
-- AI-based portfolio research and analysis
-- Six-agent investment research workflow
-- AI Score evaluation framework
-- Portfolio diagnostics and suggestions
-- Paper trading and backtesting workflows
-- Board-ready reporting and decision support
-
-The app is built with:
-
-- Next.js 16
-- React 19
-- TypeScript
-- Tailwind CSS
-
-## Project structure
-
-```bash
-.
-├── public/
-│   ├── favicon.ico
-│   ├── logo.svg
-│   └── logo.png
-├── src/
-│   ├── app/
-│   ├── components/
-│   └── globals.css
-├── package.json
-├── next.config.ts
-├── tsconfig.json
-├── eslint.config.mjs
-└── README.md
-```
-
-## Local development
-
-### Requirements
-
-- Node.js 20+
-- npm
-
-### Install dependencies
-
-```bash
-npm install
-```
-
-### Run the app in development mode
-
-```bash
-npm run dev
-```
-
-Then open:
-
-```text
-http://localhost:3000
-```
-
-### Production build
-
-```bash
-npm run build
-npm run start
-```
-
-This serves the optimized production build locally on port 3000.
-
-## Proxmox LXC setup
-
-The following steps describe a practical setup for running this app inside a Proxmox LXC container.
-
-### 1. Create the container
-
-In Proxmox:
-
-- Create a new LXC container
-- Linux distribution: Debian 12 or Ubuntu 22.04/24.04
-- Resource sizing example:
-  - CPU: 2 vCPU
-  - RAM: 4 GB
-  - Disk: 20–40 GB
-- Enable nesting if you want to use Node tooling more comfortably
-
-### 2. Open the container and update the system
-
-```bash
-apt update && apt upgrade -y
-apt install -y curl ca-certificates gnupg git build-essential
-```
-
-### 3. Install Node.js 20
-
-For Debian/Ubuntu-based containers, use NodeSource:
-
-```bash
-curl -fsSL https://deb.nodesource.com/setup_20.x | bash -
-apt install -y nodejs
-```
-
-Verify:
-
-```bash
-node -v
-npm -v
-```
-
-### 4. Clone the project
-
-```bash
-git clone <your-repository-url> /opt/niveshmarg
-cd /opt/niveshmarg
-```
-
-If you are using a private repository, make sure SSH keys are configured or use HTTPS with the appropriate credentials.
-
-### 5. Install project dependencies
-
-```bash
-npm install
-```
-
-### 6. Build for production
-
-```bash
-npm run build
-```
-
-### 7. Start the app in production mode
-
-```bash
-npm run start -- --hostname 0.0.0.0 --port 3000
-```
-
-This binds the app to all network interfaces inside the container.
-
-### 8. Run it as a service with systemd
-
-Create a service file:
-
-```bash
-sudo nano /etc/systemd/system/niveshmarg.service
-```
-
-Add:
-
-```ini
-[Unit]
-Description=NiveshMarg Next.js app
-After=network.target
-
-[Service]
-Type=simple
-WorkingDirectory=/opt/niveshmarg
-Environment=NODE_ENV=production
-Environment=PORT=3000
-ExecStart=/usr/bin/npm run start -- --hostname 0.0.0.0 --port 3000
-Restart=always
-RestartSec=5
-
-[Install]
-WantedBy=multi-user.target
-```
-
-Then enable it:
-
-```bash
-systemctl daemon-reload
-systemctl enable --now niveshmarg
-systemctl status niveshmarg
-```
-
-### 9. Expose it through Proxmox networking
-
-If you want the site reachable from outside the container, configure either:
-
-- a bridged network on the LXC container, or
-- a reverse proxy on the host or another container (Nginx/Traefik/Caddy)
-
-A simple HTTP proxy example would route traffic to:
-
-```text
-http://127.0.0.1:3000
-```
-
-### 10. Optional reverse proxy example with Nginx
-
-Install Nginx on the host or another service container:
-
-```bash
-apt install -y nginx
-```
-
-Create a site config:
-
-```nginx
-server {
-    listen 80;
-    server_name niveshmarg.example.com;
-
-    location / {
-        proxy_pass http://127.0.0.1:3000;
-        proxy_http_version 1.1;
-        proxy_set_header Host $host;
-        proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_set_header X-Forwarded-Proto $scheme;
-    }
-}
-```
-
-Then enable the site and reload Nginx.
-
-## Notes
-
-- This repository is primarily a frontend landing/application shell for the NiveshMarg brand experience.
-- If the production deployment later needs environment variables or backend connectivity, create a `.env.local` file and add only the necessary values.
-- The public folder already includes the brand assets such as the logo and favicon used by the app.
-
-## Useful commands
+# Niveshmarg Edge website
+
+Marketing site for Niveshmarg Edge, built with Next.js 16 (App Router) from the design prototype in `UI_PROTO/`.
+
+## Pages
+
+| Route           | Source design                   |
+| --------------- | ------------------------------- |
+| `/`             | `UI_PROTO/Home.dc.html`         |
+| `/builder`      | `UI_PROTO/Builder.dc.html`      |
+| `/charts`       | `UI_PROTO/Charts.dc.html`       |
+| `/backtesting`  | `UI_PROTO/Backtesting.dc.html`  |
+| `/live`         | `UI_PROTO/Live.dc.html`         |
+| `/research`     | `UI_PROTO/Research.dc.html`     |
+| `/integrations` | `UI_PROTO/Integrations.dc.html` |
+| `/strategies`   | `UI_PROTO/Strategies.dc.html`   |
+| `/docs`         | `UI_PROTO/Docs.dc.html`         |
+| `/contact`      | `UI_PROTO/Contact.dc.html`      |
+
+Old `/features/*` URLs from the previous site redirect permanently to the closest new page (`next.config.ts`).
+
+## How it is put together
+
+- `src/components/pages/*Page.tsx` and `src/app/hover.css` are **generated** from the prototype by
+  `scripts/convert-proto.mjs`. When the design changes, update `UI_PROTO/` and run `npm run convert-proto`
+  instead of hand-editing those files.
+- `src/components/pages/DocsState.ts` and `ContactState.ts` hold the interactive state for those two pages
+  (search/filter, form, FAQ). They are hand-written.
+- `src/lib/siteMotion.ts` is the animation engine (scroll reveals, count-ups, live candle chart, equity curve,
+  risk-gate loop, parallax). Pages opt in with `data-*` attributes; `MotionRoot` boots it per page.
+- `SiteNav`, `SiteFooter` and `BrandMark` are hand-written shared components.
+
+## SEO
+
+`src/lib/seo.ts` is the single source of truth. Each entry in `PAGES` sets a page's title, meta description, keywords,
+share-image text, and sitemap `changefreq`/`priority`. From that one entry the site generates:
+
+- `<title>`, description, keywords, canonical URL, Open Graph and Twitter card tags (`pageMetadata`)
+- a 1200×630 share image at `/<page>/opengraph-image` (`src/lib/shareImage.tsx`, rendered at build time)
+- JSON-LD: Organization, WebSite, SoftwareApplication and WebPage on the home page; WebPage and BreadcrumbList on
+  every other page; FAQPage on `/contact` (from `src/lib/content.ts`, the same copy the page shows)
+- `/sitemap.xml` (same `loc`/`lastmod`/`changefreq`/`priority` format as the previous site), `/robots.txt` and
+  `/manifest.webmanifest`
+
+To add a page: add it to `PAGES`, create `src/app/<route>/page.tsx` using `pageMetadata` and `pageJsonLd` (copy an
+existing route), and copy an `opengraph-image.tsx`.
+
+## Develop
 
 ```bash
 npm install
 npm run dev
-npm run build
-npm run start
-npm run lint
 ```
 
+Open http://localhost:3000.
+
+## Deploy
+
+The build uses `output: "standalone"`, which produces a self-contained Node server in `.next/standalone`.
+
+### Plain Node (e.g. with pm2 or systemd)
+
 ```bash
-git pull origin main
+npm ci
 npm run build
-cd /var/www/niveshmarg
-cp -r .next/static .next/standalone/.next/
 cp -r public .next/standalone/
-chown -R www-data:www-data .next/standalone
-systemctl restart niveshmarg
+cp -r .next/static .next/standalone/.next/
+PORT=3000 HOSTNAME=0.0.0.0 node .next/standalone/server.js
 ```
 
-## License
+Copy the whole `.next/standalone` folder to the server if you build elsewhere; it needs Node 20+ and nothing else.
+Put nginx (or similar) in front for TLS.
 
-This project is private and intended for the NiveshMarg product/site workflow unless otherwise stated by the repository owner.
+### Docker
+
+```bash
+docker build -t niveshmarg-site .
+docker run -p 3000:3000 niveshmarg-site
+```
+
+## Not wired up yet
+
+- The **Request a demo** form (`/contact`) only shows a thank-you message; it does not send the details anywhere.
+- The guide cards on `/docs` link to `#`; there are no guide pages yet.

@@ -10,9 +10,7 @@ function AnalyticsTrackerContent() {
 
   useEffect(() => {
     if (pathname) {
-      const url = searchParams?.toString()
-        ? `${pathname}?${searchParams.toString()}`
-        : pathname;
+      const url = searchParams?.toString() ? `${pathname}?${searchParams.toString()}` : pathname;
       pageview(url);
     }
   }, [pathname, searchParams]);

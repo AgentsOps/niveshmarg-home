@@ -1,0 +1,6 @@
+node_modules
+.next
+.git
+UI_PROTO
+Dockerfile
+.dockerignore
