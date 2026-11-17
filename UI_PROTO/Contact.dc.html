@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;background:#f5f5fb;color:#16153b;font-family:'Schibsted Grotesk',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#4f46e5;text-decoration:none}
+a:hover{color:#3730a3}
+button,input,textarea{font-family:inherit}
+input::placeholder,textarea::placeholder{color:#8e8cb3}
+input:focus,textarea:focus{border-color:var(--acc,#4f46e5)!important;box-shadow:0 0 0 4px rgba(var(--acc-rgb,99,102,241),.15)}
+</style>
+<script src="site-motion.js"></script>
+</helmet>
+<div ref="{{ rootRef }}" style="position:relative;overflow-x:clip;font-size:17px;line-height:1.55;color:#3d3c5c">
+<div data-blob style="position:absolute;top:-260px;left:-200px;width:780px;height:780px;border-radius:50%;background:radial-gradient(circle,rgba(var(--acc-rgb,99,102,241),.22),rgba(var(--acc-rgb,99,102,241),0) 68%);pointer-events:none"></div>
+<div data-blob style="position:absolute;top:160px;right:-260px;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(125,190,255,.24),rgba(125,190,255,0) 68%);pointer-events:none"></div>
+
+<div style="position:sticky;top:12px;z-index:50"><dc-import name="SiteNav" active="contact" hint-size="100%,72px"></dc-import></div>
+
+<section data-screen-label="Contact" style="position:relative;max-width:1200px;margin:0 auto;padding:72px 24px 0;display:flex;flex-wrap:wrap;gap:48px 64px;align-items:flex-start">
+  <div style="flex:1 1 380px;min-width:0">
+    <div data-reveal style="font:500 12px/1 'JetBrains Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--acc,#4f46e5)">Request a demo</div>
+    <h1 data-reveal data-delay="80" style="margin:22px 0 0;font-size:clamp(38px,5.6vw,70px);line-height:1;letter-spacing:-.045em;font-weight:800;color:#16153b;text-wrap:balance">See it run on your instruments.</h1>
+    <p data-reveal data-delay="160" style="margin:22px 0 0;max-width:460px;text-wrap:pretty">A live walkthrough with our team. Bring a strategy idea and we'll build, backtest and paper trade it together.</p>
+    <div data-reveal data-delay="220" style="margin-top:34px;display:flex;flex-direction:column">
+      <div style="display:flex;gap:16px;padding:16px 0;border-top:1px solid rgba(22,21,59,.1)"><span style="font:600 12px/1.7 'JetBrains Mono',monospace;color:var(--acc,#4f46e5)">01</span><span style="font-size:16px;color:#16153b">Build your idea in the visual builder</span></div>
+      <div style="display:flex;gap:16px;padding:16px 0;border-top:1px solid rgba(22,21,59,.1)"><span style="font:600 12px/1.7 'JetBrains Mono',monospace;color:var(--acc,#4f46e5)">02</span><span style="font-size:16px;color:#16153b">Backtest it with real Indian costs</span></div>
+      <div style="display:flex;gap:16px;padding:16px 0;border-top:1px solid rgba(22,21,59,.1)"><span style="font:600 12px/1.7 'JetBrains Mono',monospace;color:var(--acc,#4f46e5)">03</span><span style="font-size:16px;color:#16153b">Walk through the risk engine and live cockpit</span></div>
+      <div style="display:flex;gap:16px;padding:16px 0;border-top:1px solid rgba(22,21,59,.1);border-bottom:1px solid rgba(22,21,59,.1)"><span style="font:600 12px/1.7 'JetBrains Mono',monospace;color:var(--acc,#4f46e5)">04</span><span style="font-size:16px;color:#16153b">Answer your questions on brokers and setup</span></div>
+    </div>
+  </div>
+
+  <div data-reveal="scale" data-delay="200" style="flex:1 1 460px;min-width:0;border-radius:26px;background:rgba(255,255,255,.78);border:1px solid rgba(22,21,59,.08);box-shadow:inset 0 1px 0 rgba(255,255,255,.95),0 50px 90px -50px rgba(22,21,59,.5);backdrop-filter:blur(14px);padding:clamp(22px,4vw,36px)">
+    <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+      <div style="padding:40px 8px;text-align:center">
+        <div style="width:64px;height:64px;margin:0 auto;border-radius:50%;background:var(--acc,#4f46e5);color:#fff;display:flex;align-items:center;justify-content:center;font-size:28px;box-shadow:0 18px 36px -14px rgba(var(--acc-rgb,99,102,241),.8)">✓</div>
+        <div style="margin-top:22px;font-size:26px;font-weight:700;letter-spacing:-.02em;color:#16153b">Thanks, {{ firstName }}.</div>
+        <p style="margin:10px auto 0;max-width:360px">We'll email {{ email }} to schedule your walkthrough.</p>
+        <button onClick="{{ reset }}" style="margin-top:24px;border:1px solid rgba(22,21,59,.14);cursor:pointer;padding:12px 20px;border-radius:999px;background:#fff;color:#16153b;font-size:15px;font-weight:600">Send another request</button>
+      </div>
+    </sc-if>
+    <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
+      <form onSubmit="{{ submit }}" style="display:flex;flex-direction:column;gap:18px">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px">
+          <label style="display:flex;flex-direction:column;gap:7px;font-size:14px;font-weight:600;color:#16153b">Full name<input required value="{{ name }}" onChange="{{ onName }}" placeholder="Aarav Sharma" style="border:1px solid rgba(22,21,59,.14);outline:0;border-radius:12px;padding:13px 14px;font-size:16px;font-weight:400;background:#fff;color:#16153b;transition:box-shadow .2s"></label>
+          <label style="display:flex;flex-direction:column;gap:7px;font-size:14px;font-weight:600;color:#16153b">Work email<input required type="email" value="{{ email }}" onChange="{{ onEmail }}" placeholder="aarav@fund.in" style="border:1px solid rgba(22,21,59,.14);outline:0;border-radius:12px;padding:13px 14px;font-size:16px;font-weight:400;background:#fff;color:#16153b;transition:box-shadow .2s"></label>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <span style="font-size:14px;font-weight:600;color:#16153b">I trade as</span>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;padding:4px;border-radius:14px;background:rgba(22,21,59,.05)">
+            <sc-for list="{{ roles }}" as="r" hint-placeholder-count="3">
+              <button type="button" onClick="{{ r.pick }}" style="flex:1 1 120px;border:0;cursor:pointer;padding:11px 12px;border-radius:10px;font-size:14.5px;font-weight:600;background:{{ r.bg }};color:{{ r.fg }};box-shadow:{{ r.sh }};transition:background .2s">{{ r.label }}</button>
+            </sc-for>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <span style="font-size:14px;font-weight:600;color:#16153b">Markets you're interested in</span>
+          <div style="display:flex;flex-wrap:wrap;gap:8px">
+            <sc-for list="{{ markets }}" as="m" hint-placeholder-count="4">
+              <button type="button" onClick="{{ m.toggle }}" style="cursor:pointer;padding:10px 14px;border-radius:999px;font-size:14.5px;font-weight:500;border:1px solid {{ m.bd }};background:{{ m.bg }};color:{{ m.fg }};transition:background .2s">{{ m.label }}</button>
+            </sc-for>
+          </div>
+        </div>
+        <label style="display:flex;flex-direction:column;gap:7px;font-size:14px;font-weight:600;color:#16153b">What would you like to see?<textarea rows="3" value="{{ msg }}" onChange="{{ onMsg }}" placeholder="An SMC strategy on Bank Nifty, paper traded through Zerodha…" style="border:1px solid rgba(22,21,59,.14);outline:0;border-radius:12px;padding:13px 14px;font-size:16px;font-weight:400;background:#fff;color:#16153b;resize:vertical;transition:box-shadow .2s"></textarea></label>
+        <button type="submit" style="border:0;cursor:pointer;padding:16px 24px;border-radius:999px;background:var(--acc,#4f46e5);color:#fff;font-size:16px;font-weight:600;box-shadow:0 14px 30px -12px rgba(var(--acc-rgb,99,102,241),.75);transition:transform .2s" style-hover="transform:translateY(-2px)">Request my demo</button>
+        <span style="font-size:13px;color:#5d5c7a;text-align:center">We'll only use your details to arrange the demo.</span>
+      </form>
+    </sc-if>
+  </div>
+</section>
+
+<section data-screen-label="FAQ" style="max-width:900px;margin:0 auto;padding:130px 24px 0">
+  <div data-reveal style="text-align:center">
+    <div style="font:500 12px/1 'JetBrains Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--acc,#4f46e5)">Questions</div>
+    <h2 style="margin:18px 0 0;font-size:clamp(30px,4.4vw,50px);line-height:1.04;letter-spacing:-.035em;font-weight:700;color:#16153b">Before you ask.</h2>
+  </div>
+  <div style="margin-top:36px;display:flex;flex-direction:column;gap:10px">
+    <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="4">
+      <div style="border-radius:18px;background:rgba(255,255,255,.72);border:1px solid rgba(22,21,59,.08);overflow:hidden">
+        <button onClick="{{ f.toggle }}" style="width:100%;display:flex;justify-content:space-between;align-items:center;gap:16px;border:0;cursor:pointer;background:transparent;padding:20px 22px;text-align:left;font-size:17.5px;font-weight:600;color:#16153b"><span>{{ f.q }}</span><span style="flex:none;width:30px;height:30px;border-radius:50%;background:{{ f.iconBg }};color:{{ f.iconFg }};display:flex;align-items:center;justify-content:center;font-size:18px;transition:background .2s">{{ f.icon }}</span></button>
+        <sc-if value="{{ f.open }}" hint-placeholder-val="{{ false }}">
+          <div style="padding:0 22px 20px;font-size:16px;max-width:720px">{{ f.a }}</div>
+        </sc-if>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<dc-import name="SiteFooter" hint-size="100%,320px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;skin&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Indigo sky&quot;,&quot;Ocean&quot;,&quot;Forest&quot;,&quot;Saffron&quot;],&quot;default&quot;:&quot;Indigo sky&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Theme&quot;},&quot;motion&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Full&quot;,&quot;Subtle&quot;,&quot;Off&quot;],&quot;default&quot;:&quot;Full&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Motion&quot;}}">
+class Component extends DCLogic {
+  rootRef = React.createRef();
+  state = { name: '', email: '', msg: '', role: 'Individual trader', markets: ['NSE equity'], sent: false, open: 0 };
+  FAQ = [
+    ['Can AI place trades on my account?', 'No. AI writes research and labels market regimes. Every order, paper or live, goes through a deterministic risk engine, and AI has no path to place a live order.'],
+    ['Which brokers are supported?', 'Fyers, Zerodha Kite and Groww for NSE and BSE, and Delta Exchange for crypto perpetuals. Strategies run the same way on all of them.'],
+    ['Do I need to write code?', 'No. Strategies are built visually from nodes. A JSON view is there if you prefer to edit the graph directly.'],
+    ['How do I go live?', 'A strategy passes four stages: a validated draft, a linked backtest, at least five paper sessions close to the backtest, then a confirmed live promotion.']
+  ];
+  componentDidMount() { this.start(); }
+  componentDidUpdate(pp) { if (pp.skin !== this.props.skin || pp.motion !== this.props.motion) { this.stop(); this.start(); } }
+  componentWillUnmount() { this.stop(); }
+  start() { const go = () => { const r = this.rootRef.current; if (!r) return; if (!window.NMSite) { this.t = setTimeout(go, 60); return; } this.h = window.NMSite.boot(r, { skin: this.props.skin, motion: this.props.motion }); }; go(); }
+  stop() { clearTimeout(this.t); if (this.h) this.h.stop(); this.h = null; }
+  renderVals() {
+    const s = this.state, acc = 'var(--acc,#4f46e5)';
+    return {
+      rootRef: this.rootRef, sent: s.sent, notSent: !s.sent,
+      name: s.name, email: s.email, msg: s.msg, firstName: (s.name.trim().split(/\s+/)[0] || 'there'),
+      onName: e => this.setState({ name: e.target.value }), onEmail: e => this.setState({ email: e.target.value }), onMsg: e => this.setState({ msg: e.target.value }),
+      submit: e => { e.preventDefault(); this.setState({ sent: true }); },
+      reset: () => this.setState({ sent: false, name: '', email: '', msg: '' }),
+      roles: ['Individual trader', 'Fund or desk', 'Developer'].map(label => {
+        const on = s.role === label;
+        return { label, bg: on ? '#fff' : 'transparent', fg: on ? '#16153b' : '#5d5c7a', sh: on ? '0 6px 16px -8px rgba(22,21,59,.35)' : 'none', pick: () => this.setState({ role: label }) };
+      }),
+      markets: ['NSE equity', 'F&O', 'BSE', 'Crypto perpetuals'].map(label => {
+        const on = s.markets.includes(label);
+        return { label, bg: on ? acc : '#fff', fg: on ? '#fff' : '#3d3c5c', bd: on ? 'transparent' : 'rgba(22,21,59,.14)',
+          toggle: () => this.setState(st => ({ markets: st.markets.includes(label) ? st.markets.filter(x => x !== label) : st.markets.concat(label) })) };
+      }),
+      faqs: this.FAQ.map((f, i) => {
+        const open = s.open === i;
+        return { q: f[0], a: f[1], open, icon: open ? '−' : '+', iconBg: open ? acc : 'rgba(22,21,59,.06)', iconFg: open ? '#fff' : '#16153b', toggle: () => this.setState({ open: open ? -1 : i }) };
+      })
+    };
+  }
+}
+</script>
+</body>
+</html>

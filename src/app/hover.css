@@ -1,0 +1,26 @@
+/* Hover states from the prototype's style-hover attributes. !important beats the inline styles they sit on. */
+.hv1:hover {
+  transform: translateY(-2px) !important;
+  color: #fff !important;
+}
+.hv2:hover {
+  transform: translateY(-2px) !important;
+  color: #16153b !important;
+}
+.hv3:hover {
+  transform: translateY(-4px) !important;
+  color: #3d3c5c !important;
+}
+.hv4:hover {
+  color: var(--acc, #4f46e5) !important;
+}
+.hv5:hover {
+  transform: translateY(-4px) !important;
+  color: #3d3c5c !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.95),
+    0 30px 60px -34px rgba(22, 21, 59, 0.55) !important;
+}
+.hv6:hover {
+  transform: translateY(-2px) !important;
+}

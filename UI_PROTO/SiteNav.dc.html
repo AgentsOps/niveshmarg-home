@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<div style="max-width:1200px;margin:0 auto;padding:12px 24px 0;font-family:'Schibsted Grotesk',system-ui,sans-serif">
+  <nav ref="{{ navRef }}" style="display:flex;align-items:center;gap:18px;padding:10px 12px 10px 16px;border-radius:999px;background:rgba(255,255,255,.72);border:1px solid rgba(22,21,59,.08);box-shadow:inset 0 1px 0 rgba(255,255,255,.9),0 14px 34px -22px rgba(22,21,59,.35);backdrop-filter:blur(16px)">
+    <a href="Home.dc.html" style="display:flex;align-items:center;gap:10px;color:#16153b;flex:none">
+      <span role="img" aria-label="Niveshmarg logo" style="width:30px;height:30px;flex:none;display:block;background:var(--acc,#4f46e5);-webkit-mask:url(assets/niveshmarg-logo.svg) center/contain no-repeat;mask:url(assets/niveshmarg-logo.svg) center/contain no-repeat"></span>
+      <span style="font-weight:800;font-size:18px;letter-spacing:-.02em">Niveshmarg</span>
+      <span style="font:600 10px/1 'JetBrains Mono',monospace;letter-spacing:.14em;padding:5px 7px;border-radius:6px;background:var(--acc-soft,#ecebff);color:var(--acc,#4f46e5)">EDGE</span>
+    </a>
+    <div style="flex:1;display:flex;flex-wrap:wrap;justify-content:center;gap:4px 22px;height:24px;overflow:hidden;font-size:14.5px;line-height:24px">
+      <a data-nav="builder" href="Builder.dc.html" style="color:var(--nc,#3d3c5c);font-weight:var(--nw,500)" style-hover="color:#16153b">Builder</a>
+      <a data-nav="charts" href="Charts.dc.html" style="color:var(--nc,#3d3c5c);font-weight:var(--nw,500)" style-hover="color:#16153b">Charts</a>
+      <a data-nav="backtesting" href="Backtesting.dc.html" style="color:var(--nc,#3d3c5c);font-weight:var(--nw,500)" style-hover="color:#16153b">Backtesting</a>
+      <a data-nav="live" href="Live.dc.html" style="color:var(--nc,#3d3c5c);font-weight:var(--nw,500)" style-hover="color:#16153b">Live &amp; Risk</a>
+      <a data-nav="research" href="Research.dc.html" style="color:var(--nc,#3d3c5c);font-weight:var(--nw,500)" style-hover="color:#16153b">Research</a>
+      <a data-nav="integrations" href="Integrations.dc.html" style="color:var(--nc,#3d3c5c);font-weight:var(--nw,500)" style-hover="color:#16153b">Integrations</a>
+      <a data-nav="strategies" href="Strategies.dc.html" style="color:var(--nc,#3d3c5c);font-weight:var(--nw,500)" style-hover="color:#16153b">Strategies</a>
+      <a data-nav="docs" href="Docs.dc.html" style="color:var(--nc,#3d3c5c);font-weight:var(--nw,500)" style-hover="color:#16153b">Docs</a>
+    </div>
+    <a href="Contact.dc.html" style="flex:none;padding:10px 18px;border-radius:999px;background:#16153b;color:#fff;font-size:14.5px;font-weight:600;transition:background .2s" style-hover="background:var(--acc,#4f46e5);color:#fff">Request a demo</a>
+  </nav>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1200,&quot;height&quot;:90},&quot;active&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;home&quot;,&quot;builder&quot;,&quot;charts&quot;,&quot;backtesting&quot;,&quot;live&quot;,&quot;research&quot;,&quot;integrations&quot;,&quot;strategies&quot;,&quot;docs&quot;,&quot;contact&quot;],&quot;default&quot;:&quot;home&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  navRef = React.createRef();
+  componentDidMount() { this.mark(); }
+  componentDidUpdate() { this.mark(); }
+  mark() {
+    const n = this.navRef.current; if (!n) return;
+    n.querySelectorAll('[data-nav]').forEach(a => {
+      if (a.dataset.nav === this.props.active) { a.style.setProperty('--nc', 'var(--acc,#4f46e5)'); a.style.setProperty('--nw', '700'); a.setAttribute('aria-current', 'page'); }
+      else { a.style.removeProperty('--nc'); a.style.removeProperty('--nw'); a.removeAttribute('aria-current'); }
+    });
+  }
+  renderVals() { return { navRef: this.navRef }; }
+}
+</script>
+</body>
+</html>

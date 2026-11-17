@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;background:#f5f5fb;color:#16153b;font-family:'Schibsted Grotesk',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#4f46e5;text-decoration:none}
+a:hover{color:#3730a3}
+button{font-family:inherit}
+</style>
+<script src="site-motion.js"></script>
+</helmet>
+<div ref="{{ rootRef }}" style="position:relative;overflow-x:clip;font-size:17px;line-height:1.55;color:#3d3c5c">
+<div data-blob style="position:absolute;top:-240px;left:-220px;width:780px;height:780px;border-radius:50%;background:radial-gradient(circle,rgba(var(--acc-rgb,99,102,241),.2),rgba(var(--acc-rgb,99,102,241),0) 68%);pointer-events:none"></div>
+<div data-blob style="position:absolute;top:200px;right:-260px;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(242,169,59,.14),rgba(242,169,59,0) 68%);pointer-events:none"></div>
+
+<div style="position:sticky;top:12px;z-index:50"><dc-import name="SiteNav" active="backtesting" hint-size="100%,72px"></dc-import></div>
+
+<section data-hero data-screen-label="Backtesting hero" style="position:relative;max-width:1200px;margin:0 auto;padding:72px 24px 0">
+  <div style="display:flex;flex-wrap:wrap;gap:48px 64px;align-items:center">
+    <div style="flex:1 1 440px;min-width:0">
+      <div data-reveal style="font:500 12px/1 'JetBrains Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--acc,#4f46e5)">Backtesting &amp; Optimization</div>
+      <h1 data-reveal data-delay="80" style="margin:22px 0 0;font-size:clamp(38px,6vw,76px);line-height:1;letter-spacing:-.045em;font-weight:800;color:#16153b;text-wrap:balance">The backtest that tells you no.</h1>
+      <p data-reveal data-delay="160" style="margin:22px 0 0;max-width:520px;text-wrap:pretty">Most retail backtests look great because they peek ahead, fill optimistically and forget fees. Ours can't do any of that, so a good result here means something.</p>
+      <div data-reveal data-delay="240" style="margin-top:28px;display:flex;flex-wrap:wrap;gap:10px">
+        <a href="Contact.dc.html" style="padding:13px 22px;border-radius:999px;background:var(--acc,#4f46e5);color:#fff;font-weight:600;font-size:15px;box-shadow:0 14px 30px -12px rgba(var(--acc-rgb,99,102,241),.75);transition:transform .2s" style-hover="transform:translateY(-2px);color:#fff">Request a demo</a>
+        <a href="#case" style="padding:13px 22px;border-radius:999px;background:rgba(255,255,255,.75);border:1px solid rgba(22,21,59,.12);color:#16153b;font-weight:600;font-size:15px;transition:transform .2s" style-hover="transform:translateY(-2px);color:#16153b">Read a case study</a>
+      </div>
+    </div>
+    <div data-reveal="scale" data-delay="200" style="flex:1 1 480px;min-width:0">
+      <div data-tilt style="border-radius:22px;background:rgba(255,255,255,.72);border:1px solid rgba(22,21,59,.08);box-shadow:inset 0 1px 0 rgba(255,255,255,.95),0 50px 90px -46px rgba(22,21,59,.5);backdrop-filter:blur(14px);padding:22px">
+        <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px"><span style="font-size:15px;font-weight:700;color:#16153b">Run detail · EMA Pullback v3</span><span style="font:600 11px/1 'JetBrains Mono',monospace;padding:6px 9px;border-radius:999px;background:rgba(15,138,75,.1);color:#0f8a4b">Completed</span></div>
+        <div style="margin-top:12px;display:flex;gap:16px;font:500 11px/1 'JetBrains Mono',monospace;color:#5d5c7a">
+          <span style="display:flex;align-items:center;gap:6px"><span style="width:14px;height:3px;border-radius:2px;background:var(--acc,#4f46e5);display:block"></span>Strategy</span>
+          <span style="display:flex;align-items:center;gap:6px"><span style="width:14px;height:3px;border-radius:2px;background:#9a99b5;display:block"></span>Buy &amp; hold</span>
+          <span style="display:flex;align-items:center;gap:6px"><span style="width:10px;height:10px;border-radius:2px;background:rgba(210,47,74,.2);display:block"></span>Drawdown</span>
+        </div>
+        <canvas data-chart="equity" data-seed="5" style="display:block;width:100%;height:220px;margin-top:8px"></canvas>
+        <div style="margin-top:12px;display:grid;grid-template-columns:repeat(auto-fit,minmax(96px,1fr));gap:8px">
+          <div style="padding:11px;border-radius:12px;background:rgba(22,21,59,.04)"><div style="font-size:12px;color:#5d5c7a">CAGR</div><div style="margin-top:3px;font-size:18px;font-weight:700;color:#16153b"><span data-count="24.5" data-dec="1" data-suf="%">24.5%</span></div></div>
+          <div style="padding:11px;border-radius:12px;background:rgba(22,21,59,.04)"><div style="font-size:12px;color:#5d5c7a">Sharpe</div><div style="margin-top:3px;font-size:18px;font-weight:700;color:#16153b"><span data-count="1.82" data-dec="2">1.82</span></div></div>
+          <div style="padding:11px;border-radius:12px;background:rgba(22,21,59,.04)"><div style="font-size:12px;color:#5d5c7a">Max DD</div><div style="margin-top:3px;font-size:18px;font-weight:700;color:#d22f4a"><span data-count="7.8" data-dec="1" data-pre="−" data-suf="%">−7.8%</span></div></div>
+          <div style="padding:11px;border-radius:12px;background:rgba(22,21,59,.04)"><div style="font-size:12px;color:#5d5c7a">Win rate</div><div style="margin-top:3px;font-size:18px;font-weight:700;color:#16153b"><span data-count="64.2" data-dec="1" data-suf="%">64.2%</span></div></div>
+        </div>
+        <div style="margin-top:10px;font:400 11.5px/1.4 'JetBrains Mono',monospace;color:#5d5c7a">Sample run, for illustration</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Invariants" style="max-width:1200px;margin:0 auto;padding:130px 24px 0">
+  <div data-reveal style="max-width:760px">
+    <div style="font:500 12px/1 'JetBrains Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--acc,#4f46e5)">Three invariants</div>
+    <h2 style="margin:18px 0 0;font-size:clamp(30px,4.4vw,54px);line-height:1.04;letter-spacing:-.035em;font-weight:700;color:#16153b;text-wrap:balance">Rules that apply to every run. None can be switched off.</h2>
+  </div>
+  <div style="margin-top:44px;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px">
+    <div data-reveal style="padding:26px;border-radius:22px;background:rgba(255,255,255,.68);border:1px solid rgba(22,21,59,.08);box-shadow:inset 0 1px 0 rgba(255,255,255,.95),0 24px 50px -34px rgba(22,21,59,.4)">
+      <div style="font:700 44px/1 'JetBrains Mono',monospace;letter-spacing:-.04em;color:var(--acc,#4f46e5)">T+1</div>
+      <div style="margin-top:18px;font-size:21px;font-weight:700;color:#16153b">Zero look-ahead</div>
+      <p style="margin:8px 0 0;font-size:16px">Conditions evaluate on the close of bar T. Orders fill at the open of bar T+1. Exits on a condition also wait for the next open.</p>
+    </div>
+    <div data-reveal data-delay="90" style="padding:26px;border-radius:22px;background:rgba(255,255,255,.68);border:1px solid rgba(22,21,59,.08);box-shadow:inset 0 1px 0 rgba(255,255,255,.95),0 24px 50px -34px rgba(22,21,59,.4)">
+      <div style="display:flex;align-items:center;gap:14px;height:44px">
+        <div style="position:relative;width:16px;height:44px"><div style="position:absolute;left:7px;top:0;bottom:0;width:2px;background:#16153b"></div><div style="position:absolute;left:0;top:12px;width:16px;height:20px;background:#d22f4a;border-radius:2px"></div></div>
+        <div style="display:flex;flex-direction:column;gap:6px;font:600 11px/1 'JetBrains Mono',monospace"><span style="color:#0f8a4b">TP touched</span><span style="color:#c12843">SL touched → SL wins</span></div>
+      </div>
+      <div style="margin-top:18px;font-size:21px;font-weight:700;color:#16153b">Pessimistic fills</div>
+      <p style="margin:8px 0 0;font-size:16px">If one candle's range crosses both the stop and the target, the engine assumes the stop was hit first.</p>
+    </div>
+    <div data-reveal data-delay="180" style="padding:26px;border-radius:22px;background:rgba(255,255,255,.68);border:1px solid rgba(22,21,59,.08);box-shadow:inset 0 1px 0 rgba(255,255,255,.95),0 24px 50px -34px rgba(22,21,59,.4)">
+      <div style="font:700 44px/1 'JetBrains Mono',monospace;letter-spacing:-.04em;color:var(--acc,#4f46e5)">₹ − fees</div>
+      <div style="margin-top:18px;font-size:21px;font-weight:700;color:#16153b">Real Indian costs</div>
+      <div style="margin-top:10px;display:flex;flex-direction:column;font-size:14.5px">
+        <div style="display:flex;justify-content:space-between;gap:10px;padding:7px 0;border-top:1px solid rgba(22,21,59,.08)"><span>STT, intraday sell</span><span style="font:600 12.5px/1.6 'JetBrains Mono',monospace;color:#16153b">0.025%</span></div>
+        <div style="display:flex;justify-content:space-between;gap:10px;padding:7px 0;border-top:1px solid rgba(22,21,59,.08)"><span>STT, delivery buy &amp; sell</span><span style="font:600 12.5px/1.6 'JetBrains Mono',monospace;color:#16153b">0.1%</span></div>
+        <div style="display:flex;justify-content:space-between;gap:10px;padding:7px 0;border-top:1px solid rgba(22,21,59,.08)"><span>Exchange, GST, SEBI, stamp</span><span style="font:600 12.5px/1.6 'JetBrains Mono',monospace;color:#16153b">every fill</span></div>
+        <div style="display:flex;justify-content:space-between;gap:10px;padding:7px 0;border-top:1px solid rgba(22,21,59,.08)"><span>Slippage</span><span style="font:600 12.5px/1.6 'JetBrains Mono',monospace;color:#16153b">modelled</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Data pipeline" style="max-width:1200px;margin:0 auto;padding:130px 24px 0">
+  <div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px 60px">
+    <div data-reveal style="flex:1 1 460px;max-width:700px">
+      <div style="font:500 12px/1 'JetBrains Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--acc,#4f46e5)">Data before every run</div>
+      <h2 style="margin:18px 0 0;font-size:clamp(30px,4.4vw,54px);line-height:1.04;letter-spacing:-.035em;font-weight:700;color:#16153b;text-wrap:balance">No run starts on a guess about the data.</h2>
+    </div>
+    <p data-reveal data-delay="100" style="flex:1 1 300px;max-width:420px;margin:0;text-wrap:pretty">Every session in the period is checked against stored bars. Only the gaps are fetched, then cleaned before the simulation begins.</p>
+  </div>
+  <div data-seq="520" data-reveal style="margin-top:40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px">
+    <div data-i="0" style="padding:18px;border-radius:16px;background:rgba(255,255,255,.7);border:1px solid rgba(22,21,59,.08)"><div style="font:600 11px/1 'JetBrains Mono',monospace;color:#5d5c7a">01</div><div style="margin-top:12px;font-size:16px;font-weight:700;color:#16153b">Pending</div><div style="margin-top:4px;font-size:14px">Queued to a worker</div></div>
+    <div data-i="1" style="padding:18px;border-radius:16px;background:rgba(255,255,255,.7);border:1px solid rgba(22,21,59,.08)"><div style="font:600 11px/1 'JetBrains Mono',monospace;color:#5d5c7a">02</div><div style="margin-top:12px;font-size:16px;font-weight:700;color:#16153b">Checking history</div><div style="margin-top:4px;font-size:14px">Every NSE session compared</div></div>
+    <div data-i="2" style="padding:18px;border-radius:16px;background:rgba(255,255,255,.7);border:1px solid rgba(22,21,59,.08)"><div style="font:600 11px/1 'JetBrains Mono',monospace;color:#5d5c7a">03</div><div style="margin-top:12px;font-size:16px;font-weight:700;color:#16153b">Fetching candles</div><div style="margin-top:4px;font-size:14px">Only the missing ranges</div></div>
+    <div data-i="3" style="padding:18px;border-radius:16px;background:rgba(255,255,255,.7);border:1px solid rgba(22,21,59,.08)"><div style="font:600 11px/1 'JetBrains Mono',monospace;color:#5d5c7a">04</div><div style="margin-top:12px;font-size:16px;font-weight:700;color:#16153b">Validating</div><div style="margin-top:4px;font-size:14px">Bad and duplicate bars dropped</div></div>
+    <div data-i="4" style="padding:18px;border-radius:16px;background:rgba(255,255,255,.7);border:1px solid rgba(22,21,59,.08)"><div style="font:600 11px/1 'JetBrains Mono',monospace;color:#5d5c7a">05</div><div style="margin-top:12px;font-size:16px;font-weight:700;color:#16153b">Running</div><div style="margin-top:4px;font-size:14px">The simulation itself</div></div>
+    <div data-i="5" style="padding:18px;border-radius:16px;background:var(--acc,#4f46e5);border:1px solid transparent;color:#fff"><div style="font:600 11px/1 'JetBrains Mono',monospace;color:#fff">06</div><div style="margin-top:12px;font-size:16px;font-weight:700">Completed</div><div style="margin-top:4px;font-size:14px">Results, or the exact reason it failed</div></div>
+  </div>
+</section>
+
+<section data-screen-label="Walk-forward" style="margin:140px 14px 0;border-radius:36px;background:#0d0c22;color:#a8a6c9;position:relative;overflow:hidden">
+  <div data-blob style="position:absolute;top:-300px;right:-200px;width:780px;height:780px;border-radius:50%;background:radial-gradient(circle,rgba(var(--acc-rgb,99,102,241),.3),rgba(var(--acc-rgb,99,102,241),0) 68%);pointer-events:none"></div>
+  <div style="position:relative;max-width:1200px;margin:0 auto;padding:clamp(64px,9vw,110px) clamp(10px,3vw,24px)">
+    <div style="display:flex;flex-wrap:wrap;gap:48px 64px;align-items:center">
+      <div data-reveal style="flex:1 1 380px;min-width:0">
+        <div style="font:500 12px/1 'JetBrains Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--acc-lite,#a5b4fc)">Walk-forward optimization</div>
+        <h2 style="margin:18px 0 0;font-size:clamp(30px,4.4vw,54px);line-height:1.04;letter-spacing:-.035em;font-weight:700;color:#fff;text-wrap:balance">Tune on the past. Test on data it has never seen.</h2>
+        <p style="margin:20px 0 0;max-width:500px;text-wrap:pretty">Parameters are optimised on an in-sample slice and judged on the out-of-sample window that follows, rolling forward through time. Overfit settings fall apart here, not in your account.</p>
+        <div style="margin-top:24px;display:flex;flex-wrap:wrap;gap:24px">
+          <div><div style="font:700 30px/1 'JetBrains Mono',monospace;color:#fff">1–6</div><div style="margin-top:6px;font-size:14px">rolling windows</div></div>
+          <div><div style="font:700 30px/1 'JetBrains Mono',monospace;color:#fff">30–90%</div><div style="margin-top:6px;font-size:14px">in-sample share</div></div>
+        </div>
+      </div>
+      <div data-reveal="scale" style="flex:1 1 460px;min-width:0;padding:22px;border-radius:20px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1)">
+        <div style="font:600 11px/1 'JetBrains Mono',monospace;letter-spacing:.12em;color:#8e8cb3">ROLLING WINDOWS</div>
+        <div style="margin-top:14px;display:flex;flex-direction:column;gap:8px;font:500 11px/1 'JetBrains Mono',monospace">
+          <div style="display:flex;gap:4px;height:26px"><div style="flex:7;border-radius:6px;background:rgba(165,180,252,.25);display:flex;align-items:center;padding-left:8px;color:#eeedfb">in-sample</div><div style="flex:3;border-radius:6px;background:var(--acc,#4f46e5);display:flex;align-items:center;padding-left:8px;color:#fff">OOS 1</div><div style="flex:6"></div></div>
+          <div style="display:flex;gap:4px;height:26px"><div style="flex:3"></div><div style="flex:7;border-radius:6px;background:rgba(165,180,252,.25)"></div><div style="flex:3;border-radius:6px;background:var(--acc,#4f46e5);display:flex;align-items:center;padding-left:8px;color:#fff">OOS 2</div><div style="flex:3"></div></div>
+          <div style="display:flex;gap:4px;height:26px"><div style="flex:6"></div><div style="flex:7;border-radius:6px;background:rgba(165,180,252,.25)"></div><div style="flex:3;border-radius:6px;background:var(--acc,#4f46e5);display:flex;align-items:center;padding-left:8px;color:#fff">OOS 3</div></div>
+        </div>
+        <div style="margin-top:22px;font:600 11px/1 'JetBrains Mono',monospace;letter-spacing:.12em;color:#8e8cb3">PARAMETER GRID · FAST EMA × STOP ATR</div>
+        <canvas data-chart="heat" data-cols="10" data-rows="5" style="display:block;width:100%;height:170px;margin-top:12px"></canvas>
+        <div style="margin-top:10px;display:flex;justify-content:space-between;font:400 11px/1 'JetBrains Mono',monospace;color:#8e8cb3"><span>weaker</span><span>stronger, with stable neighbours</span></div>
+      </div>
+    </div>
+    <div style="margin-top:56px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px">
+      <div data-reveal style="padding:20px;border-radius:16px;border:1px solid rgba(255,255,255,.1)"><div style="font-size:18px;font-weight:700;color:#fff">Compare up to six runs</div><div style="margin-top:6px;font-size:14.5px">P&amp;L, CAGR, drawdown, Sharpe, Sortino, win rate and profit factor side by side.</div></div>
+      <div data-reveal data-delay="80" style="padding:20px;border-radius:16px;border:1px solid rgba(255,255,255,.1)"><div style="font-size:18px;font-weight:700;color:#fff">Portfolio backtests</div><div style="margin-top:6px;font-size:14.5px">One strategy across many instruments sharing one pool of capital, with correlation analysis.</div></div>
+      <div data-reveal data-delay="160" style="padding:20px;border-radius:16px;border:1px solid rgba(255,255,255,.1)"><div style="font-size:18px;font-weight:700;color:#fff">Open on chart</div><div style="margin-top:6px;font-size:14.5px">Jump from any run to its trades drawn on the candles.</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="case" data-screen-label="Case study" style="max-width:1200px;margin:0 auto;padding:140px 24px 0">
+  <div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px 60px">
+    <div data-reveal style="flex:1 1 460px;max-width:720px">
+      <div style="font:500 12px/1 'JetBrains Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--acc,#4f46e5)">Case study · BTCUSD EMA crossover</div>
+      <h2 style="margin:18px 0 0;font-size:clamp(30px,4.4vw,54px);line-height:1.04;letter-spacing:-.035em;font-weight:700;color:#16153b;text-wrap:balance">Profitable on price. Ruined by costs.</h2>
+    </div>
+    <p data-reveal data-delay="100" style="flex:1 1 300px;max-width:420px;margin:0;text-wrap:pretty">An EMA 10/20 cross on 5-minute crypto bars, run for one year. Here is what an honest engine showed us.</p>
+  </div>
+  <div style="margin-top:44px;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px">
+    <div data-reveal style="padding:24px;border-radius:20px;background:rgba(255,255,255,.68);border:1px solid rgba(22,21,59,.08);box-shadow:inset 0 1px 0 rgba(255,255,255,.95),0 24px 50px -34px rgba(22,21,59,.4)"><div style="font-size:clamp(34px,4vw,46px);font-weight:800;letter-spacing:-.04em;line-height:1;color:#0f8a4b">+₹<span data-count="2.9" data-dec="1">2.9</span>L</div><div style="margin-top:10px;font-size:15px">raw price P&amp;L before friction</div></div>
+    <div data-reveal data-delay="80" style="padding:24px;border-radius:20px;background:rgba(255,255,255,.68);border:1px solid rgba(22,21,59,.08);box-shadow:inset 0 1px 0 rgba(255,255,255,.95),0 24px 50px -34px rgba(22,21,59,.4)"><div style="font-size:clamp(34px,4vw,46px);font-weight:800;letter-spacing:-.04em;line-height:1;color:#c12843">−₹<span data-count="36">36</span>L</div><div style="margin-top:10px;font-size:15px">lost to slippage at 5 bps a fill</div></div>
+    <div data-reveal data-delay="160" style="padding:24px;border-radius:20px;background:rgba(255,255,255,.68);border:1px solid rgba(22,21,59,.08);box-shadow:inset 0 1px 0 rgba(255,255,255,.95),0 24px 50px -34px rgba(22,21,59,.4)"><div style="font-size:clamp(34px,4vw,46px);font-weight:800;letter-spacing:-.04em;line-height:1;color:#c12843">−₹<span data-count="50">50</span>L</div><div style="margin-top:10px;font-size:15px">lost to exchange charges</div></div>
+    <div data-reveal data-delay="240" style="padding:24px;border-radius:20px;background:rgba(255,255,255,.68);border:1px solid rgba(22,21,59,.08);box-shadow:inset 0 1px 0 rgba(255,255,255,.95),0 24px 50px -34px rgba(22,21,59,.4)"><div style="font-size:clamp(34px,4vw,46px);font-weight:800;letter-spacing:-.04em;line-height:1;color:#16153b"><span data-count="83" data-suf="%">83%</span></div><div style="margin-top:10px;font-size:15px">of losers saw the opposite cross before their stop</div></div>
+  </div>
+  <div data-reveal style="margin-top:16px;padding:28px;border-radius:22px;background:var(--acc-soft,#ecebff);display:flex;flex-wrap:wrap;gap:20px 48px;align-items:center">
+    <div style="flex:1 1 380px;min-width:0"><div style="font:600 11px/1 'JetBrains Mono',monospace;letter-spacing:.12em;color:var(--acc,#4f46e5)">WHAT CHANGED</div><div style="margin-top:10px;font-size:19px;font-weight:600;color:#16153b;text-wrap:pretty">The same cross on 4-hour bars, only when ADX(14) is above 20, with a 3× ATR stop. Two orders of magnitude fewer trades, and winners left to run.</div></div>
+    <div style="flex:0 1 300px;font-size:15px;color:#3d3c5c">Only 45 trades in three years, chosen after about fifty variants. Paper trade it before any live runner.</div>
+  </div>
+</section>
+
+<section data-screen-label="Next" style="max-width:1200px;margin:0 auto;padding:120px 24px 0">
+  <div data-reveal="scale" style="position:relative;overflow:hidden;border-radius:28px;background:rgba(255,255,255,.7);border:1px solid rgba(22,21,59,.08);box-shadow:inset 0 1px 0 rgba(255,255,255,.95),0 40px 80px -48px rgba(22,21,59,.45);padding:clamp(32px,5vw,60px);display:flex;flex-wrap:wrap;align-items:center;gap:30px 60px">
+    <div data-blob style="position:absolute;right:-220px;top:-260px;width:620px;height:620px;border-radius:50%;background:radial-gradient(circle,rgba(var(--acc-rgb,99,102,241),.2),rgba(var(--acc-rgb,99,102,241),0) 68%);pointer-events:none"></div>
+    <div style="position:relative;flex:1 1 420px;min-width:0">
+      <div style="font:500 12px/1 'JetBrains Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--acc,#4f46e5)">Next: run it</div>
+      <h2 style="margin:16px 0 0;font-size:clamp(28px,3.8vw,46px);line-height:1.06;letter-spacing:-.035em;font-weight:700;color:#16153b;text-wrap:balance">Passed the backtest? Paper trade it under live risk checks.</h2>
+    </div>
+    <div style="position:relative;flex:0 1 280px;display:flex;flex-direction:column;gap:12px">
+      <a href="Live.dc.html" style="padding:15px 24px;border-radius:999px;background:var(--acc,#4f46e5);color:#fff;font-weight:600;text-align:center;box-shadow:0 14px 30px -12px rgba(var(--acc-rgb,99,102,241),.75);transition:transform .2s" style-hover="transform:translateY(-2px);color:#fff">Explore live &amp; risk →</a>
+      <a href="Strategies.dc.html" style="padding:15px 24px;border-radius:999px;background:rgba(255,255,255,.75);border:1px solid rgba(22,21,59,.12);color:#16153b;font-weight:600;text-align:center;transition:transform .2s" style-hover="transform:translateY(-2px);color:#16153b">See validated strategies</a>
+    </div>
+  </div>
+</section>
+
+<dc-import name="SiteFooter" hint-size="100%,320px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;skin&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Indigo sky&quot;,&quot;Ocean&quot;,&quot;Forest&quot;,&quot;Saffron&quot;],&quot;default&quot;:&quot;Indigo sky&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Theme&quot;},&quot;motion&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Full&quot;,&quot;Subtle&quot;,&quot;Off&quot;],&quot;default&quot;:&quot;Full&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Motion&quot;}}">
+class Component extends DCLogic {
+  rootRef = React.createRef();
+  componentDidMount() { this.start(); }
+  componentDidUpdate(pp) { if (pp.skin !== this.props.skin || pp.motion !== this.props.motion) { this.stop(); this.start(); } }
+  componentWillUnmount() { this.stop(); }
+  start() { const go = () => { const r = this.rootRef.current; if (!r) return; if (!window.NMSite) { this.t = setTimeout(go, 60); return; } this.h = window.NMSite.boot(r, { skin: this.props.skin, motion: this.props.motion }); }; go(); }
+  stop() { clearTimeout(this.t); if (this.h) this.h.stop(); this.h = null; }
+  renderVals() { return { rootRef: this.rootRef }; }
+}
+</script>
+</body>
+</html>
