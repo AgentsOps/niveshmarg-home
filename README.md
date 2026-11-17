@@ -45,6 +45,19 @@ share-image text, and sitemap `changefreq`/`priority`. From that one entry the s
 To add a page: add it to `PAGES`, create `src/app/<route>/page.tsx` using `pageMetadata` and `pageJsonLd` (copy an
 existing route), and copy an `opengraph-image.tsx`.
 
+## Error pages
+
+All four share `src/components/ErrorScreen.tsx` and are marked `noindex`.
+
+| Status | File                                     | When                                                                         |
+| ------ | ---------------------------------------- | ---------------------------------------------------------------------------- |
+| 404    | `src/app/not-found.tsx`                  | Unknown URLs, or `notFound()`                                                |
+| 403    | `src/app/forbidden.tsx` (+ `/403` route) | `forbidden()` (enabled by `experimental.authInterrupts`), or visiting `/403` |
+| 500    | `src/app/error.tsx`                      | A page throws while rendering                                                |
+| 500    | `src/app/global-error.tsx`               | The root layout itself fails                                                 |
+
+Behind nginx you can reuse the branded 403 page, e.g. `error_page 403 /403;` with `/403` proxied to the app.
+
 ## Develop
 
 ```bash

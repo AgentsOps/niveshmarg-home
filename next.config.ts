@@ -3,6 +3,8 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   // Self-contained server bundle in .next/standalone for deployment.
   output: "standalone",
+  // Enables forbidden() and src/app/forbidden.tsx (the 403 page).
+  experimental: { authInterrupts: true },
   // The previous site's feature URLs are shared links; send them to the closest new page.
   async redirects() {
     const moved: Record<string, string> = {

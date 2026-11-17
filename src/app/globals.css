@@ -71,3 +71,57 @@ textarea::placeholder {
 .footer-link:hover {
   color: var(--acc, #4f46e5) !important;
 }
+
+/* Error pages (403 / 404 / 500) */
+.err-btn {
+  display: inline-block;
+  padding: 15px 26px;
+  border-radius: 999px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.err-btn:hover {
+  transform: translateY(-2px);
+}
+.err-btn-primary,
+.err-btn-primary:hover {
+  border: 0;
+  background: var(--acc, #4f46e5);
+  color: #fff;
+  box-shadow:
+    0 14px 30px -12px rgba(var(--acc-rgb, 99, 102, 241), 0.75),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+.err-btn-secondary,
+.err-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(22, 21, 59, 0.12);
+  color: #16153b;
+}
+.err-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 150px;
+  padding: 22px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(22, 21, 59, 0.08);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.95),
+    0 20px 44px -34px rgba(22, 21, 59, 0.45);
+  color: #3d3c5c;
+  transition:
+    transform 0.25s,
+    box-shadow 0.25s;
+}
+.err-card:hover {
+  transform: translateY(-4px);
+  color: #3d3c5c;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.95),
+    0 30px 60px -34px rgba(22, 21, 59, 0.55);
+}

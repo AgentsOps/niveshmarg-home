@@ -1,6 +1,6 @@
 import Link from "next/link";
 import BrandMark from "@/components/BrandMark";
-import { NAV_LINKS, type NavKey } from "@/lib/nav";
+import { LOGIN_URL, NAV_LINKS, type NavKey } from "@/lib/nav";
 
 export default function SiteNav({ active = "home" }: { active?: NavKey | string }) {
   return (
@@ -58,8 +58,9 @@ export default function SiteNav({ active = "home" }: { active?: NavKey | string 
             );
           })}
         </div>
-        <Link
-          href="/contact"
+        {/* External app, so a plain <a> rather than next/link. */}
+        <a
+          href={LOGIN_URL}
           className="nav-cta"
           style={{
             flex: "none",
@@ -73,8 +74,8 @@ export default function SiteNav({ active = "home" }: { active?: NavKey | string 
             transition: "background .2s",
           }}
         >
-          Request a demo
-        </Link>
+          Log in
+        </a>
       </nav>
     </div>
   );
