@@ -1,5 +1,6 @@
 import Link from "next/link";
 import BrandMark from "@/components/BrandMark";
+import MobileMenu from "@/components/MobileMenu";
 import { LOGIN_URL, NAV_LINKS, type NavKey } from "@/lib/nav";
 
 export default function SiteNav({ active = "home" }: { active?: NavKey | string }) {
@@ -16,6 +17,7 @@ export default function SiteNav({ active = "home" }: { active?: NavKey | string 
       <nav
         className="nav-bar"
         style={{
+          position: "relative",
           display: "flex",
           alignItems: "center",
           gap: "18px",
@@ -76,6 +78,7 @@ export default function SiteNav({ active = "home" }: { active?: NavKey | string 
         >
           Log in
         </a>
+        <MobileMenu links={NAV_LINKS} active={active} />
       </nav>
     </div>
   );
