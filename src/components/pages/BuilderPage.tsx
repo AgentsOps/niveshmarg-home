@@ -595,7 +595,7 @@ export default function BuilderPage() {
               textWrap: "balance",
             }}
           >
-            More than 200 building blocks, grouped the way you think.
+            222 building blocks across 19 categories, grouped the way you think.
           </h2>{" "}
         </div>{" "}
         <div
@@ -622,10 +622,10 @@ export default function BuilderPage() {
               <span
                 style={{ width: "10px", height: "10px", borderRadius: "50%", background: "#f2a93b", display: "block" }}
               />
-              <span style={{ fontSize: "19px", fontWeight: "700", color: "#16153b" }}>Indicators</span>
+              <span style={{ fontSize: "19px", fontWeight: "700", color: "#16153b" }}>Indicators · 179</span>
             </div>{" "}
             <p style={{ margin: "8px 0 14px", fontSize: "15.5px" }}>
-              The TA-Lib catalogue: moving averages, oscillators, volatility and volume studies.
+              The full TA-Lib catalogue + custom Donchian, Keltner, Heikin-Ashi and Pivot Points.
             </p>{" "}
             <div
               style={{
@@ -643,7 +643,7 @@ export default function BuilderPage() {
               <span style={{ padding: "7px 9px", borderRadius: "7px", background: "rgba(22,21,59,.05)" }}>
                 Bollinger
               </span>
-              <span style={{ padding: "7px 9px", borderRadius: "7px", background: "rgba(22,21,59,.05)" }}>ADX</span>
+              <span style={{ padding: "7px 9px", borderRadius: "7px", background: "rgba(22,21,59,.05)" }}>Keltner</span>
             </div>{" "}
           </div>{" "}
           <div
@@ -662,7 +662,7 @@ export default function BuilderPage() {
               <span
                 style={{ width: "10px", height: "10px", borderRadius: "50%", background: "#2fbf71", display: "block" }}
               />
-              <span style={{ fontSize: "19px", fontWeight: "700", color: "#16153b" }}>Smart Money Concepts</span>
+              <span style={{ fontSize: "19px", fontWeight: "700", color: "#16153b" }}>Smart Money · 9</span>
             </div>{" "}
             <p style={{ margin: "8px 0 14px", fontSize: "15.5px" }}>
               Institutional price action as nodes. Every detector is causal and only sees past bars.
@@ -683,7 +683,10 @@ export default function BuilderPage() {
                 Fair Value Gap
               </span>
               <span style={{ padding: "7px 9px", borderRadius: "7px", background: "rgba(22,21,59,.05)" }}>
-                Swing High/Low
+                Liquidity Sweep
+              </span>
+              <span style={{ padding: "7px 9px", borderRadius: "7px", background: "rgba(22,21,59,.05)" }}>
+                BoS / CHoCH
               </span>
             </div>{" "}
           </div>{" "}
@@ -701,12 +704,12 @@ export default function BuilderPage() {
             {" "}
             <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
               <span
-                style={{ width: "10px", height: "10px", borderRadius: "50%", background: "#b79bff", display: "block" }}
+                style={{ width: "10px", height: "10px", borderRadius: "50%", background: "#6ea8ff", display: "block" }}
               />
-              <span style={{ fontSize: "19px", fontWeight: "700", color: "#16153b" }}>Conditions &amp; logic</span>
+              <span style={{ fontSize: "19px", fontWeight: "700", color: "#16153b" }}>Patterns &amp; Swing · 9</span>
             </div>{" "}
             <p style={{ margin: "8px 0 14px", fontSize: "15.5px" }}>
-              Compare, cross, combine. Gate everything on the day&apos;s AI market regime.
+              Algorithmic chart pattern recognition and top-down swing stage analysis.
             </p>{" "}
             <div
               style={{
@@ -717,14 +720,16 @@ export default function BuilderPage() {
                 color: "#3d3c5c",
               }}
             >
-              <span style={{ padding: "7px 9px", borderRadius: "7px", background: "rgba(22,21,59,.05)" }}>Compare</span>
               <span style={{ padding: "7px 9px", borderRadius: "7px", background: "rgba(22,21,59,.05)" }}>
-                AND / OR
+                Head &amp; Shoulders
+              </span>
+              <span style={{ padding: "7px 9px", borderRadius: "7px", background: "rgba(22,21,59,.05)" }}>VCP</span>
+              <span style={{ padding: "7px 9px", borderRadius: "7px", background: "rgba(22,21,59,.05)" }}>
+                Flag Breakout
               </span>
               <span style={{ padding: "7px 9px", borderRadius: "7px", background: "rgba(22,21,59,.05)" }}>
-                Regime Filter
+                IPO Base
               </span>
-              <span style={{ padding: "7px 9px", borderRadius: "7px", background: "rgba(22,21,59,.05)" }}>Maths</span>
             </div>{" "}
           </div>{" "}
           <div
@@ -743,10 +748,10 @@ export default function BuilderPage() {
               <span
                 style={{ width: "10px", height: "10px", borderRadius: "50%", background: "#ff8095", display: "block" }}
               />
-              <span style={{ fontSize: "19px", fontWeight: "700", color: "#16153b" }}>Risk, sizing &amp; exits</span>
+              <span style={{ fontSize: "19px", fontWeight: "700", color: "#16153b" }}>Risk &amp; Exits · 18</span>
             </div>{" "}
             <p style={{ margin: "8px 0 14px", fontSize: "15.5px" }}>
-              Size by risk, cap exposure and leave on stops, targets, conditions or time.
+              Size by risk capital, cap gross exposure, and exit on trailing stops, targets, or time.
             </p>{" "}
             <div
               style={{
@@ -759,13 +764,13 @@ export default function BuilderPage() {
             >
               <span style={{ padding: "7px 9px", borderRadius: "7px", background: "rgba(22,21,59,.05)" }}>Risk %</span>
               <span style={{ padding: "7px 9px", borderRadius: "7px", background: "rgba(22,21,59,.05)" }}>
-                ATR Stop
+                ATR Trailing Stop
               </span>
               <span style={{ padding: "7px 9px", borderRadius: "7px", background: "rgba(22,21,59,.05)" }}>
                 R Target
               </span>
               <span style={{ padding: "7px 9px", borderRadius: "7px", background: "rgba(22,21,59,.05)" }}>
-                Time Exit
+                Break-Even
               </span>
             </div>{" "}
           </div>{" "}
@@ -1327,7 +1332,7 @@ export default function BuilderPage() {
           {" "}
           <Link
             className="hv3"
-            href="/backtesting"
+            href="/live-stream"
             data-reveal=""
             style={{
               display: "flex",
@@ -1336,7 +1341,7 @@ export default function BuilderPage() {
               padding: "24px",
               borderRadius: "20px",
               background: "rgba(255,255,255,.68)",
-              border: "1px solid rgba(22,21,59,.08)",
+              border: "1px solid rgba(var(--acc-rgb,99,102,241),.25)",
               boxShadow: "inset 0 1px 0 rgba(255,255,255,.95),0 24px 50px -34px rgba(22,21,59,.4)",
               color: "#3d3c5c",
               transition: "transform .25s",
@@ -1350,16 +1355,16 @@ export default function BuilderPage() {
                 color: "var(--acc,#4f46e5)",
               }}
             >
-              INTRADAY · NSE
+              CRYPTO &amp; GOLD · DELTA 24×7
             </span>{" "}
-            <span style={{ fontSize: "20px", fontWeight: "700", color: "#16153b" }}>EMA Pullback</span>{" "}
+            <span style={{ fontSize: "20px", fontWeight: "700", color: "#16153b" }}>Crypto SMC Institutional</span>{" "}
             <span style={{ fontSize: "15.5px" }}>
-              Trend filter on the slow EMA, entry on a pullback to the fast one.
+              Order blocks and liquidity sweeps on BTCUSD &amp; XAUTUSD. Streamed live on YouTube.
             </span>{" "}
           </Link>{" "}
           <Link
             className="hv3"
-            href="/backtesting"
+            href="/strategies"
             data-reveal=""
             data-delay="70"
             style={{
@@ -1376,18 +1381,12 @@ export default function BuilderPage() {
             }}
           >
             {" "}
-            <span
-              style={{
-                font: "600 11px/1 'JetBrains Mono',monospace",
-                letterSpacing: ".1em",
-                color: "var(--acc,#4f46e5)",
-              }}
-            >
-              SMART MONEY
+            <span style={{ font: "600 11px/1 'JetBrains Mono',monospace", letterSpacing: ".1em", color: "#0f8a4b" }}>
+              SWING · NSE LARGE CAPS
             </span>{" "}
-            <span style={{ fontSize: "20px", fontWeight: "700", color: "#16153b" }}>SMC Order Block &amp; FVG</span>{" "}
+            <span style={{ fontSize: "20px", fontWeight: "700", color: "#16153b" }}>RS Momentum Trend Swing</span>{" "}
             <span style={{ fontSize: "15.5px" }}>
-              Longs from a fresh bullish order block with an open fair value gap.
+              Outperforming liquid large caps filtered against Nifty 50 with ATR trailing stops.
             </span>{" "}
           </Link>{" "}
           <Link
@@ -1416,16 +1415,16 @@ export default function BuilderPage() {
                 color: "var(--acc,#4f46e5)",
               }}
             >
-              CRYPTO · 24x7
+              INDEX TREND · NIFTY 50
             </span>{" "}
-            <span style={{ fontSize: "20px", fontWeight: "700", color: "#16153b" }}>Crypto Trend Rider</span>{" "}
+            <span style={{ fontSize: "20px", fontWeight: "700", color: "#16153b" }}>NIFTY Higher-Timeframe Trend</span>{" "}
             <span style={{ fontSize: "15.5px" }}>
-              Rides trends on Delta perpetuals, sized in USD, never squared off at the NSE close.
+              Daily and weekly trend alignment with pullback entry confirmations.
             </span>{" "}
           </Link>{" "}
           <Link
             className="hv3"
-            href="/backtesting"
+            href="/strategies"
             data-reveal=""
             data-delay="210"
             style={{
@@ -1435,24 +1434,20 @@ export default function BuilderPage() {
               padding: "24px",
               borderRadius: "20px",
               background: "rgba(255,255,255,.68)",
-              border: "1px solid rgba(22,21,59,.08)",
+              border: "1px solid rgba(210,47,74,.2)",
               boxShadow: "inset 0 1px 0 rgba(255,255,255,.95),0 24px 50px -34px rgba(22,21,59,.4)",
               color: "#3d3c5c",
               transition: "transform .25s",
             }}
           >
             {" "}
-            <span
-              style={{
-                font: "600 11px/1 'JetBrains Mono',monospace",
-                letterSpacing: ".1em",
-                color: "var(--acc,#4f46e5)",
-              }}
-            >
-              VOLATILITY
+            <span style={{ font: "600 11px/1 'JetBrains Mono',monospace", letterSpacing: ".1em", color: "#c12843" }}>
+              INTRADAY · RESEARCH ONLY
             </span>{" "}
-            <span style={{ fontSize: "20px", fontWeight: "700", color: "#16153b" }}>Bollinger Breakout</span>{" "}
-            <span style={{ fontSize: "15.5px" }}>Enters when price closes outside the band after a squeeze.</span>{" "}
+            <span style={{ fontSize: "20px", fontWeight: "700", color: "#16153b" }}>Opening Range Retest</span>{" "}
+            <span style={{ fontSize: "15.5px" }}>
+              Published negative study showing why friction erodes raw opening range breakouts.
+            </span>{" "}
           </Link>{" "}
         </div>{" "}
       </section>{" "}

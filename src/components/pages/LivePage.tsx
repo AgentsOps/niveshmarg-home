@@ -761,7 +761,7 @@ export default function LivePage() {
               <div style={{ font: "700 34px/1 'JetBrains Mono',monospace", color: "#fff" }}>3</div>
               <div style={{ marginTop: "16px", fontSize: "19px", fontWeight: "700", color: "#fff" }}>Paper trade</div>
               <div style={{ marginTop: "6px", fontSize: "15px" }}>
-                At least five live-market sessions, win rate within 15 points of the backtest.
+                At least 5 live-market sessions and 20 closed paper trades, win rate within 15 points of the backtest.
               </div>
             </div>{" "}
             <div

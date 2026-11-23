@@ -483,6 +483,37 @@ export default function IntegrationsPage() {
               </span>
             </div>{" "}
           </div>{" "}
+          <div
+            data-reveal=""
+            data-delay="280"
+            style={{
+              padding: "26px",
+              borderRadius: "22px",
+              background: "rgba(255,255,255,.68)",
+              border: "1px solid rgba(22,21,59,.08)",
+              boxShadow: "inset 0 1px 0 rgba(255,255,255,.95),0 24px 50px -34px rgba(22,21,59,.4)",
+            }}
+          >
+            {" "}
+            <div style={{ fontSize: "22px", fontWeight: "700", color: "#16153b" }}>Angel One</div>{" "}
+            <p style={{ margin: "8px 0 14px", fontSize: "15.5px" }}>
+              SmartAPI broker adapter in development for order routing and equity trading.
+            </p>{" "}
+            <div
+              style={{ display: "flex", flexWrap: "wrap", gap: "6px", font: "500 11.5px/1 'JetBrains Mono',monospace" }}
+            >
+              <span
+                style={{ padding: "6px 8px", borderRadius: "6px", background: "rgba(22,21,59,.06)", color: "#5d5c7a" }}
+              >
+                in development
+              </span>
+              <span
+                style={{ padding: "6px 8px", borderRadius: "6px", background: "rgba(22,21,59,.06)", color: "#5d5c7a" }}
+              >
+                roadmap
+              </span>
+            </div>{" "}
+          </div>{" "}
         </div>{" "}
       </section>{" "}
       <section

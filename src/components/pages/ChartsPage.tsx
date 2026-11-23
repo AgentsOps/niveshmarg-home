@@ -63,7 +63,7 @@ export default function ChartsPage() {
             color: "var(--acc,#4f46e5)",
           }}
         >
-          Chart Workspace
+          Chart Workspace · Lightweight Charts v5
         </div>{" "}
         <h1
           data-reveal=""
@@ -82,8 +82,8 @@ export default function ChartsPage() {
           Read the market the way institutions do.
         </h1>{" "}
         <p data-reveal="" data-delay="160" style={{ margin: "22px auto 0", maxWidth: "620px", textWrap: "pretty" }}>
-          Full-screen streaming charts with Smart Money overlays, your backtest trades on the candles and an AI
-          assistant that draws for you. Try the controls below.
+          Full-screen streaming charts powered by TradingView Lightweight Charts v5 with Smart Money overlays, backtest
+          trades on the candles and an AI assistant that draws with shareable deep-links.
         </p>{" "}
         <div
           data-reveal="scale"
@@ -982,16 +982,23 @@ export default function ChartsPage() {
           <div data-reveal="">
             <div style={{ fontSize: "19px", fontWeight: "700", color: "#16153b" }}>Streams over WebSockets</div>
             <p style={{ margin: "8px 0 0", fontSize: "16px" }}>
-              Ticks and forming bars arrive live, without refreshing.
+              Ticks and forming bars arrive live from Fyers and Delta WebSockets without page reloads.
             </p>
           </div>{" "}
-          <div data-reveal="" data-delay="80">
+          <div data-reveal="" data-delay="70">
             <div style={{ fontSize: "19px", fontWeight: "700", color: "#16153b" }}>Your layout remembers</div>
             <p style={{ margin: "8px 0 0", fontSize: "16px" }}>
               Timeframe, studies, style and drawings are saved per user and instrument.
             </p>
           </div>{" "}
-          <div data-reveal="" data-delay="160">
+          <div data-reveal="" data-delay="140">
+            <div style={{ fontSize: "19px", fontWeight: "700", color: "#16153b" }}>Pre-trade order preview ticket</div>
+            <p style={{ margin: "8px 0 0", fontSize: "16px" }}>
+              Computes suggested sizing, notional risk, statutory charges, and verifies all 6 risk checks before
+              placement.
+            </p>
+          </div>{" "}
+          <div data-reveal="" data-delay="210">
             <div style={{ fontSize: "19px", fontWeight: "700", color: "#16153b" }}>Control runners from here</div>
             <p style={{ margin: "8px 0 0", fontSize: "16px" }}>
               Watch a runner and square off its positions without leaving the chart. One-click orders stay paper-only.

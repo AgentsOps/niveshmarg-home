@@ -97,7 +97,9 @@ class Component extends DCLogic {
     ['13', 'Swing suite user guide', 'Research', 'The daily routine, stages and acting on a Buy.'],
     ['14', 'Screener', 'Research', 'Filters, presets and the daily refresh.'],
     ['15', 'Validated strategies', 'Test', 'Our research method, results and limitations.'],
-    ['16', 'UI design system', 'Platform', 'The Glass visual language used across the app.']
+    ['16', 'UI design system', 'Platform', 'The Glass visual language used across the app.'],
+    ['17', 'Head & Shoulders study', 'Research', 'Statistical edge, failure rates and volume confirmation on NSE stocks.'],
+    ['18', 'Chart patterns', 'Build', 'Automated pattern detection for Double Bottom, Triangles, Flags and Cup & Handle.']
   ];
   componentDidMount() { this.start(); }
   componentDidUpdate(pp) { if (pp.skin !== this.props.skin || pp.motion !== this.props.motion) { this.stop(); this.start(); } }

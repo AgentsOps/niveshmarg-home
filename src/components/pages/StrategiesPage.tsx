@@ -374,6 +374,204 @@ export default function StrategiesPage() {
           style={{
             borderRadius: "28px",
             background: "rgba(255,255,255,.72)",
+            border: "1px solid rgba(var(--acc-rgb,99,102,241),.28)",
+            boxShadow: "inset 0 1px 0 rgba(255,255,255,.95),0 50px 90px -50px rgba(22,21,59,.45)",
+            padding: "clamp(24px,4vw,48px)",
+          }}
+        >
+          {" "}
+          <div
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              alignItems: "center",
+              justifyContent: "space-between",
+              gap: "12px",
+            }}
+          >
+            {" "}
+            <span
+              style={{
+                font: "600 11px/1 'JetBrains Mono',monospace",
+                letterSpacing: ".12em",
+                padding: "8px 11px",
+                borderRadius: "999px",
+                background: "rgba(var(--acc-rgb,99,102,241),.1)",
+                color: "var(--acc,#4f46e5)",
+              }}
+            >
+              ACTIVE · LIVE STREAM RUNNER
+            </span>{" "}
+            <span style={{ font: "500 12.5px/1 'JetBrains Mono',monospace", color: "#5d5c7a" }}>
+              Crypto &amp; Gold · 15m &amp; 1h · v2
+            </span>{" "}
+          </div>{" "}
+          <div
+            style={{ marginTop: "24px", display: "flex", flexWrap: "wrap", gap: "36px 56px", alignItems: "flex-start" }}
+          >
+            {" "}
+            <div style={{ flex: "1 1 380px", minWidth: "0" }}>
+              {" "}
+              <h2
+                style={{
+                  margin: "0",
+                  fontSize: "clamp(30px,4.2vw,50px)",
+                  lineHeight: "1.04",
+                  letterSpacing: "-.035em",
+                  fontWeight: "700",
+                  color: "#16153b",
+                  textWrap: "balance",
+                }}
+              >
+                Crypto SMC Institutional
+              </h2>{" "}
+              <p style={{ margin: "16px 0 0", maxWidth: "520px", textWrap: "pretty" }}>
+                Institutional Smart Money Concepts on high-liquidity perpetual contracts. Enters on structural Fair
+                Value Gap mitigations following liquidity sweeps, sized in USD under per-trade risk caps.
+              </p>{" "}
+              <div style={{ marginTop: "24px", display: "flex", flexDirection: "column", fontSize: "15.5px" }}>
+                {" "}
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    gap: "12px",
+                    padding: "12px 0",
+                    borderTop: "1px solid rgba(22,21,59,.08)",
+                  }}
+                >
+                  <span>Instruments</span>
+                  <span style={{ font: "600 13px/1.6 'JetBrains Mono',monospace", color: "#16153b" }}>
+                    DELTA:BTCUSD &amp; XAUTUSD
+                  </span>
+                </div>{" "}
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    gap: "12px",
+                    padding: "12px 0",
+                    borderTop: "1px solid rgba(22,21,59,.08)",
+                  }}
+                >
+                  <span>Structure</span>
+                  <span style={{ font: "600 13px/1.6 'JetBrains Mono',monospace", color: "#16153b" }}>
+                    Order Blocks, FVG &amp; Liquidity Sweeps
+                  </span>
+                </div>{" "}
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    gap: "12px",
+                    padding: "12px 0",
+                    borderTop: "1px solid rgba(22,21,59,.08)",
+                  }}
+                >
+                  <span>Execution mode</span>
+                  <span style={{ font: "600 13px/1.6 'JetBrains Mono',monospace", color: "#16153b" }}>
+                    24×7 Delta Exchange (USD margin)
+                  </span>
+                </div>{" "}
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    gap: "12px",
+                    padding: "12px 0",
+                    borderTop: "1px solid rgba(22,21,59,.08)",
+                    borderBottom: "1px solid rgba(22,21,59,.08)",
+                  }}
+                >
+                  <span>Broadcast</span>
+                  <span style={{ font: "600 13px/1.6 'JetBrains Mono',monospace", color: "var(--acc,#4f46e5)" }}>
+                    Mon–Fri 6–11 PM IST on YouTube
+                  </span>
+                </div>{" "}
+              </div>{" "}
+            </div>{" "}
+            <div
+              style={{ flex: "1 1 380px", minWidth: "0", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "12px" }}
+            >
+              {" "}
+              <div style={{ padding: "22px", borderRadius: "18px", background: "rgba(22,21,59,.04)" }}>
+                <div
+                  style={{
+                    fontSize: "clamp(36px,4.4vw,52px)",
+                    fontWeight: "800",
+                    letterSpacing: "-.04em",
+                    lineHeight: "1",
+                    color: "#16153b",
+                  }}
+                >
+                  11
+                </div>
+                <div style={{ marginTop: "8px", fontSize: "14.5px" }}>AST DAG nodes</div>
+              </div>{" "}
+              <div style={{ padding: "22px", borderRadius: "18px", background: "rgba(22,21,59,.04)" }}>
+                <div
+                  style={{
+                    fontSize: "clamp(36px,4.4vw,52px)",
+                    fontWeight: "800",
+                    letterSpacing: "-.04em",
+                    lineHeight: "1",
+                    color: "#16153b",
+                  }}
+                >
+                  24×7
+                </div>
+                <div style={{ marginTop: "8px", fontSize: "14.5px" }}>continuous market monitoring</div>
+              </div>{" "}
+              <div
+                style={{
+                  gridColumn: "1 / -1",
+                  padding: "22px",
+                  borderRadius: "18px",
+                  background: "var(--acc-soft,#ecebff)",
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "10px",
+                }}
+              >
+                {" "}
+                <div
+                  style={{
+                    font: "600 11px/1 'JetBrains Mono',monospace",
+                    letterSpacing: ".12em",
+                    color: "var(--acc,#4f46e5)",
+                  }}
+                >
+                  OFFICIAL STREAM STRATEGY
+                </div>{" "}
+                <div style={{ fontSize: "15px", color: "#16153b" }}>
+                  This is the exact algorithm running live on YouTube with our partner, AgentsOps. Watch every bar
+                  evaluation, entry, stop and target fill in real time.
+                </div>{" "}
+                <Link
+                  href="/live-stream"
+                  style={{
+                    marginTop: "6px",
+                    font: "600 13px/1 'JetBrains Mono',monospace",
+                    color: "var(--acc,#4f46e5)",
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: "6px",
+                  }}
+                >
+                  Watch on live stream →
+                </Link>{" "}
+              </div>{" "}
+            </div>{" "}
+          </div>{" "}
+        </div>{" "}
+      </section>{" "}
+      <section style={{ maxWidth: "1200px", margin: "0 auto", padding: "24px 24px 0" }}>
+        {" "}
+        <div
+          data-reveal="scale"
+          style={{
+            borderRadius: "28px",
+            background: "rgba(255,255,255,.72)",
             border: "1px solid rgba(210,47,74,.28)",
             boxShadow: "inset 0 1px 0 rgba(255,255,255,.95),0 50px 90px -50px rgba(22,21,59,.45)",
             padding: "clamp(24px,4vw,48px)",
@@ -629,7 +827,7 @@ export default function StrategiesPage() {
                 color: "var(--acc,#4f46e5)",
               }}
             >
-              Both are starter templates
+              All are starter templates
             </div>{" "}
             <h2
               style={{

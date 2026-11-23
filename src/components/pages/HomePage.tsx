@@ -501,12 +501,10 @@ export default function HomePage() {
                 color: "#16153b",
               }}
             >
-              <span data-count="200" data-suf="+">
-                200+
-              </span>
+              <span data-count="222">222</span>
             </div>
             <div style={{ marginTop: "10px", fontSize: "15px", color: "#5d5c7a" }}>
-              strategy node types with typed ports
+              strategy nodes across 19 categories
             </div>
           </div>{" "}
           <div data-reveal="" data-delay="70">
@@ -1711,7 +1709,7 @@ export default function HomePage() {
             <div style={{ flex: "1 1 380px", minWidth: "0" }}>
               {" "}
               <div style={{ font: "600 11px/1 'JetBrains Mono',monospace", letterSpacing: ".12em", color: "#8e8cb3" }}>
-                THE FOUR GATES TO LIVE
+                THE FOUR-STAGE PROMOTION PIPELINE
               </div>{" "}
               <div style={{ marginTop: "18px", display: "flex", flexDirection: "column" }}>
                 {" "}
@@ -1813,7 +1811,8 @@ export default function HomePage() {
                   <div>
                     <div style={{ fontSize: "18px", fontWeight: "700", color: "#fff" }}>Paper trade</div>
                     <div style={{ marginTop: "3px", fontSize: "15.5px" }}>
-                      At least five live-market paper sessions, with a win rate within 15 points of the backtest.
+                      At least 5 live-market paper sessions and 20 closed paper trades, with win rate within 15 points
+                      of backtest.
                     </div>
                   </div>{" "}
                 </div>{" "}
@@ -1891,7 +1890,7 @@ export default function HomePage() {
                 <div
                   style={{ font: "600 11px/1 'JetBrains Mono',monospace", letterSpacing: ".12em", color: "#8e8cb3" }}
                 >
-                  RISK ENGINE · LIVE CHECK
+                  DETERMINISTIC RISK ENGINE · 6 CHECKS
                 </div>{" "}
                 <span
                   data-pulse=""
@@ -1982,6 +1981,22 @@ export default function HomePage() {
                   }}
                 >
                   <span>Gross exposure &amp; open positions</span>
+                  <span data-s="" style={{ font: "600 12px/1.7 'JetBrains Mono',monospace", color: "#2fbf71" }}>
+                    pass
+                  </span>
+                </div>{" "}
+                <div
+                  data-gate=""
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    gap: "12px",
+                    padding: "11px 12px",
+                    borderRadius: "10px",
+                    transition: "background .3s",
+                  }}
+                >
+                  <span>Price circuit limit</span>
                   <span data-s="" style={{ font: "600 12px/1.7 'JetBrains Mono',monospace", color: "#2fbf71" }}>
                     pass
                   </span>
@@ -2676,6 +2691,101 @@ export default function HomePage() {
                 <div style={{ marginTop: "6px", fontSize: "13.5px", color: "#5d5c7a" }}>
                   out-of-sample years profitable
                 </div>
+              </div>{" "}
+            </div>{" "}
+          </div>{" "}
+          <div
+            data-reveal=""
+            data-delay="80"
+            style={{
+              padding: "30px",
+              borderRadius: "22px",
+              background: "rgba(255,255,255,.68)",
+              border: "1px solid rgba(var(--acc-rgb,99,102,241),.28)",
+              boxShadow: "inset 0 1px 0 rgba(255,255,255,.95),0 24px 50px -34px rgba(22,21,59,.4)",
+            }}
+          >
+            {" "}
+            <div
+              style={{
+                display: "flex",
+                flexWrap: "wrap",
+                alignItems: "center",
+                justifyContent: "space-between",
+                gap: "10px",
+              }}
+            >
+              <span
+                style={{
+                  font: "600 11px/1 'JetBrains Mono',monospace",
+                  letterSpacing: ".12em",
+                  padding: "7px 10px",
+                  borderRadius: "999px",
+                  background: "rgba(var(--acc-rgb,99,102,241),.1)",
+                  color: "var(--acc,#4f46e5)",
+                }}
+              >
+                ACTIVE · LIVE STREAM RUNNER
+              </span>
+              <span style={{ font: "500 12px/1 'JetBrains Mono',monospace", color: "#5d5c7a" }}>
+                Crypto &amp; Gold · v2
+              </span>
+            </div>{" "}
+            <div
+              style={{
+                marginTop: "20px",
+                fontSize: "26px",
+                fontWeight: "700",
+                letterSpacing: "-.02em",
+                color: "#16153b",
+              }}
+            >
+              Crypto SMC Institutional
+            </div>{" "}
+            <p style={{ margin: "10px 0 0", fontSize: "16px" }}>
+              Order blocks, fair value gaps and liquidity sweeps on BTCUSD &amp; XAUTUSD perpetuals. Streamed live
+              Monday to Friday on YouTube.
+            </p>{" "}
+            <div
+              style={{
+                marginTop: "22px",
+                display: "flex",
+                flexWrap: "wrap",
+                gap: "28px",
+                paddingTop: "20px",
+                borderTop: "1px solid rgba(22,21,59,.08)",
+              }}
+            >
+              {" "}
+              <div>
+                <div
+                  style={{
+                    fontSize: "34px",
+                    fontWeight: "800",
+                    letterSpacing: "-.03em",
+                    lineHeight: "1",
+                    color: "#16153b",
+                  }}
+                >
+                  24×7
+                </div>
+                <div style={{ marginTop: "6px", fontSize: "13.5px", color: "#5d5c7a" }}>continuous execution</div>
+              </div>{" "}
+              <div>
+                <div
+                  style={{
+                    fontSize: "34px",
+                    fontWeight: "800",
+                    letterSpacing: "-.03em",
+                    lineHeight: "1",
+                    color: "var(--acc,#4f46e5)",
+                  }}
+                >
+                  <Link href="/live-stream" style={{ color: "inherit" }}>
+                    Watch live →
+                  </Link>
+                </div>
+                <div style={{ marginTop: "6px", fontSize: "13.5px", color: "#5d5c7a" }}>YouTube @agentsops</div>
               </div>{" "}
             </div>{" "}
           </div>{" "}
