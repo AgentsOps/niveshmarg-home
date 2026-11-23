@@ -488,9 +488,12 @@ export default function LiveStreamPage() {
                 <div
                   data-cd-days=""
                   style={{
-                    font: "800 clamp(32px,5vw,56px)/1 'JetBrains Mono',monospace",
-                    color: "#fff",
+                    fontSize: "clamp(32px,5vw,56px)",
+                    fontWeight: "800",
+                    lineHeight: "1",
                     letterSpacing: "-.03em",
+                    color: "#fff",
+                    fontVariantNumeric: "tabular-nums",
                   }}
                 >
                   00
@@ -509,7 +512,9 @@ export default function LiveStreamPage() {
               </div>{" "}
               <div
                 style={{
-                  font: "800 clamp(24px,3vw,36px)/1 'JetBrains Mono',monospace",
+                  fontSize: "clamp(24px,3vw,36px)",
+                  fontWeight: "800",
+                  lineHeight: "1",
                   color: "rgba(255,255,255,.3)",
                   alignSelf: "center",
                 }}
@@ -532,9 +537,12 @@ export default function LiveStreamPage() {
                 <div
                   data-cd-hours=""
                   style={{
-                    font: "800 clamp(32px,5vw,56px)/1 'JetBrains Mono',monospace",
-                    color: "#fff",
+                    fontSize: "clamp(32px,5vw,56px)",
+                    fontWeight: "800",
+                    lineHeight: "1",
                     letterSpacing: "-.03em",
+                    color: "#fff",
+                    fontVariantNumeric: "tabular-nums",
                   }}
                 >
                   00
@@ -553,7 +561,9 @@ export default function LiveStreamPage() {
               </div>{" "}
               <div
                 style={{
-                  font: "800 clamp(24px,3vw,36px)/1 'JetBrains Mono',monospace",
+                  fontSize: "clamp(24px,3vw,36px)",
+                  fontWeight: "800",
+                  lineHeight: "1",
                   color: "rgba(255,255,255,.3)",
                   alignSelf: "center",
                 }}
@@ -576,9 +586,12 @@ export default function LiveStreamPage() {
                 <div
                   data-cd-mins=""
                   style={{
-                    font: "800 clamp(32px,5vw,56px)/1 'JetBrains Mono',monospace",
-                    color: "#fff",
+                    fontSize: "clamp(32px,5vw,56px)",
+                    fontWeight: "800",
+                    lineHeight: "1",
                     letterSpacing: "-.03em",
+                    color: "#fff",
+                    fontVariantNumeric: "tabular-nums",
                   }}
                 >
                   00
@@ -597,7 +610,9 @@ export default function LiveStreamPage() {
               </div>{" "}
               <div
                 style={{
-                  font: "800 clamp(24px,3vw,36px)/1 'JetBrains Mono',monospace",
+                  fontSize: "clamp(24px,3vw,36px)",
+                  fontWeight: "800",
+                  lineHeight: "1",
                   color: "rgba(255,255,255,.3)",
                   alignSelf: "center",
                 }}
@@ -620,9 +635,12 @@ export default function LiveStreamPage() {
                 <div
                   data-cd-secs=""
                   style={{
-                    font: "800 clamp(32px,5vw,56px)/1 'JetBrains Mono',monospace",
-                    color: "#ff576f",
+                    fontSize: "clamp(32px,5vw,56px)",
+                    fontWeight: "800",
+                    lineHeight: "1",
                     letterSpacing: "-.03em",
+                    color: "#ff576f",
+                    fontVariantNumeric: "tabular-nums",
                   }}
                 >
                   00
@@ -667,9 +685,11 @@ export default function LiveStreamPage() {
             {" "}
             <div
               style={{
-                font: "800 clamp(28px,3.2vw,40px)/1 'JetBrains Mono',monospace",
+                fontSize: "clamp(26px,3vw,38px)",
+                fontWeight: "800",
+                lineHeight: "1.08",
+                letterSpacing: "-.035em",
                 color: "#16153b",
-                letterSpacing: "-.03em",
               }}
             >
               BTCUSD &amp; XAUTUSD
@@ -692,9 +712,11 @@ export default function LiveStreamPage() {
             {" "}
             <div
               style={{
-                font: "800 clamp(28px,3.2vw,40px)/1 'JetBrains Mono',monospace",
+                fontSize: "clamp(26px,3vw,38px)",
+                fontWeight: "800",
+                lineHeight: "1.08",
+                letterSpacing: "-.035em",
                 color: "#16153b",
-                letterSpacing: "-.03em",
               }}
             >
               6 PM – 11 PM
@@ -717,9 +739,11 @@ export default function LiveStreamPage() {
             {" "}
             <div
               style={{
-                font: "800 clamp(28px,3.2vw,40px)/1 'JetBrains Mono',monospace",
+                fontSize: "clamp(26px,3vw,38px)",
+                fontWeight: "800",
+                lineHeight: "1.08",
+                letterSpacing: "-.035em",
                 color: "#e50914",
-                letterSpacing: "-.03em",
               }}
             >
               07 October
@@ -742,9 +766,11 @@ export default function LiveStreamPage() {
             {" "}
             <div
               style={{
-                font: "800 clamp(28px,3.2vw,40px)/1 'JetBrains Mono',monospace",
+                fontSize: "clamp(26px,3vw,38px)",
+                fontWeight: "800",
+                lineHeight: "1.08",
+                letterSpacing: "-.035em",
                 color: "#16153b",
-                letterSpacing: "-.03em",
               }}
             >
               <span data-count="6">6</span> Gates
@@ -832,7 +858,8 @@ export default function LiveStreamPage() {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                font: "700 16px 'JetBrains Mono',monospace",
+                fontSize: "16px",
+                fontWeight: "800",
               }}
             >
               01
@@ -867,7 +894,8 @@ export default function LiveStreamPage() {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                font: "700 16px 'JetBrains Mono',monospace",
+                fontSize: "16px",
+                fontWeight: "800",
               }}
             >
               02
@@ -902,7 +930,8 @@ export default function LiveStreamPage() {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                font: "700 16px 'JetBrains Mono',monospace",
+                fontSize: "16px",
+                fontWeight: "800",
               }}
             >
               03
@@ -937,7 +966,8 @@ export default function LiveStreamPage() {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                font: "700 16px 'JetBrains Mono',monospace",
+                fontSize: "16px",
+                fontWeight: "800",
               }}
             >
               04
@@ -1003,7 +1033,13 @@ export default function LiveStreamPage() {
             <div style={{ display: "flex", alignItems: "center", gap: "24px", minWidth: "280px" }}>
               {" "}
               <span
-                style={{ font: "700 18px 'JetBrains Mono',monospace", color: "var(--acc,#4f46e5)", width: "130px" }}
+                style={{
+                  fontSize: "18px",
+                  fontWeight: "700",
+                  color: "var(--acc,#4f46e5)",
+                  width: "130px",
+                  fontVariantNumeric: "tabular-nums",
+                }}
               >
                 18:00 – 18:30
               </span>{" "}
@@ -1047,7 +1083,15 @@ export default function LiveStreamPage() {
             {" "}
             <div style={{ display: "flex", alignItems: "center", gap: "24px", minWidth: "280px" }}>
               {" "}
-              <span style={{ font: "700 18px 'JetBrains Mono',monospace", color: "#0f8a4b", width: "130px" }}>
+              <span
+                style={{
+                  fontSize: "18px",
+                  fontWeight: "700",
+                  color: "#0f8a4b",
+                  width: "130px",
+                  fontVariantNumeric: "tabular-nums",
+                }}
+              >
                 18:30 – 20:30
               </span>{" "}
               <div>
@@ -1090,7 +1134,15 @@ export default function LiveStreamPage() {
             {" "}
             <div style={{ display: "flex", alignItems: "center", gap: "24px", minWidth: "280px" }}>
               {" "}
-              <span style={{ font: "700 18px 'JetBrains Mono',monospace", color: "#16153b", width: "130px" }}>
+              <span
+                style={{
+                  fontSize: "18px",
+                  fontWeight: "700",
+                  color: "#16153b",
+                  width: "130px",
+                  fontVariantNumeric: "tabular-nums",
+                }}
+              >
                 20:30 – 22:30
               </span>{" "}
               <div>
@@ -1134,7 +1186,15 @@ export default function LiveStreamPage() {
             {" "}
             <div style={{ display: "flex", alignItems: "center", gap: "24px", minWidth: "280px" }}>
               {" "}
-              <span style={{ font: "700 18px 'JetBrains Mono',monospace", color: "#5d5c7a", width: "130px" }}>
+              <span
+                style={{
+                  fontSize: "18px",
+                  fontWeight: "700",
+                  color: "#5d5c7a",
+                  width: "130px",
+                  fontVariantNumeric: "tabular-nums",
+                }}
+              >
                 22:30 – 23:00
               </span>{" "}
               <div>

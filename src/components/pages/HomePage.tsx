@@ -2979,9 +2979,12 @@ export default function HomePage() {
                   <div
                     data-cd-days=""
                     style={{
-                      font: "800 clamp(28px,4.5vw,50px)/1 'JetBrains Mono',monospace",
-                      color: "#fff",
+                      fontSize: "clamp(28px,4.5vw,50px)",
+                      fontWeight: "800",
+                      lineHeight: "1",
                       letterSpacing: "-.03em",
+                      color: "#fff",
+                      fontVariantNumeric: "tabular-nums",
                     }}
                   >
                     00
@@ -3000,7 +3003,9 @@ export default function HomePage() {
                 </div>{" "}
                 <div
                   style={{
-                    font: "800 clamp(20px,2.5vw,32px)/1 'JetBrains Mono',monospace",
+                    fontSize: "clamp(20px,2.5vw,32px)",
+                    fontWeight: "800",
+                    lineHeight: "1",
                     color: "rgba(255,255,255,.3)",
                     alignSelf: "center",
                   }}
@@ -3023,9 +3028,12 @@ export default function HomePage() {
                   <div
                     data-cd-hours=""
                     style={{
-                      font: "800 clamp(28px,4.5vw,50px)/1 'JetBrains Mono',monospace",
-                      color: "#fff",
+                      fontSize: "clamp(28px,4.5vw,50px)",
+                      fontWeight: "800",
+                      lineHeight: "1",
                       letterSpacing: "-.03em",
+                      color: "#fff",
+                      fontVariantNumeric: "tabular-nums",
                     }}
                   >
                     00
@@ -3044,7 +3052,9 @@ export default function HomePage() {
                 </div>{" "}
                 <div
                   style={{
-                    font: "800 clamp(20px,2.5vw,32px)/1 'JetBrains Mono',monospace",
+                    fontSize: "clamp(20px,2.5vw,32px)",
+                    fontWeight: "800",
+                    lineHeight: "1",
                     color: "rgba(255,255,255,.3)",
                     alignSelf: "center",
                   }}
@@ -3067,9 +3077,12 @@ export default function HomePage() {
                   <div
                     data-cd-mins=""
                     style={{
-                      font: "800 clamp(28px,4.5vw,50px)/1 'JetBrains Mono',monospace",
-                      color: "#fff",
+                      fontSize: "clamp(28px,4.5vw,50px)",
+                      fontWeight: "800",
+                      lineHeight: "1",
                       letterSpacing: "-.03em",
+                      color: "#fff",
+                      fontVariantNumeric: "tabular-nums",
                     }}
                   >
                     00
@@ -3088,7 +3101,9 @@ export default function HomePage() {
                 </div>{" "}
                 <div
                   style={{
-                    font: "800 clamp(20px,2.5vw,32px)/1 'JetBrains Mono',monospace",
+                    fontSize: "clamp(20px,2.5vw,32px)",
+                    fontWeight: "800",
+                    lineHeight: "1",
                     color: "rgba(255,255,255,.3)",
                     alignSelf: "center",
                   }}
@@ -3111,9 +3126,12 @@ export default function HomePage() {
                   <div
                     data-cd-secs=""
                     style={{
-                      font: "800 clamp(28px,4.5vw,50px)/1 'JetBrains Mono',monospace",
-                      color: "#ff576f",
+                      fontSize: "clamp(28px,4.5vw,50px)",
+                      fontWeight: "800",
+                      lineHeight: "1",
                       letterSpacing: "-.03em",
+                      color: "#ff576f",
+                      fontVariantNumeric: "tabular-nums",
                     }}
                   >
                     00
