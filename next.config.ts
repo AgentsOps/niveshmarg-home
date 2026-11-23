@@ -24,6 +24,8 @@ const nextConfig: NextConfig = {
         destination,
         permanent: true,
       })),
+      { source: "/stream", destination: "/live-stream", permanent: false },
+      { source: "/watch", destination: "/live-stream", permanent: false },
       { source: "/features/:path*", destination: "/", permanent: true },
     ];
   },

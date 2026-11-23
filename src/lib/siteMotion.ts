@@ -626,6 +626,58 @@ export function boot(root: HTMLElement, opts: { skin?: Skin; motion?: Motion } =
     every(up, 1000);
   })();
 
+  /* live countdown: [data-countdown] */
+  q("[data-countdown]").forEach((cd) => {
+    const dEl = cd.querySelector<HTMLElement>("[data-cd-days]"),
+      hEl = cd.querySelector<HTMLElement>("[data-cd-hours]"),
+      mEl = cd.querySelector<HTMLElement>("[data-cd-mins]"),
+      sEl = cd.querySelector<HTMLElement>("[data-cd-secs]"),
+      badgeEl = cd.querySelector<HTMLElement>("[data-cd-badge]");
+
+    // Target: 07th of October at 18:00 IST (6:00 PM IST)
+    const getTarget = () => {
+      const now = new Date();
+      if (cd.dataset.target) {
+        const custom = new Date(cd.dataset.target);
+        if (!isNaN(custom.getTime()) && custom.getTime() > now.getTime()) return custom;
+      }
+      const curYear = now.getFullYear();
+      let t = new Date(`${curYear}-10-07T18:00:00+05:30`);
+      if (now.getTime() > t.getTime()) {
+        t = new Date(`${curYear + 1}-10-07T18:00:00+05:30`);
+      }
+      return t;
+    };
+
+    const target = getTarget();
+    const pad = (n: number) => String(Math.max(0, Math.floor(n))).padStart(2, "0");
+
+    const tick = () => {
+      const now = new Date();
+      const diff = target.getTime() - now.getTime();
+      if (diff <= 0) {
+        if (dEl) setText(dEl, "00");
+        if (hEl) setText(hEl, "00");
+        if (mEl) setText(mEl, "00");
+        if (sEl) setText(sEl, "00");
+        if (badgeEl) setText(badgeEl, "STREAMING NOW · 6 PM – 11 PM IST");
+        return;
+      }
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const mins = Math.floor((diff / (1000 * 60)) % 60);
+      const secs = Math.floor((diff / 1000) % 60);
+
+      if (dEl) setText(dEl, pad(days));
+      if (hEl) setText(hEl, pad(hours));
+      if (mEl) setText(mEl, pad(mins));
+      if (sEl) setText(sEl, pad(secs));
+    };
+
+    tick();
+    every(tick, 1000);
+  });
+
   if (!still) {
     /* reveal on scroll */
     (() => {

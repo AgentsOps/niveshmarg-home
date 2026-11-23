@@ -11,6 +11,7 @@ Marketing site for Niveshmarg Edge, built with Next.js 16 (App Router) from the 
 | `/charts`       | `UI_PROTO/Charts.dc.html`       |
 | `/backtesting`  | `UI_PROTO/Backtesting.dc.html`  |
 | `/live`         | `UI_PROTO/Live.dc.html`         |
+| `/live-stream`  | `UI_PROTO/LiveStream.dc.html`   |
 | `/research`     | `UI_PROTO/Research.dc.html`     |
 | `/integrations` | `UI_PROTO/Integrations.dc.html` |
 | `/strategies`   | `UI_PROTO/Strategies.dc.html`   |
