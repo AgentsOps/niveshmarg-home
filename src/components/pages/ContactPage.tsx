@@ -363,7 +363,7 @@ export default function ContactPage() {
                   />
                 </label>{" "}
                 <button
-                  className="hv6"
+                  className="hv7"
                   type="submit"
                   style={{
                     border: "0",

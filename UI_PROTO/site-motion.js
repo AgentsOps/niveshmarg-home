@@ -174,6 +174,57 @@
       up(); every(up, 1000);
     })();
 
+    /* live countdown: [data-countdown] */
+    q('[data-countdown]').forEach(function (cd) {
+      var dEl = cd.querySelector('[data-cd-days]'),
+        hEl = cd.querySelector('[data-cd-hours]'),
+        mEl = cd.querySelector('[data-cd-mins]'),
+        sEl = cd.querySelector('[data-cd-secs]'),
+        badgeEl = cd.querySelector('[data-cd-badge]');
+
+      var getTarget = function () {
+        var now = new Date();
+        if (cd.dataset.target) {
+          var custom = new Date(cd.dataset.target);
+          if (!isNaN(custom.getTime()) && custom.getTime() > now.getTime()) return custom;
+        }
+        var curYear = now.getFullYear();
+        var t = new Date(curYear + '-10-07T18:00:00+05:30');
+        if (now.getTime() > t.getTime()) {
+          t = new Date((curYear + 1) + '-10-07T18:00:00+05:30');
+        }
+        return t;
+      };
+
+      var target = getTarget();
+      var pad = function (n) { return String(Math.max(0, Math.floor(n))).padStart(2, '0'); };
+
+      var tick = function () {
+        var now = new Date();
+        var diff = target.getTime() - now.getTime();
+        if (diff <= 0) {
+          if (dEl) setText(dEl, '00');
+          if (hEl) setText(hEl, '00');
+          if (mEl) setText(mEl, '00');
+          if (sEl) setText(sEl, '00');
+          if (badgeEl) setText(badgeEl, 'STREAMING NOW · 6 PM – 11 PM IST');
+          return;
+        }
+        var days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        var mins = Math.floor((diff / (1000 * 60)) % 60);
+        var secs = Math.floor((diff / 1000) % 60);
+
+        if (dEl) setText(dEl, pad(days));
+        if (hEl) setText(hEl, pad(hours));
+        if (mEl) setText(mEl, pad(mins));
+        if (sEl) setText(sEl, pad(secs));
+      };
+
+      tick();
+      every(tick, 1000);
+    });
+
     if (!still) {
       /* reveal on scroll */
       (function () {

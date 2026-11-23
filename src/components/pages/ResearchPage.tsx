@@ -99,7 +99,7 @@ export default function ResearchPage() {
         >
           {" "}
           <a
-            className="hv4"
+            className="hv5"
             href="#reports"
             style={{
               padding: "10px 14px",
@@ -112,7 +112,7 @@ export default function ResearchPage() {
             Stock reports
           </a>{" "}
           <a
-            className="hv4"
+            className="hv5"
             href="#regime"
             style={{
               padding: "10px 14px",
@@ -125,7 +125,7 @@ export default function ResearchPage() {
             Market regime
           </a>{" "}
           <a
-            className="hv4"
+            className="hv5"
             href="#swing"
             style={{
               padding: "10px 14px",
@@ -138,7 +138,7 @@ export default function ResearchPage() {
             Swing suite
           </a>{" "}
           <a
-            className="hv4"
+            className="hv5"
             href="#screener"
             style={{
               padding: "10px 14px",

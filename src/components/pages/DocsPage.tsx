@@ -165,7 +165,7 @@ export default function DocsPage() {
             <Fragment key={dIndex}>
               {" "}
               <a
-                className="hv5"
+                className="hv6"
                 href="#"
                 style={{
                   display: "flex",

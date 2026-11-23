@@ -2744,6 +2744,803 @@ export default function HomePage() {
           </div>{" "}
         </div>{" "}
       </section>{" "}
+      <section
+        id="stream"
+        style={{
+          margin: "140px 14px 0",
+          borderRadius: "36px",
+          background: "#0d0c22",
+          color: "#a8a6c9",
+          position: "relative",
+          overflow: "hidden",
+        }}
+      >
+        {" "}
+        <div
+          data-blob=""
+          style={{
+            position: "absolute",
+            top: "-280px",
+            right: "-180px",
+            width: "760px",
+            height: "760px",
+            borderRadius: "50%",
+            background: "radial-gradient(circle,rgba(255,68,68,.18),rgba(255,68,68,0) 65%)",
+            pointerEvents: "none",
+          }}
+        />{" "}
+        <div
+          data-blob=""
+          style={{
+            position: "absolute",
+            bottom: "-240px",
+            left: "-160px",
+            width: "700px",
+            height: "700px",
+            borderRadius: "50%",
+            background:
+              "radial-gradient(circle,rgba(var(--acc-rgb,99,102,241),.22),rgba(var(--acc-rgb,99,102,241),0) 65%)",
+            pointerEvents: "none",
+          }}
+        />{" "}
+        <div
+          style={{
+            position: "relative",
+            maxWidth: "1200px",
+            margin: "0 auto",
+            padding: "clamp(64px,9vw,110px) clamp(10px,3vw,24px)",
+          }}
+        >
+          {" "}
+          <div
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              alignItems: "flex-end",
+              justifyContent: "space-between",
+              gap: "24px 60px",
+            }}
+          >
+            {" "}
+            <div data-reveal="" style={{ flex: "1 1 500px", maxWidth: "760px" }}>
+              {" "}
+              <div
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "8px",
+                  padding: "6px 14px 6px 10px",
+                  borderRadius: "999px",
+                  background: "rgba(255,255,255,.07)",
+                  border: "1px solid rgba(255,255,255,.12)",
+                  font: "600 11px/1 'JetBrains Mono',monospace",
+                  letterSpacing: ".12em",
+                  textTransform: "uppercase",
+                  color: "#ff8595",
+                }}
+              >
+                {" "}
+                <span
+                  data-pulse=""
+                  style={{ width: "7px", height: "7px", borderRadius: "50%", background: "#ff3b5c", display: "block" }}
+                />{" "}
+                <span>LIVE BROADCAST · YOUTUBE PARTNER @AGENTSOPS</span>{" "}
+              </div>{" "}
+              <h2
+                style={{
+                  margin: "20px 0 0",
+                  fontSize: "clamp(30px,4.6vw,56px)",
+                  lineHeight: "1.04",
+                  letterSpacing: "-.035em",
+                  fontWeight: "700",
+                  color: "#fff",
+                  textWrap: "balance",
+                }}
+              >
+                {" "}
+                See it live running on <span style={{ color: "#ff576f" }}>BTCUSD</span> &amp;{" "}
+                <span style={{ color: "#ffbd2e" }}>XAUTUSD</span>.{" "}
+              </h2>{" "}
+              <p
+                style={{
+                  margin: "18px 0 0",
+                  fontSize: "clamp(16px,1.4vw,18px)",
+                  lineHeight: "1.55",
+                  color: "#c2c0dc",
+                  textWrap: "pretty",
+                }}
+              >
+                {" "}
+                Starting <strong>07th of October</strong>, watch Niveshmarg Edge execute live on Bitcoin and Tether Gold
+                perpetuals through our official YouTube partner, <strong>AgentsOps</strong>. Streaming every{" "}
+                <strong>Monday to Friday, 6:00 PM IST to 11:00 PM IST</strong>.{" "}
+              </p>{" "}
+            </div>{" "}
+            <div
+              data-reveal=""
+              data-delay="100"
+              style={{ display: "flex", flexWrap: "wrap", gap: "12px", alignItems: "center" }}
+            >
+              {" "}
+              <a
+                className="hv1"
+                href="https://www.youtube.com/@agentsops"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "10px",
+                  padding: "15px 26px",
+                  borderRadius: "999px",
+                  background: "#e50914",
+                  color: "#fff",
+                  fontWeight: "600",
+                  fontSize: "15px",
+                  boxShadow: "0 14px 30px -12px rgba(229,9,20,.6),inset 0 1px 0 rgba(255,255,255,.25)",
+                  transition: "transform .2s",
+                }}
+              >
+                {" "}
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                </svg>{" "}
+                Watch on YouTube{" "}
+              </a>{" "}
+              <Link
+                className="hv1"
+                href="/live-stream"
+                style={{
+                  padding: "15px 24px",
+                  borderRadius: "999px",
+                  background: "rgba(255,255,255,.08)",
+                  border: "1px solid rgba(255,255,255,.14)",
+                  color: "#fff",
+                  fontWeight: "600",
+                  fontSize: "15px",
+                  transition: "transform .2s",
+                }}
+              >
+                {" "}
+                Stream details &amp; countdown{" "}
+              </Link>{" "}
+            </div>{" "}
+          </div>{" "}
+          <div data-reveal="scale" data-delay="120" style={{ marginTop: "38px" }}>
+            {" "}
+            <div
+              data-countdown=""
+              style={{
+                borderRadius: "24px",
+                background: "rgba(255,255,255,.04)",
+                border: "1px solid rgba(255,255,255,.12)",
+                boxShadow: "inset 0 1px 0 rgba(255,255,255,.1)",
+                padding: "clamp(20px,3vw,30px)",
+                textAlign: "center",
+              }}
+            >
+              {" "}
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  gap: "10px",
+                  marginBottom: "16px",
+                }}
+              >
+                {" "}
+                <span
+                  data-pulse=""
+                  style={{
+                    width: "8px",
+                    height: "8px",
+                    borderRadius: "50%",
+                    background: "#ff3b5c",
+                    display: "inline-block",
+                  }}
+                />{" "}
+                <span
+                  data-cd-badge=""
+                  style={{
+                    font: "600 12px/1 'JetBrains Mono',monospace",
+                    letterSpacing: ".14em",
+                    textTransform: "uppercase",
+                    color: "#ff8595",
+                  }}
+                >
+                  {" "}
+                  STREAMING STARTS 07TH OF OCTOBER · 6:00 PM IST{" "}
+                </span>{" "}
+              </div>{" "}
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  gap: "clamp(8px,2vw,18px)",
+                  flexWrap: "wrap",
+                }}
+              >
+                {" "}
+                <div
+                  style={{
+                    flex: "1 1 76px",
+                    maxWidth: "130px",
+                    minWidth: "72px",
+                    padding: "14px 10px",
+                    borderRadius: "16px",
+                    background: "rgba(255,255,255,.06)",
+                    border: "1px solid rgba(255,255,255,.1)",
+                    boxShadow: "0 8px 20px -8px rgba(0,0,0,.5)",
+                  }}
+                >
+                  {" "}
+                  <div
+                    data-cd-days=""
+                    style={{
+                      font: "800 clamp(28px,4.5vw,50px)/1 'JetBrains Mono',monospace",
+                      color: "#fff",
+                      letterSpacing: "-.03em",
+                    }}
+                  >
+                    00
+                  </div>{" "}
+                  <div
+                    style={{
+                      marginTop: "6px",
+                      font: "600 10.5px/1 'JetBrains Mono',monospace",
+                      letterSpacing: ".14em",
+                      color: "#a5b4fc",
+                      textTransform: "uppercase",
+                    }}
+                  >
+                    DAYS
+                  </div>{" "}
+                </div>{" "}
+                <div
+                  style={{
+                    font: "800 clamp(20px,2.5vw,32px)/1 'JetBrains Mono',monospace",
+                    color: "rgba(255,255,255,.3)",
+                    alignSelf: "center",
+                  }}
+                >
+                  :
+                </div>{" "}
+                <div
+                  style={{
+                    flex: "1 1 76px",
+                    maxWidth: "130px",
+                    minWidth: "72px",
+                    padding: "14px 10px",
+                    borderRadius: "16px",
+                    background: "rgba(255,255,255,.06)",
+                    border: "1px solid rgba(255,255,255,.1)",
+                    boxShadow: "0 8px 20px -8px rgba(0,0,0,.5)",
+                  }}
+                >
+                  {" "}
+                  <div
+                    data-cd-hours=""
+                    style={{
+                      font: "800 clamp(28px,4.5vw,50px)/1 'JetBrains Mono',monospace",
+                      color: "#fff",
+                      letterSpacing: "-.03em",
+                    }}
+                  >
+                    00
+                  </div>{" "}
+                  <div
+                    style={{
+                      marginTop: "6px",
+                      font: "600 10.5px/1 'JetBrains Mono',monospace",
+                      letterSpacing: ".14em",
+                      color: "#a5b4fc",
+                      textTransform: "uppercase",
+                    }}
+                  >
+                    HOURS
+                  </div>{" "}
+                </div>{" "}
+                <div
+                  style={{
+                    font: "800 clamp(20px,2.5vw,32px)/1 'JetBrains Mono',monospace",
+                    color: "rgba(255,255,255,.3)",
+                    alignSelf: "center",
+                  }}
+                >
+                  :
+                </div>{" "}
+                <div
+                  style={{
+                    flex: "1 1 76px",
+                    maxWidth: "130px",
+                    minWidth: "72px",
+                    padding: "14px 10px",
+                    borderRadius: "16px",
+                    background: "rgba(255,255,255,.06)",
+                    border: "1px solid rgba(255,255,255,.1)",
+                    boxShadow: "0 8px 20px -8px rgba(0,0,0,.5)",
+                  }}
+                >
+                  {" "}
+                  <div
+                    data-cd-mins=""
+                    style={{
+                      font: "800 clamp(28px,4.5vw,50px)/1 'JetBrains Mono',monospace",
+                      color: "#fff",
+                      letterSpacing: "-.03em",
+                    }}
+                  >
+                    00
+                  </div>{" "}
+                  <div
+                    style={{
+                      marginTop: "6px",
+                      font: "600 10.5px/1 'JetBrains Mono',monospace",
+                      letterSpacing: ".14em",
+                      color: "#a5b4fc",
+                      textTransform: "uppercase",
+                    }}
+                  >
+                    MINUTES
+                  </div>{" "}
+                </div>{" "}
+                <div
+                  style={{
+                    font: "800 clamp(20px,2.5vw,32px)/1 'JetBrains Mono',monospace",
+                    color: "rgba(255,255,255,.3)",
+                    alignSelf: "center",
+                  }}
+                >
+                  :
+                </div>{" "}
+                <div
+                  style={{
+                    flex: "1 1 76px",
+                    maxWidth: "130px",
+                    minWidth: "72px",
+                    padding: "14px 10px",
+                    borderRadius: "16px",
+                    background: "rgba(255,255,255,.06)",
+                    border: "1px solid rgba(255,255,255,.1)",
+                    boxShadow: "0 8px 20px -8px rgba(0,0,0,.5)",
+                  }}
+                >
+                  {" "}
+                  <div
+                    data-cd-secs=""
+                    style={{
+                      font: "800 clamp(28px,4.5vw,50px)/1 'JetBrains Mono',monospace",
+                      color: "#ff576f",
+                      letterSpacing: "-.03em",
+                    }}
+                  >
+                    00
+                  </div>{" "}
+                  <div
+                    style={{
+                      marginTop: "6px",
+                      font: "600 10.5px/1 'JetBrains Mono',monospace",
+                      letterSpacing: ".14em",
+                      color: "#a5b4fc",
+                      textTransform: "uppercase",
+                    }}
+                  >
+                    SECONDS
+                  </div>{" "}
+                </div>{" "}
+              </div>{" "}
+              <div style={{ marginTop: "16px", font: "500 12.5px/1.4 'JetBrains Mono',monospace", color: "#c2c0dc" }}>
+                {" "}
+                Schedule:{" "}
+                <span style={{ color: "#fff", fontWeight: "700" }}>Monday to Friday, 6:00 PM IST – 11:00 PM IST</span> ·
+                Running live on <span style={{ color: "#ff8595", fontWeight: "700" }}>BTCUSD</span> and{" "}
+                <span style={{ color: "#ffbd2e", fontWeight: "700" }}>XAUTUSD</span>{" "}
+              </div>{" "}
+            </div>{" "}
+          </div>{" "}
+          <div
+            data-reveal="scale"
+            data-delay="180"
+            style={{
+              marginTop: "36px",
+              borderRadius: "24px",
+              background: "rgba(255,255,255,.03)",
+              border: "1px solid rgba(255,255,255,.1)",
+              boxShadow: "0 50px 100px -40px rgba(0,0,0,.8)",
+              overflow: "hidden",
+            }}
+          >
+            {" "}
+            <div
+              style={{
+                padding: "16px 22px",
+                background: "rgba(255,255,255,.05)",
+                borderBottom: "1px solid rgba(255,255,255,.08)",
+                display: "flex",
+                flexWrap: "wrap",
+                alignItems: "center",
+                justifyContent: "space-between",
+                gap: "12px",
+              }}
+            >
+              {" "}
+              <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+                {" "}
+                <div style={{ display: "flex", gap: "6px" }}>
+                  {" "}
+                  <span
+                    style={{
+                      width: "10px",
+                      height: "10px",
+                      borderRadius: "50%",
+                      background: "#ff5f56",
+                      display: "inline-block",
+                    }}
+                  />{" "}
+                  <span
+                    style={{
+                      width: "10px",
+                      height: "10px",
+                      borderRadius: "50%",
+                      background: "#ffbd2e",
+                      display: "inline-block",
+                    }}
+                  />{" "}
+                  <span
+                    style={{
+                      width: "10px",
+                      height: "10px",
+                      borderRadius: "50%",
+                      background: "#27c93f",
+                      display: "inline-block",
+                    }}
+                  />{" "}
+                </div>{" "}
+                <span
+                  style={{
+                    font: "600 12px/1 'JetBrains Mono',monospace",
+                    color: "#fff",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "6px",
+                  }}
+                >
+                  {" "}
+                  <span style={{ color: "#ff576f" }}>●</span> LIVE RUNNERS · BTCUSD &amp; XAUTUSD ·
+                  youtube.com/@agentsops{" "}
+                </span>{" "}
+              </div>{" "}
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "14px",
+                  font: "500 11.5px/1 'JetBrains Mono',monospace",
+                  color: "#8e8cb3",
+                }}
+              >
+                {" "}
+                <span style={{ display: "inline-flex", alignItems: "center", gap: "6px", color: "#7fe0aa" }}>
+                  <span
+                    data-pulse=""
+                    style={{
+                      width: "6px",
+                      height: "6px",
+                      borderRadius: "50%",
+                      background: "#2fbf71",
+                      display: "inline-block",
+                    }}
+                  />{" "}
+                  MON–FRI 6 PM – 11 PM IST
+                </span>{" "}
+              </div>{" "}
+            </div>{" "}
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(auto-fit,minmax(320px,1fr))",
+                gap: "0",
+                borderBottom: "1px solid rgba(255,255,255,.08)",
+              }}
+            >
+              {" "}
+              <div
+                style={{
+                  padding: "32px 28px",
+                  borderRight: "1px solid rgba(255,255,255,.08)",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "space-between",
+                  background: "radial-gradient(circle at 20% 20%,rgba(229,9,20,.08),transparent 60%)",
+                }}
+              >
+                {" "}
+                <div>
+                  {" "}
+                  <div
+                    style={{
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: "8px",
+                      padding: "4px 10px",
+                      borderRadius: "6px",
+                      background: "rgba(229,9,20,.15)",
+                      border: "1px solid rgba(229,9,20,.3)",
+                      font: "600 11px/1 'JetBrains Mono',monospace",
+                      color: "#ff8595",
+                    }}
+                  >
+                    {" "}
+                    <span>CRYPTO &amp; GOLD PERPETUALS STREAM</span>{" "}
+                  </div>{" "}
+                  <div
+                    style={{
+                      marginTop: "20px",
+                      fontSize: "26px",
+                      fontWeight: "700",
+                      letterSpacing: "-.02em",
+                      color: "#fff",
+                      lineHeight: "1.2",
+                    }}
+                  >
+                    {" "}
+                    Real-time algo execution on BTCUSD &amp; XAUTUSD.{" "}
+                  </div>{" "}
+                  <p style={{ margin: "14px 0 0", fontSize: "15.5px", lineHeight: "1.6", color: "#a8a6c9" }}>
+                    {" "}
+                    Experience the power of Niveshmarg Edge running live on high-liquidity crypto and gold perpetuals.
+                    Watch real tick feeds, Smart Money Concepts (Order Blocks &amp; Fair Value Gaps), and deterministic
+                    risk engine checks in action during the peak global session.{" "}
+                  </p>{" "}
+                </div>{" "}
+                <div style={{ marginTop: "32px", display: "flex", flexWrap: "wrap", gap: "12px" }}>
+                  {" "}
+                  <a
+                    className="hv1"
+                    href="https://www.youtube.com/@agentsops"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: "8px",
+                      padding: "12px 20px",
+                      borderRadius: "999px",
+                      background: "#e50914",
+                      color: "#fff",
+                      fontWeight: "600",
+                      fontSize: "14px",
+                      transition: "transform .2s",
+                    }}
+                  >
+                    {" "}
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M10 15l5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73.47-.13 1.33-.22 2.65-.28 1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44.9.25 1.48.83 1.73 1.73z" />
+                    </svg>{" "}
+                    Subscribe @agentsops{" "}
+                  </a>{" "}
+                  <Link
+                    href="/live-stream"
+                    style={{
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: "8px",
+                      padding: "12px 18px",
+                      borderRadius: "999px",
+                      background: "rgba(255,255,255,.07)",
+                      border: "1px solid rgba(255,255,255,.12)",
+                      color: "#eeedfb",
+                      fontWeight: "500",
+                      fontSize: "14px",
+                    }}
+                  >
+                    {" "}
+                    View Schedule &amp; Details →{" "}
+                  </Link>{" "}
+                </div>{" "}
+              </div>{" "}
+              <div
+                style={{
+                  padding: "28px 24px",
+                  background: "rgba(0,0,0,.25)",
+                  fontFamily: "'JetBrains Mono',monospace",
+                }}
+              >
+                {" "}
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                    borderBottom: "1px solid rgba(255,255,255,.08)",
+                    paddingBottom: "12px",
+                  }}
+                >
+                  {" "}
+                  <span
+                    style={{ fontSize: "11px", letterSpacing: ".12em", color: "#8e8cb3", textTransform: "uppercase" }}
+                  >
+                    LIVE RUNNER TICKER · BTCUSD &amp; XAUTUSD
+                  </span>{" "}
+                  <span style={{ fontSize: "11px", color: "#2fbf71" }}>SESSION: 18:00–23:00 IST</span>{" "}
+                </div>{" "}
+                <div
+                  style={{
+                    marginTop: "16px",
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "10px",
+                    fontSize: "13px",
+                    lineHeight: "1.5",
+                  }}
+                >
+                  {" "}
+                  <div
+                    style={{
+                      padding: "10px 12px",
+                      borderRadius: "8px",
+                      background: "rgba(255,255,255,.04)",
+                      borderLeft: "3px solid #2fbf71",
+                    }}
+                  >
+                    {" "}
+                    <div
+                      style={{ display: "flex", justifyContent: "space-between", color: "#8e8cb3", fontSize: "11px" }}
+                    >
+                      {" "}
+                      <span>18:00:02 IST</span> <span style={{ color: "#2fbf71" }}>SESSION CONNECTED</span>{" "}
+                    </div>{" "}
+                    <div style={{ marginTop: "4px", color: "#fff" }}>
+                      WebSocket feed synced: BTCUSD Perpetual ($96,450.00), XAUTUSD ($2,684.50)
+                    </div>{" "}
+                  </div>{" "}
+                  <div
+                    style={{
+                      padding: "10px 12px",
+                      borderRadius: "8px",
+                      background: "rgba(255,255,255,.04)",
+                      borderLeft: "3px solid var(--acc,#4f46e5)",
+                    }}
+                  >
+                    {" "}
+                    <div
+                      style={{ display: "flex", justifyContent: "space-between", color: "#8e8cb3", fontSize: "11px" }}
+                    >
+                      {" "}
+                      <span>18:42:15 IST</span> <span style={{ color: "#a5b4fc" }}>SIGNAL FIRED</span>{" "}
+                    </div>{" "}
+                    <div style={{ marginTop: "4px", color: "#fff" }}>SMC FVG Retest: BUY 0.25 BTCUSD @ $96,420.00</div>{" "}
+                    <div style={{ marginTop: "4px", color: "#7fe0aa", fontSize: "11.5px" }}>
+                      Risk Gate Check: Passed (6/6 gates) · Delta Exchange route in 14ms
+                    </div>{" "}
+                  </div>{" "}
+                  <div
+                    style={{
+                      padding: "10px 12px",
+                      borderRadius: "8px",
+                      background: "rgba(255,255,255,.04)",
+                      borderLeft: "3px solid #ffbd2e",
+                    }}
+                  >
+                    {" "}
+                    <div
+                      style={{ display: "flex", justifyContent: "space-between", color: "#8e8cb3", fontSize: "11px" }}
+                    >
+                      {" "}
+                      <span>19:15:30 IST</span> <span style={{ color: "#ffbd2e" }}>ORDER BLOCK CONFIRMED</span>{" "}
+                    </div>{" "}
+                    <div style={{ marginTop: "4px", color: "#fff" }}>
+                      XAUTUSD 15m Bullish Order Block formed at $2,681.20 · Liquidity swept
+                    </div>{" "}
+                  </div>{" "}
+                  <div
+                    style={{
+                      padding: "10px 12px",
+                      borderRadius: "8px",
+                      background: "rgba(255,255,255,.04)",
+                      borderLeft: "3px solid #2fbf71",
+                    }}
+                  >
+                    {" "}
+                    <div
+                      style={{ display: "flex", justifyContent: "space-between", color: "#8e8cb3", fontSize: "11px" }}
+                    >
+                      {" "}
+                      <span>22:50:00 IST</span> <span style={{ color: "#2fbf71" }}>RISK AUDIT COMPLETED</span>{" "}
+                    </div>{" "}
+                    <div style={{ marginTop: "4px", color: "#fff" }}>
+                      Evening session limits verified · Daily Drawdown: 0.28% (Cap: 2.0%)
+                    </div>{" "}
+                  </div>{" "}
+                </div>{" "}
+              </div>{" "}
+            </div>{" "}
+            <div
+              style={{
+                padding: "24px 28px",
+                background: "rgba(255,255,255,.02)",
+                display: "grid",
+                gridTemplateColumns: "repeat(auto-fit,minmax(200px,1fr))",
+                gap: "20px",
+              }}
+            >
+              {" "}
+              <div>
+                {" "}
+                <div
+                  style={{
+                    fontSize: "clamp(24px,2.8vw,34px)",
+                    fontWeight: "800",
+                    letterSpacing: "-.03em",
+                    color: "#fff",
+                    lineHeight: "1",
+                  }}
+                >
+                  {" "}
+                  BTC &amp; XAU{" "}
+                </div>{" "}
+                <div style={{ marginTop: "8px", fontSize: "14px", color: "#8e8cb3" }}>
+                  Live on BTCUSD &amp; XAUTUSD
+                </div>{" "}
+              </div>{" "}
+              <div>
+                {" "}
+                <div
+                  style={{
+                    fontSize: "clamp(24px,2.8vw,34px)",
+                    fontWeight: "800",
+                    letterSpacing: "-.03em",
+                    color: "#fff",
+                    lineHeight: "1",
+                  }}
+                >
+                  {" "}
+                  6 PM – 11 PM{" "}
+                </div>{" "}
+                <div style={{ marginTop: "8px", fontSize: "14px", color: "#8e8cb3" }}>Monday to Friday (IST)</div>{" "}
+              </div>{" "}
+              <div>
+                {" "}
+                <div
+                  style={{
+                    fontSize: "clamp(24px,2.8vw,34px)",
+                    fontWeight: "800",
+                    letterSpacing: "-.03em",
+                    color: "#ff576f",
+                    lineHeight: "1",
+                  }}
+                >
+                  {" "}
+                  07 October{" "}
+                </div>{" "}
+                <div style={{ marginTop: "8px", fontSize: "14px", color: "#8e8cb3" }}>
+                  Official streaming launch date
+                </div>{" "}
+              </div>{" "}
+              <div>
+                {" "}
+                <div
+                  style={{
+                    fontSize: "clamp(24px,2.8vw,34px)",
+                    fontWeight: "800",
+                    letterSpacing: "-.03em",
+                    color: "#fff",
+                    lineHeight: "1",
+                  }}
+                >
+                  {" "}
+                  <span data-count="6">6</span> Gates{" "}
+                </div>{" "}
+                <div style={{ marginTop: "8px", fontSize: "14px", color: "#8e8cb3" }}>
+                  Deterministic risk checks on every tick
+                </div>{" "}
+              </div>{" "}
+            </div>{" "}
+          </div>{" "}
+        </div>{" "}
+      </section>{" "}
       <section id="cta" style={{ maxWidth: "1200px", margin: "0 auto", padding: "140px 24px 0" }}>
         {" "}
         <div

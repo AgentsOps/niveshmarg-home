@@ -11,6 +11,7 @@ export type PageKey =
   | "charts"
   | "backtesting"
   | "live"
+  | "liveStream"
   | "research"
   | "integrations"
   | "strategies"
@@ -137,6 +138,30 @@ export const PAGES: Record<PageKey, PageSeo> = {
     ogHeadline: "Every order meets the risk engine first.",
     changeFrequency: "monthly",
     priority: 0.8,
+  },
+  liveStream: {
+    path: "/live-stream",
+    name: "Live Stream",
+    title: "Live BTCUSD & XAUTUSD Trading Stream | Niveshmarg Edge × AgentsOps",
+    description:
+      "Watch Niveshmarg Edge run live on BTCUSD and XAUTUSD via YouTube partner @agentsops. Streaming Monday to Friday 6 PM to 11 PM IST, starting 07 October.",
+    keywords: [
+      "BTCUSD live stream",
+      "XAUTUSD trading live",
+      "algo trading live stream",
+      "live trading YouTube",
+      "AgentsOps YouTube",
+      "Niveshmarg Edge live",
+      "crypto algo trading",
+      "gold perpetuals algo",
+      "Delta Exchange algo",
+      "real time risk telemetry",
+      "AgentsOps live",
+    ],
+    ogEyebrow: "BTCUSD & XAUTUSD · YOUTUBE PARTNER @AGENTSOPS",
+    ogHeadline: "See Niveshmarg Edge running live on BTCUSD & XAUTUSD.",
+    changeFrequency: "daily",
+    priority: 0.9,
   },
   research: {
     path: "/research",

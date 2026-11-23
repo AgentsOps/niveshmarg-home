@@ -9,6 +9,7 @@ const COLUMNS: { title: string; links: [string, string][] }[] = [
       ["/charts", "Chart Workspace"],
       ["/backtesting", "Backtesting"],
       ["/live", "Live Trading & Risk"],
+      ["/live-stream", "Live Stream (@agentsops)"],
     ],
   },
   {
