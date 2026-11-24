@@ -144,7 +144,7 @@ export const PAGES: Record<PageKey, PageSeo> = {
     name: "Live Stream",
     title: "Live BTCUSD & XAUTUSD Trading Stream | Niveshmarg Edge × AgentsOps",
     description:
-      "Watch Niveshmarg Edge run live on BTCUSD and XAUTUSD via YouTube partner @agentsops. Streaming Monday to Friday 6 PM to 11 PM IST, starting 07 October.",
+      "Watch Niveshmarg Edge run live on BTCUSD and XAUTUSD via YouTube partner @agentsops. Streaming Monday to Friday 6 PM to 11 PM IST, starting 07 December 2026.",
     keywords: [
       "BTCUSD live stream",
       "XAUTUSD trading live",

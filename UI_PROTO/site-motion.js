@@ -189,9 +189,9 @@
           if (!isNaN(custom.getTime()) && custom.getTime() > now.getTime()) return custom;
         }
         var curYear = now.getFullYear();
-        var t = new Date(curYear + '-10-07T18:00:00+05:30');
+        var t = new Date(curYear + '-12-07T18:00:00+05:30');
         if (now.getTime() > t.getTime()) {
-          t = new Date((curYear + 1) + '-10-07T18:00:00+05:30');
+          t = new Date((curYear + 1) + '-12-07T18:00:00+05:30');
         }
         return t;
       };

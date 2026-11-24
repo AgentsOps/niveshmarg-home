@@ -2961,8 +2961,8 @@ export default function HomePage() {
                 }}
               >
                 {" "}
-                Starting <strong>07th of October</strong>, watch Niveshmarg Edge execute live on Bitcoin and Tether Gold
-                perpetuals through our official YouTube partner, <strong>AgentsOps</strong>. Streaming every{" "}
+                Starting <strong>07th of December 2026</strong>, watch Niveshmarg Edge execute live on Bitcoin and
+                Tether Gold perpetuals through our official YouTube partner, <strong>AgentsOps</strong>. Streaming every{" "}
                 <strong>Monday to Friday, 6:00 PM IST to 11:00 PM IST</strong>.{" "}
               </p>{" "}
             </div>{" "}
@@ -3060,7 +3060,7 @@ export default function HomePage() {
                   }}
                 >
                   {" "}
-                  STREAMING STARTS 07TH OF OCTOBER · 6:00 PM IST{" "}
+                  STREAMING STARTS 07TH OF DECEMBER 2026 · 6:00 PM IST{" "}
                 </span>{" "}
               </div>{" "}
               <div
@@ -3641,7 +3641,7 @@ export default function HomePage() {
                   }}
                 >
                   {" "}
-                  07 October{" "}
+                  07 December{" "}
                 </div>{" "}
                 <div style={{ marginTop: "8px", fontSize: "14px", color: "#8e8cb3" }}>
                   Official streaming launch date

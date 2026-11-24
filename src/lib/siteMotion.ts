@@ -634,7 +634,7 @@ export function boot(root: HTMLElement, opts: { skin?: Skin; motion?: Motion } =
       sEl = cd.querySelector<HTMLElement>("[data-cd-secs]"),
       badgeEl = cd.querySelector<HTMLElement>("[data-cd-badge]");
 
-    // Target: 07th of October at 18:00 IST (6:00 PM IST)
+    // Target: 07th of December 2026 at 18:00 IST (6:00 PM IST)
     const getTarget = () => {
       const now = new Date();
       if (cd.dataset.target) {
@@ -642,9 +642,9 @@ export function boot(root: HTMLElement, opts: { skin?: Skin; motion?: Motion } =
         if (!isNaN(custom.getTime()) && custom.getTime() > now.getTime()) return custom;
       }
       const curYear = now.getFullYear();
-      let t = new Date(`${curYear}-10-07T18:00:00+05:30`);
+      let t = new Date(`${curYear}-12-07T18:00:00+05:30`);
       if (now.getTime() > t.getTime()) {
-        t = new Date(`${curYear + 1}-10-07T18:00:00+05:30`);
+        t = new Date(`${curYear + 1}-12-07T18:00:00+05:30`);
       }
       return t;
     };

@@ -113,8 +113,8 @@ export default function LiveStreamPage() {
               }}
             >
               {" "}
-              Starting <strong>07th of October</strong>, watch Niveshmarg Edge execute live on Bitcoin (BTCUSD) and
-              Tether Gold (XAUTUSD) perpetuals through our official channel partner{" "}
+              Starting <strong>07th of December 2026</strong>, watch Niveshmarg Edge execute live on Bitcoin (BTCUSD)
+              and Tether Gold (XAUTUSD) perpetuals through our official channel partner{" "}
               <strong style={{ color: "#16153b" }}>@agentsops</strong>. Broadcast every{" "}
               <strong>Monday to Friday, 6:00 PM IST to 11:00 PM IST</strong>.{" "}
             </p>{" "}
@@ -446,7 +446,7 @@ export default function LiveStreamPage() {
                   display: "inline-block",
                 }}
               />{" "}
-              <span data-cd-badge="">STREAMING STARTS 07TH OF OCTOBER · 6:00 PM IST</span>{" "}
+              <span data-cd-badge="">STREAMING STARTS 07TH OF DECEMBER 2026 · 6:00 PM IST</span>{" "}
             </div>{" "}
             <h2
               style={{
@@ -746,7 +746,7 @@ export default function LiveStreamPage() {
                 color: "#e50914",
               }}
             >
-              07 October
+              07 December
             </div>{" "}
             <div style={{ marginTop: "10px", fontSize: "15px", color: "#5d5c7a" }}>
               Live stream launch premiere date
@@ -1475,7 +1475,7 @@ export default function LiveStreamPage() {
               When does the stream premiere?
             </div>{" "}
             <p style={{ margin: "12px 0 0", fontSize: "15.5px", color: "#3d3c5c" }}>
-              The live stream officially launches on <strong>07th of October</strong>. You can subscribe to{" "}
+              The live stream officially launches on <strong>07th of December, 2026</strong>. You can subscribe to{" "}
               <a href="https://www.youtube.com/@agentsops" target="_blank" rel="noopener noreferrer">
                 @agentsops
               </a>{" "}
@@ -1623,7 +1623,7 @@ export default function LiveStreamPage() {
                 textAlign: "center",
               }}
             >
-              Mon–Fri 6 PM–11 PM IST · Starts 07 October
+              Mon–Fri 6 PM–11 PM IST · Starts 07 December
             </div>{" "}
           </div>{" "}
         </div>{" "}
